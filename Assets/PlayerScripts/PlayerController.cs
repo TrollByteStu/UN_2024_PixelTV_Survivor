@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     {
         FinalMovement = MoveDirection.ConvertTo<Vector3>() * MoveSpeed * MoveSpeedMultiplier * Time.deltaTime;
 
-        //BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement);
-        BackgroundSprite.material.SetVector("_Offset", BackgroundSprite.material.GetVector("_Offset")  -Vector4.one * Time.deltaTime);
+        BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement);
+        //BackgroundSprite.material.SetVector("_Offset", BackgroundSprite.material.GetVector("_Offset")  + Vector4.one * Time.deltaTime);
         //transform.position += MoveDirection.ConvertTo<Vector3>() * MoveSpeed * MoveSpeedMultiplier;
     }
     

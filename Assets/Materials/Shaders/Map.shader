@@ -44,7 +44,7 @@ Shader"Custom/Map"
         void surf (Input IN, inout SurfaceOutputStandard o)
         {  
             // Albedo comes from a texture tinted by color
-            float2 uv = (IN.uv_MainTex / _Scale + _Offset) % 1;
+            float2 uv = (IN.uv_MainTex / _Scale + _Offset % 1 + 1 )% 1;
             fixed4 c = tex2D(_MainTex, uv) * _Color;
             o.Albedo = c.rgb;
             // Metallic and smoothness come from slider variables

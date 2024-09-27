@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour
     {
         FinalMovement = MoveDirection.ConvertTo<Vector3>() * MoveSpeed * MoveSpeedMultiplier * Time.deltaTime;
 
-        BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement);
         //BackgroundSprite.material.SetVector("_Offset", BackgroundSprite.material.GetVector("_Offset")  + Vector4.one * Time.deltaTime);
-        //transform.position += MoveDirection.ConvertTo<Vector3>() * MoveSpeed * MoveSpeedMultiplier;
+        transform.position += FinalMovement.ConvertTo<Vector3>();
+        BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement / 4);
     }
     
     // Event called by Player Input Component on press and release of move keybind

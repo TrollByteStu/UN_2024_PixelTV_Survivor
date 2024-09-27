@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public SpriteRenderer BackgroundSprite;
+    public MeshRenderer BackgroundSprite;
 
 
     // Start is called before the first frame update

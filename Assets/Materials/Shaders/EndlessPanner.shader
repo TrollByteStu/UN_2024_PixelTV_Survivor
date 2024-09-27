@@ -1,4 +1,4 @@
-Shader"Custom/Map"
+Shader"Custom/EndlessPanner"
 {
     Properties
     {

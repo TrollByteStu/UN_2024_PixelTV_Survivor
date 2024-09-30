@@ -83,5 +83,5 @@ Material:
     - _Curve: {r: 1.2, g: 5.31, b: 0.14, a: 0.14}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Size: {r: 13, g: 2.4, b: 1, a: 3}
+    - _Size: {r: 16, g: 2.6, b: 1, a: 3.2}
   m_BuildTextureStacks: []

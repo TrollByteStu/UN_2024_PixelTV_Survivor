@@ -58,15 +58,15 @@ public class MeshGenerater : MonoBehaviour
             int p = i % (Resolution ) + math.floor(i / (Resolution )).ConvertTo<int>() * (Resolution + 1);
 
             // top tri
+            Triangles.Add(p + Resolution + 2);
             Triangles.Add(p);
             Triangles.Add(p + Resolution + 1);
-            Triangles.Add(p + Resolution + 2);
 
 
             //bottom tri
+            Triangles.Add(p + Resolution +2);
             Triangles.Add(p + 1);   
             Triangles.Add(p);
-            Triangles.Add(p + Resolution +2);
 
         }
     }

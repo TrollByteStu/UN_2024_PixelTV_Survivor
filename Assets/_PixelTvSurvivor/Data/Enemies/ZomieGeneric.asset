@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
   m_Name: ZomieGeneric
   m_EditorClassIdentifier: 
-  ChracterName: 
+  EnemyName: Generic Zombie
   Stats:
     MaxHealth: 20
     Health: 20

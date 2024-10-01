@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyCharacter : ScriptableObject
 {
     [Tooltip("The name of the enemy")]
-    public string ChracterName;
+    public string EnemyName;
 
     [Tooltip("A list of the enemies Stats")]
     public EnemyStats Stats;

@@ -23,11 +23,11 @@ public class GenericSpawner : MonoBehaviour
     {
         if ( transform.childCount < amountToSpawn ) 
         {
-            if (Time.time - lastSpawn < spawnDelay)
+            if (Time.time > lastSpawn )
             {
                 var enemy = Instantiate( genericEnemyPrefab );
                 enemy.transform.SetParent(transform);
-
+                lastSpawn = Time.time + lastSpawn;
             }
         }
     }

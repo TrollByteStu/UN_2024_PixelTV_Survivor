@@ -11,6 +11,25 @@ public class EnemyCharacter : ScriptableObject
     [Tooltip("A list of the enemies Stats")]
     public EnemyStats Stats;
 
-    //[Tooltip("A list of the characters Skills")]
-    //public List<CharacterSkillImplementation> Skills;
+    [Tooltip("the sprite for the enemy")]
+    public Sprite enemySprite;
+
+    [Tooltip("the list of sounds for Walk")]
+    public AudioClip[] enemyAudioWalk;
+
+    [Tooltip("How often to play Walk sounds")]
+    public float enemyAudioWalkProbablity;
+
+    [Tooltip("the list of sounds for Walk")]
+    public AudioClip[] enemyAudioAttack;
+
+    [Tooltip("How often to play Walk sounds")]
+    public float enemyAudioAttackProbablity;
+
+    [Tooltip("the list of sounds for Walk")]
+    public AudioClip[] enemyAudioDeath;
+
+    [Tooltip("How often to play Walk sounds")]
+    public float enemyAudioDeathProbablity;
+
 }

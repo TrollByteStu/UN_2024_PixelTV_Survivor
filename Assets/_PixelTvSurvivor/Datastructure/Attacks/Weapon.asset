@@ -14,22 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   weapon: {fileID: 8308352212180140569, guid: 8817fab004377894c835ea3eaf5b4ebe, type: 3}
-  Bullets: {fileID: 8308352212180140569, guid: 8817fab004377894c835ea3eaf5b4ebe, type: 3}
+  BulletTexture: {fileID: 21300000, guid: 75d5977427bef81489760bf87e3bacf1, type: 3}
+  Bullets: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
   weaponCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      value: 0.0051593482
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.5
-      value: -1
+      value: -0.9948406
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -38,15 +39,24 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      value: 1.0051594
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0.049895942
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.5
+      value: 0.0051593482
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 1
+    m_PostInfinity: 1
     m_RotationOrder: 4
   bulletSpeed: 10
   AttackSpeed: 1

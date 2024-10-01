@@ -7,6 +7,7 @@ public class Weapons : ScriptableObject
 {
     public WeaponType Type;
     public GameObject weapon;
+    public Sprite BulletTexture;
     public GameObject Bullets;
     public AnimationCurve weaponCurve;
     public float bulletSpeed;
@@ -31,7 +32,7 @@ public class Weapons : ScriptableObject
     }
     public void Bullet(Vector3 position , Vector3 direction)
     {
-        Instantiate(Bullets, position + direction,new(0,0,0,0)).GetComponent<Bullets>().Setup(bulletSpeed,AttackDamage,direction);
+        Instantiate(Bullets, position + direction,Quaternion.LookRotation(direction,Vector3.forward)).GetComponent<Bullets>().Setup(bulletSpeed,AttackDamage,direction,weaponCurve,BulletTexture);
     }
     public void Homing()
     {

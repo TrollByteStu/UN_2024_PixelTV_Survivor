@@ -491,7 +491,9 @@ MonoBehaviour:
     XpModifier: 1
     Reroll: 0
   WeaponsList:
-  - {fileID: 11400000, guid: 35b31c1da9e64da4780d83d2f35c95d9, type: 2}
+  - Weapon: {fileID: 11400000, guid: 35b31c1da9e64da4780d83d2f35c95d9, type: 2}
+    LastShot: 0
+    Level: 0
 --- !u!114 &1135793731
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "ScriptableObjects/Weapon", order = 1)]
 public class Weapons : ScriptableObject
 {
-    internal float LastShot;
     public WeaponType Type;
     public GameObject weapon;
     public GameObject Bullets;
     public AnimationCurve weaponCurve;
+    public float bulletSpeed;
     public float AttackSpeed;
     public float AttackDamage;
 
@@ -20,21 +20,21 @@ public class Weapons : ScriptableObject
         Homing
     }
 
-    public void Aura(Vector3 position,float timeOfAttack,float area)
+    //does not work
+    public void Aura(Vector3 position,float area)
     {
-        LastShot = timeOfAttack;
-        foreach( RaycastHit Hit in Physics.SphereCastAll(position, area, Vector3.zero))
+        foreach( RaycastHit Hit in Physics.SphereCastAll(position, 10, Vector3.zero,1))
         {
 
         }
         
     }
-    public void Bullet(float timeOfAttack)
+    public void Bullet(Vector3 position , Vector3 direction)
     {
-        LastShot = timeOfAttack;
+        Instantiate(Bullets, position + direction,new(0,0,0,0)).GetComponent<Bullets>().Setup(bulletSpeed,AttackDamage,direction);
     }
-    public void Homing(float timeOfAttack)
+    public void Homing()
     {
-        LastShot = timeOfAttack;
+       
     }
 }

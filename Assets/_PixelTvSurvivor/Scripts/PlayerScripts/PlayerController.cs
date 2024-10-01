@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats Stats = new("Player",100,100,0.1f,0,10);
-    public List<Weapons> WeaponsList;
+    
+    public WeaponStats[] WeaponsList;
 
     // Start is called before the first frame update
     void Start()
@@ -32,22 +34,26 @@ public class PlayerController : MonoBehaviour
         //BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement / 4);
     }
 
+    private Vector2 AimDirection = new(1,0);
     void Attacks()
     {
-        foreach (var weapon in WeaponsList) 
+        for (int i = 0; i < WeaponsList.Length; i++) 
         {
-            if (weapon.LastShot < Time.time )
+            if (WeaponsList[i].LastShot < Time.time )
             {
-                switch (weapon.Type)
+                WeaponsList[i].LastShot = Time.time + WeaponsList[i].Weapon.AttackSpeed * Stats.CooldownModifier;
+                switch (WeaponsList[i].Weapon.Type)
                 {
                     case Weapons.WeaponType.Aura:
-                        weapon.Aura(transform.position , Time.time + weapon.AttackSpeed * Stats.CooldownModifier , Stats.Area);
+                        WeaponsList[i].Weapon.Aura(transform.position, Stats.Area);
                         break;
                     case Weapons.WeaponType.Bullet:
-                        weapon.Bullet(Time.time + weapon.AttackSpeed * Stats.CooldownModifier);
+                        WeaponsList[i].Weapon.Bullet(transform.position, AimDirection);
                         break;
                     case Weapons.WeaponType.Homing:
-                        weapon.Homing(Time.time + weapon.AttackSpeed * Stats.CooldownModifier);
+                        WeaponsList[i].Weapon.Homing();
+                        break;
+                    default:
                         break;
                 }
             }
@@ -58,5 +64,9 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveDirection = context.ReadValue<Vector2>();
+        if (MoveDirection != Vector2.zero)
+        {
+            AimDirection = MoveDirection;
+        }
     }
 }

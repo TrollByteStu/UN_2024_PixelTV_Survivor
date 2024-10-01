@@ -27,6 +27,7 @@ public class GenericSpawner : MonoBehaviour
             {
                 var enemy = Instantiate( genericEnemyPrefab );
                 enemy.transform.SetParent(transform);
+                enemy.transform.localPosition = Vector3.zero;
                 lastSpawn = Time.time + spawnDelay;
             }
         }

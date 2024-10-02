@@ -26,8 +26,10 @@ public class GenericSpawner : MonoBehaviour
             if (Time.time > lastSpawn )
             {
                 var enemy = Instantiate( genericEnemyPrefab );
+                var enemyscript = enemy.GetComponent<Enemy_Main>();
                 enemy.transform.SetParent(transform);
                 enemy.transform.localPosition = Vector3.zero;
+                enemy.transform.localScale = new Vector3(enemyscript.enemytype.spriteScale, enemyscript.enemytype.spriteScale,1);
                 lastSpawn = Time.time + spawnDelay;
             }
         }

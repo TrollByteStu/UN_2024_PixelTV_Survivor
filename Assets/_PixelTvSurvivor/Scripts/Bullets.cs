@@ -55,4 +55,15 @@ public class Bullets : MonoBehaviour
         if (Time.time > StartTime + LifeTime)
             Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("BulletHits!!!");
+            col.GetComponent<Enemy_Main>().Damage(Damage);
+            Destroy(gameObject);
+        }
+    }
+
 }

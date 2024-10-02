@@ -27,5 +27,14 @@ public class Enemy_Main : MonoBehaviour
     public void Damage(float damage)
     {
         myStats.Health -= damage;
+        if (myStats.Health <= 0) EnemyDies();
+    }
+
+    public void EnemyDies()
+    {
+        // add effects and sounds
+        // spawn pickups?
+        // add points? Or is that on pickup?
+        Destroy(gameObject);
     }
 }

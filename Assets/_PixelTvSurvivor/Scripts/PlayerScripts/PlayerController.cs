@@ -45,13 +45,13 @@ public class PlayerController : MonoBehaviour
                 switch (WeaponsList[i].Weapon.Type)
                 {
                     case Weapons.WeaponType.Aura:
-                        WeaponsList[i].Weapon.Aura(transform.position, Stats.Area);
+                        WeaponsList[i].Weapon.Aura(transform.position, Stats.Area,Stats.DamageModifier);
                         break;
                     case Weapons.WeaponType.Bullet:
                         WeaponsList[i].Weapon.Bullet(transform.position, AimDirection);
                         break;
                     case Weapons.WeaponType.Homing:
-                        WeaponsList[i].Weapon.Homing();
+                        WeaponsList[i].Weapon.Homing(transform.position);
                         break;
                     default:
                         break;

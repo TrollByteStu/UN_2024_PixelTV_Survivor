@@ -139,10 +139,10 @@ TextureImporter:
       name: UnluckyPlayerSpriteSheet(PNG)_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 295
-        width: 162
-        height: 249
+        x: 0
+        y: 284
+        width: 201
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: UnluckyPlayerSpriteSheet(PNG)_1
       rect:
         serializedVersion: 2
-        x: 215
-        y: 297
-        width: 162
-        height: 243
+        x: 201
+        y: 284
+        width: 201
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: UnluckyPlayerSpriteSheet(PNG)_2
       rect:
         serializedVersion: 2
-        x: 22
-        y: 13
-        width: 162
-        height: 242
+        x: 0
+        y: 0
+        width: 201
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: UnluckyPlayerSpriteSheet(PNG)_3
       rect:
         serializedVersion: 2
-        x: 221
-        y: 11
-        width: 162
-        height: 249
+        x: 201
+        y: 0
+        width: 201
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

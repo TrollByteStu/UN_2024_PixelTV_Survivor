@@ -139,9 +139,9 @@ TextureImporter:
       name: Zombie sprite sheet 1_0
       rect:
         serializedVersion: 2
-        x: 71
+        x: 0
         y: 0
-        width: 719
+        width: 853
         height: 1181
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Zombie sprite sheet 1_1
       rect:
         serializedVersion: 2
-        x: 838
-        y: 17
-        width: 766
-        height: 1148
+        x: 853
+        y: 0
+        width: 853
+        height: 1181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Zombie sprite sheet 1_2
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 1161
-        width: 14
-        height: 14
+        x: 1706
+        y: 0
+        width: 853
+        height: 1181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,27 +194,6 @@ TextureImporter:
       bones: []
       spriteID: aa1adb8355266c14ebd9b1b8a2f4a8f3
       internalID: -1992805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zombie sprite sheet 1_3
-      rect:
-        serializedVersion: 2
-        x: 1696
-        y: 4
-        width: 685
-        height: 1174
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aced30e5dd0e45d40abe59f5d255d1d2
-      internalID: 1014176826
       vertices: []
       indices: 
       edges: []
@@ -233,7 +212,6 @@ TextureImporter:
       Zombie sprite sheet 1_0: 1326495855
       Zombie sprite sheet 1_1: -1788805607
       Zombie sprite sheet 1_2: -1992805
-      Zombie sprite sheet 1_3: 1014176826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

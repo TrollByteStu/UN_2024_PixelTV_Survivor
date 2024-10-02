@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4580590997166710823}
   - component: {fileID: 4339891707272752023}
   - component: {fileID: 2647032646040814274}
+  - component: {fileID: 9112618871384783546}
+  - component: {fileID: 6017448913976279683}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -1687904249
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2fc62033a74daf94e93c0937774bfef5, type: 3}
+  m_Sprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,7 +145,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.89, y: 3.56}
+    oldSize: {x: 8.5315275, y: 11.809999}
     newSize: {x: 1.89, y: 3.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,3 +154,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.89, y: 3.56}
   m_EdgeRadius: 0
+--- !u!111 &9112618871384783546
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893235177329492211}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 764e8126ac005b544a40ce44e6641ba3, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &6017448913976279683
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893235177329492211}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 333dfa838d5ebe74f9a01249bad43a48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         Attacks();
+        print(math.pow(Stats.Level *10,1.4f));
     }
 
     private Vector2 MoveDirection;
@@ -60,6 +62,16 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    public void AddXp(float xp)
+    {
+        Stats.Xp += xp * Stats.XpModifier;
+        if (Stats.Xp > math.pow(Stats.Level * 10, 1.4f))
+            LevelUp();
+    }
+    public void LevelUp()
+    {
+        Stats.Level++;
+    }
     // Event called by Player Input Component on press and release of move keybind
     public void OnMove(InputAction.CallbackContext context)
     {

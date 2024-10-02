@@ -13,7 +13,7 @@ public class Enemy_Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerRef = GameObject.Find("PlayerWannaBeThatZombiesChase").transform;
+        playerRef = GameObject.FindGameObjectWithTag("Player").transform;
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
     }

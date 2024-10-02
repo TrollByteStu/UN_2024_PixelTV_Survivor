@@ -23,4 +23,9 @@ public class Enemy_Main : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
     }
+
+    public void Damage(float damage)
+    {
+        myStats.Health -= damage;
+    }
 }

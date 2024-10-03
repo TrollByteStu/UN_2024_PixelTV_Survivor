@@ -56,12 +56,13 @@ public class Bullets : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.gameObject.tag == "Enemy")
+        Debug.Log("Bullet hit something with tag: " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("BulletHits!!!");
-            col.GetComponent<Enemy_Main>().Damage(Damage);
+            collision.GetComponent<Enemy_Main>().Damage(Damage);
             Destroy(gameObject);
         }
     }

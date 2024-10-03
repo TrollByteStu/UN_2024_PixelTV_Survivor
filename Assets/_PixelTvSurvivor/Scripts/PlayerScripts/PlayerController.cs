@@ -89,10 +89,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player hit something with tag: " + collision.gameObject.tag);
+        //Debug.Log("Player hit something with tag: " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Walls")
         {
-            transform.position -= ((transform.position-lastPosition)*50);
+            transform.position -= ((transform.position-lastPosition)*5);
         }
     }
 

@@ -42,5 +42,5 @@ MonoBehaviour:
     m_RotationOrder: 4
   bulletSpeed: 15
   AttackSpeed: 1
-  AttackDamage: 1
+  AttackDamage: 10
   AttackAOE: 10

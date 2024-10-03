@@ -20,6 +20,7 @@ MonoBehaviour:
     AttackDamage: 5
     AttackSpeed: 1
     AttackRange: 1
+    XpValue: 1
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   spriteScale: 0.2
   enemyAudioWalk: []

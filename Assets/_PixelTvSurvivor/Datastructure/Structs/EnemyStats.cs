@@ -8,5 +8,6 @@ public struct EnemyStats
     public float AttackDamage;
     public float AttackSpeed;
     public float AttackRange;
+    public float XpValue;
 
 }

@@ -15,6 +15,7 @@ public class Bullets : MonoBehaviour
 
     private float StartTime = 0;
     private float LifeTime = 5;
+    private Vector3 moveDirection;
 
     private void Start()
     {
@@ -50,7 +51,7 @@ public class Bullets : MonoBehaviour
             //Quaternion.LookRotation(Target.transform.position);
             transform.position = Vector3.MoveTowards(transform.position - 0.05f * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right, Target.transform.position, Speed *Time.deltaTime);
             // testing:
-            Vector3 moveDirection = Target.transform.position - transform.position;
+            moveDirection = Target.transform.position - transform.position;
             if (moveDirection != Vector3.zero)
             {
                 float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;

@@ -716,6 +716,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1946390614343069319, guid: e5532717b3172be4facae59b2fafa8d0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4349542706234104030, guid: e5532717b3172be4facae59b2fafa8d0, type: 3}
       propertyPath: m_Name
       value: TestMap2

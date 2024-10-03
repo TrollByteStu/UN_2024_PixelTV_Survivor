@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_PixelTvSurvivor/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/_PixelTvSurvivor/Scenes/_MainMenu.unity
+    guid: 9453ac39d7421f74f924946791d3bde7
+  - enabled: 1
+    path: Assets/_PixelTvSurvivor/Scenes/_Level_01.unity
+    guid: cca2f452642939b46b6fb27638c10965
   m_configObjects: {}

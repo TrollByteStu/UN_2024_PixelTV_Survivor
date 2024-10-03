@@ -224,7 +224,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 10
-  m_PointLightOuterRadius: 20
+  m_PointLightOuterRadius: 30
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 797986456139938501}
   - component: {fileID: 4733911419387393674}
   - component: {fileID: 3604820102806253043}
+  - component: {fileID: 6365954872489682157}
   m_Layer: 0
   m_Name: Player_UnluckyIntern
   m_TagString: Player
@@ -502,7 +503,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -518,6 +519,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.01, y: 2.84}
   m_EdgeRadius: 0
+--- !u!50 &6365954872489682157
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717821040084105354}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &6188995383559106537
 GameObject:
   m_ObjectHideFlags: 0

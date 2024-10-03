@@ -10,6 +10,9 @@ public class Enemy_Main : MonoBehaviour
 
     public Transform playerRef;
 
+    private Vector3 thisPosition;
+    private Vector3 lastPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,8 @@ public class Enemy_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lastPosition = thisPosition;
+        thisPosition = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
     }
 
@@ -36,5 +41,14 @@ public class Enemy_Main : MonoBehaviour
         // spawn pickups?
         // add points? Or is that on pickup?
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log("Zombie hit something with tag: " + collision.gameObject.tag);
+        if ( collision.gameObject.tag == "Walls")
+        {
+            transform.position -= ((transform.position - lastPosition) * 50);
+        }
     }
 }

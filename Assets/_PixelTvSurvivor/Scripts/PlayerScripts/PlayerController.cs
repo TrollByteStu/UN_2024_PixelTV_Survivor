@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     
     public WeaponStats[] WeaponsList;
 
+    private Vector3 thisPosition;
+    private Vector3 lastPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         Attacks();
-        print(math.pow(Stats.Level *10,1.4f));
+        //print(math.pow(Stats.Level *10,1.4f));
     }
 
     private Vector2 MoveDirection;
@@ -31,6 +34,8 @@ public class PlayerController : MonoBehaviour
     // moves Player 
     void Movement()
     {
+        lastPosition = thisPosition;
+        thisPosition = transform.position;
         FinalMovement = MoveDirection.ConvertTo<Vector3>() * Stats.MoveSpeed * Stats.MoveSpeedModifier * Time.deltaTime;
         transform.position += FinalMovement.ConvertTo<Vector3>();
         //BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement / 4);
@@ -81,4 +86,14 @@ public class PlayerController : MonoBehaviour
             AimDirection = MoveDirection;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Player hit something with tag: " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Walls")
+        {
+            transform.position -= ((transform.position-lastPosition)*50);
+        }
+    }
+
 }

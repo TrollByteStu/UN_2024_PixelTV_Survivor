@@ -49,7 +49,13 @@ public class Bullets : MonoBehaviour
         {
             //Quaternion.LookRotation(Target.transform.position);
             transform.position = Vector3.MoveTowards(transform.position - 0.05f * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right, Target.transform.position, Speed *Time.deltaTime);
-
+            // testing:
+            Vector3 moveDirection = Target.transform.position - transform.position;
+            if (moveDirection != Vector3.zero)
+            {
+                float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
         }
 
         if (Time.time > StartTime + LifeTime)

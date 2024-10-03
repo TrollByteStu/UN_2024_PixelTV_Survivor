@@ -47,7 +47,7 @@ public class Bullets : MonoBehaviour
             transform.position += (Direction + AnimationCurve.Evaluate(Time.time - StartTime) * transform.right) * Speed * Time.deltaTime;
         else
         {
-            Quaternion.LookRotation(Target.transform.position);
+            //Quaternion.LookRotation(Target.transform.position);
             transform.position = Vector3.MoveTowards(transform.position - 0.05f * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right, Target.transform.position, Speed *Time.deltaTime);
 
         }
@@ -58,7 +58,7 @@ public class Bullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Bullet hit something with tag: " + collision.gameObject.tag);
+        //Debug.Log("Bullet hit something with tag: " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("BulletHits!!!");

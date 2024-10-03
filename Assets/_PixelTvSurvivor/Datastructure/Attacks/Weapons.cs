@@ -56,7 +56,9 @@ public class Weapons : ScriptableObject
         // sorts list based on distance from player
         Hits.Sort((h1, h2) => (h1.transform.position - position).magnitude.CompareTo((h2.transform.position - position).magnitude));
         if (Hits.Count > 0 ) 
-            Instantiate(Bullets, position, Quaternion.LookRotation(Hits[0].transform.position.normalized, Vector3.forward)).GetComponent<Bullets>()
+            Instantiate(Bullets, position, Quaternion.identity).GetComponent<Bullets>()
                 .Setup(bulletSpeed, AttackDamage, Hits[0].transform.gameObject,weaponCurve,BulletTexture,Type);
+        //Instantiate(Bullets, position, Quaternion.LookRotation(Hits[0].transform.position.normalized, Vector3.forward)).GetComponent<Bullets>()
+        //        .Setup(bulletSpeed, AttackDamage, Hits[0].transform.gameObject, weaponCurve, BulletTexture, Type);
     }
 }

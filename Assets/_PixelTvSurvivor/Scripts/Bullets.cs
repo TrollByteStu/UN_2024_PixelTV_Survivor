@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class Bullets : MonoBehaviour
 {
@@ -20,13 +21,10 @@ public class Bullets : MonoBehaviour
 
     private float StartTime = 0;
     private float LifeTime = 5;
-    private Vector3 MoveDirection;
-    private Rigidbody2D Rigidbody;
 
     private void Start()
     {
         StartTime = Time.time;
-        Rigidbody = GetComponentInChildren<Rigidbody2D>();
     }
 
     public void Setup(float speed, float damage, Vector2 direction ,AnimationCurve animationCurve,bool flipCurve,Sprite texture , Weapons.WeaponType type)
@@ -38,7 +36,7 @@ public class Bullets : MonoBehaviour
         GetComponentInChildren<SpriteRenderer>().sprite = texture;
         WeaponType = type;
         FlipCurve = flipCurve;
-        transform.rotation = Quaternion.LookRotation(transform.position - Target.transform.position, Vector3.forward);
+        transform.rotation = Lookat(direction);
     }
 
     public void Setup(float speed, float damage, GameObject target, AnimationCurve animationCurve, bool flipCurve, Sprite texture, Weapons.WeaponType type)
@@ -50,30 +48,41 @@ public class Bullets : MonoBehaviour
         GetComponentInChildren<SpriteRenderer>().sprite = texture;
         WeaponType = type;
         FlipCurve = flipCurve;
-        transform.rotation = Quaternion.LookRotation(transform.position - Target.transform.position, Vector3.forward);
+        transform.rotation = Lookat(Target.transform);
+
     }
 
     private void Update()
     {
         if (WeaponType == Weapons.WeaponType.Bullet)
-            transform.position += (Direction + AnimationCurve.Evaluate(Time.time - StartTime) * transform.right * math.pow(-1, Convert.ToInt32(FlipCurve))) * Speed * Time.deltaTime;
+            transform.position += (Direction + AnimationCurve.Evaluate(Time.time - StartTime) * transform.up * math.pow(-1, Convert.ToInt32(FlipCurve))) * Speed * Time.deltaTime;
         else
         {
-            //transform.rotation = Quaternion.LookRotation(Target.transform.position - transform.position,Vector3.forward);
-            transform.position = Vector3.MoveTowards(transform.position - 0.05f * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right * math.pow(-1,Convert.ToInt32(FlipCurve)), Target.transform.position, Speed *Time.deltaTime);
+            //transform.rotation = Lookat(Target.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position - 0 * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right * math.pow(-1,Convert.ToInt32(FlipCurve)), Target.transform.position, Speed *Time.deltaTime);
         }
 
+        transform.localScale = new Vector3(1,math.pow(-1,Convert.ToInt32(transform.rotation.z < 0)),1);
         if (Time.time > StartTime + LifeTime)
             Destroy(gameObject);
     }
 
-
-    public void OnHit(Collider2D collision)
+    public quaternion Lookat(Transform Target)
     {
-        //Debug.Log("Bullet hit something with tag: " + collision.gameObject.tag);
+        Vector3 Direction = Target.position - transform.position;
+        float angle = Mathf.Atan2(Direction.y, Direction.x);
+        return quaternion.AxisAngle( Vector3.forward,angle);
+    }    
+    public quaternion Lookat(Vector3 Direction)
+    {
+        float angle = Mathf.Atan2(Direction.y, Direction.x);
+        return quaternion.AxisAngle( Vector3.forward,angle);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.tag == "Enemy")
         {
-            //Debug.Log("BulletHits!!!");
             if (collision.GetComponent<Enemy_Main>() != null)
                 collision.GetComponent<Enemy_Main>().Damage(Damage);
             Destroy(gameObject);

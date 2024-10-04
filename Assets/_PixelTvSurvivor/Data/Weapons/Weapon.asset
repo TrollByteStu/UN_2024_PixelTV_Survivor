@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88783c600ca2a22428c92ac31003397d, type: 3}
   m_Name: Weapon
   m_EditorClassIdentifier: 
-  Type: 2
+  Type: 1
   weapon: {fileID: 8308352212180140569, guid: 8817fab004377894c835ea3eaf5b4ebe, type: 3}
   BulletTexture: {fileID: 21300000, guid: 75d5977427bef81489760bf87e3bacf1, type: 3}
-  Bullets: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
+  BulletsPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
   weaponCurve:
     serializedVersion: 2
     m_Curve:
@@ -41,8 +41,8 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 4
   bulletSpeed: 15
-  AttackSpeed: 10
+  AttackSpeed: 1
   AttackDamage: 10
   AttackAOE: 10
-  ShootQuantity: 1
-  FlipCurve: 0
+  ShootQuantity: 2
+  FlipCurve: 1

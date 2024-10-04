@@ -11,7 +11,7 @@ public class Weapons : ScriptableObject
     public WeaponType Type;
     public GameObject weapon;
     public Sprite BulletTexture;
-    public GameObject Bullets;
+    public GameObject BulletsPrefab;
     public AnimationCurve weaponCurve;
     public float bulletSpeed;
     public float AttackSpeed;
@@ -42,10 +42,10 @@ public class Weapons : ScriptableObject
         for (int i = 0; i < ShootQuantity; i++) 
         {
             if (FlipCurve) 
-                Instantiate(Bullets, position + direction,Quaternion.LookRotation(direction,Vector3.forward)).GetComponent<Bullets>()
+                Instantiate(BulletsPrefab, position + direction,Quaternion.identity).GetComponent<Bullets>()
                 .Setup(bulletSpeed,AttackDamage,direction,weaponCurve,Convert.ToBoolean(i % 2),BulletTexture,Type);
             else
-                Instantiate(Bullets, position + direction, Quaternion.LookRotation(direction, Vector3.forward)).GetComponent<Bullets>()
+                Instantiate(BulletsPrefab, position + direction, Quaternion.identity).GetComponent<Bullets>()
                 .Setup(bulletSpeed, AttackDamage, direction, weaponCurve, false, BulletTexture, Type);
 
         }
@@ -72,10 +72,10 @@ public class Weapons : ScriptableObject
             for (int i = 0; i < ShootQuantity && i !< Hits.Count ; i++)
             {
                 if (FlipCurve)
-                    Instantiate(Bullets, position, Quaternion.identity).GetComponent<Bullets>()
+                    Instantiate(BulletsPrefab, position, Quaternion.identity).GetComponent<Bullets>()
                     .Setup(bulletSpeed, AttackDamage, Hits[i].transform.gameObject,weaponCurve, Convert.ToBoolean(i % 2), BulletTexture,Type);
                 else
-                    Instantiate(Bullets, position, Quaternion.identity).GetComponent<Bullets>()
+                    Instantiate(BulletsPrefab, position, Quaternion.identity).GetComponent<Bullets>()
                     .Setup(bulletSpeed, AttackDamage, Hits[i].transform.gameObject, weaponCurve, false, BulletTexture, Type);
             }
         }

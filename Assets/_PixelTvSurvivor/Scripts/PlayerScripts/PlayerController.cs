@@ -84,6 +84,10 @@ public class PlayerController : MonoBehaviour
         if (MoveDirection != Vector2.zero)
         {
             AimDirection = MoveDirection;
+            if (MoveDirection.x < 0)
+                transform.localScale = new Vector3(-.5f, .5f, 1);
+            else
+                transform.localScale = new Vector3(.5f, .5f, 1);
         }
     }
 

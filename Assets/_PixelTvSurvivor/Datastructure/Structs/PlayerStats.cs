@@ -17,6 +17,7 @@ public struct PlayerStats
     public float Area;
     public float XpModifier;
     public float Xp;
+    public float MaxXp;
     public int Level;
     public int Reroll;
 
@@ -35,6 +36,7 @@ public struct PlayerStats
         Area = 1;
         XpModifier = 1;
         Xp = 0;
+        MaxXp = 10;
         Level = 1;
         Reroll = 0;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ public class Weapons : ScriptableObject
     public float AttackSpeed;
     public float AttackDamage;
     public float AttackAOE = 4;
+    public float ShootQuantity = 1;
+    public bool FlipCurve;
 
     public enum WeaponType
     {
@@ -36,8 +39,16 @@ public class Weapons : ScriptableObject
     }
     public void Bullet(Vector3 position , Vector3 direction)
     {
-        Instantiate(Bullets, position + direction,Quaternion.LookRotation(direction,Vector3.forward)).GetComponent<Bullets>()
-            .Setup(bulletSpeed,AttackDamage,direction,weaponCurve,BulletTexture,Type);
+        for (int i = 0; i < ShootQuantity; i++) 
+        {
+            if (FlipCurve) 
+                Instantiate(Bullets, position + direction,Quaternion.LookRotation(direction,Vector3.forward)).GetComponent<Bullets>()
+                .Setup(bulletSpeed,AttackDamage,direction,weaponCurve,Convert.ToBoolean(i % 2),BulletTexture,Type);
+            else
+                Instantiate(Bullets, position + direction, Quaternion.LookRotation(direction, Vector3.forward)).GetComponent<Bullets>()
+                .Setup(bulletSpeed, AttackDamage, direction, weaponCurve, false, BulletTexture, Type);
+
+        }
     }
     public void Homing(Vector3 position)
     {
@@ -55,10 +66,18 @@ public class Weapons : ScriptableObject
         Hits.RemoveAll(h => RemoveList.Contains(h));
         // sorts list based on distance from player
         Hits.Sort((h1, h2) => (h1.transform.position - position).magnitude.CompareTo((h2.transform.position - position).magnitude));
-        if (Hits.Count > 0 ) 
-            Instantiate(Bullets, position, Quaternion.identity).GetComponent<Bullets>()
-                .Setup(bulletSpeed, AttackDamage, Hits[0].transform.gameObject,weaponCurve,BulletTexture,Type);
-        //Instantiate(Bullets, position, Quaternion.LookRotation(Hits[0].transform.position.normalized, Vector3.forward)).GetComponent<Bullets>()
-        //        .Setup(bulletSpeed, AttackDamage, Hits[0].transform.gameObject, weaponCurve, BulletTexture, Type);
+
+        if (Hits.Count > 0 )
+        {
+            for (int i = 0; i < ShootQuantity && i !< Hits.Count ; i++)
+            {
+                if (FlipCurve)
+                    Instantiate(Bullets, position, Quaternion.identity).GetComponent<Bullets>()
+                    .Setup(bulletSpeed, AttackDamage, Hits[i].transform.gameObject,weaponCurve, Convert.ToBoolean(i % 2), BulletTexture,Type);
+                else
+                    Instantiate(Bullets, position, Quaternion.identity).GetComponent<Bullets>()
+                    .Setup(bulletSpeed, AttackDamage, Hits[i].transform.gameObject, weaponCurve, false, BulletTexture, Type);
+            }
+        }
     }
 }

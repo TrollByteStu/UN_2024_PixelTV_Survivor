@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class Bullets : MonoBehaviour
 {
@@ -12,17 +16,20 @@ public class Bullets : MonoBehaviour
     public GameObject Target;
     public AnimationCurve AnimationCurve;
     public Weapons.WeaponType WeaponType;
+    public bool FlipCurve;
 
     private float StartTime = 0;
     private float LifeTime = 5;
-    private Vector3 moveDirection;
+    private Vector3 MoveDirection;
+    private Rigidbody2D Rigidbody;
 
     private void Start()
     {
         StartTime = Time.time;
+        Rigidbody = GetComponentInChildren<Rigidbody2D>();
     }
 
-    public void Setup(float speed, float damage, Vector2 direction ,AnimationCurve animationCurve,Sprite texture , Weapons.WeaponType type)
+    public void Setup(float speed, float damage, Vector2 direction ,AnimationCurve animationCurve,bool flipCurve,Sprite texture , Weapons.WeaponType type)
     {
         Speed = speed;
         Damage = damage;
@@ -30,9 +37,11 @@ public class Bullets : MonoBehaviour
         AnimationCurve = animationCurve;
         GetComponentInChildren<SpriteRenderer>().sprite = texture;
         WeaponType = type;
+        FlipCurve = flipCurve;
+        transform.rotation = Quaternion.LookRotation(transform.position - Target.transform.position, Vector3.forward);
     }
 
-    public void Setup(float speed, float damage, GameObject target, AnimationCurve animationCurve, Sprite texture, Weapons.WeaponType type)
+    public void Setup(float speed, float damage, GameObject target, AnimationCurve animationCurve, bool flipCurve, Sprite texture, Weapons.WeaponType type)
     {
         Speed = speed;
         Damage = damage;
@@ -40,36 +49,33 @@ public class Bullets : MonoBehaviour
         AnimationCurve = animationCurve;
         GetComponentInChildren<SpriteRenderer>().sprite = texture;
         WeaponType = type;
+        FlipCurve = flipCurve;
+        transform.rotation = Quaternion.LookRotation(transform.position - Target.transform.position, Vector3.forward);
     }
 
     private void Update()
     {
         if (WeaponType == Weapons.WeaponType.Bullet)
-            transform.position += (Direction + AnimationCurve.Evaluate(Time.time - StartTime) * transform.right) * Speed * Time.deltaTime;
+            transform.position += (Direction + AnimationCurve.Evaluate(Time.time - StartTime) * transform.right * math.pow(-1, Convert.ToInt32(FlipCurve))) * Speed * Time.deltaTime;
         else
         {
-            //Quaternion.LookRotation(Target.transform.position);
-            transform.position = Vector3.MoveTowards(transform.position - 0.05f * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right, Target.transform.position, Speed *Time.deltaTime);
-            // testing:
-            moveDirection = Target.transform.position - transform.position;
-            if (moveDirection != Vector3.zero)
-            {
-                float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            }
+            //transform.rotation = Quaternion.LookRotation(Target.transform.position - transform.position,Vector3.forward);
+            transform.position = Vector3.MoveTowards(transform.position - 0.05f * AnimationCurve.Evaluate(Time.time - StartTime) * transform.right * math.pow(-1,Convert.ToInt32(FlipCurve)), Target.transform.position, Speed *Time.deltaTime);
         }
 
         if (Time.time > StartTime + LifeTime)
             Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void OnHit(Collider2D collision)
     {
         //Debug.Log("Bullet hit something with tag: " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("BulletHits!!!");
-            collision.GetComponent<Enemy_Main>().Damage(Damage);
+            //Debug.Log("BulletHits!!!");
+            if (collision.GetComponent<Enemy_Main>() != null)
+                collision.GetComponent<Enemy_Main>().Damage(Damage);
             Destroy(gameObject);
         }
     }

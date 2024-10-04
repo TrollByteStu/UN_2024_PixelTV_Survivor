@@ -41,6 +41,8 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 4
   bulletSpeed: 15
-  AttackSpeed: 1
+  AttackSpeed: 10
   AttackDamage: 10
   AttackAOE: 10
+  ShootQuantity: 1
+  FlipCurve: 0

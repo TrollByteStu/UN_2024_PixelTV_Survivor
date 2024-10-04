@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         Movement();
         Attacks();
         //print(math.pow(Stats.Level *10,1.4f));
+        
     }
 
     private Vector2 MoveDirection;

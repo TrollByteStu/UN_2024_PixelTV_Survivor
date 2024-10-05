@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 648489790}
   - component: {fileID: 648489791}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: GlobalLight 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000009fff212865b10dd407a0649b
@@ -903,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6128637384264544530, guid: e5532717b3172be4facae59b2fafa8d0, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6128637384264544530, guid: e5532717b3172be4facae59b2fafa8d0, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.size
@@ -1635,7 +1635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6128637384264544530, guid: e5532717b3172be4facae59b2fafa8d0, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6128637384264544530, guid: e5532717b3172be4facae59b2fafa8d0, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[1].Array.size
@@ -2439,6 +2439,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_BlendStyleIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_NormalMapQuality
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_OverlapOperation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_LightVolumeIntensity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_LightVolumeIntensityEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321571983564712132, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: m_ShadowVolumeIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5717821040084105354, guid: de0b145276da4e548b85c2fa91061800, type: 3}
       propertyPath: m_Name
       value: Player_UnluckyIntern
@@ -2449,6 +2485,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6365954872489682157, guid: de0b145276da4e548b85c2fa91061800, type: 3}
       propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414803333860801162, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7928294290991414138, guid: de0b145276da4e548b85c2fa91061800, type: 3}

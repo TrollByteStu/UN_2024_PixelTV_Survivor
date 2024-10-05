@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 809d22c1571d5924d801648af08e56f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1687904249
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemytype: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
+  XpOrb: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
   myStats:
     MaxHealth: 20
     Health: 20
@@ -111,7 +112,6 @@ MonoBehaviour:
     AttackRange: 2
     XpValue: 0
     PointValue: 0
-  XpOrb: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
 --- !u!61 &2647032646040814274
 BoxCollider2D:
   m_ObjectHideFlags: 0

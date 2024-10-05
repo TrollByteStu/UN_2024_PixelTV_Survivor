@@ -58,4 +58,10 @@ public class UI_HUD : MonoBehaviour
         XpText.text = PlayerStatRef.Xp + "/" + math.pow(PlayerStatRef.Level * 10, 1.4f);
         XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
     }
+
+    public void PlayerIsDead()
+    {
+        Section_HUD.localScale = new Vector2(0, 0);
+        Section_Looser.localScale = new Vector2(1, 1);
+    }
 }

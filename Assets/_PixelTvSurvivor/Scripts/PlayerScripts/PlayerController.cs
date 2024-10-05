@@ -69,6 +69,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PlayerTakesDamage(float damage)
+    {
+        // play sound of player moaning/complaining?
+        Stats.Health -= math.clamp( damage - Stats.Armor,0,999999999);
+        if (Stats.Health < 0) GameController.Instance.PlayerIsDead();
+    }
     public void AddPoints(int Points)
     {
         Stats.Points += Points;

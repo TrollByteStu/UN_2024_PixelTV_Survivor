@@ -53,8 +53,10 @@ public class Enemy_Main : MonoBehaviour
     {
         // Still not recovered from last attack on player
         if (myLastAttackTime + myStats.AttackSpeed > Time.time) return;
-
-
+        // play sound of zombie attacking?!?
+        GameController.Instance.PlayerReference.PlayerTakesDamage(myStats.AttackDamage);
+        // possibly blood particles?!?
+        myLastAttackTime = Time.time;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -22,4 +22,10 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void PlayerIsDead()
+    {
+        Time.timeScale = 0;
+        UI_HUD.Instance.PlayerIsDead();
+    }
+
 }

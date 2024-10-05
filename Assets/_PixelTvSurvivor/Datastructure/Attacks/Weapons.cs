@@ -33,7 +33,7 @@ public class Weapons : ScriptableObject
         {
             if (Hit.transform.CompareTag("Enemy"))
             {
-                Hit.transform.GetComponent<Enemy_Main>().Damage(AttackDamage);
+                Hit.transform.GetComponent<Enemy_Main>().EnemyTakesDamage(AttackDamage);
             }
         }
     }

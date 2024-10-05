@@ -10,6 +10,10 @@ public class Enemy_Main : MonoBehaviour
 
     public Transform playerRef;
 
+    // enemy attack
+    private float myLastAttackTime;
+
+    // bumping into walls the ugly way
     private Vector3 thisPosition;
     private Vector3 lastPosition;
 
@@ -27,9 +31,10 @@ public class Enemy_Main : MonoBehaviour
         lastPosition = thisPosition;
         thisPosition = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
     }
 
-    public void Damage(float damage)
+    public void EnemyTakesDamage(float damage)
     {
         myStats.Health -= damage;
         if (myStats.Health <= 0) EnemyDies();
@@ -39,8 +44,17 @@ public class Enemy_Main : MonoBehaviour
     {
         // add effects and sounds
         // spawn pickups?
+        GameController.Instance.PlayerReference.AddPoints(myStats.PointValue);
         GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
         Destroy(gameObject);
+    }
+
+    public void EnemyAttacksPlayer()
+    {
+        // Still not recovered from last attack on player
+        if (myLastAttackTime + myStats.AttackSpeed > Time.time) return;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

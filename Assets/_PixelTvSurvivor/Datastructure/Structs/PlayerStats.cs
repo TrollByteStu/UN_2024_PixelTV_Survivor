@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 public struct PlayerStats
 {
     public string Name;
+    public int Points;
     public float MaxHealth;
     public float HealthModifier;
     public float Health;
@@ -17,13 +18,13 @@ public struct PlayerStats
     public float Area;
     public float XpModifier;
     public float Xp;
-    public float MaxXp;
     public int Level;
     public int Reroll;
 
     public PlayerStats (string name, float maxhealth, float health, float recovery,float armor, float movespeed)
     {
         Name = name;
+        Points = 0;
         MaxHealth = maxhealth;
         HealthModifier = 1;
         Health = health;
@@ -36,7 +37,6 @@ public struct PlayerStats
         Area = 1;
         XpModifier = 1;
         Xp = 0;
-        MaxXp = 10;
         Level = 1;
         Reroll = 0;
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -37,6 +38,10 @@ public class UI_HUD : MonoBehaviour
         {
             Instance = this;
         }
+        // show only HUD for now
+        Section_HUD.localScale = new Vector2(1, 1);
+        Section_Looser.localScale = new Vector2(0, 0);
+        Section_Upgrade.localScale = new Vector2(0, 0);
     }
 
     // Update is called once per frame
@@ -50,7 +55,7 @@ public class UI_HUD : MonoBehaviour
         HealthSlider.localScale = new Vector2(PlayerStatRef.Health / PlayerStatRef.MaxHealth, 1);
 
         // XP
-        XpText.text = PlayerStatRef.Xp + "/" + PlayerStatRef.MaxXp;
-        XpSlider.localScale = new Vector2(PlayerStatRef.Xp / PlayerStatRef.MaxXp,1);
+        XpText.text = PlayerStatRef.Xp + "/" + math.pow(PlayerStatRef.Level * 10, 1.4f);
+        XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
     }
 }

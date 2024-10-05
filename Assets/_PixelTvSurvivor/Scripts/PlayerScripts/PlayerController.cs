@@ -68,7 +68,11 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+
+    public void AddPoints(int Points)
+    {
+        Stats.Points += Points;
+    }
     public void AddXp(float xp)
     {
         Stats.Xp += xp * Stats.XpModifier;
@@ -78,7 +82,9 @@ public class PlayerController : MonoBehaviour
     public void LevelUp()
     {
         Stats.Level++;
+        Stats.Xp = 0;
     }
+
     // Event called by Player Input Component on press and release of move keybind
     public void OnMove(InputAction.CallbackContext context)
     {

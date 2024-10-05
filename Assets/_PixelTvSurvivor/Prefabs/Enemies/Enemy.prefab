@@ -109,7 +109,9 @@ MonoBehaviour:
     AttackDamage: 5
     AttackSpeed: 2
     AttackRange: 2
-  playerRef: {fileID: 0}
+    XpValue: 0
+    PointValue: 0
+  XpOrb: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
 --- !u!61 &2647032646040814274
 BoxCollider2D:
   m_ObjectHideFlags: 0

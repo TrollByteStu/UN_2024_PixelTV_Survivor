@@ -5,10 +5,10 @@ using UnityEngine;
 public class Enemy_Main : MonoBehaviour
 {
     public EnemyCharacter enemytype;
+    public GameObject XpOrb;
     public EnemyStats myStats;
 
-
-    public Transform playerRef;
+    private Transform playerRef;
 
     // enemy attack
     private float myLastAttackTime;
@@ -20,7 +20,7 @@ public class Enemy_Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerRef = GameObject.FindGameObjectWithTag("Player").transform;
+        playerRef = GameController.Instance.PlayerReference.transform;
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
     }
@@ -45,7 +45,8 @@ public class Enemy_Main : MonoBehaviour
         // add effects and sounds
         // spawn pickups?
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue);
-        GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
+        Instantiate(XpOrb,transform.position,Quaternion.identity).GetComponent<XpOrb>().xp = myStats.XpValue;
+        //GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
         Destroy(gameObject);
     }
 

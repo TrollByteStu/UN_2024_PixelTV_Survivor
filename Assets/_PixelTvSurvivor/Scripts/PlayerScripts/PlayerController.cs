@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         Attacks();
-        //print(math.pow(Stats.Level *10,1.4f));
+        PickupXP();
         
     }
 
@@ -68,7 +68,14 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+    void PickupXP()
+    {
+        foreach (RaycastHit2D hit in Physics2D.CircleCastAll(transform.position, 5, Vector3.forward))
+        {
+            if (hit.transform.GetComponent<XpOrb>() != null)
+                hit.transform.GetComponent<XpOrb>().MoveToPlayer = true;
+        }
+    }
     public void PlayerTakesDamage(float damage)
     {
         // play sound of player moaning/complaining?

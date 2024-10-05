@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class XpOrb : MonoBehaviour
 {
-    public float xp;
-    public SpriteRenderer SpriteRenderer;
+    private SpriteRenderer SpriteRenderer;
+    private GameObject Player;
 
+    public float xp;
+    public bool MoveToPlayer;
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameController.Instance.PlayerReference.gameObject;
         SpriteRenderer = GetComponent<SpriteRenderer>();
         switch (xp)
         {
@@ -31,6 +34,14 @@ public class XpOrb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (MoveToPlayer)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position , (Vector3.Distance(transform.position, Player.transform.position) + 5)  * Time.deltaTime);
+            if (Vector3.Distance(transform.position, Player.transform.position) < 0.1f)
+            {
+                GameController.Instance.PlayerReference.AddXp(xp);
+                Destroy(gameObject);
+            }
+        }
     }
 }

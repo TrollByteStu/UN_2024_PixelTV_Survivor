@@ -590,7 +590,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1480154835925085407, guid: a84984d8853ba70498d7c4e429c33a4a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1918809828559128502, guid: a84984d8853ba70498d7c4e429c33a4a, type: 3}
       propertyPath: m_Pivot.x
@@ -670,6 +670,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1918809828559128502, guid: a84984d8853ba70498d7c4e429c33a4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3977201504907389572, guid: a84984d8853ba70498d7c4e429c33a4a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646426918843343344, guid: a84984d8853ba70498d7c4e429c33a4a, type: 3}

@@ -11,6 +11,7 @@ public class UI_HUD : MonoBehaviour
     public RectTransform Section_HUD;
     public RectTransform Section_Looser;
     public RectTransform Section_Upgrade;
+    public RectTransform Section_Upgrade_List;
 
     [Space(10)]
 
@@ -21,6 +22,9 @@ public class UI_HUD : MonoBehaviour
     [Header("XP Settings")]
     public RectTransform XpSlider;
     public TMP_Text XpText;
+
+    [Header("Prefabs to spawn in UI")]
+    public GameObject UpgradeIconPrefab;
 
     // Make it a singleton
     public static UI_HUD Instance { get; private set; }
@@ -38,10 +42,13 @@ public class UI_HUD : MonoBehaviour
         {
             Instance = this;
         }
-        // show only HUD for now
+        // show only HUD for now, but activate all
         Section_HUD.localScale = new Vector2(1, 1);
+        Section_HUD.gameObject.SetActive(true);
         Section_Looser.localScale = new Vector2(0, 0);
+        Section_Looser.gameObject.SetActive(true);
         Section_Upgrade.localScale = new Vector2(0, 0);
+        Section_Upgrade.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -55,7 +62,7 @@ public class UI_HUD : MonoBehaviour
         HealthSlider.localScale = new Vector2(PlayerStatRef.Health / PlayerStatRef.MaxHealth, 1);
 
         // XP
-        XpText.text = PlayerStatRef.Xp + "/" + math.pow(PlayerStatRef.Level * 10, 1.4f);
+        XpText.text = PlayerStatRef.Xp + "/" +math.floor( math.pow(PlayerStatRef.Level * 10, 1.4f) );
         XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
     }
 

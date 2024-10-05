@@ -46,9 +46,15 @@ TagManager:
   - name: Ground
     uniqueID: 673316767
     locked: 0
+  - name: Effects_Particles
+    uniqueID: 3583827203
+    locked: 0
   - name: Walls
     uniqueID: 3557667173
     locked: 0
   - name: Entities
     uniqueID: 2607063047
+    locked: 0
+  - name: Effects_Fog
+    uniqueID: 1292685357
     locked: 0

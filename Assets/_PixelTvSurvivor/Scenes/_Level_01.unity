@@ -527,6 +527,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1992508398}
     m_Modifications:
+    - target: {fileID: 2602850772845630815, guid: b6c7bb82904530241b59e27e6d259f9a, type: 3}
+      propertyPath: listOfSpawnableEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ef43694fb56cdf642b263fd918067fa8, type: 2}
     - target: {fileID: 2776648307843490263, guid: b6c7bb82904530241b59e27e6d259f9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.35

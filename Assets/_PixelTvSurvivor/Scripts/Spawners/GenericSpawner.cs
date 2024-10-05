@@ -11,6 +11,7 @@ public class GenericSpawner : MonoBehaviour
     public float spawnDelay;
 
     private float lastSpawn;
+    private int spawntype;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +26,14 @@ public class GenericSpawner : MonoBehaviour
         {
             if (Time.time > lastSpawn )
             {
+                spawntype = Random.Range(0, listOfSpawnableEnemies.Length - 1);
                 var enemy = Instantiate( genericEnemyPrefab );
                 var enemyscript = enemy.GetComponent<Enemy_Main>();
+                enemyscript.enemytype = listOfSpawnableEnemies[spawntype];
                 enemy.transform.SetParent(transform);
                 enemy.transform.localPosition = Vector3.zero;
                 enemy.transform.localScale = new Vector3(enemyscript.enemytype.spriteScale, enemyscript.enemytype.spriteScale,1);
+                enemy.GetComponent<SpriteRenderer>().color = enemyscript.enemytype.spriteColor;
                 lastSpawn = Time.time + spawnDelay;
             }
         }

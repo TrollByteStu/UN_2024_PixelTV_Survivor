@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
+  m_Name: ZomieRage
+  m_EditorClassIdentifier: 
+  EnemyName: Rage Zombie
+  Stats:
+    MaxHealth: 30
+    Health: 30
+    MoveSpeed: 0.6
+    AttackDamage: 15
+    AttackSpeed: 1
+    AttackRange: 2
+    XpValue: 1
+    PointValue: 1
+  enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
+  spriteScale: 0.25
+  spriteColor:
+    serializedVersion: 2
+    rgba: 4278190335
+  enemyAudioWalk: []
+  enemyAudioWalkProbablity: 0.1
+  enemyAudioAttack: []
+  enemyAudioAttackProbablity: 0.33
+  enemyAudioDeath: []
+  enemyAudioDeathProbablity: 0.25

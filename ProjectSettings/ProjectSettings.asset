@@ -722,8 +722,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: UN_PixelTV_2024_Survivor
-  metroPackageVersion: 
+  metroPackageName: UNPixelTV2024Survivor
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -731,7 +731,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: UN_PixelTV_2024_Survivor
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: UN_PixelTV_2024_Survivor
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

@@ -90,7 +90,10 @@ public class PlayerController : MonoBehaviour
     {
         Stats.Xp += xp * Stats.XpModifier;
         if (Stats.Xp > math.pow(Stats.Level * 10, 1.4f))
+        {
             LevelUp();
+            UI_HUD.Instance.UpgradeShow();
+        }
     }
     public void LevelUp()
     {

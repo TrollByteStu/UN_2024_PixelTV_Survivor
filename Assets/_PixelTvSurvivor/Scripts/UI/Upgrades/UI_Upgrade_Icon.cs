@@ -13,6 +13,12 @@ public class UI_Upgrade_Icon : MonoBehaviour
     public TMP_Text UpgradeFlavor;
 
     private PlayerController PlayerRef;
+    public void SetUp()
+    {
+        UpgradeTitle.text = chosenUpgradeType.UpgradeName;
+        UpgradeIcon.sprite = chosenUpgradeType.upgradeSprite;
+        UpgradeFlavor.text = chosenUpgradeType.UpgradeFlavor;
+    }
     public void ChooseUpgradeButton()
     {
         // basic prep

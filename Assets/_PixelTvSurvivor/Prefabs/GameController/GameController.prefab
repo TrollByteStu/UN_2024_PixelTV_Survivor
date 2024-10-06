@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa54cb8e89a61f4a875a75779bbfc6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerReference: {fileID: 0}
+  allUpgradesInGame:
+  - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}

@@ -76,12 +76,59 @@ public class UI_HUD : MonoBehaviour
     {
         Time.timeScale = 0;
         Section_HUD.localScale = new Vector2(0, 0);
-        Section_Looser.localScale = new Vector2(1, 1);
+        Section_Upgrade.localScale = new Vector2(1, 1);
+        // get upgrades to list
+        var acceptableUpgrades = UpgradeShow_GetListOfUpgrades();
+        // remove old list
+        while (Section_Upgrade_List.childCount > 0) Destroy(Section_Upgrade_List.GetChild(0).gameObject);
+        if ( acceptableUpgrades.Length > 0)
+        { // show the upgrade buttons
+            for ( int i = 0 ; i < acceptableUpgrades.Length ; i++ )
+            {
+                if ( acceptableUpgrades[i] != null)
+                {
+                     var newUI = Instantiate(UpgradeIconPrefab);
+                    newUI.transform.SetParent(Section_Upgrade_List);
+                    var newUIscript = newUI.GetComponent<UI_Upgrade_Icon>();
+                    newUIscript.chosenUpgradeType = acceptableUpgrades[i];
+                    newUIscript.SetUp();
+                    var rectTransform = newUI.GetComponent<RectTransform>();
+                    rectTransform.localPosition = new Vector2(0, 0);
+                }
+            }
+        } else
+        { // no upgrade buttons to show
+            UpgradeHide();
+        }
+    }
+    public UpgradeScriptable[] UpgradeShow_GetListOfUpgrades()
+    { // get the full list of upgrades to show the player
+        var outputList = new UpgradeScriptable[3];
+        int counter = 0;
+        var completeList = GameController.Instance.allUpgradesInGame;
+        var playerRef = GameController.Instance.PlayerReference;
+        // go through them all
+        foreach (UpgradeScriptable testThis in completeList)
+        {
+            if ( UpgradeShow_TestUpgrade( testThis , playerRef ) && counter< 3 )
+            { // this works and we have not exceeded our max
+                outputList[counter] = testThis;
+            }
+        }
+        return outputList;
+    }
+    public bool UpgradeShow_TestUpgrade(UpgradeScriptable testThis, PlayerController playerRef)
+    { // can this upgrade be show to this player at this time?
+        // the many reasons it can fail
+        if (testThis.UpgradeName.Length < 1) return false;
+        if (testThis.levelRequired > playerRef.Stats.Level) return false;
+        // no fails means it should be shown
+        return true;
     }
     public void UpgradeHide()
     {
         Time.timeScale = 1;
         Section_HUD.localScale = new Vector2(1, 1);
-        Section_Looser.localScale = new Vector2(0, 0);
+        Section_Upgrade.localScale = new Vector2(0, 0);
     }
 }

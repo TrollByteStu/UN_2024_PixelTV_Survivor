@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
 
     public PlayerController PlayerReference;
 
+    public UpgradeScriptable[] allUpgradesInGame;
+
     private void Awake()
     {
         // Make it a singleton, and prevent duplicates

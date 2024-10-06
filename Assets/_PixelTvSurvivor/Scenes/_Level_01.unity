@@ -2475,6 +2475,10 @@ PrefabInstance:
       propertyPath: m_ShadowVolumeIntensityEnabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 797986456139938501, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: Stats.Xp
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5717821040084105354, guid: de0b145276da4e548b85c2fa91061800, type: 3}
       propertyPath: m_Name
       value: Player_UnluckyIntern

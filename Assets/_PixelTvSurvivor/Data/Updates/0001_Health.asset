@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeName: Morgen Pushups
   upgradeSprite: {fileID: 21300000, guid: d08c160f2d73a8e44a6208cdf95fa7cf, type: 3}
+  UpgradeFlavor: Hop ud af sengen og lav pushups
   levelRequired: 1
   requiedWeapon:
     Weapon: {fileID: 0}

@@ -11,6 +11,9 @@ public class UpgradeScriptable : ScriptableObject
     [Tooltip("The image of this Upgrade")]
     public Sprite upgradeSprite;
 
+    [Tooltip("The flavor text of this Upgrade")]
+    public string UpgradeFlavor;
+
     [Tooltip("The Level requires for this upgrade")]
     public int levelRequired = 0;
 

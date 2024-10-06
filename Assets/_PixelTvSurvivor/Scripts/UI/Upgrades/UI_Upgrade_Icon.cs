@@ -6,20 +6,30 @@ using TMPro;
 
 public class UI_Upgrade_Icon : MonoBehaviour
 {
+    public UpgradeScriptable chosenUpgradeType;
 
     public TMP_Text UpgradeTitle;
     public Image UpgradeIcon;
     public TMP_Text UpgradeFlavor;
 
-    // Start is called before the first frame update
-    void Start()
+    private PlayerController PlayerRef;
+    public void ChooseUpgradeButton()
     {
-        
-    }
+        // basic prep
+        UI_HUD.Instance.UpgradeHide();
+        PlayerRef = GameController.Instance.PlayerReference;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // actually upgrade stats
+        if (chosenUpgradeType.Stats.MaxHealthIncrease > 0) PlayerRef.Stats.MaxHealth += chosenUpgradeType.Stats.MaxHealthIncrease;
+        if (chosenUpgradeType.Stats.HealthModifierIncrease > 0) PlayerRef.Stats.HealthModifier += chosenUpgradeType.Stats.HealthModifierIncrease;
+        if (chosenUpgradeType.Stats.RecoveryIncrease > 0) PlayerRef.Stats.Recovery += chosenUpgradeType.Stats.RecoveryIncrease;
+        if (chosenUpgradeType.Stats.ArmorIncrease > 0) PlayerRef.Stats.Armor += chosenUpgradeType.Stats.ArmorIncrease;
+        if (chosenUpgradeType.Stats.MoveSpeedIncrease > 0) PlayerRef.Stats.MoveSpeed += chosenUpgradeType.Stats.MoveSpeedIncrease;
+        if (chosenUpgradeType.Stats.MoveSpeedModifierIncrease > 0) PlayerRef.Stats.MoveSpeedModifier += chosenUpgradeType.Stats.MoveSpeedModifierIncrease;
+        if (chosenUpgradeType.Stats.DamageModifierIncrease > 0) PlayerRef.Stats.DamageModifier += chosenUpgradeType.Stats.DamageModifierIncrease;
+        if (chosenUpgradeType.Stats.CooldownModifierIncrease > 0) PlayerRef.Stats.CooldownModifier += chosenUpgradeType.Stats.CooldownModifierIncrease;
+        if (chosenUpgradeType.Stats.XpModifierIncrease > 0) PlayerRef.Stats.XpModifier += chosenUpgradeType.Stats.XpModifierIncrease;
+
+        // actually add/upgrade weapons
     }
 }

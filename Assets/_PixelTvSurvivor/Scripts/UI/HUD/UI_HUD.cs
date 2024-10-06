@@ -71,4 +71,17 @@ public class UI_HUD : MonoBehaviour
         Section_HUD.localScale = new Vector2(0, 0);
         Section_Looser.localScale = new Vector2(1, 1);
     }
+
+    public void UpgradeShow()
+    {
+        Time.timeScale = 0;
+        Section_HUD.localScale = new Vector2(0, 0);
+        Section_Looser.localScale = new Vector2(1, 1);
+    }
+    public void UpgradeHide()
+    {
+        Time.timeScale = 1;
+        Section_HUD.localScale = new Vector2(1, 1);
+        Section_Looser.localScale = new Vector2(0, 0);
+    }
 }

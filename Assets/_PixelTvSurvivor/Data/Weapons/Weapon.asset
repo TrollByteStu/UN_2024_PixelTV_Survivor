@@ -40,9 +40,20 @@ MonoBehaviour:
     m_PreInfinity: 0
     m_PostInfinity: 0
     m_RotationOrder: 4
-  bulletSpeed: 15
-  AttackSpeed: 1
-  AttackDamage: 10
-  AttackAOE: 10
-  ShootQuantity: 2
   FlipCurve: 1
+  LevelStats:
+  - bulletSpeed: 15
+    AttackSpeed: 1
+    AttackDamage: 1
+    AttackAOE: 0
+    ShootQuantity: 1
+  - bulletSpeed: 15
+    AttackSpeed: 1
+    AttackDamage: 1
+    AttackAOE: 0
+    ShootQuantity: 2
+  - bulletSpeed: 15
+    AttackSpeed: 1
+    AttackDamage: 1
+    AttackAOE: 0
+    ShootQuantity: 3

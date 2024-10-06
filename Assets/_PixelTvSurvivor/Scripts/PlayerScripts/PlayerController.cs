@@ -50,17 +50,17 @@ public class PlayerController : MonoBehaviour
         {
             if (WeaponsList[i].LastShot < Time.time )
             {
-                WeaponsList[i].LastShot = Time.time + WeaponsList[i].Weapon.AttackSpeed * Stats.CooldownModifier;
+                WeaponsList[i].LastShot = Time.time + WeaponsList[i].Weapon.LevelStats[WeaponsList[i].Level].AttackSpeed * Stats.CooldownModifier;
                 switch (WeaponsList[i].Weapon.Type)
                 {
                     case Weapons.WeaponType.Aura:
-                        WeaponsList[i].Weapon.Aura(transform.position, Stats.Area,Stats.DamageModifier);
+                        WeaponsList[i].Weapon.Aura(WeaponsList[i].Level, transform.position, Stats.Area,Stats.DamageModifier);
                         break;
                     case Weapons.WeaponType.Bullet:
-                        WeaponsList[i].Weapon.Bullet(transform.position, AimDirection);
+                        WeaponsList[i].Weapon.Bullet(WeaponsList[i].Level,transform.position, AimDirection, Stats.DamageModifier);
                         break;
                     case Weapons.WeaponType.Homing:
-                        WeaponsList[i].Weapon.Homing(transform.position);
+                        WeaponsList[i].Weapon.Homing(WeaponsList[i].Level,transform.position, Stats.DamageModifier);
                         break;
                     default:
                         break;

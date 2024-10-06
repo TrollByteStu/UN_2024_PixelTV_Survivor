@@ -4,7 +4,7 @@ public struct WeaponStats
 {
     public Weapons Weapon;
     public float LastShot;
-    public float Level;
+    public int Level;
 
     public WeaponStats(Weapons weapon)
     {
@@ -12,7 +12,7 @@ public struct WeaponStats
         LastShot = 0;
         Level = 0;
     }
-    public WeaponStats(Weapons weapon, float level)
+    public WeaponStats(Weapons weapon, int level)
     {
         Weapon = weapon;
         LastShot = 0;

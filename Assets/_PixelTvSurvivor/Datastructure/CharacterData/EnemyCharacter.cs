@@ -17,8 +17,11 @@ public class EnemyCharacter : ScriptableObject
     [Tooltip("the size scale of this enemy")]
     public float spriteScale = 1;
 
-    [Tooltip("thecolor of this enemy")]
+    [Tooltip("the color of this enemy")]
     public Color32 spriteColor = Color.white;
+
+    [Tooltip("the color of the blood/gunk this enemy spews when hit")]
+    public Color32 bloodColor = Color.red;
 
     [Tooltip("the list of sounds for Walk")]
     public AudioClip[] enemyAudioWalk;

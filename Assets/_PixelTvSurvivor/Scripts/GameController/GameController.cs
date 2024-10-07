@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour
 
     public PlayerController PlayerReference;
 
+    [Header("Prefabs")]
+    public GameObject[] BloodSplatPrefabs;
+
     public UpgradeScriptable[] allUpgradesInGame;
 
     private void Awake()

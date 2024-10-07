@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerReference: {fileID: 0}
+  BloodSplatPrefabs:
+  - {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
   allUpgradesInGame:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}

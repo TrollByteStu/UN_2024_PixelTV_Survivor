@@ -47,6 +47,14 @@ public class Enemy_Main : MonoBehaviour
     {
         myStats.Health -= damage;
         if (myStats.Health <= 0) EnemyDies();
+        else EnemyDropsBlood();
+    }
+
+    public void EnemyDropsBlood()
+    {
+        var blood = Instantiate(GameController.Instance.BloodSplatPrefabs[0], transform.position,Quaternion.identity);
+        Destroy(blood, 2);
+        blood.GetComponent<SpriteRenderer>().color = enemytype.bloodColor;
     }
 
     public void EnemyDies()

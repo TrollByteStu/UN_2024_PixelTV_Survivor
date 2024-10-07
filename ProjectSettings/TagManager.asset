@@ -52,6 +52,9 @@ TagManager:
   - name: Walls
     uniqueID: 3557667173
     locked: 0
+  - name: Bloodsplat
+    uniqueID: 1884156593
+    locked: 0
   - name: Entities
     uniqueID: 2607063047
     locked: 0

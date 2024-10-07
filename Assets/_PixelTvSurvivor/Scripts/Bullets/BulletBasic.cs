@@ -11,7 +11,5 @@ public class BulletBasic : BulletBase
         transform.position += (Direction + AnimationCurve.Evaluate(Time.time - StartTime) * transform.up * math.pow(-1, Convert.ToInt32(FlipCurve))) * Speed * Time.deltaTime;
 
         transform.localScale = new Vector3(1, math.pow(-1, Convert.ToInt32(transform.rotation.z < 0)), 1);
-        if (Time.time > StartTime + LifeTime)
-            Destroy(gameObject);
     }
 }

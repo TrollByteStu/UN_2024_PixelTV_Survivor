@@ -15,9 +15,10 @@ public class BulletBase : MonoBehaviour
     protected float StartTime = 0;
     protected float LifeTime = 5;
 
-    protected void Start()
+    protected virtual void Start()
     {
         StartTime = Time.time;
+        Destroy(gameObject,LifeTime);
     }
 
     public void Setup(float speed, float damage, Vector2 direction ,AnimationCurve animationCurve,bool flipCurve,Sprite texture)

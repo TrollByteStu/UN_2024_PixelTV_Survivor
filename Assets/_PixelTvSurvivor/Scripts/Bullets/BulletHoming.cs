@@ -17,7 +17,5 @@ public class BulletHoming : BulletBase
 
         //transform.localScale = new Vector3(1, math.pow(-1, Convert.ToInt32(transform.rotation.z < 90 || transform.rotation.z > 270)), 1);
 
-        if (Time.time > StartTime + LifeTime)
-            Destroy(gameObject);
     }
 }

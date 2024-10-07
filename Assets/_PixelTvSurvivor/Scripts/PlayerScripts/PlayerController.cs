@@ -1,11 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -50,21 +46,9 @@ public class PlayerController : MonoBehaviour
         {
             if (WeaponsList[i].LastShot < Time.time )
             {
-                WeaponsList[i].LastShot = Time.time + WeaponsList[i].Weapon.LevelStats[WeaponsList[i].Level].AttackSpeed * Stats.CooldownModifier;
-                switch (WeaponsList[i].Weapon.Type)
-                {
-                    case Weapons.WeaponType.Aura:
-                        WeaponsList[i].Weapon.Aura(WeaponsList[i].Level, transform.position, Stats.Area,Stats.DamageModifier);
-                        break;
-                    case Weapons.WeaponType.Bullet:
-                        WeaponsList[i].Weapon.Bullet(WeaponsList[i].Level,transform.position, AimDirection, Stats.DamageModifier);
-                        break;
-                    case Weapons.WeaponType.Homing:
-                        WeaponsList[i].Weapon.Homing(WeaponsList[i].Level,transform.position, Stats.DamageModifier);
-                        break;
-                    default:
-                        break;
-                }
+                WeaponsList[i].LastShot = Time.time + WeaponsList[i].Weapon.GetAttackSpeed(WeaponsList[i].Level) * Stats.CooldownModifier;
+                WeaponsList[i].Weapon.Attack(WeaponsList[i].Level, transform.position, AimDirection, Stats);
+            
             }
         }
     }

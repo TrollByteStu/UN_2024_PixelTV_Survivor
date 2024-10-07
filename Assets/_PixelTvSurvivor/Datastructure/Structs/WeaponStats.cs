@@ -2,17 +2,17 @@ using System;
 [Serializable]
 public struct WeaponStats
 {
-    public Weapons Weapon;
+    public WeaponBase Weapon;
     public float LastShot;
     public int Level;
 
-    public WeaponStats(Weapons weapon)
+    public WeaponStats(WeaponBase weapon)
     {
         Weapon = weapon;
         LastShot = 0;
         Level = 0;
     }
-    public WeaponStats(Weapons weapon, int level)
+    public WeaponStats(WeaponBase weapon, int level)
     {
         Weapon = weapon;
         LastShot = 0;

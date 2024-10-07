@@ -478,6 +478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stats:
     Name: Player
+    Points: 0
     MaxHealth: 100
     HealthModifier: 1
     Health: 100
@@ -490,11 +491,16 @@ MonoBehaviour:
     Area: 1
     XpModifier: 1
     Xp: 0
-    MaxXp: 10
     Level: 1
     Reroll: 0
   WeaponsList:
-  - Weapon: {fileID: 11400000, guid: 35b31c1da9e64da4780d83d2f35c95d9, type: 2}
+  - Weapon: {fileID: 11400000, guid: 9aa662a6751a87c479ca9a42b5a23512, type: 2}
+    LastShot: 0
+    Level: 0
+  - Weapon: {fileID: 11400000, guid: 019fdea26557dbd40b854abb3e6bb282, type: 2}
+    LastShot: 0
+    Level: 0
+  - Weapon: {fileID: 11400000, guid: f9602e8e18027d54a88285adb8dbaebe, type: 2}
     LastShot: 0
     Level: 0
 --- !u!114 &1135793731

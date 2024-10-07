@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224672242773744533}
-  - component: {fileID: 4884889263235708447}
   - component: {fileID: 7966146960560710818}
   - component: {fileID: 6402738758533129580}
   - component: {fileID: 4070323071675406346}
@@ -35,30 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4884889263235708447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718296494489236584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f69ad034203d4434cbe8cd4572d71931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Damage: 10
-  Direction: {x: 1, y: 0, z: 0}
-  Target: {fileID: 0}
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  WeaponType: 0
-  FlipCurve: 0
 --- !u!212 &7966146960560710818
 SpriteRenderer:
   m_ObjectHideFlags: 0

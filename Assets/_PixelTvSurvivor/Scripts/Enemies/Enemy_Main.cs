@@ -8,6 +8,9 @@ public class Enemy_Main : MonoBehaviour
     public GameObject XpOrb;
     public EnemyStats myStats;
 
+    // status effects
+    public float statusStunTimerLeft;
+
     private Transform playerRef;
 
     // enemy attack
@@ -30,8 +33,14 @@ public class Enemy_Main : MonoBehaviour
     {
         lastPosition = thisPosition;
         thisPosition = transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
+        if ( statusStunTimerLeft <= 0 )
+            transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
+        if ( statusStunTimerLeft > 0 )
+        {
+            statusStunTimerLeft -= Time.deltaTime;
+            if ( statusStunTimerLeft < 0 ) statusStunTimerLeft = 0;
+        }
     }
 
     public void EnemyTakesDamage(float damage)

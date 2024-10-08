@@ -23,6 +23,10 @@ public class UI_HUD : MonoBehaviour
     public RectTransform XpSlider;
     public TMP_Text XpText;
 
+    [Header("Misc Settings")]
+    public TMP_Text PointsText;
+    public TMP_Text TimeText;
+
     [Header("Prefabs to spawn in UI")]
     public GameObject UpgradeIconPrefab;
 
@@ -64,6 +68,11 @@ public class UI_HUD : MonoBehaviour
         // XP
         XpText.text = PlayerStatRef.Xp + "/" +math.floor( math.pow(PlayerStatRef.Level * 10, 1.4f) );
         XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
+
+        // time
+
+        // points
+        PointsText.text = PlayerStatRef.Points.ToString();
     }
 
     public void PlayerIsDead()

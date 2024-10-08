@@ -81,6 +81,16 @@ public class UI_HUD : MonoBehaviour
         Section_HUD.localScale = new Vector2(0, 0);
         Section_Looser.localScale = new Vector2(1, 1);
     }
+    void clearTransformChildren(Transform needToClear)
+    {
+        if (needToClear.childCount > 0)
+        {
+            foreach (Transform child in needToClear)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+    }
 
     public void UpgradeShow()
     {
@@ -90,7 +100,7 @@ public class UI_HUD : MonoBehaviour
         // get upgrades to list
         var acceptableUpgrades = UpgradeShow_GetListOfUpgrades();
         // remove old list
-        while (Section_Upgrade_List.childCount > 0) Destroy(Section_Upgrade_List.GetChild(0).gameObject);
+        if ( Section_Upgrade_List.childCount > 0 ) clearTransformChildren(Section_Upgrade_List.transform);
         if ( acceptableUpgrades.Length > 0)
         { // show the upgrade buttons
             for ( int i = 0 ; i < acceptableUpgrades.Length ; i++ )

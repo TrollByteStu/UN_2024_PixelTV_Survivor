@@ -494,7 +494,7 @@ MonoBehaviour:
     Level: 1
     Reroll: 0
   WeaponsList:
-  - Weapon: {fileID: 11400000, guid: ddec7dc71daf1ef418e202f2f9777718, type: 2}
+  - Weapon: {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}
     LastShot: 0
     Level: 0
 --- !u!114 &1135793731

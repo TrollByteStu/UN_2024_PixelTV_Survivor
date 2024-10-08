@@ -20,6 +20,7 @@ public struct PlayerStats
     public float Xp;
     public int Level;
     public int Reroll;
+    public float TimeUntilDeath;
 
     public PlayerStats (string name, float maxhealth, float health, float recovery,float armor, float movespeed)
     {
@@ -39,5 +40,6 @@ public struct PlayerStats
         Xp = 0;
         Level = 1;
         Reroll = 0;
+        TimeUntilDeath = 120;
     }
 }

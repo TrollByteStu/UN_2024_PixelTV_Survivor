@@ -1,5 +1,6 @@
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,7 +25,8 @@ public class PlayerController : MonoBehaviour
         Movement();
         Attacks();
         PickupXP();
-        
+        Stats.TimeUntilDeath -= Time.deltaTime;
+        if (Stats.TimeUntilDeath <= 0) GameController.Instance.PlayerIsDead();
     }
 
     private Vector2 MoveDirection;
@@ -66,9 +68,10 @@ public class PlayerController : MonoBehaviour
         Stats.Health -= math.clamp( damage - Stats.Armor,0,999999999);
         if (Stats.Health < 0) GameController.Instance.PlayerIsDead();
     }
-    public void AddPoints(int Points)
+    public void AddPoints(int Points, float time)
     {
         Stats.Points += Points;
+        Stats.TimeUntilDeath += time;
     }
     public void AddXp(float xp)
     {

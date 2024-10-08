@@ -61,7 +61,7 @@ public class Enemy_Main : MonoBehaviour
     {
         // add effects and sounds
         // spawn pickups?
-        GameController.Instance.PlayerReference.AddPoints(myStats.PointValue);
+        GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
         Instantiate(XpOrb,transform.position,Quaternion.identity).GetComponent<XpOrb>().xp = myStats.XpValue;
         //GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
         Destroy(gameObject);

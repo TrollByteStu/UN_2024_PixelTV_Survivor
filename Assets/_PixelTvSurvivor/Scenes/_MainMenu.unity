@@ -368,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52, y: 186}
+  m_AnchoredPosition: {x: -46, y: 175}
   m_SizeDelta: {x: -764.3307, y: -424.694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128016367
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start new game
+  m_text: Start nyet spill
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: "G\xE5v\xE6k-portalen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -817,6 +817,7 @@ GameObject:
   - component: {fileID: 1120521067}
   - component: {fileID: 1120521066}
   - component: {fileID: 1120521069}
+  - component: {fileID: 1120521070}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -841,8 +842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95, y: -95}
-  m_SizeDelta: {x: 109.6188, y: 81.4483}
+  m_AnchoredPosition: {x: 104, y: -96}
+  m_SizeDelta: {x: 141.5957, y: 81.4483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120521066
 MonoBehaviour:
@@ -913,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8113208, b: 0.047408726, a: 1}
+  m_Color: {r: 0, g: 0.8113208, b: 0.047408726, a: 0.2627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -959,6 +960,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1120521070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120521064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1583786886}
+          m_TargetAssemblyTypeName: UI_MainMenu_Handler, Assembly-CSharp
+          m_MethodName: tooltipLettuce
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1531607670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +1046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Oplysninger
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1212,6 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc81248d0c2feb4bb7566d0433cfc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NewAnimationExit: {fileID: 771801677}
 --- !u!1 &1759926813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,8 +1280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100.86243, y: 16}
-  m_SizeDelta: {x: 121.3437, y: 58.9986}
+  m_AnchoredPosition: {x: 114, y: 15}
+  m_SizeDelta: {x: 190.6268, y: 58.9986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1759926815
 Animator:
@@ -1342,7 +1373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8117647, b: 0.047058824, a: 1}
+  m_Color: {r: 0, g: 0.8117647, b: 0.047058824, a: 0.2627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1497,7 +1528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8117647, b: 0.047058824, a: 1}
+  m_Color: {r: 0, g: 0.8117647, b: 0.047058824, a: 0.2627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

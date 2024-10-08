@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1292685357
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -277,7 +277,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1687904249
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1295208911, guid: adb01bcd723e8e74da628021c18d4979, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -414,7 +414,7 @@ MonoBehaviour:
     Level: 1
     Reroll: 0
   WeaponsList:
-  - Weapon: {fileID: 11400000, guid: 35b31c1da9e64da4780d83d2f35c95d9, type: 2}
+  - Weapon: {fileID: 11400000, guid: ddec7dc71daf1ef418e202f2f9777718, type: 2}
     LastShot: 0
     Level: 0
 --- !u!95 &4733911419387393674

@@ -22,9 +22,13 @@ MonoBehaviour:
     AttackRange: 2
     XpValue: 1
     PointValue: 1
+    TimeSecondsValue: 5
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   spriteScale: 0.25
   spriteColor:
+    serializedVersion: 2
+    rgba: 4278190335
+  bloodColor:
     serializedVersion: 2
     rgba: 4278190335
   enemyAudioWalk: []

@@ -10,5 +10,6 @@ public struct EnemyStats
     public float AttackRange;
     public float XpValue;
     public int PointValue;
+    public float TimeSecondsValue;
 
 }

@@ -30,10 +30,16 @@ public class UI_HUD : MonoBehaviour
     [Header("Prefabs to spawn in UI")]
     public GameObject UpgradeIconPrefab;
 
+    [Header("UI Sounds")]
+    public AudioClip UI_Sound_Upgrade;
+
+
     // Make it a singleton
     public static UI_HUD Instance { get; private set; }
 
+    // in script used references
     private PlayerStats PlayerStatRef;
+    private AudioSource myAS;
 
     private void Awake()
     {
@@ -53,6 +59,9 @@ public class UI_HUD : MonoBehaviour
         Section_Looser.gameObject.SetActive(true);
         Section_Upgrade.localScale = new Vector2(0, 0);
         Section_Upgrade.gameObject.SetActive(true);
+
+        // get references
+        myAS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -97,6 +106,9 @@ public class UI_HUD : MonoBehaviour
         Time.timeScale = 0;
         Section_HUD.localScale = new Vector2(0, 0);
         Section_Upgrade.localScale = new Vector2(1, 1);
+        // play sound
+        myAS.clip = UI_Sound_Upgrade;
+        myAS.Play();
         // get upgrades to list
         var acceptableUpgrades = UpgradeShow_GetListOfUpgrades();
         // remove old list

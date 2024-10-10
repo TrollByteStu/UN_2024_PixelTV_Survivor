@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &6303254524006578964
 CanvasRenderer:
@@ -143,8 +143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100/100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -392,8 +392,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "V\xE6lg en opgradering"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -603,7 +603,7 @@ MonoBehaviour:
     virkelig din plan at h\xE6lde baconparfume ud over dig selv og snige dig ud blandt
     zombierne? Hvor har du fortjent at blive frokost!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2197312738855578787
@@ -776,8 +776,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100/100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -935,7 +935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8823185814730645706
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1175,8 +1175,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 120000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1386,7 +1386,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6260439576667171890
@@ -1520,8 +1520,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1:20
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

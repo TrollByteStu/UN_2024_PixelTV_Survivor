@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4387e048509a09c4893200b93e3fba01, type: 3}
+  m_Name: Healing_Pot
+  m_EditorClassIdentifier: 
+  UpgradeName: Healing Pot
+  upgradeSprite: {fileID: 21300000, guid: 0a3f320d949e4034aac7d513a603a8c6, type: 3}
+  levelRequired: 0
+  requiedWeapon:
+    Weapon: {fileID: 0}
+    LastShot: 0
+    Level: 0
+  Stats:
+    HealthIncrease: 20
+    MaxHealthIncrease: 0
+    HealthModifierIncrease: 0
+    RecoveryIncrease: 0
+    ArmorIncrease: 0
+    MoveSpeedIncrease: 0
+    MoveSpeedModifierIncrease: 0
+    DamageModifierIncrease: 0
+    CooldownModifierIncrease: 0
+    XpModifierIncrease: 0
+  givenWeapon:
+    Weapon: {fileID: 0}
+    LastShot: 0
+    Level: 0
+  removedWeapon:
+    Weapon: {fileID: 0}
+    LastShot: 0
+    Level: 0

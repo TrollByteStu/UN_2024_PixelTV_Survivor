@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 [Serializable]
 public struct UpgradeStats
 {
+    public float HealthIncrease;
     public float MaxHealthIncrease;
     public float HealthModifierIncrease;
     public float RecoveryIncrease;

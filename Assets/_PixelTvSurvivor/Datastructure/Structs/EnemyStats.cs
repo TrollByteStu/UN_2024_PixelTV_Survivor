@@ -2,6 +2,9 @@ using System;
 [Serializable]
 public struct EnemyStats
 {
+    public enum EnemyAiType { Zombie,Shooter,LootGoblin };
+
+    public EnemyAiType AiType;
     public float MaxHealth;
     public float Health;
     public float MoveSpeed;

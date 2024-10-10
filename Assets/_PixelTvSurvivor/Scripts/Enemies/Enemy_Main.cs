@@ -31,16 +31,34 @@ public class Enemy_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // janky wall blocker
         lastPosition = thisPosition;
         thisPosition = transform.position;
-        if ( statusStunTimerLeft <= 0 )
-            transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
+
+        // ai
+        EnemyMoveByAIType();
+
+        // stats & status
         if ( statusStunTimerLeft > 0 )
         {
             statusStunTimerLeft -= Time.deltaTime;
             if ( statusStunTimerLeft < 0 ) statusStunTimerLeft = 0;
         }
+    }
+    private void EnemyMoveByAIType()
+    {
+        switch (myStats.AiType)
+        {
+            default:
+                EnemyMove_ZombieType();
+            break;
+        }
+    }
+    private void EnemyMove_ZombieType()
+    {
+        if (statusStunTimerLeft <= 0)
+            transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
     }
 
     public void EnemyTakesDamage(float damage)

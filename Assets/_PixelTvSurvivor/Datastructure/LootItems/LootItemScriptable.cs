@@ -7,10 +7,10 @@ public class LootItemScriptable : ScriptableObject
 {
     [Header("Appearance")]
     [Tooltip("The name of this Item")]
-    public string UpgradeName;
+    public string ItemName;
 
     [Tooltip("The image of this Item")]
-    public Sprite upgradeSprite;
+    public Sprite ItemSprite;
 
     [Tooltip("The size scale of this Item")]
     public float spriteScale = 1;

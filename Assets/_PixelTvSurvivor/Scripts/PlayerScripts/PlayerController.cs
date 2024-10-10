@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.transform.GetComponent<XpOrb>() != null)
                 hit.transform.GetComponent<XpOrb>().MoveToPlayer = true;
+            if (hit.transform.GetComponent<ItemHandler>() != null)
+                hit.transform.GetComponent<ItemHandler>().MoveToPlayer = true;
         }
     }
     public void PlayerTakesDamage(float damage)

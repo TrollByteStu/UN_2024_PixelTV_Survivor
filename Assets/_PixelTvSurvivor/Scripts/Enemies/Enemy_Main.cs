@@ -78,11 +78,22 @@ public class Enemy_Main : MonoBehaviour
     public void EnemyDies()
     {
         // add effects and sounds
-        // spawn pickups?
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
         Instantiate(XpOrb,transform.position,Quaternion.identity).GetComponent<XpOrb>().xp = myStats.XpValue;
-        //GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
+        EnemyDies_DropLoot();
         Destroy(gameObject);
+    }
+    private void EnemyDies_DropLoot()
+    {
+        if (enemytype.LootTable.Length < 1) return; // no loot
+        foreach (EnemyCharacter.LootTableStructure possibleLoot in enemytype.LootTable)
+        { // try them all, roll for each(simpler to explain to the designers)
+            if (possibleLoot.LootChancePercent < Random.Range(0f, 100f) && possibleLoot.LootType != null)
+            {
+                Instantiate(GameController.Instance.GenericItemPrefab, transform.position, Quaternion.identity).GetComponent<ItemHandler>().ItemType = possibleLoot.LootType;
+                return;
+            }
+        }  
     }
 
     public void EnemyAttacksPlayer()

@@ -5,13 +5,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewEnemyCharacter", menuName = "ScriptableObjects/EnemyCharacter", order = 1)]
 public class EnemyCharacter : ScriptableObject
 {
+    [System.Serializable]
+    public class LootTableStructure
+    {
+        [Tooltip("What kind of loot?")]
+        public LootItemScriptable LootType;
+
+        [Tooltip("The chance this loot will drop")]
+        [Range(0f, 100f)]
+        public float LootChancePercent;
+    }
+
     [Header("Basic Stats")]
 
     [Tooltip("The name of this enemy")]
     public string EnemyName;
 
-
+    [Tooltip("The stats of this enemy")]
     public EnemyStats Stats;
+
+    [Space]
+    [Header("Loot")]
+
+    [Tooltip("The Loot table of this enemy")]
+    public LootTableStructure[] LootTable;
 
     [Space]
     [Header("Looks")]

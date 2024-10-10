@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemHandler : MonoBehaviour
 {
+    public LootItemScriptable ItemType;
+
     // Start is called before the first frame update
     void Start()
     {

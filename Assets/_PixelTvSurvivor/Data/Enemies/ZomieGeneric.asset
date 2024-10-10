@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Generic Zombie
   Stats:
+    AiType: 0
     MaxHealth: 20
     Health: 20
     MoveSpeed: 0.5
@@ -23,6 +24,7 @@ MonoBehaviour:
     XpValue: 1
     PointValue: 1
     TimeSecondsValue: 3
+  LootTable: []
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   spriteScale: 0.2
   spriteColor:

@@ -5,11 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewEnemyCharacter", menuName = "ScriptableObjects/EnemyCharacter", order = 1)]
 public class EnemyCharacter : ScriptableObject
 {
+    [Header("Basic Stats")]
+
     [Tooltip("The name of this enemy")]
     public string EnemyName;
 
-    [Tooltip("A list of this enemies Stats")]
+
     public EnemyStats Stats;
+
+    [Space]
+    [Header("Looks")]
 
     [Tooltip("the sprite for this enemy")]
     public Sprite enemySprite;
@@ -22,6 +27,9 @@ public class EnemyCharacter : ScriptableObject
 
     [Tooltip("the color of the blood/gunk this enemy spews when hit")]
     public Color32 bloodColor = Color.red;
+
+    [Space]
+    [Header("Audio")]
 
     [Tooltip("the list of sounds for Walk")]
     public AudioClip[] enemyAudioWalk;

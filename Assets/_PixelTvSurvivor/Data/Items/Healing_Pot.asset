@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Healing_Pot
   m_EditorClassIdentifier: 
   UpgradeName: Healing Pot
-  upgradeSprite: {fileID: 21300000, guid: 0a3f320d949e4034aac7d513a603a8c6, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: 17e5d1b0e8b5ece479b98cb90c7203b9, type: 3}
+  spriteScale: 0.2
+  spriteColor:
+    serializedVersion: 2
+    rgba: 4294967295
   levelRequired: 0
   requiedWeapon:
     Weapon: {fileID: 0}

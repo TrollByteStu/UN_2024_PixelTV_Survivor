@@ -5,12 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/Item", order = 1)]
 public class LootItemScriptable : ScriptableObject
 {
-    [Header("Basic Stats")]
+    [Header("Appearance")]
     [Tooltip("The name of this Item")]
     public string UpgradeName;
 
     [Tooltip("The image of this Item")]
     public Sprite upgradeSprite;
+
+    [Tooltip("The size scale of this Item")]
+    public float spriteScale = 1;
+
+    [Tooltip("The color of this sprite")]
+    public Color32 spriteColor = Color.white;
 
     [Space]
     [Header("Requirements to spawn")]

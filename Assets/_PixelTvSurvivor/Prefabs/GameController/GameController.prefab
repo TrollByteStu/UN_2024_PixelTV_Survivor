@@ -47,5 +47,7 @@ MonoBehaviour:
   PlayerReference: {fileID: 0}
   BloodSplatPrefabs:
   - {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
+  - {fileID: 8064215494278097599, guid: ed3ccc196630e034d957fb4b3d355917, type: 3}
+  GenericItemPrefab: {fileID: 8195367136101649449, guid: b3b574f75c46c824db7c85b08612b25a, type: 3}
   allUpgradesInGame:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}

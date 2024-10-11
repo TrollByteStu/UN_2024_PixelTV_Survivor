@@ -24,7 +24,9 @@ MonoBehaviour:
     XpValue: 1
     PointValue: 1
     TimeSecondsValue: 3
-  LootTable: []
+  LootTable:
+  - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
+    LootChancePercent: 1.5
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   spriteScale: 0.2
   spriteColor:

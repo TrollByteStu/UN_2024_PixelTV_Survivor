@@ -19,7 +19,7 @@ public class ItemHandler : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = ItemType.ItemSprite;
         SpriteRenderer.color = ItemType.spriteColor;
-        GetComponent<RectTransform>().localScale = new Vector2(ItemType.spriteScale, ItemType.spriteScale);
+        transform.localScale = new Vector3(ItemType.spriteScale, ItemType.spriteScale,1);
     }
 
     // Update is called once per frame
@@ -53,7 +53,9 @@ public class ItemHandler : MonoBehaviour
 
     public void Pickup()
     {
+        DoneDropAnimation = true;
         MoveToPlayer = true;
         transform.tag = "PickedUp";
+        Destroy(GetComponent<BoxCollider2D>());
     }
 }

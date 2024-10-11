@@ -71,18 +71,18 @@ public class UI_HUD : MonoBehaviour
         PlayerStatRef = GameController.Instance.PlayerReference.Stats;
 
         // Health
-        HealthText.text = PlayerStatRef.Health + "/" + PlayerStatRef.MaxHealth;
+        HealthText.text = math.floor( PlayerStatRef.Health ) + "/" + PlayerStatRef.MaxHealth;
         HealthSlider.localScale = new Vector2(PlayerStatRef.Health / PlayerStatRef.MaxHealth, 1);
 
         // XP
-        XpText.text = PlayerStatRef.Xp + "/" +math.floor( math.pow(PlayerStatRef.Level * 10, 1.4f) );
+        XpText.text = math.floor(PlayerStatRef.Xp) + "/" +math.floor( math.pow(PlayerStatRef.Level * 10, 1.4f) );
         XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
 
         // time
         TimeText.text = PlayerStatRef.TimeUntilDeath.ToString();
 
         // points
-        PointsText.text = PlayerStatRef.Points.ToString();
+        PointsText.text = math.floor(PlayerStatRef.Points).ToString();
     }
 
     public void PlayerIsDead()

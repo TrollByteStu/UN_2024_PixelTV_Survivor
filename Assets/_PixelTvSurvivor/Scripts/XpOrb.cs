@@ -49,5 +49,6 @@ public class XpOrb : MonoBehaviour
     {
         MoveToPlayer = true;
         transform.tag = "PickedUp";
+        Destroy(GetComponent<BoxCollider2D>());
     }
 }

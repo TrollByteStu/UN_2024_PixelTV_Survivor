@@ -25,8 +25,7 @@ public class PlayerController : MonoBehaviour
         Movement();
         Attacks();
         PickupXP();
-        Stats.TimeUntilDeath -= Time.deltaTime;
-        if (Stats.TimeUntilDeath <= 0) GameController.Instance.PlayerIsDead();
+        StatsAndStatusHandler();
     }
 
     private Vector2 MoveDirection;
@@ -67,6 +66,19 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    void StatsAndStatusHandler()
+    {
+        // Time
+        Stats.TimeUntilDeath -= Time.deltaTime;
+
+        // Stats
+        Stats.Health += Time.deltaTime * Stats.Recovery;
+        if (Stats.Health > Stats.MaxHealth) Stats.Health = Stats.MaxHealth;
+
+        // Statuses
+        if (Stats.TimeUntilDeath <= 0) GameController.Instance.PlayerIsDead();
+    }
+
     public void PlayerTakesDamage(float damage)
     {
         // play sound of player moaning/complaining?
@@ -84,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (Stats.Xp > math.pow(Stats.Level * 10, 1.4f))
         {
             LevelUp();
-            UI_HUD.Instance.UpgradeShow();
+            //UI_HUD.Instance.UpgradeShow();
         }
     }
     public void LevelUp()

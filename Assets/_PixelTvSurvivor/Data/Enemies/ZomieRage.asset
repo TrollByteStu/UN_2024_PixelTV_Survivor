@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Rage Zombie
   Stats:
+    AiType: 0
     MaxHealth: 30
     Health: 30
     MoveSpeed: 0.6
@@ -23,6 +24,9 @@ MonoBehaviour:
     XpValue: 1
     PointValue: 1
     TimeSecondsValue: 5
+  LootTable:
+  - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
+    LootChancePercent: 2
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   spriteScale: 0.25
   spriteColor:

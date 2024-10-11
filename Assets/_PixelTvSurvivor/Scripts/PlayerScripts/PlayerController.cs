@@ -58,10 +58,13 @@ public class PlayerController : MonoBehaviour
     {
         foreach (RaycastHit2D hit in Physics2D.CircleCastAll(transform.position, 5, Vector3.forward))
         {
-            if (hit.transform.GetComponent<XpOrb>() != null)
-                hit.transform.GetComponent<XpOrb>().MoveToPlayer = true;
-            if (hit.transform.GetComponent<ItemHandler>() != null)
-                hit.transform.GetComponent<ItemHandler>().MoveToPlayer = true;
+            if (hit.transform.tag == "PickupAble")
+            {
+                if (hit.transform.GetComponent<XpOrb>() != null)
+                    hit.transform.GetComponent<XpOrb>().Pickup();
+                if (hit.transform.GetComponent<ItemHandler>() != null)
+                    hit.transform.GetComponent<ItemHandler>().Pickup();
+            }
         }
     }
     public void PlayerTakesDamage(float damage)

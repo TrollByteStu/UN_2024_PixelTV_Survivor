@@ -50,4 +50,10 @@ public class ItemHandler : MonoBehaviour
             }
         }
     }
+
+    public void Pickup()
+    {
+        MoveToPlayer = true;
+        transform.tag = "PickedUp";
+    }
 }

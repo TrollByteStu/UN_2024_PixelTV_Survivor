@@ -44,4 +44,10 @@ public class XpOrb : MonoBehaviour
             }
         }
     }
+
+    public void Pickup()
+    {
+        MoveToPlayer = true;
+        transform.tag = "PickedUp";
+    }
 }

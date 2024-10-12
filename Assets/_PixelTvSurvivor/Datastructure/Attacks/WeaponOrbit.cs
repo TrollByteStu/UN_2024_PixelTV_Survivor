@@ -40,8 +40,8 @@ public class WeaponOrbit : WeaponBase
                 Satellites[i] = Instantiate(Satellite);
 
             Satellites[i].transform.position = new Vector3(
-            /*x*/    math.sin(Time.timeSinceLevelLoad * LevelStats[level].RotationSpeed + (math.PI * 2) / LevelStats[level].SatelliteQuantity * (i % LevelStats[level].SatelliteQuantity)) * LevelStats[level].DistanceFromPlayer ,
-            /*y*/    math.cos(Time.timeSinceLevelLoad * LevelStats[level].RotationSpeed + (math.PI * 2) / LevelStats[level].SatelliteQuantity * (i % LevelStats[level].SatelliteQuantity)) * LevelStats[level].DistanceFromPlayer , 0) + playerPosition;
+            /*x*/    math.sin(Time.timeSinceLevelLoad * LevelStats[level].RotationSpeed + (math.PI * 2) / (LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity) * (i % (LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity))) * LevelStats[level].DistanceFromPlayer / math.floor(i / (LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity) +1),
+            /*y*/    math.cos(Time.timeSinceLevelLoad * LevelStats[level].RotationSpeed + (math.PI * 2) / (LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity) * (i % (LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity))) * LevelStats[level].DistanceFromPlayer / math.floor(i / (LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity) +1), 0) + playerPosition;
         }
         foreach (GameObject obj in Satellites.GetRange(LevelStats[level].SatelliteQuantity, Satellites.Count - LevelStats[level].SatelliteQuantity))
         {

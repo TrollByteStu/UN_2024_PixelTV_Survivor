@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -48,9 +49,17 @@ public class WeaponOrbit : WeaponBase
         for (int i = 0; i < LevelStats[level].SatelliteQuantity; i++)
         { 
             if (Satellites.Count == i)
-                Satellites.Add(Instantiate(Satellite,SatelliteHolder));
+            {
+                var sat = Instantiate(Satellite, SatelliteHolder);
+                sat.GetComponent<SatelliteBase>().SetUp(this);
+                Satellites.Add(sat);
+            }
             if (Satellites[i] == null)
-                Satellites[i] = Instantiate(Satellite,SatelliteHolder);
+            {
+                var sat = Instantiate(Satellite, SatelliteHolder);
+                sat.GetComponent<SatelliteBase>().SetUp(this);
+                Satellites[i] = sat;
+            }
 
             switch (SpinDirection)
             {
@@ -84,9 +93,11 @@ public class WeaponOrbit : WeaponBase
             Satellites.Remove(obj);
         }
     }
-    public override float GetAttackSpeed(int level)
+
+    public override float GetDamage(int level)
     {
-        return 0;
+        return LevelStats[level].AttackDamage;
     }
+
 
 }

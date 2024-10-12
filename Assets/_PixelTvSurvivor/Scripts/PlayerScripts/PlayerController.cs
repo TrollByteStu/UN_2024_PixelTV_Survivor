@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats Stats = new("Player",100,100,0.1f,0,10);
     
-    public WeaponStats[] WeaponsList;
+    public WeaponStats[] WeaponsArray;
 
     private Vector3 thisPosition;
     private Vector3 lastPosition;
@@ -43,12 +43,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 AimDirection = new(1,0);
     void Attacks()
     {
-        for (int i = 0; i < WeaponsList.Length; i++) 
+        for (int i = 0; i < WeaponsArray.Length; i++) 
         {
-            if (WeaponsList[i].LastShot < Time.time )
+            if (WeaponsArray[i].LastShot < Time.time )
             {
-                WeaponsList[i].LastShot = Time.time + WeaponsList[i].Weapon.GetAttackSpeed(WeaponsList[i].Level) * Stats.CooldownModifier;
-                WeaponsList[i].Weapon.Attack(WeaponsList[i].Level, transform.position, AimDirection, Stats);
+                WeaponsArray[i].LastShot = Time.time + WeaponsArray[i].Weapon.GetAttackSpeed(WeaponsArray[i].Level) * Stats.CooldownModifier;
+                WeaponsArray[i].Weapon.Attack(WeaponsArray[i].Level, transform.position, AimDirection, Stats);
             
             }
         }
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
         if (MoveDirection != Vector2.zero)
         {
             AimDirection = MoveDirection;
-            foreach (WeaponStats weaponStats in WeaponsList)
+            foreach (WeaponStats weaponStats in WeaponsArray)
             {
                 weaponStats.Weapon.SetAim(AimDirection);
             }

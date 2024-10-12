@@ -8,7 +8,7 @@ public class WeaponBasic : WeaponBase
 {
     public GameObject BulletPrefab;
     public Sprite bulletSprite;
-    public List<WeaponStats> LevelStats;
+    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
     public bool HasCurve;
     public AnimationCurve Curve;
     public bool FlipCurve;
@@ -20,6 +20,14 @@ public class WeaponBasic : WeaponBase
         public float AttackSpeed;
         public float AttackDamage;
         public float ShootQuantity;
+
+        public WeaponStats(int i)
+        {
+            bulletSpeed = 10;
+            AttackSpeed = 1;
+            AttackDamage = 10;
+            ShootQuantity = 1;
+        }
     }
     public override float GetAttackSpeed(int level)
     {

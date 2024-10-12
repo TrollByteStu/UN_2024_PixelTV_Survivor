@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponAura", menuName = "ScriptableObjects/WeaponTypes/Aura", order = 3)]
 public class WeaponAura : WeaponBase
 {
-    public List<WeaponStats> LevelStats;
+    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
 
     [Serializable]
     public struct WeaponStats
@@ -14,6 +14,13 @@ public class WeaponAura : WeaponBase
         public float AttackSpeed;
         public float AttackDamage;
         public float AOE;
+
+        public WeaponStats(int i)
+        {
+            AttackSpeed = 1;
+            AttackDamage = 10;
+            AOE = 5;
+        }
     }
     public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
     {

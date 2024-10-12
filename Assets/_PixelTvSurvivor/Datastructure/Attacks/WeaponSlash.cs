@@ -10,7 +10,7 @@ public class WeaponSlash : WeaponBase
     public GameObject Slash;
     public Sprite SlashSprite;
     public Side AttackSide;
-    public List<WeaponStats> LevelStats;
+    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
 
     private Vector3 Aim;
 
@@ -21,6 +21,14 @@ public class WeaponSlash : WeaponBase
         public float AttackDamage;
         public int AttackQuantity;
         public Vector2 AOE;
+
+        public WeaponStats(int i)
+        {
+            AttackSpeed = 1;
+            AttackDamage = 10;
+            AttackQuantity = 1;
+            AOE = new Vector2(2,3);
+        }
     }
 
     public enum Side

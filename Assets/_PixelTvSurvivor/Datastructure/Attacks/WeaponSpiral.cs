@@ -10,7 +10,7 @@ public class WeaponSpiral : WeaponBase
     public GameObject BulletPrefab;
     public Sprite bulletSprite;
     public Spin SpinDirection;
-    public List<WeaponStats> LevelStats;
+    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
     [Serializable]
     public struct WeaponStats
     {
@@ -19,6 +19,15 @@ public class WeaponSpiral : WeaponBase
         public float AttackSpeed;
         public float AttackDamage;
         public float ShootQuantity;
+
+        public WeaponStats(int i)
+        {
+            ClimbSpeed = 3;
+            bulletSpeed = 1;
+            AttackSpeed = 1;
+            AttackDamage = 10;
+            ShootQuantity = 5;
+        }
     }
     public enum Spin
     {

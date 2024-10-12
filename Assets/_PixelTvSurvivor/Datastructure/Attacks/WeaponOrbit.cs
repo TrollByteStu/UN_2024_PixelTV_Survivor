@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "WeaponOrbit", menuName = "ScriptableObjects/WeaponTypes/Orbit", order = 1)]
 public class WeaponOrbit : WeaponBase
 {
     private List<GameObject> Satellites = new List<GameObject>();

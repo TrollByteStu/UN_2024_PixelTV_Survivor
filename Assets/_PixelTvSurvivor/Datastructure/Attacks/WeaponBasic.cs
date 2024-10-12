@@ -13,12 +13,6 @@ public class WeaponBasic : WeaponBase
     public AnimationCurve Curve;
     public bool FlipCurve;
 
-    [Tooltip("What sound does it make when the weapon fires?")]
-    public AudioClip AttackAudioFire;
-
-    [Tooltip("What sound does it make when the weapon hits?")]
-    public AudioClip AttackAudioHit;
-
     [Serializable]
     public struct WeaponStats
     {

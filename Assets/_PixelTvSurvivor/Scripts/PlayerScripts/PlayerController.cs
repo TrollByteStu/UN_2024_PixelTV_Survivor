@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     
     public WeaponStats[] WeaponsArray;
 
-    private Vector3 thisPosition;
-    private Vector3 lastPosition;
+    //private Vector3 thisPosition;
+    //private Vector3 lastPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +33,19 @@ public class PlayerController : MonoBehaviour
     // moves Player 
     void Movement()
     {
-        lastPosition = thisPosition;
-        thisPosition = transform.position;
-        FinalMovement = MoveDirection.ConvertTo<Vector3>() * Stats.MoveSpeed * Stats.MoveSpeedModifier * Time.deltaTime;
-        transform.position += FinalMovement.ConvertTo<Vector3>();
-        //BackgroundSprite.material.SetVector("_Offset",BackgroundSprite.material.GetVector("_Offset") + FinalMovement / 4);
+        //lastPosition = thisPosition;
+        //thisPosition = transform.position;
+        FinalMovement = Stats.MoveSpeed * Stats.MoveSpeedModifier * Time.deltaTime * MoveDirection.ConvertTo<Vector3>();
+        // raycast check for walls in move direction
+        foreach (RaycastHit2D Hit in Physics2D.LinecastAll(transform.position,transform.position + FinalMovement))
+        {
+            if (Hit.collider.CompareTag("Walls"))
+            {
+                FinalMovement *= Hit.distance;
+                break;
+            }
+        }
+        transform.position += FinalMovement;
     }
 
     private Vector2 AimDirection = new(1,0);
@@ -123,13 +131,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Debug.Log("Player hit something with tag: " + collision.gameObject.tag);
-        if (collision.gameObject.tag == "Walls")
-        {
-            transform.position -= ((transform.position-lastPosition)*5);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    //Debug.Log("Player hit something with tag: " + collision.gameObject.tag);
+    //    if (collision.gameObject.tag == "Walls")
+    //    {
+    //        transform.position -= ((transform.position-lastPosition)*5);
+    //    }
+    //}
 
 }

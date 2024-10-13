@@ -1,0 +1,1077 @@
+fileFormatVersion: 2
+guid: ff6624a6407f12d44aa170cb7967d170
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed171eeddc5f69d46a8c9298ffa801c0
+      internalID: -1115768726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 852
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1502152d6b2d94240b1479441a39d1db
+      internalID: 346290098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_2
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 852
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6873894f12bb9534a9e4cb871860af08
+      internalID: -621415452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 852
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bf866c50a0d8d47aadfe0663796e8d
+      internalID: -970417722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_4
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 852
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d944b5e66040c41a811fe387d31960
+      internalID: 889675625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_5
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 852
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9a96b3602376547a62a1eecb9802c7
+      internalID: -1975419592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 710
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a0e7fbd8b5ccb43a6353bb6603e28d
+      internalID: 1965999633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 710
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378bcebd8768b264fa4e712086e3b6ad
+      internalID: 1886964660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_8
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 710
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d28578ddb056fb4a88f5aceee5ad07e
+      internalID: -675799869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_9
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 710
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fe519615d385b43ae0c680ab70a2ea
+      internalID: -21660698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_10
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 710
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01db7d1e08bcd714ea063f6b199fdbb9
+      internalID: -2132941513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_11
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 710
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d77d1fa6d6f2d848a688a7a99cc293b
+      internalID: -2075876083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d293cc27c69540f409747e2fc3a18fe8
+      internalID: 15701505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_13
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 568
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad052502fadfe1b45b36be513bd91e88
+      internalID: -595708913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_14
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 568
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7fe11385327ad4492804cfeccc2621
+      internalID: 1226206335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_15
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 568
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0399b874ab39c734a880eb7fdd248347
+      internalID: -900776459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_16
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 568
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9cbcaf1d3779447b7697c04bad2a84
+      internalID: -222302886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_17
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 568
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadfdb31b48c03749a4d2ed80af0a1c9
+      internalID: 1861871724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a90ec451813324ba92d70aba783abc
+      internalID: -1575249263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_19
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 426
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f1e29db57d234c88b344e0b728d3e
+      internalID: 715647506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_20
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 426
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b005a7c8a5ac08f469625c036eb50bb8
+      internalID: 1637116413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_21
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 426
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2ea1ee7c829d24ebb1c06ba0ced71d
+      internalID: -580186443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_22
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 426
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257677040458a854f89172b15229e8d4
+      internalID: -1140557908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_23
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 426
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18e09de34045a544a9867333acf39f2
+      internalID: 975707074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f99e4d84895c414cbe4be264fbd3e25
+      internalID: 1941984438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_25
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 284
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f16988e2293a624dab215bb675e7352
+      internalID: -788465528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_26
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 284
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a964e9c3ef9d641ba98ad6b18545eb
+      internalID: 147903171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_27
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 284
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3e608d0b2dfcf4ea863cb549259733
+      internalID: -525186695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_28
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 284
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cec4e5dc9d54b42820b5a32ad478b4
+      internalID: -167329573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_29
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 284
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4cc6663e83613499998b2f2487ec88
+      internalID: -242179479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c2426f5e0f38d4b8f3cf2cd5182ce1
+      internalID: -1858770194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_31
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 142
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b7e90d5a17c2b4eb45dfe0b170f8e8
+      internalID: 486252381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_32
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 142
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424d60796942f92438f80793dc054334
+      internalID: 1794825800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_33
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 142
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5841951513297b343a9d0e3c7e46f780
+      internalID: -1749178992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_34
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 142
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d02a3d058a21c488d23a9ed22a025a
+      internalID: 1106564713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_35
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 142
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d90f224000f88448d3ee9e1d15534b
+      internalID: 1911377867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bda52951b9fd674cb1c3da1b4c8db92
+      internalID: -1204484180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_37
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928889bcca8ee7246a8362dbf4878525
+      internalID: 1623641384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_38
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11f33d1275e76f46b8f6fdd1ca92ff4
+      internalID: 638973803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_39
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 0
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7a4ed3f3061ac42b3f939fe17f0514
+      internalID: -1319134803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_40
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 0
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07223f0606390d4ea005914ec45f76a
+      internalID: 552465564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlaceHolder_Industrial_Tiles 1_41
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 0
+        width: 158.5
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0299b05a7540b9143a00c068ce2108e6
+      internalID: 2103389028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlaceHolder_Industrial_Tiles 1_0: -1115768726
+      PlaceHolder_Industrial_Tiles 1_1: 346290098
+      PlaceHolder_Industrial_Tiles 1_10: -2132941513
+      PlaceHolder_Industrial_Tiles 1_11: -2075876083
+      PlaceHolder_Industrial_Tiles 1_12: 15701505
+      PlaceHolder_Industrial_Tiles 1_13: -595708913
+      PlaceHolder_Industrial_Tiles 1_14: 1226206335
+      PlaceHolder_Industrial_Tiles 1_15: -900776459
+      PlaceHolder_Industrial_Tiles 1_16: -222302886
+      PlaceHolder_Industrial_Tiles 1_17: 1861871724
+      PlaceHolder_Industrial_Tiles 1_18: -1575249263
+      PlaceHolder_Industrial_Tiles 1_19: 715647506
+      PlaceHolder_Industrial_Tiles 1_2: -621415452
+      PlaceHolder_Industrial_Tiles 1_20: 1637116413
+      PlaceHolder_Industrial_Tiles 1_21: -580186443
+      PlaceHolder_Industrial_Tiles 1_22: -1140557908
+      PlaceHolder_Industrial_Tiles 1_23: 975707074
+      PlaceHolder_Industrial_Tiles 1_24: 1941984438
+      PlaceHolder_Industrial_Tiles 1_25: -788465528
+      PlaceHolder_Industrial_Tiles 1_26: 147903171
+      PlaceHolder_Industrial_Tiles 1_27: -525186695
+      PlaceHolder_Industrial_Tiles 1_28: -167329573
+      PlaceHolder_Industrial_Tiles 1_29: -242179479
+      PlaceHolder_Industrial_Tiles 1_3: -970417722
+      PlaceHolder_Industrial_Tiles 1_30: -1858770194
+      PlaceHolder_Industrial_Tiles 1_31: 486252381
+      PlaceHolder_Industrial_Tiles 1_32: 1794825800
+      PlaceHolder_Industrial_Tiles 1_33: -1749178992
+      PlaceHolder_Industrial_Tiles 1_34: 1106564713
+      PlaceHolder_Industrial_Tiles 1_35: 1911377867
+      PlaceHolder_Industrial_Tiles 1_36: -1204484180
+      PlaceHolder_Industrial_Tiles 1_37: 1623641384
+      PlaceHolder_Industrial_Tiles 1_38: 638973803
+      PlaceHolder_Industrial_Tiles 1_39: -1319134803
+      PlaceHolder_Industrial_Tiles 1_4: 889675625
+      PlaceHolder_Industrial_Tiles 1_40: 552465564
+      PlaceHolder_Industrial_Tiles 1_41: 2103389028
+      PlaceHolder_Industrial_Tiles 1_5: -1975419592
+      PlaceHolder_Industrial_Tiles 1_6: 1965999633
+      PlaceHolder_Industrial_Tiles 1_7: 1886964660
+      PlaceHolder_Industrial_Tiles 1_8: -675799869
+      PlaceHolder_Industrial_Tiles 1_9: -21660698
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

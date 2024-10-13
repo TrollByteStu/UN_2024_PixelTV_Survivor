@@ -81,6 +81,10 @@ public class Enemy_Main : MonoBehaviour
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
         Instantiate(XpOrb,transform.position,Quaternion.identity,GameController.Instance.XpHolder).GetComponent<XpOrb>().xp = myStats.XpValue;
         EnemyDies_DropLoot();
+        if ( enemytype.SpawnsGravestoneUponDeath )
+        { // spawn a gravestone
+            Instantiate(GameController.Instance.GraveStonePrefab, transform.position, Quaternion.identity).GetComponent<Gravestone>().SpawnableEnemy = enemytype;
+        }
         Destroy(gameObject);
     }
     private void EnemyDies_DropLoot()

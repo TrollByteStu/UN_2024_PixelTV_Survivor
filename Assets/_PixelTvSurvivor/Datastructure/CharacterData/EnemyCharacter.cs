@@ -24,6 +24,9 @@ public class EnemyCharacter : ScriptableObject
     [Tooltip("The stats of this enemy")]
     public EnemyStats Stats;
 
+    [Tooltip("Does this enemy spawn a gravestone when it dies? The gravestone will spawn 2 more..")]
+    public bool SpawnsGravestoneUponDeath = false;
+
     [Space]
     [Header("Loot")]
 

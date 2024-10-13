@@ -9,6 +9,11 @@ public class GameController : MonoBehaviour
 
     public PlayerController PlayerReference;
 
+    [Header("Object Holders")]
+    public Transform SatelliteHolder;
+    public Transform BloodHolder;
+    public Transform XpHolder;
+
     [Header("Prefabs")]
     public GameObject[] BloodSplatPrefabs;
     public GameObject GenericItemPrefab;

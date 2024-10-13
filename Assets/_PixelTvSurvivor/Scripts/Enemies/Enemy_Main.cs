@@ -70,7 +70,7 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDropsBlood()
     {
-        var blood = Instantiate(GameController.Instance.BloodSplatPrefabs[0], transform.position,Quaternion.identity);
+        var blood = Instantiate(GameController.Instance.BloodSplatPrefabs[0], transform.position,Quaternion.identity,GameController.Instance.BloodHolder);
         Destroy(blood, 2);
         blood.GetComponent<SpriteRenderer>().color = enemytype.bloodColor;
     }
@@ -79,7 +79,7 @@ public class Enemy_Main : MonoBehaviour
     {
         // add effects and sounds
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
-        Instantiate(XpOrb,transform.position,Quaternion.identity).GetComponent<XpOrb>().xp = myStats.XpValue;
+        Instantiate(XpOrb,transform.position,Quaternion.identity,GameController.Instance.XpHolder).GetComponent<XpOrb>().xp = myStats.XpValue;
         EnemyDies_DropLoot();
         Destroy(gameObject);
     }

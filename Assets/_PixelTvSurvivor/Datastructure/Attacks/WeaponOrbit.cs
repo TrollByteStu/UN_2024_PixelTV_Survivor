@@ -43,7 +43,7 @@ public class WeaponOrbit : WeaponBase
     public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
     {
         if (SatelliteHolder == null)
-            SatelliteHolder = new GameObject("SatelliteHolder").transform;
+            SatelliteHolder = GameController.Instance.SatelliteHolder;
 
         int QuantityPerLayer = LevelStats[level].SatelliteQuantity / LevelStats[level].LayerQuantity;
         for (int i = 0; i < LevelStats[level].SatelliteQuantity; i++)

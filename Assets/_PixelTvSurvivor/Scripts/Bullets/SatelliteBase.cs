@@ -13,7 +13,7 @@ public class SatelliteBase : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             if (collision.GetComponent<Enemy_Main>() != null)
             {

@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public GameObject[] BloodSplatPrefabs;
     public GameObject GenericItemPrefab;
     public GameObject GraveStonePrefab;
+    public GameObject PopupTextPrefab;
 
     public UpgradeScriptable[] allUpgradesInGame;
 

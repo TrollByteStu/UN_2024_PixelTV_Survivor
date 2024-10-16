@@ -38,6 +38,7 @@ public class WeaponScatterShot : WeaponBase
             Vector3 SpreadDirection = new Vector3 (math.asin(direction.x),math.acos(direction.y),0) + new Vector3(SpreadAngle, SpreadAngle, 0);
             SpreadDirection = new Vector3(math.sin(SpreadDirection.x),math.cos(SpreadDirection.y),0);
             SpreadDirection.Normalize();
+            Debug.Log(SpreadDirection);
 
             if (HasCurve)
             {

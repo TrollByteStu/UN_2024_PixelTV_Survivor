@@ -495,7 +495,7 @@ MonoBehaviour:
     Reroll: 0
     TimeUntilDeath: 120
   WeaponsArray:
-  - Weapon: {fileID: 11400000, guid: da5052f0eb9b7754b9c226e43e48b89e, type: 2}
+  - Weapon: {fileID: 11400000, guid: 0b550e82a197e1d4c96f3729a1ea8d8f, type: 2}
     LastShot: 0
     Level: 0
 --- !u!114 &1135793731

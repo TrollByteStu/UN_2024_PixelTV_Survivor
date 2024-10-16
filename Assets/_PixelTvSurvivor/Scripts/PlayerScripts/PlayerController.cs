@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour
     
     public WeaponStats[] WeaponsArray;
 
-    //private Vector3 thisPosition;
-    //private Vector3 lastPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +31,6 @@ public class PlayerController : MonoBehaviour
     // moves Player 
     void Movement()
     {
-        //lastPosition = thisPosition;
-        //thisPosition = transform.position;
         FinalMovement = Stats.MoveSpeed * Stats.MoveSpeedModifier * Time.deltaTime * MoveDirection.ConvertTo<Vector3>();
         // raycast check for walls in move direction
         foreach (RaycastHit2D Hit in Physics2D.LinecastAll(transform.position,transform.position + FinalMovement))
@@ -124,20 +120,13 @@ public class PlayerController : MonoBehaviour
             {
                 weaponStats.Weapon.SetAim(AimDirection);
             }
+
+            // Flip player sprite to face movement
             if (MoveDirection.x < 0)
                 transform.localScale = new Vector3(-.5f, .5f, 1);
             else
                 transform.localScale = new Vector3(.5f, .5f, 1);
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    //Debug.Log("Player hit something with tag: " + collision.gameObject.tag);
-    //    if (collision.gameObject.tag == "Walls")
-    //    {
-    //        transform.position -= ((transform.position-lastPosition)*5);
-    //    }
-    //}
 
 }

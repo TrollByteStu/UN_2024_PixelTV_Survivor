@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa95109a9614ec4aa903fb00bd7ff5c, type: 3}
+  m_Name: WeaponScatterShot
+  m_EditorClassIdentifier: 
+  AttackAudioFire: {fileID: 0}
+  AttackAudioHit: {fileID: 0}
+  BulletPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
+  bulletSprite: {fileID: 21300000, guid: 75d5977427bef81489760bf87e3bacf1, type: 3}
+  LevelStats:
+  - bulletSpeed: 15
+    bulletSpread: 45
+    AttackSpeed: 1
+    AttackDamage: 10
+    ShootQuantity: 5
+  HasCurve: 0
+  Curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FlipCurve: 0

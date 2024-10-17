@@ -49,6 +49,9 @@ public class Enemy_Main : MonoBehaviour
     {
         switch (myStats.AiType)
         {
+            case EnemyStats.EnemyAiType.LootGoblin:
+                EnemyMove_LootGoblinType();
+            break;
             default:
                 EnemyMove_ZombieType();
             break;
@@ -59,6 +62,11 @@ public class Enemy_Main : MonoBehaviour
         if (statusStunTimerLeft <= 0)
             transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
+    }
+    private void EnemyMove_LootGoblinType()
+    {
+        if (statusStunTimerLeft <= 0)
+            transform.position = Vector3.MoveTowards(transform.position, transform.position+((transform.position-playerRef.position)*2), myStats.MoveSpeed * Time.deltaTime);
     }
 
     public void EnemyTakesDamage(float damage)
@@ -81,7 +89,7 @@ public class Enemy_Main : MonoBehaviour
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
         Instantiate(XpOrb,transform.position,Quaternion.identity,GameController.Instance.XpHolder).GetComponent<XpOrb>().xp = myStats.XpValue;
         EnemyDies_DropLoot();
-        if ( enemytype.SpawnsGravestoneUponDeath )
+        if ( enemytype.SpawnsGravestoneUponDeath && GameController.Instance.myFps.lastFPSCalculated > 120 )
         { // spawn a gravestone
             Instantiate(GameController.Instance.GraveStonePrefab, transform.position, Quaternion.identity).GetComponent<Gravestone>().SpawnableEnemy = enemytype;
         }

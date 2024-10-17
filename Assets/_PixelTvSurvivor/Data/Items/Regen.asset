@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4387e048509a09c4893200b93e3fba01, type: 3}
-  m_Name: Health_Booster
+  m_Name: Regen
   m_EditorClassIdentifier: 
-  ItemName: Health Booster
-  ItemSprite: {fileID: -2038632400, guid: 443b6aa6ac9be654eb956a5b31e38ec3, type: 3}
+  ItemName: Regen
+  ItemSprite: {fileID: 1587653074, guid: 443b6aa6ac9be654eb956a5b31e38ec3, type: 3}
   spriteScale: 0.2
   spriteColor:
     serializedVersion: 2
@@ -25,9 +25,9 @@ MonoBehaviour:
     Level: 0
   Stats:
     HealthIncrease: 0
-    MaxHealthIncrease: 5
+    MaxHealthIncrease: 0
     HealthModifierIncrease: 0
-    RecoveryIncrease: 0
+    RecoveryIncrease: 0.1
     ArmorIncrease: 0
     MoveSpeedIncrease: 0
     MoveSpeedModifierIncrease: 0

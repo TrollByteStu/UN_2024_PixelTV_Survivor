@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Loot Goblin
   Stats:
-    AiType: 0
+    AiType: 2
     MaxHealth: 5
     Health: 5
     MoveSpeed: 2
@@ -24,17 +24,21 @@ MonoBehaviour:
     XpValue: 10
     PointValue: 10
     TimeSecondsValue: 1
-  SpawnsGravestoneUponDeath: 1
+  SpawnsGravestoneUponDeath: 0
   LootTable:
   - LootType: {fileID: 11400000, guid: 72ca8b5ac31409043bf1f367c3ac3f63, type: 2}
     LootChancePercent: 20
+  - LootType: {fileID: 11400000, guid: 79256c330406f6544a8211f4ff603901, type: 2}
+    LootChancePercent: 20
+  - LootType: {fileID: 11400000, guid: fe21ae6e321586b44b9a6b5c4588c4b3, type: 2}
+    LootChancePercent: 10
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
     LootChancePercent: 100
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
   spriteScale: 0.15
   spriteColor:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294907648
   bloodColor:
     serializedVersion: 2
     rgba: 4294910720

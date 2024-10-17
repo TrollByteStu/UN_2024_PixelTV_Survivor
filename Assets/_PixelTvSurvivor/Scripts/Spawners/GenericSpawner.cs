@@ -26,7 +26,7 @@ public class GenericSpawner : MonoBehaviour
         {
             if (Time.time > lastSpawn )
             {
-                spawntype = Random.Range(0, listOfSpawnableEnemies.Length - 1);
+                spawntype = Random.Range(0, listOfSpawnableEnemies.Length);
                 var enemy = Instantiate( genericEnemyPrefab );
                 var enemyscript = enemy.GetComponent<Enemy_Main>();
                 enemyscript.enemytype = listOfSpawnableEnemies[spawntype];

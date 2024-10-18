@@ -13,7 +13,7 @@ public class PopupTextHandler : MonoBehaviour
     public TMP_Text TextElementReference;
     public AudioSource myASref;
 
-    private float timeLeft = 2f;
+    private float timeLeft = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,8 @@ public class PopupTextHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.position += Vector3.up * Time.deltaTime;
+        TextElementReference.color = Color.Lerp(TextColor, Color.clear, VisibilityCurve.Evaluate(timeLeft));
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0) Destroy(gameObject);
     }

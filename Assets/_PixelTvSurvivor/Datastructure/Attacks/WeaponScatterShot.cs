@@ -21,7 +21,7 @@ public class WeaponScatterShot : WeaponBase
         public float bulletSpread;
         public float AttackSpeed;
         public float AttackDamage;
-        public float ShootQuantity;
+        public int ShootQuantity;
     }
     public override float GetAttackSpeed(int level)
     {
@@ -33,12 +33,11 @@ public class WeaponScatterShot : WeaponBase
         
         for (int i = 0; i < LevelStats[level].ShootQuantity; i++)
         {
-            float SpreadAngle = math.radians(LevelStats[level].bulletSpread) / LevelStats[level].ShootQuantity * i;
-            SpreadAngle -= math.radians(LevelStats[level].bulletSpread) / 2 ;
+            float SpreadAngle = math.radians(LevelStats[level].bulletSpread / 2 ) / LevelStats[level].ShootQuantity * i;
+            SpreadAngle -= math.radians(LevelStats[level].bulletSpread/2) / 2 ;
             Vector3 SpreadDirection = new Vector3 (math.asin(direction.x),math.acos(direction.y),0) + new Vector3(SpreadAngle, SpreadAngle, 0);
             SpreadDirection = new Vector3(math.sin(SpreadDirection.x),math.cos(SpreadDirection.y),0);
             SpreadDirection.Normalize();
-            Debug.Log(SpreadDirection);
 
             if (HasCurve)
             {

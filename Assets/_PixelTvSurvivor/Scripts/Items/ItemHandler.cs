@@ -45,7 +45,7 @@ public class ItemHandler : MonoBehaviour
                 if (ItemType.Stats.XpModifierIncrease > 0) PlayerRef.Stats.XpModifier += ItemType.Stats.XpModifierIncrease;
 
                 // actually add/upgrade weapons
-               if (ItemType.givenWeapon.Weapon != null) PlayerRef.AddWeapon(ItemType.givenWeapon);
+                if (ItemType.givenWeapon.Weapon != null) PlayerRef.AddWeapon(ItemType.givenWeapon);
 
                 // popup text
                 var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();

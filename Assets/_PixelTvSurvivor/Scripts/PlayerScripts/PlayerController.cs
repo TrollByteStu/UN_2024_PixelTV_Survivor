@@ -4,18 +4,20 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using System.Linq;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats Stats = new("Player",100,100,0.1f,0,10);
     
-    public List<WeaponStats> WeaponsArray;
+    public WeaponStats[] WeaponsArray;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
@@ -48,11 +50,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 AimDirection = new(1,0);
     void Attacks()
     {
-        for (int i = 0; i < WeaponsArray.Count; i++) 
+        for (int i = 0; i < WeaponsArray.Length; i++) 
         {
             if (WeaponsArray[i].LastShot < Time.time )
             {
-                WeaponsArray[i].setLastShot( Time.time + WeaponsArray[i].Weapon.GetAttackSpeed(WeaponsArray[i].Level) * Stats.CooldownModifier );
+                WeaponsArray[i].LastShot = Time.time + WeaponsArray[i].Weapon.GetAttackSpeed(WeaponsArray[i].Level) * Stats.CooldownModifier;
                 WeaponsArray[i].Weapon.Attack(WeaponsArray[i].Level, transform.position, AimDirection, Stats);
             
             }
@@ -142,6 +144,9 @@ public class PlayerController : MonoBehaviour
     public void AddWeapon(WeaponStats addWeapon)
     {
         if (DoesPlayerHaveWeapon(addWeapon)) return;
-        WeaponsArray.Add(addWeapon);
+        WeaponStats[] TmpArray = new WeaponStats[WeaponsArray.Length +1];
+        WeaponsArray.CopyTo(TmpArray, 0);
+        WeaponsArray = TmpArray;
+        WeaponsArray[WeaponsArray.Length-1] = addWeapon;
     }
 }

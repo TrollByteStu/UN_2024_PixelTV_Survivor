@@ -12,11 +12,14 @@ public class Gravestone : MonoBehaviour
     private int spawnsLeft = 2;
     private float spawnTimer;
 
+    private Vector3 myLocation;
+
     // Start is called before the first frame update
     void Start()
     {
         spawnTimer = Time.time + 10;
         GetComponent<SpriteRenderer>().sprite = PossibleGraveStoneSprites[Random.Range(0, PossibleGraveStoneSprites.Length - 1)];
+        myLocation = transform.position;
     }
 
     // Update is called once per frame
@@ -24,7 +27,7 @@ public class Gravestone : MonoBehaviour
     {
         if ( Time.time > spawnTimer)
         {
-            var enemy = Instantiate(genericEnemyPrefab,transform.position,Quaternion.identity);
+            var enemy = Instantiate(genericEnemyPrefab, myLocation, Quaternion.identity);
             var enemyscript = enemy.GetComponent<Enemy_Main>();
             enemyscript.enemytype = SpawnableEnemy;
             enemy.transform.localScale = new Vector3(enemyscript.enemytype.spriteScale, enemyscript.enemytype.spriteScale, 1);

@@ -13,10 +13,12 @@ public class GenericSpawner : MonoBehaviour
     private float lastSpawn;
     private int spawntype;
 
+    private Vector3 myLocation;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myLocation = transform.position;
     }
 
     // Update is called once per frame
@@ -27,11 +29,10 @@ public class GenericSpawner : MonoBehaviour
             if (Time.time > lastSpawn )
             {
                 spawntype = Random.Range(0, listOfSpawnableEnemies.Length);
-                var enemy = Instantiate( genericEnemyPrefab );
+                var enemy = Instantiate( genericEnemyPrefab , myLocation , Quaternion.identity);
                 var enemyscript = enemy.GetComponent<Enemy_Main>();
                 enemyscript.enemytype = listOfSpawnableEnemies[spawntype];
                 enemy.transform.SetParent(transform);
-                enemy.transform.localPosition = Vector3.zero;
                 enemy.transform.localScale = new Vector3(enemyscript.enemytype.spriteScale, enemyscript.enemytype.spriteScale,1);
                 enemy.GetComponent<SpriteRenderer>().color = enemyscript.enemytype.spriteColor;
                 lastSpawn = Time.time + spawnDelay;

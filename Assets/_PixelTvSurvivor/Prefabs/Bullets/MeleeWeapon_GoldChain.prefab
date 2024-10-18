@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5343199921876529959}
   - component: {fileID: 2069999352626508576}
   - component: {fileID: 6786183064676781091}
+  - component: {fileID: 7710459165623546480}
   m_Layer: 0
   m_Name: MeleeWeapon_GoldChain
   m_TagString: Untagged
@@ -180,3 +181,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7710459165623546480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344504690676526400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0394c22fc41acbe49b983f8e57d82620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

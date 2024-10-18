@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4387e048509a09c4893200b93e3fba01, type: 3}
-  m_Name: Weapon_ScatterShot
+  m_Name: Weapon_Homing
   m_EditorClassIdentifier: 
-  ItemName: ScatterShot
-  ItemSprite: {fileID: -219969514, guid: ac0904a0ae4f9744ba23cdfb5d87c157, type: 3}
+  ItemName: Homing
+  ItemSprite: {fileID: 2120405602, guid: ac0904a0ae4f9744ba23cdfb5d87c157, type: 3}
   spriteScale: 1
   spriteColor:
     serializedVersion: 2
@@ -23,11 +23,11 @@ MonoBehaviour:
     Weapon: {fileID: 0}
     LastShot: 0
     Level: 0
-  PopupText: SHOTGUN!!!
+  PopupText: RAKETTER!!!
   PopupColor:
     serializedVersion: 2
     rgba: 4278255615
-  pickupAudio: {fileID: 8300000, guid: 06ab9e249f969f54b81cc47013ceb08e, type: 3}
+  pickupAudio: {fileID: 8300000, guid: b957e897e6500684c9be89d9a0cad8a6, type: 3}
   Stats:
     HealthIncrease: 0
     MaxHealthIncrease: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     CooldownModifierIncrease: 0
     XpModifierIncrease: 0
   givenWeapon:
-    Weapon: {fileID: 11400000, guid: 0b550e82a197e1d4c96f3729a1ea8d8f, type: 2}
+    Weapon: {fileID: 11400000, guid: 019fdea26557dbd40b854abb3e6bb282, type: 2}
     LastShot: 0
     Level: 0
   removedWeapon:

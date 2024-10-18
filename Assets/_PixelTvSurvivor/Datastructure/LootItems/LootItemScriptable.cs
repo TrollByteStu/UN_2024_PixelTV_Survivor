@@ -30,6 +30,15 @@ public class LootItemScriptable : ScriptableObject
     [Space]
     [Header("Effects when Picked up")]
 
+    [Tooltip("The popup text")]
+    public string PopupText;
+
+    [Tooltip("The color of the popup text")]
+    public Color32 PopupColor = Color.white;
+
+    [Tooltip("The sound played when players pick it up")]
+    public AudioClip pickupAudio;
+
     [Tooltip("A list of Stat Effects")]
     public UpgradeStats Stats;
 

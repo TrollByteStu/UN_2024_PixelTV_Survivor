@@ -46,6 +46,13 @@ public class ItemHandler : MonoBehaviour
 
                 // actually add/upgrade weapons
 
+                // popup text
+                var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+                popup.TextContent = ItemType.PopupText;
+                popup.TextColor = ItemType.PopupColor;
+                popup.playThis = ItemType.pickupAudio;
+
+                // no more object flying after player
                 Destroy(gameObject);
             }
         }

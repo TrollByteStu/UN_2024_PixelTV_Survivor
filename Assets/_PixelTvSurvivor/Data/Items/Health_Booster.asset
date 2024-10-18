@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Health Booster
   ItemSprite: {fileID: -2038632400, guid: 443b6aa6ac9be654eb956a5b31e38ec3, type: 3}
-  spriteScale: 0.2
+  spriteScale: 0.5
   spriteColor:
     serializedVersion: 2
     rgba: 4294967295
@@ -23,6 +23,11 @@ MonoBehaviour:
     Weapon: {fileID: 0}
     LastShot: 0
     Level: 0
+  PopupText: Helbred +5
+  PopupColor:
+    serializedVersion: 2
+    rgba: 4286391725
+  pickupAudio: {fileID: 8300000, guid: 50f75cf0e8ffead4fabc503819641430, type: 3}
   Stats:
     HealthIncrease: 0
     MaxHealthIncrease: 5

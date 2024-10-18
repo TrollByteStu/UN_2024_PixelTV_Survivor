@@ -100,7 +100,7 @@ public class Enemy_Main : MonoBehaviour
         if (enemytype.LootTable.Length < 1) return; // no loot
         foreach (EnemyCharacter.LootTableStructure possibleLoot in enemytype.LootTable)
         { // try them all, roll for each(simpler to explain to the designers)
-            if (possibleLoot.LootChancePercent < Random.Range(0f, 100f) && possibleLoot.LootType != null)
+            if (possibleLoot.LootChancePercent > Random.Range(0f, 100f) && possibleLoot.LootType != null)
             {
                 Instantiate(GameController.Instance.GenericItemPrefab, transform.position, Quaternion.identity).GetComponent<ItemHandler>().ItemType = possibleLoot.LootType;
                 return;

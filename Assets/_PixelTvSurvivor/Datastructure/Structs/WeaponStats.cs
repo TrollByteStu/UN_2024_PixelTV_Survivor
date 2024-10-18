@@ -18,4 +18,8 @@ public struct WeaponStats
         LastShot = 0;
         Level = level;
     }
+    public void setLastShot(float newShot)
+    {
+        LastShot = newShot;
+    }
 }

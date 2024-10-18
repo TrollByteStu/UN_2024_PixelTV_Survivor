@@ -12,6 +12,7 @@ public class Enemy_Main : MonoBehaviour
     public float statusStunTimerLeft;
 
     private Transform playerRef;
+    private PlayerController playerControllerRef;
 
     // enemy attack
     private float myLastAttackTime;
@@ -24,6 +25,7 @@ public class Enemy_Main : MonoBehaviour
     void Start()
     {
         playerRef = GameController.Instance.PlayerReference.transform;
+        playerControllerRef = GameController.Instance.PlayerReference;
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
     }
@@ -100,12 +102,23 @@ public class Enemy_Main : MonoBehaviour
         if (enemytype.LootTable.Length < 1) return; // no loot
         foreach (EnemyCharacter.LootTableStructure possibleLoot in enemytype.LootTable)
         { // try them all, roll for each(simpler to explain to the designers)
-            if (possibleLoot.LootChancePercent > Random.Range(0f, 100f) && possibleLoot.LootType != null)
+            if (possibleLoot.LootChancePercent > Random.Range(0f, 100f) && EnemyDies_DropLoot_CheckLootPossible(possibleLoot))
             {
                 Instantiate(GameController.Instance.GenericItemPrefab, transform.position, Quaternion.identity).GetComponent<ItemHandler>().ItemType = possibleLoot.LootType;
                 return;
             }
         }  
+    }
+    private bool EnemyDies_DropLoot_CheckLootPossible(EnemyCharacter.LootTableStructure checkLoot)
+    { // check if this player can get this loot at this time
+        // all the ways it can fail
+        if (checkLoot.LootType == null) return false;
+        if ( checkLoot.LootType.givenWeapon.Level > 0 )
+        { // do not spawn a weapon player already has
+            if (playerControllerRef.DoesPlayerHaveWeapon(checkLoot.LootType.givenWeapon)) return false;
+        }
+        // passed all tests, player can get this loot
+        return true;
     }
 
     public void EnemyAttacksPlayer()

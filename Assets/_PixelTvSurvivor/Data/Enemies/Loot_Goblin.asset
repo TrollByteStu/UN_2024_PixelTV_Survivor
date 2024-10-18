@@ -26,6 +26,8 @@ MonoBehaviour:
     TimeSecondsValue: 1
   SpawnsGravestoneUponDeath: 0
   LootTable:
+  - LootType: {fileID: 11400000, guid: d620118170a5b13469d98a53164d8a25, type: 2}
+    LootChancePercent: 100
   - LootType: {fileID: 11400000, guid: 72ca8b5ac31409043bf1f367c3ac3f63, type: 2}
     LootChancePercent: 20
   - LootType: {fileID: 11400000, guid: 79256c330406f6544a8211f4ff603901, type: 2}

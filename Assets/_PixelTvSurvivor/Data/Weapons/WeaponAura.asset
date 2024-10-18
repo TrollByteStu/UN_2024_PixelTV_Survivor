@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c53380f3fe38e4196102fc04f73399, type: 3}
   m_Name: WeaponAura
   m_EditorClassIdentifier: 
+  WeaponName: Aura
+  AttackAudioFire: {fileID: 0}
+  AttackAudioHit: {fileID: 0}
   LevelStats:
   - AttackSpeed: 1
     AttackDamage: 10

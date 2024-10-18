@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f704ff6bccf8b42949d653403271ed, type: 3}
   m_Name: WeaponHoming
   m_EditorClassIdentifier: 
+  WeaponName: Homing
+  AttackAudioFire: {fileID: 0}
+  AttackAudioHit: {fileID: 0}
   BulletPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
   bulletSprite: {fileID: 21300000, guid: f58130e5792808848bbb484276ccdd44, type: 3}
   LevelStats:

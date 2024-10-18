@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff554e262e30e2c4da5954f296362eed, type: 3}
   m_Name: WeaponOrbit
   m_EditorClassIdentifier: 
+  WeaponName: Orbit
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
   Satellite: {fileID: 534344728426264382, guid: 10ec6ebe525660d49a773c382c0836c4, type: 3}

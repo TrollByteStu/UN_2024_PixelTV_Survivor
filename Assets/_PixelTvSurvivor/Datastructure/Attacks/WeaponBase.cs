@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class WeaponBase : ScriptableObject 
 {
+    [Tooltip("What is this Weapon called?")]
+    public String WeaponName;
+
     [Tooltip("What sound does it make when the weapon fires?")]
     public AudioClip AttackAudioFire;
 

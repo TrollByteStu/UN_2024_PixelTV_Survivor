@@ -3,12 +3,13 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats Stats = new("Player",100,100,0.1f,0,10);
     
-    public WeaponStats[] WeaponsArray;
+    public List<WeaponStats> WeaponsArray;
 
 
     // Start is called before the first frame update
@@ -47,11 +48,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 AimDirection = new(1,0);
     void Attacks()
     {
-        for (int i = 0; i < WeaponsArray.Length; i++) 
+        for (int i = 0; i < WeaponsArray.Count; i++) 
         {
             if (WeaponsArray[i].LastShot < Time.time )
             {
-                WeaponsArray[i].LastShot = Time.time + WeaponsArray[i].Weapon.GetAttackSpeed(WeaponsArray[i].Level) * Stats.CooldownModifier;
+                WeaponsArray[i].setLastShot( Time.time + WeaponsArray[i].Weapon.GetAttackSpeed(WeaponsArray[i].Level) * Stats.CooldownModifier );
                 WeaponsArray[i].Weapon.Attack(WeaponsArray[i].Level, transform.position, AimDirection, Stats);
             
             }
@@ -129,4 +130,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool DoesPlayerHaveWeapon(WeaponStats checkWeapon)
+    {
+        foreach (WeaponStats lookForWeapon in WeaponsArray)
+        {
+            if (lookForWeapon.Weapon == checkWeapon.Weapon) return true;
+        }
+        return false;
+    }
+
+    public void AddWeapon(WeaponStats addWeapon)
+    {
+        if (DoesPlayerHaveWeapon(addWeapon)) return;
+        WeaponsArray.Add(addWeapon);
+    }
 }

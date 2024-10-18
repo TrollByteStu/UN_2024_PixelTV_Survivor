@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e3b6da1595732489368163d2cc03f2, type: 3}
   m_Name: WeaponSlash
   m_EditorClassIdentifier: 
+  WeaponName: Slash
+  AttackAudioFire: {fileID: 0}
+  AttackAudioHit: {fileID: 0}
   Slash: {fileID: 4629565521201394547, guid: 2ab814923e8df4a4e88b7a5b30e1862b, type: 3}
   SlashSprite: {fileID: 1678305621, guid: 95877343e8583304c8a0caee374373f3, type: 3}
   AttackSide: 0

@@ -4,6 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UI_HUD : MonoBehaviour
 {
@@ -89,6 +90,7 @@ public class UI_HUD : MonoBehaviour
     {
         Section_HUD.localScale = new Vector2(0, 0);
         Section_Looser.localScale = new Vector2(1, 1);
+        Cursor.visible = true;
     }
     void clearTransformChildren(Transform needToClear)
     {
@@ -162,5 +164,10 @@ public class UI_HUD : MonoBehaviour
         Time.timeScale = 1;
         Section_HUD.localScale = new Vector2(1, 1);
         Section_Upgrade.localScale = new Vector2(0, 0);
+    }
+
+    public void ButtonPress_GameOver()
+    {
+        SceneManager.LoadScene("_MainMenu");
     }
 }

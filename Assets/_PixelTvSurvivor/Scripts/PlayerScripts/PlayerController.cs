@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
     {
         foreach (WeaponStats lookForWeapon in WeaponsArray)
         {
-            if (lookForWeapon.Weapon == checkWeapon.Weapon) return true;
+            if (lookForWeapon.Weapon.WeaponName == checkWeapon.Weapon.WeaponName) return true;
         }
         return false;
     }

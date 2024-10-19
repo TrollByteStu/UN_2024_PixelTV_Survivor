@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         foreach (RaycastHit2D hit in Physics2D.CircleCastAll(transform.position, 5, Vector3.forward))
         {
-            if (hit.transform.tag == "PickupAble")
+            if (hit.transform.CompareTag("PickupAble"))
             {
                 if (hit.transform.GetComponent<XpOrb>() != null)
                     hit.transform.GetComponent<XpOrb>().Pickup();
@@ -144,9 +144,7 @@ public class PlayerController : MonoBehaviour
     public void AddWeapon(WeaponStats addWeapon)
     {
         if (DoesPlayerHaveWeapon(addWeapon)) return;
-        WeaponStats[] TmpArray = new WeaponStats[WeaponsArray.Length +1];
-        WeaponsArray.CopyTo(TmpArray, 0);
-        WeaponsArray = TmpArray;
-        WeaponsArray[WeaponsArray.Length-1] = addWeapon;
+        //adds new weapon to array
+        WeaponsArray = WeaponsArray.Concat(new WeaponStats[] { addWeapon }).ToArray();
     }
 }

@@ -11,7 +11,11 @@ public class SlashBase : MonoBehaviour
 
     public void Setup(Sprite sprite, Vector3 scale)
     {
-        GetComponent<SpriteRenderer>().sprite = sprite;
+
+        if (GetComponent<SpriteRenderer>() != null) 
+            GetComponent<SpriteRenderer>().sprite = sprite;
+        else
+            GetComponentInChildren<SpriteRenderer>().sprite = sprite;
         transform.localScale = scale;
 
     }

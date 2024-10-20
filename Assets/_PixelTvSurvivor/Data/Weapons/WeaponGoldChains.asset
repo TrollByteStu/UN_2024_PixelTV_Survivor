@@ -19,7 +19,7 @@ MonoBehaviour:
   SlashSprite: {fileID: 1837000093, guid: 392dd643053572b4883c279991a8255b, type: 3}
   AttackSide: 0
   LevelStats:
-  - AttackSpeed: 1.123
+  - AttackSpeed: 1
     AttackDamage: 15
     AttackQuantity: 1
     AOE: {x: 4, y: 3}

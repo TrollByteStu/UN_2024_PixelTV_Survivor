@@ -22,7 +22,7 @@ MonoBehaviour:
     bulletSpread: 30
     AttackSpeed: 0.04
     AttackDamage: 10
-    ShootQuantity: 5
+    ShootQuantity: 10
   HasCurve: 0
   Curve:
     serializedVersion: 2

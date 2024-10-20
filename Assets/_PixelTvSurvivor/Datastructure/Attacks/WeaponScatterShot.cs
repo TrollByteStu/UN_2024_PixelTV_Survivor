@@ -14,6 +14,10 @@ public class WeaponScatterShot : WeaponBase
     public AnimationCurve Curve;
     public bool FlipCurve;
 
+
+    private float SpreadAngle;
+    private float angle;
+    private Vector3 SpreadDirection;
     [Serializable]
     public struct WeaponStats
     {
@@ -31,14 +35,15 @@ public class WeaponScatterShot : WeaponBase
     {
 
         
-        for (int i = 0; i < LevelStats[level].ShootQuantity; i++)
+        for (int i = 0; i < LevelStats[level].ShootQuantity ; i++)
         {
-            //float SpreadAngle = math.radians(LevelStats[level].bulletSpread / 2 ) / LevelStats[level].ShootQuantity * i;
-            //SpreadAngle -= math.radians(LevelStats[level].bulletSpread/2) / LevelStats[level].ShootQuantity / 2 ;
-            float SpreadAngle = math.radians(LevelStats[level].bulletSpread  / (LevelStats[level].ShootQuantity - 1) * i );
-            SpreadAngle -= math.radians(LevelStats[level].bulletSpread / (LevelStats[level].ShootQuantity - 1) / 2);
-            float angle = math.atan2(direction.x, direction.y) + SpreadAngle;
-            Vector3 SpreadDirection = new Vector3(math.sin(angle),math.cos(angle),0);
+            SpreadAngle = math.radians(LevelStats[level].bulletSpread  / (LevelStats[level].ShootQuantity-1) * i );
+            SpreadAngle -= math.radians(LevelStats[level].bulletSpread / 2);
+            if (LevelStats[level].ShootQuantity == 1)
+                SpreadAngle = 0;
+
+            angle = math.atan2(direction.x, direction.y) + SpreadAngle;
+            SpreadDirection = new Vector3(math.sin(angle),math.cos(angle),0);
 
             if (HasCurve)
             {

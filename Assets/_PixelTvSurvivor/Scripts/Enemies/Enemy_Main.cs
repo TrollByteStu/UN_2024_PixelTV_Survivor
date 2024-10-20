@@ -115,7 +115,7 @@ public class Enemy_Main : MonoBehaviour
         if (checkLoot.LootType == null) return false;
         if ( checkLoot.LootType.givenWeapon.Level > 0 )
         { // do not spawn a weapon player already has
-            if (playerControllerRef.DoesPlayerHaveWeapon(checkLoot.LootType.givenWeapon)) return false;
+            if (playerControllerRef.DoesPlayerHaveWeapon(checkLoot.LootType.givenWeapon.Weapon)) return false;
         }
         // passed all tests, player can get this loot
         return true;

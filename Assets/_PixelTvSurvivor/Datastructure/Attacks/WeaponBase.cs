@@ -18,6 +18,7 @@ public class WeaponBase : ScriptableObject
     public virtual float GetDamage(int level) { return 0; }
     public virtual void Attack(int level, Vector3 playerPosition,Vector3 direction,PlayerStats playerStats) { }
     public virtual void SetAim(Vector3 direction) { }
+    public virtual int GetMaxLevel() {  return 0; }
 
 
 

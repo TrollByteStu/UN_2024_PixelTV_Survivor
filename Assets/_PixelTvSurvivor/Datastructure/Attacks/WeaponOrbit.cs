@@ -13,7 +13,7 @@ public class WeaponOrbit : WeaponBase
     private List<GameObject> Satellites = new List<GameObject>();
     public GameObject Satellite;
     public Spin SpinDirection;
-    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
+    public List<WeaponStats> LevelStats;
     [Serializable]
     public struct WeaponStats
     {
@@ -99,5 +99,8 @@ public class WeaponOrbit : WeaponBase
         return LevelStats[level].AttackDamage;
     }
 
-
+    public override int GetMaxLevel()
+    {
+        return LevelStats.Count - 1;
+    }
 }

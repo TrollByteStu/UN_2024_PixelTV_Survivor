@@ -62,4 +62,8 @@ public class WeaponSpiral : WeaponBase
     {
         return LevelStats[level].AttackSpeed;
     }
+    public override int GetMaxLevel()
+    {
+        return LevelStats.Count - 1;
+    }
 }

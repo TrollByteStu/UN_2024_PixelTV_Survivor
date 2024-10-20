@@ -63,6 +63,10 @@ public class WeaponScatterShot : WeaponBase
 
         }
     }
+    public override int GetMaxLevel()
+    {
+        return LevelStats.Count - 1;
+    }
 
 
 

@@ -10,7 +10,7 @@ public class WeaponHoming : WeaponBase
 
     public GameObject BulletPrefab;
     public Sprite bulletSprite;
-    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
+    public List<WeaponStats> LevelStats;
     public bool HasCurve;
     public AnimationCurve Curve;
     public bool FlipCurve;
@@ -72,5 +72,9 @@ public class WeaponHoming : WeaponBase
     public override float GetAttackSpeed(int level)
     {
         return LevelStats[level].AttackSpeed;
+    }
+    public override int GetMaxLevel()
+    {
+        return LevelStats.Count - 1;
     }
 }

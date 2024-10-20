@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponAura", menuName = "ScriptableObjects/WeaponTypes/Aura", order = 3)]
 public class WeaponAura : WeaponBase
 {
-    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
+    public List<WeaponStats> LevelStats;
 
     [Serializable]
     public struct WeaponStats
@@ -36,5 +36,10 @@ public class WeaponAura : WeaponBase
     public override float GetAttackSpeed(int level)
     {
         return LevelStats[level].AttackSpeed;
+    }
+
+    public override int GetMaxLevel()
+    {
+        return LevelStats.Count-1;
     }
 }

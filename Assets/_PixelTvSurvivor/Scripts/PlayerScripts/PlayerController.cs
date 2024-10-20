@@ -13,11 +13,10 @@ public class PlayerController : MonoBehaviour
     
     public WeaponStats[] WeaponsArray;
 
-
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
@@ -132,19 +131,49 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public bool DoesPlayerHaveWeapon(WeaponStats checkWeapon)
+    public bool DoesPlayerHaveWeapon(WeaponBase checkWeapon)
     {
         foreach (WeaponStats lookForWeapon in WeaponsArray)
         {
-            if (lookForWeapon.Weapon.WeaponName == checkWeapon.Weapon.WeaponName) return true;
+            if (lookForWeapon.Weapon == checkWeapon) return true;
         }
         return false;
     }
 
-    public void AddWeapon(WeaponStats addWeapon)
+    public void AddWeapon(WeaponBase addWeapon)
     {
         if (DoesPlayerHaveWeapon(addWeapon)) return;
         //adds new weapon to array
+        WeaponsArray = WeaponsArray.Concat(new WeaponStats[] { new WeaponStats(addWeapon) }).ToArray();
+    }
+
+    public void AddWeapon(WeaponStats addWeapon)
+    {
+        if (DoesPlayerHaveWeapon(addWeapon.Weapon)) return;
+        //adds new weapon to array
         WeaponsArray = WeaponsArray.Concat(new WeaponStats[] { addWeapon }).ToArray();
     }
+
+    public void UpgradeWeapon(WeaponBase weapon)
+    {
+        if (WeaponUpgardeble(weapon))
+            WeaponsArray[FindWeapon(weapon)].Level++;
+    }
+
+    int FindWeapon(WeaponBase weapon)
+    {
+        for (int i = 0; i < WeaponsArray.Length; i++)
+        {
+            if (WeaponsArray[i].Weapon == weapon)
+                return i;
+        }
+        Debug.LogError("none found");
+        return 99999999;
+    }
+
+    public bool WeaponUpgardeble(WeaponBase weapon)
+    {
+        return WeaponsArray[FindWeapon(weapon)].Level < weapon.GetMaxLevel();
+    }
+
 }

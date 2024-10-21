@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
     [Header("Other GameController Scripts")]
     public GameController_FPS myFps;
     public GameController_ObjectPool myOP;
+    public WeaponUpgradeGamble myWUG;
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class GameController : MonoBehaviour
         // Other game controller scripts
         myFps = GetComponent<GameController_FPS>();
         myOP = GetComponent<GameController_ObjectPool>();
+        myWUG = GetComponent<WeaponUpgradeGamble>();
     }
 
     public void PlayerIsDead()

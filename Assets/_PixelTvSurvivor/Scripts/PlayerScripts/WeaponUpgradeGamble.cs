@@ -18,14 +18,14 @@ public class WeaponUpgradeGamble : MonoBehaviour
         Player = GameController.Instance.PlayerReference;
     }
 
-    private void Update()
-    {
-        if (Roll)
-        {
-            Roll = false;
-            SlotMachine();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Roll)
+    //    {
+    //        Roll = false;
+    //        SlotMachine();
+    //    }
+    //}
 
     public void SlotMachine()
     {

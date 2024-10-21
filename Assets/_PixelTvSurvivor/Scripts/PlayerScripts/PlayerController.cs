@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
     {
         Stats.Level++;
         Stats.Xp = 0;
+        GameController.Instance.myWUG.SlotMachine();
     }
 
     // Event called by Player Input Component on press and release of move keybind

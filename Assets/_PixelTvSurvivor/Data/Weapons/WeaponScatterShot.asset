@@ -20,9 +20,9 @@ MonoBehaviour:
   LevelStats:
   - bulletSpeed: 15
     bulletSpread: 30
-    AttackSpeed: 0.04
+    AttackSpeed: 1
     AttackDamage: 10
-    ShootQuantity: 10
+    ShootQuantity: 5
   HasCurve: 0
   Curve:
     serializedVersion: 2

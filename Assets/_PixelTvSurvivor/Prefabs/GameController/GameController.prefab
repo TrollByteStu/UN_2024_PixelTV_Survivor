@@ -74,6 +74,8 @@ GameObject:
   - component: {fileID: 5730287457983381779}
   - component: {fileID: 2798827809084272646}
   - component: {fileID: 8848570326371855061}
+  - component: {fileID: 3732330668148699807}
+  - component: {fileID: 5943691402303187131}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -128,6 +130,7 @@ MonoBehaviour:
   currentFPS: 0
   myFps: {fileID: 0}
   myOP: {fileID: 0}
+  myWUG: {fileID: 0}
 --- !u!114 &2798827809084272646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +160,150 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
   EnemyStartPool: 500
   EnemyMaxPool: 2000
+--- !u!114 &3732330668148699807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945792299011173173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c53606b00c72fc40ba45c964a81caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveSize:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 7.86145
+      value: 14.58548
+      inSlope: 1.47904
+      outSlope: 1.47904
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 9.86145
+      value: 24.58548
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14.456334
+      value: 14.541811
+      inSlope: -0.058780573
+      outSlope: -0.058780573
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 21.251387
+      value: 31.065384
+      inSlope: -0.012036828
+      outSlope: -0.012036828
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 32.350525
+      value: 17.845945
+      inSlope: -0.3394327
+      outSlope: -0.3394327
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35.861336
+      value: 47.00366
+      inSlope: 0.07077032
+      outSlope: 0.07077032
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 38.805607
+      value: 18.302315
+      inSlope: -0.57723844
+      outSlope: -0.57723844
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 45.28872
+      value: 25.78342
+      inSlope: 0.023594834
+      outSlope: 0.023594834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 53.14718
+      value: 15.993708
+      inSlope: -0.64655346
+      outSlope: -0.64655346
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 60
+      value: 20
+      inSlope: 0.5846194
+      outSlope: 0.5846194
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  SpawnableEnemiesArray:
+  - {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
+  Enemyprefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
+--- !u!114 &5943691402303187131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945792299011173173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd469b02f9e632a4eb9cc9835c0b73c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChanceToMiss: 0
+  Roll: 0
+  Player: {fileID: 0}
+  WeaponChances:
+  - {fileID: 11400000, guid: f9602e8e18027d54a88285adb8dbaebe, type: 2}
+  - {fileID: 11400000, guid: 9aa662a6751a87c479ca9a42b5a23512, type: 2}
+  - {fileID: 11400000, guid: 14bbdbe25c50d694cb6548a1ffbb7dd3, type: 2}
+  - {fileID: 11400000, guid: 019fdea26557dbd40b854abb3e6bb282, type: 2}
+  - {fileID: 11400000, guid: da5052f0eb9b7754b9c226e43e48b89e, type: 2}
+  - {fileID: 11400000, guid: 0b550e82a197e1d4c96f3729a1ea8d8f, type: 2}
+  - {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}
+  - {fileID: 11400000, guid: ddec7dc71daf1ef418e202f2f9777718, type: 2}
 --- !u!1 &4213852873923545635
 GameObject:
   m_ObjectHideFlags: 0

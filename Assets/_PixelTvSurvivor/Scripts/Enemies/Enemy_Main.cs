@@ -99,7 +99,7 @@ public class Enemy_Main : MonoBehaviour
         { // spawn a gravestone
             Instantiate(GameController.Instance.GraveStonePrefab, transform.position, Quaternion.identity).GetComponent<Gravestone>().SpawnableEnemy = enemytype;
         }
-        GameController.Instance.myOP.EnemyPool.Release(gameObject);
+        if ( gameObject.activeInHierarchy ) GameController.Instance.myOP.EnemyPool.Release(gameObject);
         //Destroy(gameObject);
     }
     private void EnemyDies_DropLoot()

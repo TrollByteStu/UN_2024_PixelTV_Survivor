@@ -134,9 +134,16 @@ public class Enemy_Main : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("Zombie hit something with tag: " + collision.gameObject.tag);
-        if ( collision.gameObject.tag == "Walls")
+        if ( collision.gameObject.CompareTag("Walls"))
         {
             transform.position -= ((transform.position - lastPosition) * 50);
         }
+    }
+
+    public void Setup(EnemyCharacter enemy)
+    {
+        enemytype = enemy;
+        transform.localScale = new Vector3(enemytype.spriteScale, enemytype.spriteScale, 1);
+        GetComponent<SpriteRenderer>().color = enemytype.spriteColor;
     }
 }

@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public Transform SatelliteHolder;
     public Transform BloodHolder;
     public Transform XpHolder;
+    public Transform EnemyHolder;
 
     [Header("Prefabs")]
     public GameObject[] BloodSplatPrefabs;

@@ -1,23 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SurroundSpawner : MonoBehaviour
 {
-    public float WaveSize;
-    public bool spawn;
 
-    public float MinDistance;
-    public float MaxDistance;
+    public AnimationCurve waveSize;
 
     public EnemyCharacter[] SpawnableEnemiesArray;
     public GameObject Enemyprefab;
 
     private Transform Player;
     private Transform Holder;
-    private Vector3 Spawnpoint;
 
-    private float ViewPortSize = 24;
+    private readonly float ViewPortSize = 24;
 
     float LastSpawn;
 
@@ -30,15 +28,10 @@ public class SurroundSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (spawn) 
-        { 
-            spawn = false;
-        }
-
         if (LastSpawn + 1 < Time.time)
         {
             
-            SpawnWave();
+            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.length +1)));
             LastSpawn = Time.time;
         }
     }
@@ -93,11 +86,10 @@ public class SurroundSpawner : MonoBehaviour
     //    return true;
     //}
 
-    void SpawnWave()
+    void SpawnWave(int amount)
     {
-        for (int i = 0; i < WaveSize; i++)
+        for (int i = 0; i < amount; i++)
         {
-
             float angle = Random.Range(-Mathf.PI, Mathf.PI);
             Instantiate(Enemyprefab, new Vector3(Mathf.Sin(angle)* (ViewPortSize + Random.Range(-3,3)) ,Mathf.Cos(angle)* (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position, Quaternion.identity, Holder).GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[0]);
         }

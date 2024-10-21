@@ -37,6 +37,9 @@ public class Enemy_Main : MonoBehaviour
         lastPosition = thisPosition;
         thisPosition = transform.position;
 
+        if (Vector3.Distance(playerRef.position,transform.position) > 30)
+            Destroy(gameObject);
+
         // ai
         EnemyMoveByAIType();
 

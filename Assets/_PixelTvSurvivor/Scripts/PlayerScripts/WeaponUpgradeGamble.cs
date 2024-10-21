@@ -29,6 +29,11 @@ public class WeaponUpgradeGamble : MonoBehaviour
 
     public void SlotMachine()
     {
+        if (WeaponChances.Count == 0)
+        {
+            return;
+        }
+
         if (RollFailed())
         {
             print("failed");

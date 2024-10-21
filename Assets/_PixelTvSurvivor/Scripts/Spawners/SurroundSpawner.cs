@@ -18,6 +18,7 @@ public class SurroundSpawner : MonoBehaviour
     private readonly float ViewPortSize = 24;
 
     float LastSpawn;
+    private GameObject lastSpawn;
 
     private void Start()
     {
@@ -91,7 +92,11 @@ public class SurroundSpawner : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             float angle = Random.Range(-Mathf.PI, Mathf.PI);
-            Instantiate(Enemyprefab, new Vector3(Mathf.Sin(angle)* (ViewPortSize + Random.Range(-3,3)) ,Mathf.Cos(angle)* (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position, Quaternion.identity, Holder).GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[0]);
+            lastSpawn = GameController.Instance.myOP.EnemyPool.Get();
+            lastSpawn.transform.position = new Vector3(Mathf.Sin(angle) * (ViewPortSize + Random.Range(-3, 3)), Mathf.Cos(angle) * (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position;
+            lastSpawn.transform.SetParent(Holder);
+            lastSpawn.GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[0]);
+            //Instantiate(Enemyprefab, new Vector3(Mathf.Sin(angle)* (ViewPortSize + Random.Range(-3,3)) ,Mathf.Cos(angle)* (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position, Quaternion.identity, Holder).GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[0]);
         }
     }
 }

@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
 
     [Header("Other GameController Scripts")]
     public GameController_FPS myFps;
+    public GameController_ObjectPool myOP;
 
     private void Awake()
     {
@@ -37,13 +38,12 @@ public class GameController : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(this);
-        }
-        else
-        {
+        } else {
             Instance = this;
         }
         // Other game controller scripts
         myFps = GetComponent<GameController_FPS>();
+        myOP = GetComponent<GameController_ObjectPool>();
     }
 
     public void PlayerIsDead()

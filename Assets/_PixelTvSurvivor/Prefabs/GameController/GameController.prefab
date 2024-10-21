@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 7121866874130086151}
   - component: {fileID: 5730287457983381779}
   - component: {fileID: 2798827809084272646}
+  - component: {fileID: 8848570326371855061}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -126,6 +127,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}
   currentFPS: 0
   myFps: {fileID: 0}
+  myOP: {fileID: 0}
 --- !u!114 &2798827809084272646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +142,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxFrames: 120
   lastFPSCalculated: 0
+--- !u!114 &8848570326371855061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945792299011173173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8846fe033d8d845b377425a8bd1aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
+  EnemyStartPool: 500
+  EnemyMaxPool: 2000
 --- !u!1 &4213852873923545635
 GameObject:
   m_ObjectHideFlags: 0

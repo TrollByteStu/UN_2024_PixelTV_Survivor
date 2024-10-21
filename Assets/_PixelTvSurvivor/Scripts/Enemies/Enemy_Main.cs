@@ -37,8 +37,9 @@ public class Enemy_Main : MonoBehaviour
         lastPosition = thisPosition;
         thisPosition = transform.position;
 
-        if (Vector3.Distance(playerRef.position,transform.position) > 30)
-            Destroy(gameObject);
+        if (Vector3.Distance(playerRef.position, transform.position) > 30)
+            GameController.Instance.myOP.EnemyPool.Release(gameObject);
+            //Destroy(gameObject);
 
         // ai
         EnemyMoveByAIType();
@@ -98,7 +99,8 @@ public class Enemy_Main : MonoBehaviour
         { // spawn a gravestone
             Instantiate(GameController.Instance.GraveStonePrefab, transform.position, Quaternion.identity).GetComponent<Gravestone>().SpawnableEnemy = enemytype;
         }
-        Destroy(gameObject);
+        GameController.Instance.myOP.EnemyPool.Release(gameObject);
+        //Destroy(gameObject);
     }
     private void EnemyDies_DropLoot()
     {

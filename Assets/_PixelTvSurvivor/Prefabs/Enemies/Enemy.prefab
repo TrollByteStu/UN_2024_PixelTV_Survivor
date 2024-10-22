@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4339891707272752023}
   - component: {fileID: 2647032646040814274}
   - component: {fileID: 6017448913976279683}
-  - component: {fileID: 8808419316441915939}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -103,6 +102,7 @@ MonoBehaviour:
   enemytype: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
   XpOrb: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
   myStats:
+    AiType: 0
     MaxHealth: 20
     Health: 20
     MoveSpeed: 0.5
@@ -112,7 +112,7 @@ MonoBehaviour:
     XpValue: 0
     PointValue: 0
     TimeSecondsValue: 0
-  statusStunTimerLeft: 0
+  StunTime: 0
 --- !u!61 &2647032646040814274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,30 +179,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!50 &8808419316441915939
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893235177329492211}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7

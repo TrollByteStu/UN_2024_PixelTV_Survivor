@@ -12,6 +12,8 @@ public class SurroundSpawner : MonoBehaviour
     public EnemyCharacter[] SpawnableEnemiesArray;
     public GameObject Enemyprefab;
 
+    public bool Spawn;
+
     private Transform Player;
     private Transform Holder;
 
@@ -24,17 +26,21 @@ public class SurroundSpawner : MonoBehaviour
     {
         Player = GameController.Instance.PlayerReference.transform;
         Holder = GameController.Instance.EnemyHolder;
-
     }
 
     private void Update()
     {
-        if (LastSpawn + 1 < Time.time)
+        if (Spawn)
         {
-            
-            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.length +1)));
-            LastSpawn = Time.time;
+            SpawnWave(2000);
+            Spawn = false;
         }
+
+        //if (LastSpawn + 1 < Time.time)
+        //{
+        //    SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.length +1)));
+        //    LastSpawn = Time.time;
+        //}
     }
 
     //void Spawn()

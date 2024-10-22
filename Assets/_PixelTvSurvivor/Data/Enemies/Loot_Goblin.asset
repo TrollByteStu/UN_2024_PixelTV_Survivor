@@ -17,7 +17,7 @@ MonoBehaviour:
     AiType: 2
     MaxHealth: 5
     Health: 5
-    MoveSpeed: 2
+    MoveSpeed: -2
     AttackDamage: 5
     AttackSpeed: 1
     AttackRange: 1

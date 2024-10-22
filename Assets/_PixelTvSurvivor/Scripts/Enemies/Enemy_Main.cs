@@ -9,7 +9,7 @@ public class Enemy_Main : MonoBehaviour
     public EnemyStats myStats;
 
     // status effects
-    public float statusStunTimerLeft;
+    public float StunTime;
 
     private Transform playerRef;
     private PlayerController playerControllerRef;
@@ -34,45 +34,68 @@ public class Enemy_Main : MonoBehaviour
     void Update()
     {
         // janky wall blocker
-        lastPosition = thisPosition;
-        thisPosition = transform.position;
+        //lastPosition = thisPosition;
+        //thisPosition = transform.position;
 
+
+        // kill enemy if to far from player
         if (Vector3.Distance(playerRef.position, transform.position) > 30)
             GameController.Instance.myOP.EnemyPool.Release(gameObject);
-            //Destroy(gameObject);
+        //Destroy(gameObject);
 
         // ai
-        EnemyMoveByAIType();
+        Movement();
+        // attack
+        if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
+        //EnemyMoveByAIType();
 
-        // stats & status
-        if ( statusStunTimerLeft > 0 )
-        {
-            statusStunTimerLeft -= Time.deltaTime;
-            if ( statusStunTimerLeft < 0 ) statusStunTimerLeft = 0;
-        }
     }
     private void EnemyMoveByAIType()
     {
         switch (myStats.AiType)
         {
-            case EnemyStats.EnemyAiType.LootGoblin:
-                EnemyMove_LootGoblinType();
-            break;
+            case EnemyStats.EnemyAiType.LootGoblin or EnemyStats.EnemyAiType.Zombie or EnemyStats.EnemyAiType.Shooter:
+                Movement();
+            break;<z
             default:
-                EnemyMove_ZombieType();
             break;
         }
     }
-    private void EnemyMove_ZombieType()
+    //private void EnemyMove_ZombieType()
+    //{
+    //    if (statusStunTimerLeft <= 0)
+    //        transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
+    //    if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
+    //}
+    //private void EnemyMove_LootGoblinType()
+    //{
+    //    if (statusStunTimerLeft <= 0)
+    //        transform.position = Vector3.MoveTowards(transform.position, transform.position+((transform.position-playerRef.position)*2), myStats.MoveSpeed * Time.deltaTime);
+    //}
+
+    void Movement()
     {
-        if (statusStunTimerLeft <= 0)
-            transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
+        if (StunTime > Time.time) return;
+
+        Vector3 direction = (playerRef.position - transform.position ).normalized * myStats.MoveSpeed * Time.deltaTime;
+
+        foreach (RaycastHit2D Hit in Physics2D.LinecastAll(transform.position, direction + transform.position ))
+        {
+            if (Hit.collider.CompareTag("Walls") || Hit.collider.CompareTag("Player"))
+            {
+                direction *= Hit.distance;
+                break;
+            }
+        }
+        //Debug.DrawRay(transform.position, direction,Color.red,1);
+
+        transform.position += direction;
+
     }
-    private void EnemyMove_LootGoblinType()
+
+    public void Stun(float seconds)
     {
-        if (statusStunTimerLeft <= 0)
-            transform.position = Vector3.MoveTowards(transform.position, transform.position+((transform.position-playerRef.position)*2), myStats.MoveSpeed * Time.deltaTime);
+        StunTime = seconds + Time.time;
     }
 
     public void EnemyTakesDamage(float damage)
@@ -136,14 +159,14 @@ public class Enemy_Main : MonoBehaviour
         myLastAttackTime = Time.time;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Debug.Log("Zombie hit something with tag: " + collision.gameObject.tag);
-        if ( collision.gameObject.CompareTag("Walls"))
-        {
-            transform.position -= ((transform.position - lastPosition) * 50);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    //Debug.Log("Zombie hit something with tag: " + collision.gameObject.tag);
+    //    if ( collision.gameObject.CompareTag("Walls"))
+    //    {
+    //        transform.position -= ((transform.position - lastPosition) * 50);
+    //    }
+    //}
 
     public void Setup(EnemyCharacter enemy)
     {

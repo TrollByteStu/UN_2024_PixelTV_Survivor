@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameController_FPS : MonoBehaviour
 {
-    public int MaxFrames = 60;  //maximum frames to average over
+    public int MaxFrames = 120;  //maximum frames to average over
 
-    public float lastFPSCalculated = 0f;
+    private float lastFPSCalculated = 0f;
     private List<float> frameTimes = new List<float>();
 
     // Use this for initialization
@@ -44,6 +44,10 @@ public class GameController_FPS : MonoBehaviour
         newFPS = ((float)(frameTimes.Count)) / totalTimeOfAllFrames;
 
         return newFPS;
+    }
+
+    public float getFPS() {
+        return lastFPSCalculated;
     }
 
 }

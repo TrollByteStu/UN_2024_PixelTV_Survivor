@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
     public int currentFPS;
 
     [Header("Other GameController Scripts")]
-    public GameController_FPS myFps;
+    private GameController_FPS myFps;
     public GameController_ObjectPool myOP;
     public WeaponUpgradeGamble myWUG;
 
@@ -52,6 +52,10 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 0;
         UI_HUD.Instance.PlayerIsDead();
+    }
+    public bool FPS_isWithinLimit(float limit)
+    {
+        return (limit > myFps.getFPS() );
     }
 
 }

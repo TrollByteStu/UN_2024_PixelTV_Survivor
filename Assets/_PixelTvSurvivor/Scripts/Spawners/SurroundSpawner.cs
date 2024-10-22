@@ -89,6 +89,10 @@ public class SurroundSpawner : MonoBehaviour
 
     void SpawnWave(int amount)
     {
+        // computer is dying, skip wave
+        if (!GameController.Instance.FPS_isWithinLimit(60)) return;
+
+        // spawn wave
         for (int i = 0; i < amount; i++)
         {
             float angle = Random.Range(-Mathf.PI, Mathf.PI);

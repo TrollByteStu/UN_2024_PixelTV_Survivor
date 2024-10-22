@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour
     }
     public bool FPS_isWithinLimit(float limit)
     {
-        return (limit > myFps.getFPS() );
+        return (limit < myFps.getFPS() );
     }
 
 }

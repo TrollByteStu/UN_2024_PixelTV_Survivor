@@ -90,7 +90,7 @@ public class SurroundSpawner : MonoBehaviour
     void SpawnWave(int amount)
     {
         // computer is dying, skip wave
-        if (!GameController.Instance.FPS_isWithinLimit(60)) return;
+        if (!GameController.Instance.FPS_isWithinLimit(50)) return;
 
         // spawn wave
         for (int i = 0; i < amount; i++)

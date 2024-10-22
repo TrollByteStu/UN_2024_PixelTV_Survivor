@@ -56,7 +56,7 @@ public class Enemy_Main : MonoBehaviour
         {
             case EnemyStats.EnemyAiType.LootGoblin or EnemyStats.EnemyAiType.Zombie or EnemyStats.EnemyAiType.Shooter:
                 Movement();
-            break;<z
+            break;
             default:
             break;
         }

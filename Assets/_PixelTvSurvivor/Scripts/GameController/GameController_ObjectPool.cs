@@ -20,7 +20,7 @@ public class GameController_ObjectPool : MonoBehaviour
 
         EnemyPool = new ObjectPool<GameObject>(() => {
             // create object pool
-            myGC.currentEnemies++;
+            //myGC.currentEnemies++;
             return Instantiate(EnemyPrefab);
         }, go => { // get object there is one available
             myGC.currentEnemies++;

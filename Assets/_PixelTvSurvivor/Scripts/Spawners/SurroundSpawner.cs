@@ -30,17 +30,17 @@ public class SurroundSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Spawn)
-        {
-            SpawnWave(2000);
-            Spawn = false;
-        }
-
-        //if (LastSpawn + 1 < Time.time)
+        //if (Spawn)
         //{
-        //    SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.length +1)));
-        //    LastSpawn = Time.time;
+        //    SpawnWave(2000);
+        //    Spawn = false;
         //}
+
+        if (LastSpawn + 1 < Time.time)
+        {
+            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.length +1)));
+            LastSpawn = Time.time;
+        }
     }
 
     //void Spawn()

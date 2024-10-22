@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Enemy_Main : MonoBehaviour
@@ -102,7 +103,6 @@ public class Enemy_Main : MonoBehaviour
     {
         myStats.Health -= damage;
         if (myStats.Health <= 0) EnemyDies();
-        else EnemyDropsBlood();
     }
 
     public void EnemyDropsBlood()
@@ -110,11 +110,19 @@ public class Enemy_Main : MonoBehaviour
         var blood = Instantiate(GameController.Instance.BloodSplatPrefabs[0], transform.position,Quaternion.identity,GameController.Instance.BloodHolder);
         Destroy(blood, 2);
         blood.GetComponent<SpriteRenderer>().color = enemytype.bloodColor;
+        if (enemytype.enemyAudioDeath.Length > 0)
+        { // should play sound on death
+            Debug.Log("Should play");
+            var bloodAudio = blood.GetComponent<AudioSource>();
+            bloodAudio.clip = enemytype.enemyAudioDeath[Random.Range(0, enemytype.enemyAudioDeath.Length)];
+            bloodAudio.Play();
+        }
     }
 
     public void EnemyDies()
     {
         // add effects and sounds
+        EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
         Instantiate(XpOrb,transform.position,Quaternion.identity,GameController.Instance.XpHolder).GetComponent<XpOrb>().xp = myStats.XpValue;
         EnemyDies_DropLoot();

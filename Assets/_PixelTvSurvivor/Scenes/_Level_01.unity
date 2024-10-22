@@ -180,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28c3564e9f1ea4469ed94f059e8b0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTM: {fileID: 0}
   Decortiles:
   - {fileID: 11400000, guid: 59932c52ec8c3bb4080b8d7a637f5ef3, type: 2}
 --- !u!483693784 &624493196

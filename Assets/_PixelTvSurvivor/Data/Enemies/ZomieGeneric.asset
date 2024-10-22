@@ -40,5 +40,8 @@ MonoBehaviour:
   enemyAudioWalkProbablity: 0.1
   enemyAudioAttack: []
   enemyAudioAttackProbablity: 0.33
-  enemyAudioDeath: []
+  enemyAudioDeath:
+  - {fileID: 8300000, guid: 40c965fd441df2f43a2f0f2718e4e1d4, type: 3}
+  - {fileID: 8300000, guid: 6d6536e1995ab214bb34fe60a05a0dbf, type: 3}
+  - {fileID: 8300000, guid: 952e5c73dcd330246a806b71215070a2, type: 3}
   enemyAudioDeathProbablity: 0.25

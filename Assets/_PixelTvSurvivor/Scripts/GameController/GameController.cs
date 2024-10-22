@@ -26,8 +26,8 @@ public class GameController : MonoBehaviour
     public UpgradeScriptable[] allUpgradesInGame;
 
     [Header("Gathered Metrics")]
-    public int currentFPS;
-    public int currentEnemies;
+    public int currentFPS = 120;
+    public int currentEnemies = 0;
 
     [Header("Other GameController Scripts")]
     private GameController_FPS myFps;

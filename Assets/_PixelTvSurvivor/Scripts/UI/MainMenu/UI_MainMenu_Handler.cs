@@ -25,6 +25,7 @@ public class UI_MainMenu_Handler : MonoBehaviour
 
     public void PressPlay()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("_Level_01");
     }
 

@@ -6,13 +6,13 @@ public class GameController_FPS : MonoBehaviour
 {
     public int MaxFrames = 120;  //maximum frames to average over
 
-    private float lastFPSCalculated = 0f;
+    private int lastFPSCalculated = 0;
     private List<float> frameTimes = new List<float>();
 
     // Use this for initialization
     void Start()
     {
-        lastFPSCalculated = 0f;
+        lastFPSCalculated = 0;
         frameTimes.Clear();
     }
 
@@ -32,7 +32,7 @@ public class GameController_FPS : MonoBehaviour
         }
     }
 
-    private float calculateFPS()
+    private int calculateFPS()
     {
         float newFPS = 0f;
 
@@ -43,10 +43,10 @@ public class GameController_FPS : MonoBehaviour
         }
         newFPS = ((float)(frameTimes.Count)) / totalTimeOfAllFrames;
 
-        return newFPS;
+        return (int)newFPS;
     }
 
-    public float getFPS() {
+    public int getFPS() {
         return lastFPSCalculated;
     }
 

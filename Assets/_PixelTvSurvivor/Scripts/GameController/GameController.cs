@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
 
     [Header("Gathered Metrics")]
     public int currentFPS;
+    public int currentEnemies;
 
     [Header("Other GameController Scripts")]
     private GameController_FPS myFps;
@@ -46,6 +47,10 @@ public class GameController : MonoBehaviour
         myFps = GetComponent<GameController_FPS>();
         myOP = GetComponent<GameController_ObjectPool>();
         myWUG = GetComponent<WeaponUpgradeGamble>();
+    }
+    private void Update()
+    {
+        currentFPS = myFps.getFPS();
     }
 
     public void PlayerIsDead()

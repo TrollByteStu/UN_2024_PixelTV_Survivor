@@ -27,6 +27,7 @@ public class UI_HUD : MonoBehaviour
     [Header("Misc Settings")]
     public TMP_Text PointsText;
     public TMP_Text TimeText;
+    public TMP_Text DebugText;
 
     [Header("Prefabs to spawn in UI")]
     public GameObject UpgradeIconPrefab;
@@ -84,6 +85,9 @@ public class UI_HUD : MonoBehaviour
 
         // points
         PointsText.text = math.floor(PlayerStatRef.Points).ToString();
+
+        // Debug
+        DebugText.text = "Debug: \nFps: " + GameController.Instance.currentFPS + "\nEnemies: " + GameController.Instance.currentEnemies;
     }
 
     public void PlayerIsDead()

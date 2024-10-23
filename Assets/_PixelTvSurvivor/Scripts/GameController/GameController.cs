@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     public Transform EnemyHolder;
 
     [Header("Prefabs")]
-    public GameObject[] BloodSplatPrefabs;
+    public GameObject BloodSplatPrefab;
     public GameObject GenericItemPrefab;
     public GameObject GraveStonePrefab;
     public GameObject PopupTextPrefab;

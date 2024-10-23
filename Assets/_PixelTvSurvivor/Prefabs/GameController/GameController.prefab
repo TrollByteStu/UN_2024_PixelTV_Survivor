@@ -119,9 +119,7 @@ MonoBehaviour:
   BloodHolder: {fileID: 8880508971477768606}
   XpHolder: {fileID: 5385915594771759043}
   EnemyHolder: {fileID: 6442757979936559258}
-  BloodSplatPrefabs:
-  - {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
-  - {fileID: 8064215494278097599, guid: ed3ccc196630e034d957fb4b3d355917, type: 3}
+  BloodSplatPrefab: {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
   GenericItemPrefab: {fileID: 8195367136101649449, guid: b3b574f75c46c824db7c85b08612b25a, type: 3}
   GraveStonePrefab: {fileID: 8119679194988011476, guid: 749794211244a8e4986027e960ad6c01, type: 3}
   PopupTextPrefab: {fileID: 4459120249405654147, guid: 3aedf4cfb8e50884a9356582d8a39ef7, type: 3}
@@ -279,6 +277,7 @@ MonoBehaviour:
   SpawnableEnemiesArray:
   - {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
   Enemyprefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
+  Spawn: 0
 --- !u!114 &5943691402303187131
 MonoBehaviour:
   m_ObjectHideFlags: 0

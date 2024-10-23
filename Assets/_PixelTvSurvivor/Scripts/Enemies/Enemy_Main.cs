@@ -107,7 +107,7 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDropsBlood()
     {
-        var blood = Instantiate(GameController.Instance.BloodSplatPrefabs[0], transform.position,Quaternion.identity,GameController.Instance.BloodHolder);
+        var blood = Instantiate(GameController.Instance.BloodSplatPrefab, transform.position,Quaternion.identity,GameController.Instance.BloodHolder);
         Destroy(blood, 2);
         blood.GetComponent<SpriteRenderer>().color = enemytype.bloodColor;
         if (enemytype.enemyAudioDeath.Length > 0)

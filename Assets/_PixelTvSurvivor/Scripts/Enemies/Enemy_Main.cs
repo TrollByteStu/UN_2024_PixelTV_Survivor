@@ -107,8 +107,10 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDropsBlood()
     {
-        var blood = Instantiate(GameController.Instance.BloodSplatPrefab, transform.position,Quaternion.identity,GameController.Instance.BloodHolder).GetComponent<BloodSplatHandler>();
-        Destroy(blood.gameObject, 2);
+        //var blood = Instantiate(GameController.Instance.BloodSplatPrefab, transform.position,Quaternion.identity,GameController.Instance.BloodHolder).GetComponent<BloodSplatHandler>();
+        var blood = GameController.Instance.BloodPool_Get().GetComponent<BloodSplatHandler>();
+        blood.Start();
+        blood.transform.position = transform.position;
         blood.colorRange(enemytype.bloodColorMin,enemytype.bloodColorMax);
         blood.audioRange(enemytype.enemyAudioDeath);
     }

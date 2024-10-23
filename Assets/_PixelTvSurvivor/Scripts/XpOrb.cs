@@ -29,6 +29,7 @@ public class XpOrb : MonoBehaviour
                 SpriteRenderer.color = new Color(1, 1, 0);
                 break;
         }
+        Destroy(gameObject, 20);
     }
 
     // Update is called once per frame

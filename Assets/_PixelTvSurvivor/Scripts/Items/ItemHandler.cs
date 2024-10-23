@@ -20,6 +20,7 @@ public class ItemHandler : MonoBehaviour
         SpriteRenderer.sprite = ItemType.ItemSprite;
         SpriteRenderer.color = ItemType.spriteColor;
         transform.localScale = new Vector3(ItemType.spriteScale, ItemType.spriteScale,1);
+        Destroy(gameObject, 20);
     }
 
     // Update is called once per frame

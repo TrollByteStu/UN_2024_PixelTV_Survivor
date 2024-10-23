@@ -127,7 +127,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}
   currentFPS: 0
   currentEnemies: 0
-  myOP: {fileID: 0}
+  currentBloodSplats: 0
   myWUG: {fileID: 0}
 --- !u!114 &2798827809084272646
 MonoBehaviour:
@@ -157,6 +157,9 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
   EnemyStartPool: 1500
   EnemyMaxPool: 20000
+  BloodSplatPrefab: {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
+  BloodStartPool: 500
+  BloodMaxPool: 2000
 --- !u!114 &3732330668148699807
 MonoBehaviour:
   m_ObjectHideFlags: 0

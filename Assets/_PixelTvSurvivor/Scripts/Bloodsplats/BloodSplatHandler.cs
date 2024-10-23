@@ -16,9 +16,10 @@ public class BloodSplatHandler : MonoBehaviour
     // the internal ones
     private int randomSprite;
     private float randomSize;
+    private float Lifetime;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         // random graphics
         randomSprite = Random.Range(0, BloodSprites.Length);
@@ -30,12 +31,13 @@ public class BloodSplatHandler : MonoBehaviour
         if ( Random.value > 0.5f ) transform.localScale = new Vector3(-randomSize, randomSize, 1);
             else new Vector3(randomSize, randomSize, 1);
 
+        Lifetime = Time.time + 2f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.time > Lifetime) GameController.Instance.BloodPool_Release(gameObject);
     }
 
     public void colorRange(Color colorA, Color colorB)

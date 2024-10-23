@@ -74,4 +74,14 @@ public class GameController : MonoBehaviour
         myOP.EnemyPool.Release(enemy);
     }
 
+    public GameObject BloodPool_Get()
+    {
+        return myOP.BloodPool.Get();
+    }
+
+    public void BloodPool_Release(GameObject blood)
+    {
+        myOP.BloodPool.Release(blood);
+    }
+
 }

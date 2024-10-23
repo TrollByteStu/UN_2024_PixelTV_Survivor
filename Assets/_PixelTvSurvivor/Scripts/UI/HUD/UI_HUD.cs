@@ -42,6 +42,7 @@ public class UI_HUD : MonoBehaviour
     // in script used references
     private PlayerStats PlayerStatRef;
     private AudioSource myAS;
+    private GameController myGC;
 
     private void Awake()
     {
@@ -62,15 +63,22 @@ public class UI_HUD : MonoBehaviour
         Section_Upgrade.localScale = new Vector2(0, 0);
         Section_Upgrade.gameObject.SetActive(true);
 
+        
+    }
+
+    private void Start()
+    {
         // get references
         myAS = GetComponent<AudioSource>();
+        myGC = GameController.Instance;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         // wanted to put it in Start(), but it didnt update.. not sure why.. but this fixed it, get fresh one every time
-        PlayerStatRef = GameController.Instance.PlayerReference.Stats;
+        PlayerStatRef = myGC.PlayerReference.Stats;
 
         // Health
         HealthText.text = math.floor( PlayerStatRef.Health ) + "/" + PlayerStatRef.MaxHealth;
@@ -87,7 +95,7 @@ public class UI_HUD : MonoBehaviour
         PointsText.text = math.floor(PlayerStatRef.Points).ToString();
 
         // Debug
-        DebugText.text = "Debug: \nFps: " + GameController.Instance.currentFPS + "\nEnemies: " + GameController.Instance.currentEnemies;
+        DebugText.text = "Debug: \nFps: " + myGC.currentFPS + "\nEnemies: " + myGC.currentEnemies+"\nBloodSplats: "+ myGC.currentBloodSplats;
     }
 
     public void PlayerIsDead()

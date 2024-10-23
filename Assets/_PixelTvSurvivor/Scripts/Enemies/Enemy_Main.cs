@@ -107,16 +107,10 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDropsBlood()
     {
-        var blood = Instantiate(GameController.Instance.BloodSplatPrefab, transform.position,Quaternion.identity,GameController.Instance.BloodHolder);
-        Destroy(blood, 2);
-        blood.GetComponent<SpriteRenderer>().color = enemytype.bloodColor;
-        if (enemytype.enemyAudioDeath.Length > 0)
-        { // should play sound on death
-            Debug.Log("Should play");
-            var bloodAudio = blood.GetComponent<AudioSource>();
-            bloodAudio.clip = enemytype.enemyAudioDeath[Random.Range(0, enemytype.enemyAudioDeath.Length)];
-            bloodAudio.Play();
-        }
+        var blood = Instantiate(GameController.Instance.BloodSplatPrefab, transform.position,Quaternion.identity,GameController.Instance.BloodHolder).GetComponent<BloodSplatHandler>();
+        Destroy(blood.gameObject, 2);
+        blood.colorRange(enemytype.bloodColorMin,enemytype.bloodColorMax);
+        blood.audioRange(enemytype.enemyAudioDeath);
     }
 
     public void EnemyDies()

@@ -40,7 +40,7 @@ public class Main_Decor : MonoBehaviour
 
             if (!decorationFound)
             {
-                myTM.SetTile(testPos, Decortiles[0]);
+                myTM.SetTile(testPos, Decortiles[Random.Range(0,Decortiles.Length)]);
             }
         }
 
@@ -67,7 +67,7 @@ public class Main_Decor : MonoBehaviour
 
         if ( !decorationFound )
         {
-            myTM.SetTile(testPos, Decortiles[0]);
+            myTM.SetTile(testPos, Decortiles[Random.Range(0, Decortiles.Length)]);
         }
         
     }

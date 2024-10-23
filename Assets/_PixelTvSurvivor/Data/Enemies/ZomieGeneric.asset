@@ -32,10 +32,13 @@ MonoBehaviour:
   spriteScale: 0.2
   spriteColor:
     serializedVersion: 2
-    rgba: 4294967295
-  bloodColor:
+    rgba: 4287939508
+  bloodColorMin:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4284966901
+  bloodColorMax:
+    serializedVersion: 2
+    rgba: 4278321792
   enemyAudioWalk: []
   enemyAudioWalkProbablity: 0.1
   enemyAudioAttack: []

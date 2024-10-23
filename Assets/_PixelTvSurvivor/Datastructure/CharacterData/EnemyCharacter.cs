@@ -45,8 +45,11 @@ public class EnemyCharacter : ScriptableObject
     [Tooltip("the color of this enemy")]
     public Color32 spriteColor = Color.white;
 
-    [Tooltip("the color of the blood/gunk this enemy spews when hit")]
-    public Color32 bloodColor = Color.red;
+    [Tooltip("the color of the min blood/gunk this enemy spews when hit")]
+    public Color32 bloodColorMin = Color.red;
+
+    [Tooltip("the color of the max blood/gunk this enemy spews when hit")]
+    public Color32 bloodColorMax = Color.red;
 
     [Space]
     [Header("Audio")]

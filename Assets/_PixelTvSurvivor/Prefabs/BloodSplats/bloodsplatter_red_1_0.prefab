@@ -216,9 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56046b33ac620dc479eec961b526eb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySpriteRenderer: {fileID: 0}
-  myAnimator: {fileID: 0}
-  myAudioSource: {fileID: 0}
+  mySpriteRenderer: {fileID: 5312632288268948609}
+  myAnimator: {fileID: 3441294525925800191}
+  myAudioSource: {fileID: 4435284450681788821}
   BloodSprites:
   - {fileID: -1193815056, guid: f605bc14be34d904ebb22e93dfce0fb4, type: 3}
   - {fileID: -322197751, guid: 8b466c8e158291a4d924d9e0d56456bf, type: 3}

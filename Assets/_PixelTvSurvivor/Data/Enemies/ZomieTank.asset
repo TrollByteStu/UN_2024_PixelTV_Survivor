@@ -10,39 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
-  m_Name: ZomieGeneric
+  m_Name: ZomieTank
   m_EditorClassIdentifier: 
   EnemyName: Generic Zombie
   Stats:
     AiType: 0
-    MaxHealth: 20
-    Health: 20
-    MoveSpeed: 0.5
-    AttackDamage: 5
+    MaxHealth: 200
+    Health: 200
+    MoveSpeed: 0.25
+    AttackDamage: 50
     AttackSpeed: 1
     AttackRange: 1
-    XpValue: 1
-    PointValue: 1
-    TimeSecondsValue: 1
-  SpawnsGravestoneUponDeath: 1
+    XpValue: 10
+    PointValue: 10
+    TimeSecondsValue: 10
+  SpawnsGravestoneUponDeath: 0
   LootTable:
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
     LootChancePercent: 1.5
-  enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
-  enemyAnimController: {fileID: 9100000, guid: 333dfa838d5ebe74f9a01249bad43a48, type: 2}
+  enemySprite: {fileID: 105269556, guid: d949267c2296de045861c6e945ec7c78, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: 441fe8bebccdaa6409a08d6d70ab773e, type: 2}
   spriteScale: 0.2
   spriteColorMin:
     serializedVersion: 2
-    rgba: 4289459158
+    rgba: 4287789464
   spriteColorMax:
     serializedVersion: 2
-    rgba: 4286373887
+    rgba: 4284565091
   bloodColorMin:
     serializedVersion: 2
-    rgba: 4284966901
+    rgba: 4293739246
   bloodColorMax:
     serializedVersion: 2
-    rgba: 4278321792
+    rgba: 4278816477
   enemyAudioWalk: []
   enemyAudioWalkProbablity: 0.1
   enemyAudioAttack: []

@@ -45,13 +45,20 @@ MonoBehaviour:
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
     LootChancePercent: 100
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: 333dfa838d5ebe74f9a01249bad43a48, type: 2}
   spriteScale: 0.15
-  spriteColor:
+  spriteColorMin:
     serializedVersion: 2
-    rgba: 4294907648
-  bloodColor:
+    rgba: 4293194619
+  spriteColorMax:
     serializedVersion: 2
-    rgba: 4294910720
+    rgba: 4294150712
+  bloodColorMin:
+    serializedVersion: 2
+    rgba: 4294048354
+  bloodColorMax:
+    serializedVersion: 2
+    rgba: 4292108799
   enemyAudioWalk: []
   enemyAudioWalkProbablity: 0.1
   enemyAudioAttack: []

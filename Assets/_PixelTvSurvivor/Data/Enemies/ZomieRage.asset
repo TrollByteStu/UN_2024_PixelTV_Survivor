@@ -24,17 +24,25 @@ MonoBehaviour:
     XpValue: 1
     PointValue: 1
     TimeSecondsValue: 5
+  SpawnsGravestoneUponDeath: 0
   LootTable:
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
     LootChancePercent: 2
   enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: 333dfa838d5ebe74f9a01249bad43a48, type: 2}
   spriteScale: 0.25
-  spriteColor:
+  spriteColorMin:
     serializedVersion: 2
-    rgba: 4278190335
-  bloodColor:
+    rgba: 4279519656
+  spriteColorMax:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4278519189
+  bloodColorMin:
+    serializedVersion: 2
+    rgba: 4283227469
+  bloodColorMax:
+    serializedVersion: 2
+    rgba: 4278207256
   enemyAudioWalk: []
   enemyAudioWalkProbablity: 0.1
   enemyAudioAttack: []

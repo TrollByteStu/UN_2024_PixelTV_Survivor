@@ -5,13 +5,21 @@ using UnityEngine;
 
 public class Enemy_Main : MonoBehaviour
 {
-    public EnemyCharacter enemytype;
+    [Header("Internal references")]
+    public SpriteRenderer mySpriteRenderer;
+    public Animator myAnimator;
+
+    [Header("Prefabs")]
     public GameObject XpOrb;
+
+    [Header("Data")]
+    public EnemyCharacter enemytype;
     public EnemyStats myStats;
 
     // status effects
     public float StunTime;
 
+    // external references
     private Transform playerRef;
     private PlayerController playerControllerRef;
 
@@ -23,7 +31,7 @@ public class Enemy_Main : MonoBehaviour
     private Vector3 lastPosition;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         playerRef = GameController.Instance.PlayerReference.transform;
         playerControllerRef = GameController.Instance.PlayerReference;
@@ -34,15 +42,10 @@ public class Enemy_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // janky wall blocker
-        //lastPosition = thisPosition;
-        //thisPosition = transform.position;
-
-
+ 
         // kill enemy if to far from player
         if (Vector3.Distance(playerRef.position, transform.position) > 30)
             GameController.Instance.EnemyPool_Release(gameObject);
-        //Destroy(gameObject);
 
         // ai
         Movement();
@@ -51,6 +54,7 @@ public class Enemy_Main : MonoBehaviour
         //EnemyMoveByAIType();
 
     }
+
     private void EnemyMoveByAIType()
     {
         switch (myStats.AiType)
@@ -107,7 +111,6 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDropsBlood()
     {
-        //var blood = Instantiate(GameController.Instance.BloodSplatPrefab, transform.position,Quaternion.identity,GameController.Instance.BloodHolder).GetComponent<BloodSplatHandler>();
         var blood = GameController.Instance.BloodPool_Get().GetComponent<BloodSplatHandler>();
         blood.Start();
         blood.transform.position = transform.position;
@@ -162,19 +165,14 @@ public class Enemy_Main : MonoBehaviour
         myLastAttackTime = Time.time;
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    //Debug.Log("Zombie hit something with tag: " + collision.gameObject.tag);
-    //    if ( collision.gameObject.CompareTag("Walls"))
-    //    {
-    //        transform.position -= ((transform.position - lastPosition) * 50);
-    //    }
-    //}
-
     public void Setup(EnemyCharacter enemy)
     {
         enemytype = enemy;
         transform.localScale = new Vector3(enemytype.spriteScale, enemytype.spriteScale, 1);
-        GetComponent<SpriteRenderer>().color = enemytype.spriteColor;
+        mySpriteRenderer.color = Color.Lerp(enemytype.spriteColorMin, enemytype.spriteColorMax, Random.value);
+        mySpriteRenderer.sprite = enemytype.enemySprite;
+        myAnimator.runtimeAnimatorController = enemytype.enemyAnimController;
+        myStats = enemytype.Stats;
+        transform.name = enemytype.EnemyName;
     }
 }

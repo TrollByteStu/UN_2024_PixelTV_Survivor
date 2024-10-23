@@ -30,12 +30,9 @@ public class GenericSpawner : MonoBehaviour
             {
                 spawntype = Random.Range(0, listOfSpawnableEnemies.Length);
                 var enemy = GameController.Instance.EnemyPool_Get();
-                var enemyscript = enemy.GetComponent<Enemy_Main>();
-                enemyscript.enemytype = listOfSpawnableEnemies[spawntype];
+                enemy.GetComponent<Enemy_Main>().Setup(listOfSpawnableEnemies[spawntype]);
                 enemy.transform.position = transform.position;
                 enemy.transform.SetParent(transform);
-                enemy.transform.localScale = new Vector3(enemyscript.enemytype.spriteScale, enemyscript.enemytype.spriteScale,1);
-                enemy.GetComponent<SpriteRenderer>().color = enemyscript.enemytype.spriteColor;
                 lastSpawn = Time.time + spawnDelay;
             }
         }

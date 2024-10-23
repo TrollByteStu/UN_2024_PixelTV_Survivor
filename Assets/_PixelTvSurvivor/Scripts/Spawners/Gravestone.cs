@@ -28,11 +28,8 @@ public class Gravestone : MonoBehaviour
         if ( Time.time > spawnTimer)
         {
             var enemy = GameController.Instance.EnemyPool_Get();
-            var enemyscript = enemy.GetComponent<Enemy_Main>();
-            enemyscript.enemytype = SpawnableEnemy;
+            enemy.GetComponent<Enemy_Main>().Setup(SpawnableEnemy);
             enemy.transform.position = myLocation;
-            enemy.transform.localScale = new Vector3(enemyscript.enemytype.spriteScale, enemyscript.enemytype.spriteScale, 1);
-            enemy.GetComponent<SpriteRenderer>().color = enemyscript.enemytype.spriteColor;
             if ( spawnsLeft > 1)
             { // more to spawn
                 spawnsLeft--;

@@ -105,7 +105,7 @@ public class SurroundSpawner : MonoBehaviour
             lastSpawn = GameController.Instance.EnemyPool_Get();
             lastSpawn.transform.position = new Vector3(Mathf.Sin(angle) * (ViewPortSize + Random.Range(-3, 3)), Mathf.Cos(angle) * (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position;
             lastSpawn.transform.SetParent(Holder);
-            lastSpawn.GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[0]);
+            lastSpawn.GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[Random.Range(0,SpawnableEnemiesArray.Length)]);
             //Instantiate(Enemyprefab, new Vector3(Mathf.Sin(angle)* (ViewPortSize + Random.Range(-3,3)) ,Mathf.Cos(angle)* (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position, Quaternion.identity, Holder).GetComponent<Enemy_Main>().Setup(SpawnableEnemiesArray[0]);
         }
     }

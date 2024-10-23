@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff1e74d61128e4d8019a2fe7892bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemytype: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
+  mySpriteRenderer: {fileID: 4580590997166710823}
+  myAnimator: {fileID: 6017448913976279683}
   XpOrb: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
+  enemytype: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
   myStats:
     AiType: 0
     MaxHealth: 20

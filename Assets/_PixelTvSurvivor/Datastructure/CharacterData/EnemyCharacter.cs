@@ -39,11 +39,17 @@ public class EnemyCharacter : ScriptableObject
     [Tooltip("the sprite for this enemy")]
     public Sprite enemySprite;
 
+    [Tooltip("the Animation Controller for this enemy")]
+    public RuntimeAnimatorController enemyAnimController;
+
     [Tooltip("the size scale of this enemy")]
     public float spriteScale = 1;
 
-    [Tooltip("the color of this enemy")]
-    public Color32 spriteColor = Color.white;
+    [Tooltip("the min color of this enemy")]
+    public Color32 spriteColorMin = Color.white;
+
+    [Tooltip("the max color of this enemy")]
+    public Color32 spriteColorMax = Color.white;
 
     [Tooltip("the color of the min blood/gunk this enemy spews when hit")]
     public Color32 bloodColorMin = Color.red;

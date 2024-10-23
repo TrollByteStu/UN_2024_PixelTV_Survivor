@@ -29,7 +29,7 @@ public class GenericSpawner : MonoBehaviour
             if (Time.time > lastSpawn )
             {
                 spawntype = Random.Range(0, listOfSpawnableEnemies.Length);
-                var enemy = GameController.Instance.myOP.EnemyPool.Get(); //Instantiate( genericEnemyPrefab , myLocation , Quaternion.identity);
+                var enemy = GameController.Instance.EnemyPool_Get();
                 var enemyscript = enemy.GetComponent<Enemy_Main>();
                 enemyscript.enemytype = listOfSpawnableEnemies[spawntype];
                 enemy.transform.position = transform.position;

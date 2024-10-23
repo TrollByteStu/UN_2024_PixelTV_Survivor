@@ -41,7 +41,7 @@ public class Enemy_Main : MonoBehaviour
 
         // kill enemy if to far from player
         if (Vector3.Distance(playerRef.position, transform.position) > 30)
-            GameController.Instance.myOP.EnemyPool.Release(gameObject);
+            GameController.Instance.EnemyPool_Release(gameObject);
         //Destroy(gameObject);
 
         // ai
@@ -124,8 +124,7 @@ public class Enemy_Main : MonoBehaviour
         { // spawn a gravestone
             Instantiate(GameController.Instance.GraveStonePrefab, transform.position, Quaternion.identity).GetComponent<Gravestone>().SpawnableEnemy = enemytype;
         }
-        if ( gameObject.activeInHierarchy ) GameController.Instance.myOP.EnemyPool.Release(gameObject);
-        //Destroy(gameObject);
+        if ( gameObject.activeInHierarchy ) GameController.Instance.EnemyPool_Release(gameObject);
     }
     private void EnemyDies_DropLoot()
     {

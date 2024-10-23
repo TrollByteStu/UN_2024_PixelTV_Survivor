@@ -28,10 +28,11 @@ public class GameController : MonoBehaviour
     [Header("Gathered Metrics")]
     public int currentFPS = 120;
     public int currentEnemies = 0;
+    public int currentBloodSplats = 0;
 
     [Header("Other GameController Scripts")]
     private GameController_FPS myFps;
-    public GameController_ObjectPool myOP;
+    private GameController_ObjectPool myOP;
     public WeaponUpgradeGamble myWUG;
 
     private void Awake()
@@ -61,6 +62,16 @@ public class GameController : MonoBehaviour
     public bool FPS_isWithinLimit(float limit)
     {
         return (limit < myFps.getFPS() );
+    }
+
+    public GameObject EnemyPool_Get()
+    {
+        return myOP.EnemyPool.Get();
+    }
+
+    public void EnemyPool_Release(GameObject enemy)
+    {
+        myOP.EnemyPool.Release(enemy);
     }
 
 }

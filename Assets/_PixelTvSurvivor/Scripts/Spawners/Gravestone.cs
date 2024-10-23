@@ -27,7 +27,7 @@ public class Gravestone : MonoBehaviour
     {
         if ( Time.time > spawnTimer)
         {
-            var enemy = GameController.Instance.myOP.EnemyPool.Get(); //Instantiate(genericEnemyPrefab, myLocation, Quaternion.identity);
+            var enemy = GameController.Instance.EnemyPool_Get();
             var enemyscript = enemy.GetComponent<Enemy_Main>();
             enemyscript.enemytype = SpawnableEnemy;
             enemy.transform.position = myLocation;

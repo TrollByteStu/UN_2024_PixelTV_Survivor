@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCG: {fileID: 6033524014316378008}
   Content: {fileID: 2261130974394422457}
+  UI_Single_Score_Prefab: {fileID: 8218344733500862772, guid: 44cc46cf89bc6be48a6a5a05ceeb6ec9, type: 3}
 --- !u!225 &6033524014316378008
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -371,7 +372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000031071}
   m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4329547048928153354

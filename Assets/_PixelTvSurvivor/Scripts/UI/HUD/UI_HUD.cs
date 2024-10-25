@@ -14,6 +14,11 @@ public class UI_HUD : MonoBehaviour
     public RectTransform Section_Upgrade;
     public RectTransform Section_Upgrade_List;
 
+    [Header("Looser Options")]
+    public RectTransform Looser_Button;
+    public RectTransform Looser_Inputfield;
+    public TMP_Text Looser_Inputfield_Text;
+
     [Space(10)]
 
     [Header("Health Settings")]
@@ -62,8 +67,6 @@ public class UI_HUD : MonoBehaviour
         Section_Looser.gameObject.SetActive(true);
         Section_Upgrade.localScale = new Vector2(0, 0);
         Section_Upgrade.gameObject.SetActive(true);
-
-        
     }
 
     private void Start()
@@ -103,6 +106,14 @@ public class UI_HUD : MonoBehaviour
         Section_HUD.localScale = new Vector2(0, 0);
         Section_Looser.localScale = new Vector2(1, 1);
         Cursor.visible = true;
+        if (myGC.minimumPointsForHighscore < myGC.gamePoints )
+        { // got a highscore
+            Looser_Button.gameObject.SetActive(false);
+            Looser_Inputfield.gameObject.SetActive(true);
+        } else { // no highscore
+            Looser_Button.gameObject.SetActive(true);
+            Looser_Inputfield.gameObject.SetActive(false);
+        }
     }
     void clearTransformChildren(Transform needToClear)
     {
@@ -180,6 +191,12 @@ public class UI_HUD : MonoBehaviour
 
     public void ButtonPress_GameOver()
     {
+        SceneManager.LoadScene("_MainMenu");
+    }
+
+    public void EnterHighScore_GameOver(string name)
+    {
+        myGC.gamePlayerName = Looser_Inputfield_Text.text;
         SceneManager.LoadScene("_MainMenu");
     }
 }

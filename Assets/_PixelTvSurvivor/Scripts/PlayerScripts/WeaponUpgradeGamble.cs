@@ -29,6 +29,9 @@ public class WeaponUpgradeGamble : MonoBehaviour
 
     public void SlotMachine()
     {
+        // lost its reference and crashed, getting it again
+        Player = GameController.Instance.PlayerReference;
+
         if (WeaponChances.Count == 0)
         {
             return;

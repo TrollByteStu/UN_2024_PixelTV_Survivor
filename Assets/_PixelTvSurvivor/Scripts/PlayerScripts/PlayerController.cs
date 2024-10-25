@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     
     public WeaponStats[] WeaponsArray;
 
+    private void Awake()
+    {
+        GameController.Instance.PlayerReference = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

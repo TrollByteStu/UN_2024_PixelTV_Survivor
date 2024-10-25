@@ -24,12 +24,14 @@ public class SurroundSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (GameController.Instance.PlayerReference == null) return;
         Player = GameController.Instance.PlayerReference.transform;
         Holder = GameController.Instance.EnemyHolder;
     }
 
     private void Update()
     {
+        if (Player == null) return;
         //if (Spawn)
         //{
         //    SpawnWave(2000);

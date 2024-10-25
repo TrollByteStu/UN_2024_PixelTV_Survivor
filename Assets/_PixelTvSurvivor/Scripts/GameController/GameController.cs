@@ -48,6 +48,9 @@ public class GameController : MonoBehaviour
         myFps = GetComponent<GameController_FPS>();
         myOP = GetComponent<GameController_ObjectPool>();
         myWUG = GetComponent<WeaponUpgradeGamble>();
+
+        // make this object permanent, so it carries over from scene to scene
+        DontDestroyOnLoad(gameObject);
     }
     private void Update()
     {

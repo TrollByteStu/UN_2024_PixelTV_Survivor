@@ -29,31 +29,38 @@ public class UI_HighScore : MonoBehaviour
         StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename=testScore", ""));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator Post(string url, string json)
     {
+        // set up request
         UnityWebRequest request = new UnityWebRequest(url, "POST");
+
+        // is there a new highscore, and a new name?
+        if (GameController.Instance.gamePoints > GameController.Instance.minimumPointsForHighscore && GameController.Instance.gamePlayerName.Length > 0)
+        {
+            Debug.Log("There is a new highscore, sending it.");
+            json = "{\"newhighscore\":[\"" + GameController.Instance.gamePlayerName + "\",\"" + GameController.Instance.gamePoints + "\"]}";
+        }
+
+        // prep data
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+
+        // set headers
         request.SetRequestHeader("accept", "application/json");
         request.SetRequestHeader("Content-Type", "application/json");
         request.SetRequestHeader("User-Agent", "TrollByteUserAgent/1.0");
+
+        // wait until the request gets back
         yield return request.SendWebRequest();
 
+        // handle the reply
         if (request.error != null)
-        {
+        { // there is an error
             Debug.Log("Error: " + request.error);
             Debug.Log("Response Code: " + request.responseCode);
             Debug.Log("Response Text: " + request.downloadHandler.text);
-        }
-        else
-        {
+        } else { // there is no error
             Debug.Log("Status Code: " + request.responseCode);
             Debug.Log(request.downloadHandler.text);
             HandleHighScoreResponse(request.downloadHandler.text);
@@ -62,6 +69,7 @@ public class UI_HighScore : MonoBehaviour
 
     private void HandleHighScoreResponse(string response)
     {
+        // decode json main object
         myData = JsonUtility.FromJson<ApiData>(response);
 
         // Now, deserialize the score field, which is JSON-encoded
@@ -76,7 +84,13 @@ public class UI_HighScore : MonoBehaviour
             uiScore.transform.SetParent(Content);
             uiScore.Setup(myScores[i].name, myScores[i].score,i);
         }
+
+        // set the minimum points, from API
         GameController.Instance.minimumPointsForHighscore =  int.Parse( myData.minimum );
+        // reset points from last game
+        GameController.Instance.gamePoints = 0;
+
+        // show the ui
         myCG.alpha = 1f;
     }
 

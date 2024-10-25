@@ -29,6 +29,10 @@ public class GameController : MonoBehaviour
     public int currentFPS = 120;
     public int currentEnemies = 0;
     public int currentBloodSplats = 0;
+    public int minimumPointsForHighscore = 0;
+    public float gameTime = 0f;
+    public int gamePoints = 0;
+    public string gamePlayerName = "For Highscore";
 
     [Header("Other GameController Scripts")]
     private GameController_FPS myFps;

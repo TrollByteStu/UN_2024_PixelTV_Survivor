@@ -76,6 +76,7 @@ public class UI_HighScore : MonoBehaviour
             uiScore.transform.SetParent(Content);
             uiScore.Setup(myScores[i].name, myScores[i].score,i);
         }
+        GameController.Instance.minimumPointsForHighscore =  int.Parse( myData.minimum );
         myCG.alpha = 1f;
     }
 
@@ -83,6 +84,7 @@ public class UI_HighScore : MonoBehaviour
     public class ApiData
     {
         public string debug;
+        public string minimum;
         public string score;
 
         public static ApiData CreateFromJSON(string jsonString)

@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         Stats.Points += Points;
         Stats.TimeUntilDeath += time;
+        GameController.Instance.gamePoints = Stats.Points;
     }
     public void AddXp(float xp)
     {

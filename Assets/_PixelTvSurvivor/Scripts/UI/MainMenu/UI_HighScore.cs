@@ -16,6 +16,9 @@ public class UI_HighScore : MonoBehaviour
     public RectTransform Content;
     public GameObject UI_Single_Score_Prefab;
 
+    [Header("Database Data")]
+    public string ScoreDataTableName = "stuTesting01";
+
     // Score data
     private ApiData myData;
     private Score[] myScores;
@@ -26,7 +29,7 @@ public class UI_HighScore : MonoBehaviour
         myCG.alpha = 0f;
 
         // get highscore
-        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename=testScore", ""));
+        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename="+ ScoreDataTableName, ""));
     }
 
     IEnumerator Post(string url, string json)
@@ -40,6 +43,9 @@ public class UI_HighScore : MonoBehaviour
             Debug.Log("There is a new highscore, sending it.");
             json = "{\"newhighscore\":[\"" + GameController.Instance.gamePlayerName + "\",\"" + GameController.Instance.gamePoints + "\"]}";
         }
+
+        // Testing
+        json = "{\"newhighscore\":[\"tester\",\"1\"]}";
 
         // prep data
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);

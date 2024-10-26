@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        GameController.Instance.PlayerReference = this;
+        GameController.Instance.SetupForGame( this );
     }
 
     // Start is called before the first frame update

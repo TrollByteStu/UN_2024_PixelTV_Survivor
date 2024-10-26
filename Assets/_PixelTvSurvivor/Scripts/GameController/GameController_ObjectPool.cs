@@ -20,7 +20,7 @@ public class GameController_ObjectPool : MonoBehaviour
     private GameController myGC;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         myGC = GetComponent<GameController>();
 
@@ -45,6 +45,8 @@ public class GameController_ObjectPool : MonoBehaviour
             myGC.currentEnemies--;
             Destroy(go.gameObject);
         }, true, EnemyStartPool, EnemyMaxPool);
+        // Still trying to access old pool 2nd game
+        EnemyPool.Clear();
     }
 
     void ConfigureBloodPool()
@@ -62,6 +64,8 @@ public class GameController_ObjectPool : MonoBehaviour
             myGC.currentBloodSplats--;
             Destroy(go.gameObject);
         }, false, BloodStartPool, BloodMaxPool);
+        // Still trying to access old pool 2nd game
+        BloodPool.Clear();
     }
 
 

@@ -2659,6 +2659,7 @@ MonoBehaviour:
   Section_Upgrade_List: {fileID: 8847513224453726129}
   Looser_Button: {fileID: 3754510290014434199}
   Looser_Inputfield: {fileID: 5390574877814138456}
+  Looser_Inputfield_Text: {fileID: 6489394897955299001}
   HealthSlider: {fileID: 7781964899790944972}
   HealthText: {fileID: 6154610247990336363}
   XpSlider: {fileID: 2261312406461132404}

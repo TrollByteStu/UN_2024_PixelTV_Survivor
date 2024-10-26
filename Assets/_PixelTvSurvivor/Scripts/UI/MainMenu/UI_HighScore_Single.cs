@@ -12,7 +12,7 @@ public class UI_HighScore_Single : MonoBehaviour
 
     public void Setup(string name, string score, int rank)
     {
-        Score_Name.text = name;
+        Score_Name.text = name.Replace("u200b", " ");
         Score_Score.text = score;
         myPos.anchoredPosition = new Vector2(0, -50 * rank -30);
         myPos.offsetMin = new Vector2(0, myPos.offsetMin.y);

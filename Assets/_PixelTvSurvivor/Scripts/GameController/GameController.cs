@@ -91,4 +91,27 @@ public class GameController : MonoBehaviour
         myOP.BloodPool.Release(blood);
     }
 
+    public void SetupForGame(PlayerController controller)
+    {
+        PlayerReference = controller;
+        var holders = new GameObject("ObjectHolders");
+        // satellite
+        var SatHolder = new GameObject("SatelliteHolder");
+        SatelliteHolder = SatHolder.transform;
+        SatHolder.transform.SetParent(holders.transform);
+        // blood
+        var BloHolder = new GameObject("BloodHolder");
+        BloodHolder = BloHolder.transform;
+        BloHolder.transform.SetParent(holders.transform);
+        // xp
+        var eXpHolder = new GameObject("XpHolder");
+        XpHolder = eXpHolder.transform;
+        eXpHolder.transform.SetParent(holders.transform);
+        // enemy
+        var EneHolder = new GameObject("EnemyHolder");
+        EnemyHolder = EneHolder.transform;
+        EneHolder.transform.SetParent(holders.transform);
+
+        myOP.Start();
+    }
 }

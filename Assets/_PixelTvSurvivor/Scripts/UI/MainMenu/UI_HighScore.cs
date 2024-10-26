@@ -45,7 +45,7 @@ public class UI_HighScore : MonoBehaviour
         }
 
         // Testing
-        json = "{\"newhighscore\":[\"tester\",\"1\"]}";
+        //json = "{\"newhighscore\":[\"tester\",\"1\"]}";
 
         // prep data
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);

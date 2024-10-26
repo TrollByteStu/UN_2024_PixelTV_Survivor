@@ -45,6 +45,7 @@ public class UI_HighScore : MonoBehaviour
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.method = UnityWebRequest.kHttpVerbPOST;
 
         // set headers
         request.SetRequestHeader("accept", "application/json");

@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
     // Event called by Player Input Component on press and release of move keybind
     public void OnMove(InputAction.CallbackContext context)
     {
-        MoveDirection = context.ReadValue<Vector2>();
+        MoveDirection = context.ReadValue<Vector2>().normalized;
         if (MoveDirection != Vector2.zero)
         {
             AimDirection = MoveDirection;

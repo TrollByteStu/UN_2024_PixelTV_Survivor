@@ -20,7 +20,10 @@ public class BulletHoming : BulletBase
         else
             Destroy(gameObject);
 
+        Direction =  Target.transform.position- transform.position;
 
+        if (Direction.x < 0)
+            transform.localScale = new Vector3(1, -1, 1);
         //transform.localScale = new Vector3(1, math.pow(-1, Convert.ToInt32(transform.rotation.z < 90 || transform.rotation.z > 270)), 1);
 
     }

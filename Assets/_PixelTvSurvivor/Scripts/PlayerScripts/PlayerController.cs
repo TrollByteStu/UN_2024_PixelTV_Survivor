@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
     {
         // play sound of player moaning/complaining?
         Stats.Health -= math.clamp( damage - Stats.Armor,0,999999999);
-        if (Stats.Health < 0) GameController.Instance.PlayerIsDead();
+        if (Stats.Health <= 0) GameController.Instance.PlayerIsDead();
     }
     public void AddPoints(int Points, float time)
     {
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
     public void AddXp(float xp)
     {
         Stats.Xp += xp * Stats.XpModifier;
-        if (Stats.Xp > math.pow(Stats.Level * 10, 1.4f))
+        if ((int)Stats.Xp >= (int)math.pow(Stats.Level * 10, 1.4f))
         {
             LevelUp();
             //UI_HUD.Instance.UpgradeShow();

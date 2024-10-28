@@ -12,7 +12,7 @@ public class SurroundSpawner : MonoBehaviour
     public RandomEnemy[] RandomEnemies;
     public GameObject Enemyprefab;
 
-    public bool Spawn;
+    public bool Spawnb;
 
     private Transform Player;
     private Transform Holder;
@@ -22,6 +22,7 @@ public class SurroundSpawner : MonoBehaviour
     float LastSpawn;
     private GameObject lastSpawn;
 
+    public int maxEnemeyCost = 1;
 
     [Serializable]
     public struct EnemyCost
@@ -35,22 +36,25 @@ public class SurroundSpawner : MonoBehaviour
         public EnemyCharacter enemy;
         public int chance;
     }
+
     private void Start()
     {
         if (GameController.Instance.PlayerReference == null) return;
         Player = GameController.Instance.PlayerReference.transform;
         Holder = GameController.Instance.EnemyHolder;
+
     }
 
     private void Update()
     {
         if (Player == null) return;
 
-        if (LastSpawn + 1 < Time.time)
+        if (LastSpawn + 1 < Time.timeSinceLevelLoad)
         {
+            maxEnemeyCost = (int)math.floor(Time.timeSinceLevelLoad / waveSize.keys[^1].time + 1);
             RandomSpawns();
-            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.length +1)));
-            LastSpawn = Time.time;
+            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.keys[^1].time + 1)));
+            LastSpawn = Time.timeSinceLevelLoad;
 
         }
     }
@@ -61,7 +65,7 @@ public class SurroundSpawner : MonoBehaviour
         {
             if (Random.Range(1 , enemy.chance) == 1)
             {
-                spawn(enemy.enemy);
+                Spawn(enemy.enemy);
             }
         }
     }
@@ -69,14 +73,33 @@ public class SurroundSpawner : MonoBehaviour
     {
         // computer is dying, skip wave
         if (!GameController.Instance.FPS_isWithinLimit(50)) return;
-
+        int cost=1;
         // spawn wave
-        for (int i = 0; i < amount; i += 1)
+        for (int i = 0; i < amount; i += cost)
         {
-            spawn(SpawnableEnemiesArray[Random.Range(0, SpawnableEnemiesArray.Length)].Enemy);
+            int[] availableEnemies = GetEnemyOfCost(maxEnemeyCost);
+            int enemy = Random.Range(0 , availableEnemies.Length);
+            if (SpawnableEnemiesArray[enemy].Cost > 0)
+                cost = SpawnableEnemiesArray[enemy].Cost;
+            else
+                cost = 1;
+            Spawn(SpawnableEnemiesArray[enemy].Enemy);
         }
     }
-    void spawn(EnemyCharacter enemy)
+
+    int[] GetEnemyOfCost(int cost)
+    {
+        int[] array = new int[0];
+        for (int i = 0; i < SpawnableEnemiesArray.Length; i++)
+        {
+            if (SpawnableEnemiesArray[i].Cost > cost)
+                continue;
+            Array.Resize(ref array, array.Length +1);
+            array[^1] = i;
+        }
+        return array;
+    }
+    void Spawn(EnemyCharacter enemy)
     {
         float angle = Random.Range(-Mathf.PI, Mathf.PI);
         lastSpawn = GameController.Instance.EnemyPool_Get();

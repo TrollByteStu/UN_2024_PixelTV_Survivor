@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 941421578}
   - component: {fileID: 941421577}
   m_Layer: 0
-  m_Name: Suno_Survive_the_Night(CutsOff)
+  m_Name: Suno_Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a7331a4854e1b89429284ba3c09c6372, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e6bdf306dfa7a764fbc75fd9b14658c3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 1069793805}
   - component: {fileID: 1069793804}
   m_Layer: 0
-  m_Name: Zombie Horde Audio
+  m_Name: Ambience Horde Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,9 +557,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 46d064f6e9160334bb4911a93e30f4bd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a7d726f60253da4c817b4d7cd5f7e4f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

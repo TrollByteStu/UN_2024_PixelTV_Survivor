@@ -118,6 +118,7 @@ public class Enemy_Main : MonoBehaviour
     }
     void Knockback()
     {
+        if (transform.tag != "Enemy") return;
         transform.position += (transform.position - playerRef.position).normalized * myStats.TakenKnockback;
 
     }
@@ -134,6 +135,7 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDies()
     {
+        if (transform.tag != "Enemy") return;
         // add effects and sounds
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
@@ -145,7 +147,9 @@ public class Enemy_Main : MonoBehaviour
         //{ // spawn a gravestone
         //    Instantiate(GameController.Instance.GraveStonePrefab, transform.position, Quaternion.identity).GetComponent<Gravestone>().SpawnableEnemy = enemytype;
         //}
-        if ( gameObject.activeInHierarchy ) GameController.Instance.EnemyPool_Release(gameObject);
+        //if ( gameObject.activeInHierarchy ) GameController.Instance.EnemyPool_Release(gameObject);
+        transform.tag = "Untagged";
+        myStats.MoveSpeed = myStats.MoveSpeed * -2f;
     }
     private void EnemyDies_DropLoot()
     {
@@ -190,5 +194,6 @@ public class Enemy_Main : MonoBehaviour
         myAnimator.runtimeAnimatorController = enemytype.enemyAnimController;
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
+        transform.tag = "Enemy";
     }
 }

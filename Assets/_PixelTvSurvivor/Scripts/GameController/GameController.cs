@@ -10,10 +10,13 @@ public class GameController : MonoBehaviour
     [Header("References")]
     public PlayerController PlayerReference;
 
-    [Header("Object Holders")]
+    [HideInInspector]
     public Transform SatelliteHolder;
+    [HideInInspector]
     public Transform BloodHolder;
+    [HideInInspector]
     public Transform XpHolder;
+    [HideInInspector]
     public Transform EnemyHolder;
 
     [Header("Prefabs")]

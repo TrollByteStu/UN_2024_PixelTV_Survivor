@@ -114,6 +114,7 @@ public class Enemy_Main : MonoBehaviour
         var blood = GameController.Instance.BloodPool_Get().GetComponent<BloodSplatHandler>();
         blood.Start();
         blood.transform.position = transform.position;
+        blood.transform.SetParent(GameController.Instance.BloodHolder);
         blood.colorRange(enemytype.bloodColorMin,enemytype.bloodColorMax);
         blood.audioRange(enemytype.enemyAudioDeath);
     }

@@ -135,7 +135,7 @@ public class Enemy_Main : MonoBehaviour
     public void EnemyDies()
     {
         // add effects and sounds
-        //EnemyDropsBlood();
+        EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
         GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
         

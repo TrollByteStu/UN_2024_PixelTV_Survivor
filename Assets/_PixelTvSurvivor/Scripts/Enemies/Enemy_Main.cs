@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Enemy_Main : MonoBehaviour
@@ -96,6 +97,11 @@ public class Enemy_Main : MonoBehaviour
 
         transform.position += direction;
 
+        if (direction.x < 0)
+            transform.localScale = new Vector3(-enemytype.spriteScale, enemytype.spriteScale, enemytype.spriteScale);
+        else
+            transform.localScale = Vector3.one * enemytype.spriteScale;
+
     }
 
     public void Stun(float seconds)
@@ -107,6 +113,13 @@ public class Enemy_Main : MonoBehaviour
     {
         myStats.Health -= damage;
         if (myStats.Health <= 0) EnemyDies();
+        Knockback();
+
+    }
+    void Knockback()
+    {
+        transform.position += (transform.position - playerRef.position).normalized * myStats.TakenKnockback;
+
     }
 
     public void EnemyDropsBlood()

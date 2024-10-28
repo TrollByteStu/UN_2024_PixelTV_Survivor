@@ -10,6 +10,7 @@ public class WeaponSlash : WeaponBase
     public GameObject Slash;
     public Sprite SlashSprite;
     public Side AttackSide;
+    public bool Omnidirectional;
     public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
 
     private Vector3 Aim;

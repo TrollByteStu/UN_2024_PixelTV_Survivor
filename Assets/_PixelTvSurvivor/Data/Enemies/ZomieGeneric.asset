@@ -24,6 +24,7 @@ MonoBehaviour:
     XpValue: 1
     PointValue: 1
     TimeSecondsValue: 1
+    TakenKnockback: 1
   SpawnsGravestoneUponDeath: 1
   LootTable:
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}

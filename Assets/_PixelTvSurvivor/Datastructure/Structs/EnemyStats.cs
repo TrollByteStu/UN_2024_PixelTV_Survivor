@@ -14,4 +14,5 @@ public struct EnemyStats
     public float XpValue;
     public int PointValue;
     public float TimeSecondsValue;
+    public float TakenKnockback;
 }

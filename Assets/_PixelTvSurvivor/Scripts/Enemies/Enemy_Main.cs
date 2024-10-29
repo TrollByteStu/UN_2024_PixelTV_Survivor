@@ -149,7 +149,12 @@ public class Enemy_Main : MonoBehaviour
         //}
         //if ( gameObject.activeInHierarchy ) GameController.Instance.EnemyPool_Release(gameObject);
         transform.tag = "Untagged";
-        myStats.MoveSpeed = myStats.MoveSpeed * -2f;
+        if (myStats.MoveSpeed > 0f)
+        { // moves towards player
+            myStats.MoveSpeed = myStats.MoveSpeed * -5f;
+        } else { // moves away from player
+            myStats.MoveSpeed = myStats.MoveSpeed * 5f;
+        }
     }
     private void EnemyDies_DropLoot()
     {
@@ -178,7 +183,9 @@ public class Enemy_Main : MonoBehaviour
     public void EnemyAttacksPlayer()
     {
         // Still not recovered from last attack on player
-        if (myLastAttackTime + myStats.AttackSpeed > Time.time) return;
+        if (myLastAttackTime + myStats.AttackSpeed > Time.time ) return;
+        // no longer an enemy
+        if (transform.tag != "Enemy") return;
         // play sound of zombie attacking?!?
         GameController.Instance.PlayerReference.PlayerTakesDamage(myStats.AttackDamage);
         // possibly blood particles?!?

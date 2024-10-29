@@ -34,10 +34,10 @@ MonoBehaviour:
   spriteScale: 1
   spriteColorMin:
     serializedVersion: 2
-    rgba: 4294306732
+    rgba: 4294967295
   spriteColorMax:
     serializedVersion: 2
-    rgba: 4288448122
+    rgba: 4291348680
   bloodColorMin:
     serializedVersion: 2
     rgba: 4284966901

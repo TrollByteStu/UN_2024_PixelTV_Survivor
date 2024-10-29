@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8848570326371855061}
   - component: {fileID: 3732330668148699807}
   - component: {fileID: 5943691402303187131}
+  - component: {fileID: 2346780475056144507}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -67,6 +68,7 @@ MonoBehaviour:
   gamePoints: 0
   gamePlayerName: For Highscore
   myWUG: {fileID: 0}
+  mySR: {fileID: 0}
 --- !u!114 &2798827809084272646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +270,8 @@ MonoBehaviour:
     Cost: 0
   RandomEnemies: []
   Enemyprefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
-  Spawn: 0
+  Spawnb: 0
+  maxEnemeyCost: 1
 --- !u!114 &5943691402303187131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,3 +296,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0b550e82a197e1d4c96f3729a1ea8d8f, type: 2}
   - {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}
   - {fileID: 11400000, guid: ddec7dc71daf1ef418e202f2f9777718, type: 2}
+--- !u!114 &2346780475056144507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945792299011173173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa14cd407a2749e46ba01f504c741336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SteamrollerPrefab: {fileID: 5478023746985239956, guid: eda16952986b8f14ca1f487fe5b9cff9, type: 3}
+  spawnNow: 0

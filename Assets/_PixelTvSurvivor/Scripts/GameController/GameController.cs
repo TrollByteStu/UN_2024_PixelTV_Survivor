@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
     private GameController_FPS myFps;
     private GameController_ObjectPool myOP;
     public WeaponUpgradeGamble myWUG;
+    public GameController_Steamrollers mySR;
 
     private void Awake()
     {
@@ -55,6 +56,7 @@ public class GameController : MonoBehaviour
         myFps = GetComponent<GameController_FPS>();
         myOP = GetComponent<GameController_ObjectPool>();
         myWUG = GetComponent<WeaponUpgradeGamble>();
+        mySR = GetComponent<GameController_Steamrollers>();
 
         // make this object permanent, so it carries over from scene to scene
         DontDestroyOnLoad(gameObject);

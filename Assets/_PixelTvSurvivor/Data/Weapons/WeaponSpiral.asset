@@ -17,15 +17,17 @@ MonoBehaviour:
   AttackAudioHit: {fileID: 0}
   BulletPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
   bulletSprite: {fileID: 21300000, guid: 75d5977427bef81489760bf87e3bacf1, type: 3}
-  SpinDirection: 0
+  SpinDirection: 2
   LevelStats:
   - ClimbSpeed: 3
     bulletSpeed: 1
     AttackSpeed: 1
     AttackDamage: 10
     ShootQuantity: 5
+    ShotDelay: 0.1
   - ClimbSpeed: 3
     bulletSpeed: 1
     AttackSpeed: 1
     AttackDamage: 10
     ShootQuantity: 10
+    ShotDelay: 0.1

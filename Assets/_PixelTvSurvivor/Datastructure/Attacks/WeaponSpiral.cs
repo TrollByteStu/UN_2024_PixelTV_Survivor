@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "WeaponSpiral", menuName = "ScriptableObjects/WeaponTypes/Spiral", order = 1)]
 public class WeaponSpiral : WeaponBase
@@ -19,6 +20,7 @@ public class WeaponSpiral : WeaponBase
         public float AttackSpeed;
         public float AttackDamage;
         public float ShootQuantity;
+        public float ShotDelay;
 
         public WeaponStats(int i)
         {
@@ -27,6 +29,7 @@ public class WeaponSpiral : WeaponBase
             AttackSpeed = 1;
             AttackDamage = 10;
             ShootQuantity = 5;
+            ShotDelay = 0;
         }
     }
     public enum Spin
@@ -36,25 +39,26 @@ public class WeaponSpiral : WeaponBase
         Alternate
     }
 
-    public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
+    public async override void Attack(int level, Transform playerTransform, Vector3 direction, PlayerStats playerStats)
     {
         for (int i = 0; i < LevelStats[level].ShootQuantity; i++)
         {
             switch (SpinDirection)
             {
                 case Spin.Left:
-                    Instantiate(BulletPrefab, playerPosition, Quaternion.identity).AddComponent<BulletSpiral>()
-                        .Setup(i / LevelStats[level].ShootQuantity * math.PI * 2,-1, LevelStats[level].ClimbSpeed, LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, playerPosition);
+                    Instantiate(BulletPrefab, playerTransform.position, Quaternion.identity).AddComponent<BulletSpiral>()
+                        .Setup(i / LevelStats[level].ShootQuantity * math.PI * 2,-1, LevelStats[level].ClimbSpeed, LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, playerTransform.position);
                     break;
                 case Spin.Right:
-                    Instantiate(BulletPrefab, playerPosition, Quaternion.identity).AddComponent<BulletSpiral>()
-                        .Setup(i / LevelStats[level].ShootQuantity * math.PI * 2,1, LevelStats[level].ClimbSpeed, LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, playerPosition);
+                    Instantiate(BulletPrefab, playerTransform.position, Quaternion.identity).AddComponent<BulletSpiral>()
+                        .Setup(i / LevelStats[level].ShootQuantity * math.PI * 2,1, LevelStats[level].ClimbSpeed, LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, playerTransform.position);
                     break;
                 case Spin.Alternate:
-                    Instantiate(BulletPrefab, playerPosition, Quaternion.identity).AddComponent<BulletSpiral>()
-                        .Setup(i / LevelStats[level].ShootQuantity * math.PI * 2,math.pow(-1,i % 2), LevelStats[level].ClimbSpeed, LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, playerPosition);
+                    Instantiate(BulletPrefab, playerTransform.position, Quaternion.identity).AddComponent<BulletSpiral>()
+                        .Setup(i / LevelStats[level].ShootQuantity * math.PI * 2,math.pow(-1,i % 2), LevelStats[level].ClimbSpeed, LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, playerTransform.position);
                     break;
             }
+            await Awaitable.WaitForSecondsAsync(LevelStats[level].ShotDelay);
         }
     }
 

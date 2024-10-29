@@ -22,6 +22,7 @@ public class WeaponHoming : WeaponBase
         public float AttackSpeed;
         public float AttackDamage;
         public float ShootQuantity;
+        public float ShotDelay;
 
         public WeaponStats(int i)
         {
@@ -29,11 +30,12 @@ public class WeaponHoming : WeaponBase
             AttackSpeed = 1;
             AttackDamage = 10;
             ShootQuantity = 1;
+            ShotDelay = 0;
         }
     }
-    public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
+    public async override void Attack(int level, Transform playerTransform, Vector3 direction, PlayerStats playerStats)
     {
-        List<RaycastHit2D> Hits = Physics2D.CircleCastAll(playerPosition, 15, Vector3.forward).ToList<RaycastHit2D>();
+        List<RaycastHit2D> Hits = Physics2D.CircleCastAll(playerTransform.position, 15, Vector3.forward).ToList<RaycastHit2D>();
         List<RaycastHit2D> RemoveList = new List<RaycastHit2D>();
         foreach (RaycastHit2D Hit in Hits)
         {
@@ -46,7 +48,7 @@ public class WeaponHoming : WeaponBase
         // removes all none enemy tag hits from list
         Hits.RemoveAll(h => RemoveList.Contains(h));
         // sorts list based on distance from player
-        Hits.Sort((h1, h2) => (h1.transform.position - playerPosition).magnitude.CompareTo((h2.transform.position - playerPosition).magnitude));
+        Hits.Sort((h1, h2) => (h1.transform.position - playerTransform.position).magnitude.CompareTo((h2.transform.position - playerTransform.position).magnitude));
 
         if (Hits.Count > 0)
         {
@@ -55,17 +57,19 @@ public class WeaponHoming : WeaponBase
                 if (HasCurve)
                 {
                     if (FlipCurve)
-                        Instantiate(BulletPrefab, playerPosition + direction, Quaternion.identity).AddComponent<BulletHoming>()
-                        .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, Hits[i].transform.gameObject, Curve, Convert.ToBoolean(i % 2), bulletSprite);
+                        Instantiate(BulletPrefab, playerTransform.position , Quaternion.identity).AddComponent<BulletHoming>()
+                        .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, Hits[i % Hits.Count].transform.gameObject, Curve, Convert.ToBoolean(i % 2), bulletSprite);
                     else
-                        Instantiate(BulletPrefab, playerPosition + direction, Quaternion.identity).AddComponent<BulletHoming>()
-                        .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, Hits[i].transform.gameObject, Curve, false, bulletSprite);
+                        Instantiate(BulletPrefab, playerTransform.position , Quaternion.identity).AddComponent<BulletHoming>()
+                        .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, Hits[i % Hits.Count].transform.gameObject, Curve, false, bulletSprite);
                 }
                 else
                 {
-                    Instantiate(BulletPrefab, playerPosition + direction, Quaternion.identity).AddComponent<BulletHoming>()
-                    .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, Hits[i].transform.gameObject, null, false, bulletSprite);
+                    Instantiate(BulletPrefab, playerTransform.position, Quaternion.identity).AddComponent<BulletHoming>()
+                    .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, Hits[i % Hits.Count].transform.gameObject, null, false, bulletSprite);
                 }
+
+                await Awaitable.WaitForSecondsAsync(LevelStats[level].ShotDelay);
             }
         }
     }

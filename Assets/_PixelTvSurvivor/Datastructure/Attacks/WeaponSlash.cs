@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "WeaponSlash", menuName = "ScriptableObjects/WeaponTypes/Slash", order = 3)]
 public class WeaponSlash : WeaponBase
@@ -22,14 +23,7 @@ public class WeaponSlash : WeaponBase
         public float AttackDamage;
         public int AttackQuantity;
         public Vector2 AOE;
-
-        public WeaponStats(int i)
-        {
-            AttackSpeed = 1;
-            AttackDamage = 10;
-            AttackQuantity = 1;
-            AOE = new Vector2(2,3);
-        }
+        public float AttackDelay;
     }
 
     public enum Side
@@ -53,7 +47,7 @@ public class WeaponSlash : WeaponBase
                 break;
         }
     }
-    public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
+    public async override void Attack(int level, Transform playerTransform, Vector3 direction, PlayerStats playerStats)
     {
 
         for (int i = 0; i < LevelStats[level].AttackQuantity; i++)
@@ -64,11 +58,11 @@ public class WeaponSlash : WeaponBase
 
                 case Side.Back:
                     offset = -Aim * (LevelStats[level].AOE.x * playerStats.Area / 2);
-                    Instantiate(Slash, playerPosition + offset, Quaternion.identity).GetComponent<SlashBase>()
+                    Instantiate(Slash, playerTransform.position + offset, Quaternion.identity).GetComponent<SlashBase>()
                         .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area * -new Vector3(Aim.x,1,1));
 
 
-                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerPosition + offset , LevelStats[level].AOE * playerStats.Area,0,Vector2.zero))
+                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerTransform.position + offset , LevelStats[level].AOE * playerStats.Area,0,Vector2.zero))
                     {
                         if (Hit.transform.CompareTag("Enemy"))
                         {
@@ -78,9 +72,9 @@ public class WeaponSlash : WeaponBase
                     break;
                 case Side.Forward:
                     offset = Aim * (LevelStats[level].AOE.x * playerStats.Area / 2);
-                    Instantiate(Slash, playerPosition + offset, Quaternion.identity).GetComponent<SlashBase>()
+                    Instantiate(Slash, playerTransform.position + offset, Quaternion.identity).GetComponent<SlashBase>()
                         .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area * new Vector3(Aim.x, 1, 1));
-                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerPosition+ offset, LevelStats[level].AOE * playerStats.Area, 0, Vector2.zero))
+                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerTransform.position + offset, LevelStats[level].AOE * playerStats.Area, 0, Vector2.zero))
                     {
                         if (Hit.transform.CompareTag("Enemy"))
                         {
@@ -90,9 +84,9 @@ public class WeaponSlash : WeaponBase
                     break;
                 case Side.Alternate:
                     offset = Aim * Math.Pow(-1, i % 2).ConvertTo<float>() * (LevelStats[level].AOE.x * playerStats.Area / 2);
-                    Instantiate(Slash, playerPosition + offset, Quaternion.identity).GetComponent<SlashBase>()
+                    Instantiate(Slash, playerTransform.position + offset, Quaternion.identity).GetComponent<SlashBase>()
                         .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area * new Vector3(Aim.x, 1, 1) * Math.Pow(-1,i%2).ConvertTo<float>());
-                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerPosition + offset, LevelStats[level].AOE * playerStats.Area, 0,Vector2.zero))
+                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerTransform.position + offset, LevelStats[level].AOE * playerStats.Area, 0,Vector2.zero))
                     {
                         if (Hit.transform.CompareTag("Enemy"))
                         {
@@ -102,7 +96,7 @@ public class WeaponSlash : WeaponBase
                     break;
 
             }
-
+            await Awaitable.WaitForSecondsAsync(LevelStats[level].AttackDelay);
         }
 
 

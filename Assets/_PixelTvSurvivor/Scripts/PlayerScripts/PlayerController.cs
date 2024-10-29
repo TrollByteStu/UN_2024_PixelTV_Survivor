@@ -15,12 +15,12 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        GameController.Instance.SetupForGame( this );
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        GameController.Instance.SetupForGame( this );
 
     }
 
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             if (WeaponsArray[i].LastShot < Time.time )
             {
                 WeaponsArray[i].LastShot = Time.time + WeaponsArray[i].Weapon.GetAttackSpeed(WeaponsArray[i].Level) * Stats.CooldownModifier;
-                WeaponsArray[i].Weapon.Attack(WeaponsArray[i].Level, transform.position, AimDirection, Stats);
+                WeaponsArray[i].Weapon.Attack(WeaponsArray[i].Level, transform, AimDirection, Stats);
             
             }
         }

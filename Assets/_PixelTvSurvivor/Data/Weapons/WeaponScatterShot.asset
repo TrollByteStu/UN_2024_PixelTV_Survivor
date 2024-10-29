@@ -23,6 +23,7 @@ MonoBehaviour:
     AttackSpeed: 1
     AttackDamage: 10
     ShootQuantity: 5
+    ShotDelay: 0.1
   HasCurve: 0
   Curve:
     serializedVersion: 2

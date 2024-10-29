@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "WeaponAura", menuName = "ScriptableObjects/WeaponTypes/Aura", order = 3)]
 public class WeaponAura : WeaponBase
@@ -22,9 +23,9 @@ public class WeaponAura : WeaponBase
             AOE = 5;
         }
     }
-    public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
+    public override void Attack(int level, Transform playerTransform, Vector3 direction, PlayerStats playerStats)
     {
-        foreach (RaycastHit2D Hit in Physics2D.CircleCastAll(playerPosition, LevelStats[level].AOE * playerStats.Area, Vector3.forward))
+        foreach (RaycastHit2D Hit in Physics2D.CircleCastAll(playerTransform.position, LevelStats[level].AOE * playerStats.Area, Vector3.forward))
         {
             if (Hit.transform.CompareTag("Enemy"))
             {

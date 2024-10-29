@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "WeaponScatterShot", menuName = "ScriptableObjects/WeaponTypes/ScatterShot", order = 1)]
 public class WeaponScatterShot : WeaponBase
@@ -26,12 +27,13 @@ public class WeaponScatterShot : WeaponBase
         public float AttackSpeed;
         public float AttackDamage;
         public int ShootQuantity;
+        public float ShotDelay;
     }
     public override float GetAttackSpeed(int level)
     {
         return LevelStats[level].AttackSpeed;
     }
-    public override void Attack(int level, Vector3 playerPosition, Vector3 direction, PlayerStats playerStats)
+    public override async void Attack(int level, Transform playerTransform, Vector3 direction, PlayerStats playerStats)
     {
 
         
@@ -48,19 +50,19 @@ public class WeaponScatterShot : WeaponBase
             if (HasCurve)
             {
                 if (FlipCurve)
-                    Instantiate(BulletPrefab, playerPosition + SpreadDirection, Quaternion.identity).AddComponent<BulletBasic>()
+                    Instantiate(BulletPrefab, playerTransform.position + SpreadDirection, Quaternion.identity).AddComponent<BulletBasic>()
                     .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, SpreadDirection, Curve, Convert.ToBoolean(i % 2), bulletSprite);
                 else
-                    Instantiate(BulletPrefab, playerPosition + SpreadDirection, Quaternion.identity).AddComponent<BulletBasic>()
+                    Instantiate(BulletPrefab, playerTransform.position + SpreadDirection, Quaternion.identity).AddComponent<BulletBasic>()
                     .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, SpreadDirection, Curve, false, bulletSprite);
             }
             else
             {
-                Instantiate(BulletPrefab, playerPosition + SpreadDirection, Quaternion.identity).AddComponent<BulletBasic>()
+                Instantiate(BulletPrefab, playerTransform.position + SpreadDirection, Quaternion.identity).AddComponent<BulletBasic>()
                 .Setup(LevelStats[level].bulletSpeed, LevelStats[level].AttackDamage * playerStats.DamageModifier, SpreadDirection, null, false, bulletSprite);
             }
 
-
+            await Awaitable.WaitForSecondsAsync(LevelStats[level].ShotDelay);
         }
     }
     public override int GetMaxLevel()

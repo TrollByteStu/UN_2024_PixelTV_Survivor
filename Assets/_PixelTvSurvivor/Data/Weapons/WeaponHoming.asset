@@ -21,7 +21,8 @@ MonoBehaviour:
   - bulletSpeed: 15
     AttackSpeed: 1
     AttackDamage: 10
-    ShootQuantity: 1
+    ShootQuantity: 5
+    ShotDelay: 0.2
   HasCurve: 0
   Curve:
     serializedVersion: 2

@@ -27,6 +27,10 @@ public class WeaponUpgradeGamble : MonoBehaviour
     //    }
     //}
 
+    public void ShowSlotMachine()
+    {
+        //UI_HUD.Instance.Section_SlotMachine;
+    }
     public void SlotMachine()
     {
         // lost its reference and crashed, getting it again

@@ -13,6 +13,7 @@ public class UI_HUD : MonoBehaviour
     public RectTransform Section_Looser;
     public RectTransform Section_Upgrade;
     public RectTransform Section_Upgrade_List;
+    public RectTransform Section_SlotMachine;
 
     [Header("Looser Options")]
     public RectTransform Looser_Button;
@@ -67,6 +68,8 @@ public class UI_HUD : MonoBehaviour
         Section_Looser.gameObject.SetActive(true);
         Section_Upgrade.localScale = new Vector2(0, 0);
         Section_Upgrade.gameObject.SetActive(true);
+        Section_SlotMachine.localScale = new Vector2(0, 0);
+        Section_SlotMachine.gameObject.SetActive(true);
     }
 
     private void Start()
@@ -198,5 +201,15 @@ public class UI_HUD : MonoBehaviour
     {
         myGC.gamePlayerName = Looser_Inputfield_Text.text;
         SceneManager.LoadScene("_MainMenu");
+    }
+
+    public void ShowSlotMachine()
+    {
+        Section_SlotMachine.localScale = new Vector2(1, 1);
+        Section_SlotMachine.GetComponent<UI_Slotmachine>().StartRoll();
+    }
+    public void HideSlotMachine()
+    {
+        Section_SlotMachine.localScale = new Vector2(0, 0);
     }
 }

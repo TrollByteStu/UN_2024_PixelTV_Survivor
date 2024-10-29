@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: e0f40c2a4fde4374eb78ec898a6bf6ed
+guid: 75f45355bd9cd21489b98b5fb0d97b99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7426821216272413738
-    second: GiftProjectile6_0
+      213: -3643272549321046175
+    second: Kid3b_sheet_0
+  - first:
+      213: 7260829908109568477
+    second: Kid3b_sheet_1
+  - first:
+      213: -6257193659537212522
+    second: Kid3b_sheet_2
+  - first:
+      213: -1681600237036178521
+    second: Kid3b_sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GiftProjectile6_0
+      name: Kid3b_sheet_0
       rect:
         serializedVersion: 2
-        x: 120
-        y: 130
-        width: 379
-        height: 437
+        x: 69
+        y: 78
+        width: 201
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6db8fb9e371aee890800000000000000
-      internalID: -7426821216272413738
+      spriteID: 16789c55bee707dc0800000000000000
+      internalID: -3643272549321046175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kid3b_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 68
+        width: 198
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd92767f456a3c460800000000000000
+      internalID: 7260829908109568477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kid3b_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 67
+        width: 212
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b3578c48bf929a0800000000000000
+      internalID: -6257193659537212522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kid3b_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 60
+        width: 210
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3fe317e71c9a8e0800000000000000
+      internalID: -1681600237036178521
       vertices: []
       indices: 
       edges: []
@@ -173,8 +248,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GiftProjectile6_0: -7426821216272413738
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: e0f40c2a4fde4374eb78ec898a6bf6ed
+guid: 857ca155dc243424595beb9babacf707
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7426821216272413738
-    second: GiftProjectile6_0
+      213: 4620558823600693298
+    second: Julemanden_Body_Idle_0
+  - first:
+      213: 2780315965930698857
+    second: Julemanden_Body_Idle_1
+  - first:
+      213: -8782444902067561600
+    second: Julemanden_Body_Idle_2
+  - first:
+      213: -8196212492568994095
+    second: Julemanden_Body_Idle_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GiftProjectile6_0
+      name: Julemanden_Body_Idle_0
       rect:
         serializedVersion: 2
-        x: 120
-        y: 130
-        width: 379
-        height: 437
+        x: 52
+        y: 42
+        width: 218
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6db8fb9e371aee890800000000000000
-      internalID: -7426821216272413738
+      spriteID: 2302480f4c58f1040800000000000000
+      internalID: 4620558823600693298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julemanden_Body_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 41
+        width: 214
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96875a8e3aaa59620800000000000000
+      internalID: 2780315965930698857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julemanden_Body_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 40
+        width: 215
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b92d894ec7e1680800000000000000
+      internalID: -8782444902067561600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Julemanden_Body_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 41
+        width: 214
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de5ec4d924314e80800000000000000
+      internalID: -8196212492568994095
       vertices: []
       indices: 
       edges: []
@@ -173,8 +248,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GiftProjectile6_0: -7426821216272413738
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
-  m_Name: Kid01a
+  m_Name: Kid03b
   m_EditorClassIdentifier: 
-  EnemyName: Kid01a
+  EnemyName: Kid03b
   Stats:
     AiType: 0
-    MaxHealth: 20
-    Health: 20
-    MoveSpeed: 0.5
-    AttackDamage: 5
+    MaxHealth: 15
+    Health: 15
+    MoveSpeed: 0.65
+    AttackDamage: 4
     AttackSpeed: 1
     AttackRange: 1
     XpValue: 1
     PointValue: 1
     TimeSecondsValue: 1
-    TakenKnockback: 1
+    TakenKnockback: 1.4
   SpawnsGravestoneUponDeath: 0
   LootTable:
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
     LootChancePercent: 1.5
-  enemySprite: {fileID: 1890050234, guid: e2f62a5fd29d03e4cae64d4647aa80d3, type: 3}
-  enemyAnimController: {fileID: 9100000, guid: 72f750579517fb5408d54d1f8589ee77, type: 2}
+  enemySprite: {fileID: -3643272549321046175, guid: 75f45355bd9cd21489b98b5fb0d97b99, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: 9433b31c1cafc2744ae6da5f445f5932, type: 2}
   spriteScale: 1
   spriteColorMin:
     serializedVersion: 2

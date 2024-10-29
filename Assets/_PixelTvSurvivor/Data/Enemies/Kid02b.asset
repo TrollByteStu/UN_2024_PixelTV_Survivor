@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
   m_Name: Kid02b
   m_EditorClassIdentifier: 
-  EnemyName: Kid01a
+  EnemyName: Kid02b
   Stats:
     AiType: 0
     MaxHealth: 30
@@ -25,7 +25,7 @@ MonoBehaviour:
     PointValue: 1
     TimeSecondsValue: 1
     TakenKnockback: 0.5
-  SpawnsGravestoneUponDeath: 1
+  SpawnsGravestoneUponDeath: 0
   LootTable:
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
     LootChancePercent: 1.5

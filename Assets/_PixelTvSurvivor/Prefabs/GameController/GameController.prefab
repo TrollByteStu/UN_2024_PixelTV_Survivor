@@ -224,9 +224,17 @@ MonoBehaviour:
     Cost: 1
   - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
     Cost: 1
-  - Enemy: {fileID: 11400000, guid: ef43694fb56cdf642b263fd918067fa8, type: 2}
+  - Enemy: {fileID: 11400000, guid: 96006bf497493b242a52c609db8957be, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: 003a4fb1cdf84bc4fb2940f68704efa4, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: 7e71411a045c1944a83345faf9e504fc, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: c9c0aa655fd8cca429e7121539372b5a, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
     Cost: 2
-  - Enemy: {fileID: 11400000, guid: c29bd8b5b7ead6841aea1f22d2cb5430, type: 2}
+  - Enemy: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
     Cost: 3
   RandomEnemies:
   - enemy: {fileID: 11400000, guid: 4430c9771d377c34c9dc4e8d7f20a99a, type: 2}

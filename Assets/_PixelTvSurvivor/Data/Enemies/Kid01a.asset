@@ -49,43 +49,7 @@ MonoBehaviour:
   enemyAudioAttack: []
   enemyAudioAttackProbablity: 0.33
   enemyAudioDeath:
-  - {fileID: 8300000, guid: c3f750b492d391c4c88feb0213fc2d8a, type: 3}
-  - {fileID: 8300000, guid: d0d98abb55c436e4c9717344186ab6e5, type: 3}
-  - {fileID: 8300000, guid: 40c965fd441df2f43a2f0f2718e4e1d4, type: 3}
-  - {fileID: 8300000, guid: 6d6536e1995ab214bb34fe60a05a0dbf, type: 3}
-  - {fileID: 8300000, guid: 952e5c73dcd330246a806b71215070a2, type: 3}
-  - {fileID: 8300000, guid: 85833458d1bb6d24ca087f3e88164dfb, type: 3}
-  - {fileID: 8300000, guid: 0ba9010dc455fcb4c91a4516cbe86dbc, type: 3}
-  - {fileID: 8300000, guid: 6c13c72060fbc74479c6aac1555ddbb0, type: 3}
-  - {fileID: 8300000, guid: 9e0bffcb4bb26a14d9a9e3bf8b01875f, type: 3}
-  - {fileID: 8300000, guid: f92b6687b16ef794486b49ae981c1691, type: 3}
-  - {fileID: 8300000, guid: 68c2157fb6741444285133b789e9bef5, type: 3}
-  - {fileID: 8300000, guid: 3c986e9ccc52dcb47bfbc147acac8005, type: 3}
-  - {fileID: 8300000, guid: 2016bca542e41684b82daaf608e7b1d5, type: 3}
-  - {fileID: 8300000, guid: 20170aaefa90cc14fb02a917dd5ad50c, type: 3}
-  - {fileID: 8300000, guid: 09ed2fd712026a1428a9e73f7e727ea8, type: 3}
-  - {fileID: 8300000, guid: 96b42b79ea71e30468a89fe75cec50be, type: 3}
-  - {fileID: 8300000, guid: 4ff2ce2bdc4854444a2a3b40a0487ee7, type: 3}
-  - {fileID: 8300000, guid: 7ef645dd4664bd648b0c66ed739e2152, type: 3}
-  - {fileID: 8300000, guid: 464e453a13413fd40a073c45527568cc, type: 3}
-  - {fileID: 8300000, guid: e499149f155bbf646a8db5421cf08940, type: 3}
-  - {fileID: 8300000, guid: 4ff160f122624cf48b773d56bc537aac, type: 3}
-  - {fileID: 8300000, guid: d7087428627f7ab4792d9ee05250938f, type: 3}
-  - {fileID: 8300000, guid: 1c7d2d86b651f964b846d385c1aa0d0f, type: 3}
-  - {fileID: 8300000, guid: 28e4b998c02feb54db179010271fedcf, type: 3}
-  - {fileID: 8300000, guid: 203913fb87f426d43866d804b83d36b0, type: 3}
-  - {fileID: 8300000, guid: f69a4b2ef12008f4ea9a130293d6f143, type: 3}
-  - {fileID: 8300000, guid: c48c6a3944acbf245bb3a6a6ce9e6cce, type: 3}
-  - {fileID: 8300000, guid: 170e5134785533c4fbbbe9ac7b1e6ea8, type: 3}
-  - {fileID: 8300000, guid: 452c49fec82ddfd47bb3ad38ed5bab54, type: 3}
-  - {fileID: 8300000, guid: 31ca6e66de3b78d4fbebd1922d2c358e, type: 3}
-  - {fileID: 8300000, guid: d51a9f400fa417f4cb34a7c898b9a18b, type: 3}
-  - {fileID: 8300000, guid: 722f198ac8a1446479a5f756b6a85d14, type: 3}
-  - {fileID: 8300000, guid: 722f198ac8a1446479a5f756b6a85d14, type: 3}
-  - {fileID: 8300000, guid: 135189325a4f9c942b9d678925e25f6d, type: 3}
-  - {fileID: 8300000, guid: c3f516cf6cbe7d141af4800aa33b1c76, type: 3}
-  - {fileID: 8300000, guid: 9b87c7c71d4594147a4d3ff5d4e961fc, type: 3}
-  - {fileID: 8300000, guid: 3be52d9cc4508a644a9e7427204723d5, type: 3}
-  - {fileID: 8300000, guid: efd0ecc2230a1f64086ef60ca983e631, type: 3}
-  - {fileID: 8300000, guid: 9c8abdd2dde6a4144a12968a46ef6519, type: 3}
+  - {fileID: 8300000, guid: 047bf0c21c2cff840af0c5cc218da5a8, type: 3}
+  - {fileID: 8300000, guid: 560e7b8b3755bec44aec18803e519c50, type: 3}
+  - {fileID: 8300000, guid: f9c6f760db2a32e4c9a2f7907e2034cc, type: 3}
   enemyAudioDeathProbablity: 0.25

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
+  m_Name: Kid02a
+  m_EditorClassIdentifier: 
+  EnemyName: Kid01a
+  Stats:
+    AiType: 0
+    MaxHealth: 30
+    Health: 30
+    MoveSpeed: 0.35
+    AttackDamage: 12
+    AttackSpeed: 1
+    AttackRange: 1
+    XpValue: 1
+    PointValue: 1
+    TimeSecondsValue: 1
+    TakenKnockback: 0.5
+  SpawnsGravestoneUponDeath: 1
+  LootTable:
+  - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
+    LootChancePercent: 1.5
+  enemySprite: {fileID: -2594375359784394539, guid: d831bffedb8670e429d04f37b45b9c98, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: 944aa5f74788a834394ffc5c9abe22f6, type: 2}
+  spriteScale: 1
+  spriteColorMin:
+    serializedVersion: 2
+    rgba: 4294967295
+  spriteColorMax:
+    serializedVersion: 2
+    rgba: 4291348680
+  bloodColorMin:
+    serializedVersion: 2
+    rgba: 4284966901
+  bloodColorMax:
+    serializedVersion: 2
+    rgba: 4278321792
+  enemyAudioWalk: []
+  enemyAudioWalkProbablity: 0.1
+  enemyAudioAttack: []
+  enemyAudioAttackProbablity: 0.33
+  enemyAudioDeath:
+  - {fileID: 8300000, guid: 047bf0c21c2cff840af0c5cc218da5a8, type: 3}
+  - {fileID: 8300000, guid: 560e7b8b3755bec44aec18803e519c50, type: 3}
+  - {fileID: 8300000, guid: f9c6f760db2a32e4c9a2f7907e2034cc, type: 3}
+  enemyAudioDeathProbablity: 0.25

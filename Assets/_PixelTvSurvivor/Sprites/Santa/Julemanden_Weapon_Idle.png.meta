@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Julemanden_Weapon_Idle_0: 311996221822337867
+      Julemanden_Weapon_Idle_1: 4589891455291365204
+      Julemanden_Weapon_Idle_2: -1234436328440844455
+      Julemanden_Weapon_Idle_3: 8672758982650475596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

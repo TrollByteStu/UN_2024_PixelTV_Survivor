@@ -218,57 +218,19 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 4
   SpawnableEnemiesArray:
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  - Enemy: {fileID: 0}
-    Cost: 0
-  RandomEnemies: []
+  - Enemy: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
+    Cost: 1
+  - Enemy: {fileID: 11400000, guid: ef43694fb56cdf642b263fd918067fa8, type: 2}
+    Cost: 2
+  - Enemy: {fileID: 11400000, guid: c29bd8b5b7ead6841aea1f22d2cb5430, type: 2}
+    Cost: 3
+  RandomEnemies:
+  - enemy: {fileID: 11400000, guid: 4430c9771d377c34c9dc4e8d7f20a99a, type: 2}
+    chance: 10
   Enemyprefab: {fileID: 1893235177329492211, guid: 34c574931a0c2bc41988e4d473afa872, type: 3}
   Spawnb: 0
   maxEnemeyCost: 1

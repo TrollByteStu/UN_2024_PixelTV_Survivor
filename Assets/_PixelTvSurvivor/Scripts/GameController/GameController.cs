@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
     private GameController_ObjectPool myOP;
     public WeaponUpgradeGamble myWUG;
     public GameController_Steamrollers mySR;
+    private SurroundSpawner mySS;
 
     private void Awake()
     {
@@ -57,6 +58,7 @@ public class GameController : MonoBehaviour
         myOP = GetComponent<GameController_ObjectPool>();
         myWUG = GetComponent<WeaponUpgradeGamble>();
         mySR = GetComponent<GameController_Steamrollers>();
+        mySS = GetComponent<SurroundSpawner>();
 
         // make this object permanent, so it carries over from scene to scene
         DontDestroyOnLoad(gameObject);
@@ -116,7 +118,9 @@ public class GameController : MonoBehaviour
         var EneHolder = new GameObject("EnemyHolder");
         EnemyHolder = EneHolder.transform;
         EneHolder.transform.SetParent(holders.transform);
-
+        // spawner script
+        mySS.StartFromGameController(PlayerReference.transform,EnemyHolder);
+        // object pool
         myOP.Start();
     }
 }

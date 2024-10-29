@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Julemanden_Body_Walk_0: 5781635613869766626
+      Julemanden_Body_Walk_1: -8259355050041309361
+      Julemanden_Body_Walk_2: -2851522520820776964
+      Julemanden_Body_Walk_3: -3625520809309883950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

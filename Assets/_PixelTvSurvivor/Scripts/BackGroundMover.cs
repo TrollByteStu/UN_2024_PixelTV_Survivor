@@ -6,12 +6,14 @@ public class BackGroundMover : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PlayerTransform = GameController.Instance.PlayerReference.transform;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerTransform)
+            PlayerTransform = GameController.Instance.PlayerReference.transform;
         transform.position = PlayerTransform.position;
     }
 }

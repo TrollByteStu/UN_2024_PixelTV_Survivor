@@ -42,7 +42,11 @@ public class SurroundSpawner : MonoBehaviour
         if (GameController.Instance.PlayerReference == null) return;
         Player = GameController.Instance.PlayerReference.transform;
         Holder = GameController.Instance.EnemyHolder;
-
+    }
+    public void StartFromGameController(Transform player, Transform holder)
+    {
+        Player = player;
+        Holder = holder;
     }
 
     private void Update()

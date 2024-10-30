@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
         // Make it a singleton, and prevent duplicates
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         } else {
             Instance = this;
         }
@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour
 
     public void EnemyPool_Release(GameObject enemy)
     {
-        myOP.EnemyPool.Release(enemy);
+        if ( enemy ) myOP.EnemyPool.Release(enemy);
     }
 
     public GameObject BloodPool_Get()
@@ -118,8 +118,9 @@ public class GameController : MonoBehaviour
         var EneHolder = new GameObject("EnemyHolder");
         EnemyHolder = EneHolder.transform;
         EneHolder.transform.SetParent(holders.transform);
-        // spawner script
+        // spawner scripts
         mySS.StartFromGameController(PlayerReference.transform,EnemyHolder);
+        mySR.StartFromGameController();
         // object pool
         myOP.Start();
     }

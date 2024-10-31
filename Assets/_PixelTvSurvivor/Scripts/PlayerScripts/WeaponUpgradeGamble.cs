@@ -51,22 +51,21 @@ public class WeaponUpgradeGamble : MonoBehaviour
             
             if (Player.DoesPlayerHaveWeapon(weapon))
             {
-                if (Player.WeaponUpgardeble(weapon))
+                if (Player.WeaponUpgradeable(weapon))
                 {
                     Player.UpgradeWeapon(weapon);
-                    if (!Player.WeaponUpgardeble(weapon))
+                    if (!Player.WeaponUpgradeable(weapon))
                         WeaponChances.Remove(weapon);
                 }
                 else
                 {
                     WeaponChances.Remove(weapon);
-
                 }
             }
             else
             {
                 Player.AddWeapon(weapon);
-                if (!Player.WeaponUpgardeble(weapon))
+                if (!Player.WeaponUpgradeable(weapon))
                     WeaponChances.Remove(weapon);
             }
         }

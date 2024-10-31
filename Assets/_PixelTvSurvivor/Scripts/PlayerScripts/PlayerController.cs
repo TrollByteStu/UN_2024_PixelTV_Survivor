@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
 
     public void UpgradeWeapon(WeaponBase weapon)
     {
-        if (WeaponUpgardeble(weapon))
+        if (WeaponUpgradeable(weapon))
             WeaponsArray[FindWeapon(weapon)].Level++;
     }
 
@@ -195,7 +195,7 @@ public class PlayerController : MonoBehaviour
         return 99999999;
     }
 
-    public bool WeaponUpgardeble(WeaponBase weapon)
+    public bool WeaponUpgradeable(WeaponBase weapon)
     {
         return WeaponsArray[FindWeapon(weapon)].Level < weapon.GetMaxLevel();
     }

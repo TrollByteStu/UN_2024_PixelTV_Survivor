@@ -517,6 +517,7 @@ MonoBehaviour:
   Slot1: {fileID: 6530068254978845162}
   Slot2: {fileID: 2825718045557870772}
   Slot3: {fileID: 4371165533476954720}
+  HandleAnimation: {fileID: 2032399421736248111}
 --- !u!1 &3204816640930481925
 GameObject:
   m_ObjectHideFlags: 0

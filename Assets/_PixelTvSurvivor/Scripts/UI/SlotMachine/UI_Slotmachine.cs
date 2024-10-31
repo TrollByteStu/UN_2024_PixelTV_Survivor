@@ -11,13 +11,15 @@ public class UI_Slotmachine : MonoBehaviour
     public LootItemScriptable[] MainPrizes;
     public LootItemScriptable[] ConsolationPrizes;
 
-
     [Header("References")]
     public UI_Slot Slot1;
     public UI_Slot Slot2;
     public UI_Slot Slot3;
+    public Animator HandleAnimation;
 
     private bool isRolling = false;
+    private float rollTime = 0f;
+    private int rollStage = 0;
 
     // Start is called before the first frame update
     void Start() {
@@ -29,7 +31,21 @@ public class UI_Slotmachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isRolling) return;
+        if (rollTime > Time.time) return;
+        switch( rollStage )
+        { // the action order
+            case 0: // pull handle
+                rollStage++;
+                rollTime = Time.time + 1f;
+                HandleAnimation.Play("playAnim");
+                break;
+            default: // end
+                UI_HUD.Instance.HideSlotMachine();
+                GameController.Instance.myWUG.SlotMachine();
+                isRolling = false;
+                break;
+        }
     }
 
     public void StartRoll()
@@ -39,6 +55,8 @@ public class UI_Slotmachine : MonoBehaviour
         Slot2.StartRolling();
         Slot3.StartRolling();
         isRolling = true;
+        rollTime = Time.time + 5f;
+        rollStage = 0;
     }
 
 }

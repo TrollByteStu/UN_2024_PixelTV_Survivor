@@ -52,4 +52,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 047bf0c21c2cff840af0c5cc218da5a8, type: 3}
   - {fileID: 8300000, guid: 560e7b8b3755bec44aec18803e519c50, type: 3}
   - {fileID: 8300000, guid: f9c6f760db2a32e4c9a2f7907e2034cc, type: 3}
+  - {fileID: 8300000, guid: 584be25182b64db4093995cf71827dfd, type: 3}
   enemyAudioDeathProbablity: 0.25

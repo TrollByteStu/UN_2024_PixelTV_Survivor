@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UI_Slot : MonoBehaviour
 {
@@ -15,10 +16,23 @@ public class UI_Slot : MonoBehaviour
     private float mover = 0f;
     private float offset = 0f;
 
+    private List<LootItemScriptable> myPrizes;
+
+    private void Awake()
+    {
+        myPrizes = new List<LootItemScriptable>();
+    }
     public void Setup( UI_Slotmachine master, float newOffset)
     {
         myMachine = master;
         offset = newOffset;
+        // setup icons
+        myPrizes.Clear();
+        for (int i = 0; i < 4; i++)
+        {
+            myPrizes.Add(myMachine.MainPrizes[Random.Range(0,myMachine.MainPrizes.Length)]);
+        }
+        UpdateIcons();
     }
 
     public void StartRolling()
@@ -40,6 +54,17 @@ public class UI_Slot : MonoBehaviour
         while (mover<-35f)
         { // moveup, reshuffle
             mover += 35f;
+            myPrizes.RemoveAt(0);
+            myPrizes.Add(myMachine.MainPrizes[Random.Range(0, myMachine.MainPrizes.Length)]);
+            UpdateIcons();
         }
+    }
+
+    private void UpdateIcons()
+    {
+        Image4.sprite = myPrizes[0].ItemSprite;
+        Image3.sprite = myPrizes[1].ItemSprite;
+        Image2.sprite = myPrizes[2].ItemSprite;
+        Image1.sprite = myPrizes[3].ItemSprite;
     }
 }

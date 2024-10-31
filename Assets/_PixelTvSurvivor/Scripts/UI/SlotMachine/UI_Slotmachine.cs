@@ -7,7 +7,12 @@ using System.Runtime.CompilerServices;
 
 public class UI_Slotmachine : MonoBehaviour
 {
+    [Header("Prizes")]
+    public LootItemScriptable[] MainPrizes;
+    public LootItemScriptable[] ConsolationPrizes;
 
+
+    [Header("References")]
     public UI_Slot Slot1;
     public UI_Slot Slot2;
     public UI_Slot Slot3;

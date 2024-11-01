@@ -20,12 +20,14 @@ public class UI_Slotmachine : MonoBehaviour
     private bool isRolling = false;
     private float rollTime = 0f;
     private int rollStage = 0;
+    public List<LootItemScriptable> rolledPrizes;
 
     // Start is called before the first frame update
     void Start() {
         Slot1.Setup(this,11f);
         Slot2.Setup(this,22f);
         Slot3.Setup(this,33f);
+        rolledPrizes = new List<LootItemScriptable>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,25 @@ public class UI_Slotmachine : MonoBehaviour
                 rollStage++;
                 rollTime = Time.time + 1f;
                 HandleAnimation.Play("playAnim");
+                break;
+            case 1: // stop 1st
+                rollStage++;
+                rollTime = Time.time + 5f;
+                Slot1.StopRollingNextIcon();
+                break;
+            case 2: // stop 2nd
+                rollStage++;
+                rollTime = Time.time + 5f;
+                Slot2.StopRollingNextIcon();
+                break;
+            case 3: // stop 3rd
+                rollStage++;
+                rollTime = Time.time + 5f;
+                Slot3.StopRollingNextIcon();
+                break;
+            case 4: // show all 3,play sound?, maybe particle effects?
+                rollStage++;
+                rollTime = Time.time + 3f;
                 break;
             default: // end
                 UI_HUD.Instance.HideSlotMachine();
@@ -57,6 +78,12 @@ public class UI_Slotmachine : MonoBehaviour
         isRolling = true;
         rollTime = Time.time + 5f;
         rollStage = 0;
+        rolledPrizes.Clear();
     }
 
+    public void AddPrizeFromRoll(LootItemScriptable prize)
+    {
+        rolledPrizes.Add(prize);
+        rollTime = 1f;
+    }
 }

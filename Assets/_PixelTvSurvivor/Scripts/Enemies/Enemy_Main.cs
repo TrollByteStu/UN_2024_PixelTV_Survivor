@@ -151,9 +151,9 @@ public class Enemy_Main : MonoBehaviour
         transform.tag = "Untagged";
         if (myStats.MoveSpeed > 0f)
         { // moves towards player
-            myStats.MoveSpeed = myStats.MoveSpeed * -5f;
+            myStats.MoveSpeed = myStats.MoveSpeed * -10f;
         } else { // moves away from player
-            myStats.MoveSpeed = myStats.MoveSpeed * 5f;
+            myStats.MoveSpeed = myStats.MoveSpeed * 10f;
         }
     }
     private void EnemyDies_DropLoot()
@@ -202,5 +202,8 @@ public class Enemy_Main : MonoBehaviour
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
         transform.tag = "Enemy";
+        myStats.MaxHealth *= 1f + (Time.time * 0.0001f);
+        myStats.Health = myStats.MaxHealth;
+        myStats.MoveSpeed += (Time.time * 0.0001f);
     }
 }

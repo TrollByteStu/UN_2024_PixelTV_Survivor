@@ -22,12 +22,15 @@ public class UI_Slotmachine : MonoBehaviour
     private int rollStage = 0;
     public List<LootItemScriptable> rolledPrizes;
 
+    private AudioSource myHandleAS;
+
     // Start is called before the first frame update
     void Start() {
         Slot1.Setup(this,11f);
         Slot2.Setup(this,22f);
         Slot3.Setup(this,33f);
         rolledPrizes = new List<LootItemScriptable>();
+        myHandleAS = HandleAnimation.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -60,6 +63,7 @@ public class UI_Slotmachine : MonoBehaviour
                 rollStage++;
                 rollTime = Time.time + 1f;
                 HandleAnimation.Play("playAnim");
+                myHandleAS.Play();
                 return;
             default: // end
                 UI_HUD.Instance.HideSlotMachine();
@@ -71,7 +75,6 @@ public class UI_Slotmachine : MonoBehaviour
 
     public void StartRoll()
     {
-        Debug.Log("Start roll");
         Slot1.StartRolling();
         Slot2.StartRolling();
         Slot3.StartRolling();
@@ -79,6 +82,7 @@ public class UI_Slotmachine : MonoBehaviour
         rollTime = Time.time + 5f;
         rollStage = 0;
         rolledPrizes.Clear();
+        HandleAnimation.Play("noAnim");
     }
 
     public void AddPrizeFromRoll(LootItemScriptable prize)

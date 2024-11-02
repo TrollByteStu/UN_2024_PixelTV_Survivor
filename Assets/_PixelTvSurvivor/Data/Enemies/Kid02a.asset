@@ -15,14 +15,14 @@ MonoBehaviour:
   EnemyName: Kid02a
   Stats:
     AiType: 0
-    MaxHealth: 30
-    Health: 30
+    MaxHealth: 100
+    Health: 100
     MoveSpeed: 0.35
     AttackDamage: 12
     AttackSpeed: 1
     AttackRange: 1
-    XpValue: 1
-    PointValue: 1
+    XpValue: 5
+    PointValue: 5
     TimeSecondsValue: 1
     TakenKnockback: 0.5
   SpawnsGravestoneUponDeath: 0

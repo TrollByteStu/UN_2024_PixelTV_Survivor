@@ -37,30 +37,30 @@ public class UI_Slotmachine : MonoBehaviour
         if (rollTime > Time.time) return;
         switch( rollStage )
         { // the action order
+            case 4: // show all 3,play sound?, maybe particle effects?
+                rollStage++;
+                rollTime = Time.time + 3f;
+                return;
+            case 3: // stop 3rd
+                rollStage++;
+                rollTime = Time.time + 1f;
+                Slot3.StopRollingNextIcon();
+                return;
+            case 2: // stop 2nd
+                rollStage++;
+                rollTime = Time.time + 1f;
+                Slot2.StopRollingNextIcon();
+                return;
+            case 1: // stop 1st
+                rollStage++;
+                rollTime = Time.time + 1f;
+                Slot1.StopRollingNextIcon();
+                return;
             case 0: // pull handle
                 rollStage++;
                 rollTime = Time.time + 1f;
                 HandleAnimation.Play("playAnim");
-                break;
-            case 1: // stop 1st
-                rollStage++;
-                rollTime = Time.time + 5f;
-                Slot1.StopRollingNextIcon();
-                break;
-            case 2: // stop 2nd
-                rollStage++;
-                rollTime = Time.time + 5f;
-                Slot2.StopRollingNextIcon();
-                break;
-            case 3: // stop 3rd
-                rollStage++;
-                rollTime = Time.time + 5f;
-                Slot3.StopRollingNextIcon();
-                break;
-            case 4: // show all 3,play sound?, maybe particle effects?
-                rollStage++;
-                rollTime = Time.time + 3f;
-                break;
+                return;
             default: // end
                 UI_HUD.Instance.HideSlotMachine();
                 GameController.Instance.myWUG.SlotMachine();

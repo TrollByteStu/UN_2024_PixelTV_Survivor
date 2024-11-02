@@ -19,9 +19,14 @@ public class UI_Slot : MonoBehaviour
 
     private List<LootItemScriptable> myPrizes;
 
+    private AudioSource myWheelAS;
+    private AudioSource myStopAS;
+
     private void Awake()
     {
         myPrizes = new List<LootItemScriptable>();
+        myWheelAS = GetComponent<AudioSource>();
+        myStopAS = Mover.GetComponent<AudioSource>();
     }
     public void Setup( UI_Slotmachine master, float newOffset)
     {
@@ -41,6 +46,7 @@ public class UI_Slot : MonoBehaviour
         isRolling = true;
         stopNextRoll = false;
         mover = 0f;
+        myWheelAS.Play();
     }
     public void StopRollingNextIcon()
     {
@@ -64,6 +70,8 @@ public class UI_Slot : MonoBehaviour
             {
                 Mover.localPosition = new Vector2(0f, -35f);
                 StopRolling();
+                myWheelAS.Stop();
+                myStopAS.Play();
                 return;
             }
             mover += 35f;

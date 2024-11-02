@@ -101,7 +101,7 @@ public class UI_HUD : MonoBehaviour
         PointsText.text = math.floor(PlayerStatRef.Points).ToString();
 
         // Debug
-        DebugText.text = "Debug: \nFps: " + myGC.currentFPS + "\nEnemies: " + myGC.currentEnemies+"\nBloodSplats: "+ myGC.currentBloodSplats;
+        DebugText.text = "Debug: \nFps: " + myGC.currentFPS + "\nEnemies: " + myGC.currentEnemies+"\nConfetti: "+ myGC.currentBloodSplats;
     }
 
     public void PlayerIsDead()

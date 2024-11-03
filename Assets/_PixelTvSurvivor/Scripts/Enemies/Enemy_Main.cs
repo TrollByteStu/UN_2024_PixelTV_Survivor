@@ -202,8 +202,11 @@ public class Enemy_Main : MonoBehaviour
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
         transform.tag = "Enemy";
-        myStats.MaxHealth *= 1f + (Time.time * 0.0001f);
+        myStats.AttackDamage += (Time.time * 0.001f);
+        myStats.TakenKnockback -= (Time.time * 0.001f);
+        if (myStats.TakenKnockback < 0f) myStats.TakenKnockback = 0f;
+        myStats.MaxHealth *= 1f + (Time.time * 0.01f);
         myStats.Health = myStats.MaxHealth;
-        myStats.MoveSpeed += (Time.time * 0.0001f);
+        myStats.MoveSpeed += (Time.time * 0.001f);
     }
 }

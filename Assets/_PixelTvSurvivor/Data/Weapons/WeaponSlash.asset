@@ -16,10 +16,12 @@ MonoBehaviour:
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
   Slash: {fileID: 4629565521201394547, guid: 2ab814923e8df4a4e88b7a5b30e1862b, type: 3}
-  SlashSprite: {fileID: 1678305621, guid: 95877343e8583304c8a0caee374373f3, type: 3}
+  SlashSprite: {fileID: -8627253566936599298, guid: 35caa551dd266a941ad237d171e12cd0, type: 3}
   AttackSide: 0
+  Omnidirectional: 0
   LevelStats:
   - AttackSpeed: 1
     AttackDamage: 10
     AttackQuantity: 1
     AOE: {x: 3, y: 2}
+    AttackDelay: 0

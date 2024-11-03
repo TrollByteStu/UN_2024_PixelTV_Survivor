@@ -27,8 +27,10 @@ MonoBehaviour:
     TakenKnockback: 1.4
   SpawnsGravestoneUponDeath: 0
   LootTable:
+  - LootType: {fileID: 11400000, guid: 79256c330406f6544a8211f4ff603901, type: 2}
+    LootChancePercent: 1
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
-    LootChancePercent: 1.5
+    LootChancePercent: 1
   enemySprite: {fileID: -3643272549321046175, guid: 75f45355bd9cd21489b98b5fb0d97b99, type: 3}
   enemyAnimController: {fileID: 9100000, guid: 9433b31c1cafc2744ae6da5f445f5932, type: 2}
   spriteScale: 1

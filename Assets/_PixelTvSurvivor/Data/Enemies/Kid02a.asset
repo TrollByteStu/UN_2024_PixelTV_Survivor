@@ -15,8 +15,8 @@ MonoBehaviour:
   EnemyName: Kid02a
   Stats:
     AiType: 0
-    MaxHealth: 100
-    Health: 100
+    MaxHealth: 80
+    Health: 80
     MoveSpeed: 0.35
     AttackDamage: 12
     AttackSpeed: 1
@@ -27,8 +27,10 @@ MonoBehaviour:
     TakenKnockback: 0.5
   SpawnsGravestoneUponDeath: 0
   LootTable:
+  - LootType: {fileID: 11400000, guid: fe21ae6e321586b44b9a6b5c4588c4b3, type: 2}
+    LootChancePercent: 2
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
-    LootChancePercent: 1.5
+    LootChancePercent: 2
   enemySprite: {fileID: -2594375359784394539, guid: d831bffedb8670e429d04f37b45b9c98, type: 3}
   enemyAnimController: {fileID: 9100000, guid: 944aa5f74788a834394ffc5c9abe22f6, type: 2}
   spriteScale: 1

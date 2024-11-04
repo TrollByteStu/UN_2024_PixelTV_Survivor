@@ -48,6 +48,7 @@ public class SurroundSpawner : MonoBehaviour
     {
         Player = player;
         Holder = holder;
+        LastSpawn = 0f;
     }
 
     private void Update()

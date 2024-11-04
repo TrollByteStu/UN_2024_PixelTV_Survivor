@@ -1002,6 +1002,66 @@ PrefabInstance:
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[0].value
+      value: 4.934361
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[1].value
+      value: 6.755631
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[2].value
+      value: 10.727449
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[3].value
+      value: 6.738286
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[4].value
+      value: 13.30115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[5].value
+      value: 8.050628
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[6].value
+      value: 19.631544
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[7].value
+      value: 8.23189
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[8].value
+      value: 11.20325
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[9].value
+      value: 7.314953
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[10].value
+      value: 8.906179
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[1].inSlope
+      value: 0.58744794
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[10].inSlope
+      value: 0.23220022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[1].outSlope
+      value: 0.58744794
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: waveSize.m_Curve.Array.data[10].outSlope
+      value: 0.23220022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: SpawnableEnemiesArray.Array.data[1].ChanceSize
       value: 1
       objectReference: {fileID: 0}

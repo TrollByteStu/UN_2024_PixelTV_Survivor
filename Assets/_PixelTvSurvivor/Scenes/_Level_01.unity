@@ -1001,6 +1001,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[1].ChanceSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[2].ChanceSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[3].ChanceSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[4].ChanceSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[5].ChanceSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[6].ChanceSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[7].ChanceSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[8].ChanceSize
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5730287457983381779, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: currentFPS
       value: 0

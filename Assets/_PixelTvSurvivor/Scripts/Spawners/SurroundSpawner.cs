@@ -29,6 +29,7 @@ public class SurroundSpawner : MonoBehaviour
     {
         public EnemyCharacter Enemy;
         public int Cost;
+        public int ChanceSize;
     }
     [Serializable]
     public struct RandomEnemy
@@ -73,7 +74,7 @@ public class SurroundSpawner : MonoBehaviour
             }
         }
     }
-    void SpawnWave(int amount)
+    async void SpawnWave(int amount)
     {
         // computer is dying, skip wave
         if (!GameController.Instance.FPS_isWithinLimit(50)) return;
@@ -83,11 +84,15 @@ public class SurroundSpawner : MonoBehaviour
         {
             int[] availableEnemies = GetEnemyOfCost(maxEnemeyCost);
             int enemy = Random.Range(0 , availableEnemies.Length);
+
             if (SpawnableEnemiesArray[enemy].Cost > 0)
                 cost = SpawnableEnemiesArray[enemy].Cost;
             else
                 cost = 1;
+
             Spawn(SpawnableEnemiesArray[enemy].Enemy);
+
+            await Awaitable.WaitForSecondsAsync(2/amount);
         }
     }
 
@@ -102,6 +107,22 @@ public class SurroundSpawner : MonoBehaviour
             array[^1] = i;
         }
         return array;
+    }
+    int GetEnemyFromChance(int[] enemyArray)
+    {
+        int randomMax = 0;
+        foreach (int enemy in enemyArray)
+        {
+            randomMax += SpawnableEnemiesArray[enemy].ChanceSize;
+        }
+        int randomOutput = Random.Range(1, randomMax);
+        foreach (int enemy in enemyArray)
+        {
+            randomOutput -= SpawnableEnemiesArray[enemy].ChanceSize;
+            if (randomOutput <= 0)
+                return enemy;
+        }
+        return enemyArray[^1];
     }
     void Spawn(EnemyCharacter enemy)
     {

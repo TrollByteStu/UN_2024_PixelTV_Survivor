@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 141d848c58f040947b7f7cef4e36e671
+guid: 5b052b9d14675a94bb6f06a4c7ca7efa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 881028873044893961
-    second: Placeholder_Steamroller_0
+      213: -4456465542055165375
+    second: Placeholder_Aura_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Placeholder_Steamroller_0
+      name: Placeholder_Aura_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 560
-        height: 370
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90124b6971b0a3c00800000000000000
-      internalID: 881028873044893961
+      spriteID: 142880c63347722c0800000000000000
+      internalID: -4456465542055165375
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Placeholder_Steamroller_0: 881028873044893961
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

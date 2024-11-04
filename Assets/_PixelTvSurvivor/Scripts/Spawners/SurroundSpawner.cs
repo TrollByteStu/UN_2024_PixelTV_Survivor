@@ -19,8 +19,8 @@ public class SurroundSpawner : MonoBehaviour
 
     private readonly float ViewPortSize = 24;
 
-    float LastSpawn;
-    private GameObject lastSpawn;
+    private float LastSpawnTime;
+    private GameObject LastSpawned;
 
     public int maxEnemeyCost = 1;
 
@@ -48,19 +48,19 @@ public class SurroundSpawner : MonoBehaviour
     {
         Player = player;
         Holder = holder;
-        LastSpawn = 0f;
+        LastSpawnTime = 0f;
     }
 
     private void Update()
     {
         if (Player == null) return;
 
-        if (LastSpawn + 1 < Time.timeSinceLevelLoad)
+        if (LastSpawnTime + 1 < Time.timeSinceLevelLoad)
         {
             maxEnemeyCost = (int)math.floor(Time.timeSinceLevelLoad / waveSize.keys[^1].time + 1);
             RandomSpawns();
             SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.keys[^1].time + 1)));
-            LastSpawn = Time.timeSinceLevelLoad;
+            LastSpawnTime = Time.timeSinceLevelLoad;
 
         }
     }
@@ -128,9 +128,9 @@ public class SurroundSpawner : MonoBehaviour
     void Spawn(EnemyCharacter enemy)
     {
         float angle = Random.Range(-Mathf.PI, Mathf.PI);
-        lastSpawn = GameController.Instance.EnemyPool_Get();
-        lastSpawn.transform.position = new Vector3(Mathf.Sin(angle) * (ViewPortSize + Random.Range(-3, 3)), Mathf.Cos(angle) * (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position;
-        lastSpawn.transform.SetParent(Holder);
-        lastSpawn.GetComponent<Enemy_Main>().Setup(enemy);
+        LastSpawned = GameController.Instance.EnemyPool_Get();
+        LastSpawned.transform.position = new Vector3(Mathf.Sin(angle) * (ViewPortSize + Random.Range(-3, 3)), Mathf.Cos(angle) * (ViewPortSize + Random.Range(-3, 3)), 0) + Player.position;
+        LastSpawned.transform.SetParent(Holder);
+        LastSpawned.GetComponent<Enemy_Main>().Setup(enemy);
     }
 }

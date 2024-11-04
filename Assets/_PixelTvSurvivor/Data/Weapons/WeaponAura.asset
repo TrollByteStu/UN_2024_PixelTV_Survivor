@@ -19,3 +19,5 @@ MonoBehaviour:
   - AttackSpeed: 1
     AttackDamage: 10
     AOE: 5
+  Texture: {fileID: 2800000, guid: 5b052b9d14675a94bb6f06a4c7ca7efa, type: 3}
+  Prefab: {fileID: 3431885073850889383, guid: d84cd4ac1292e224c884b043b312e8ba, type: 3}

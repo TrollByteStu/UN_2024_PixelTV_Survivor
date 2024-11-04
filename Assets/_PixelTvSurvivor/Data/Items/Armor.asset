@@ -23,7 +23,7 @@ MonoBehaviour:
     Weapon: {fileID: 0}
     LastShot: 0
     Level: 0
-  PopupText: Rustning +1
+  PopupText: Rustning +0.1
   PopupColor:
     serializedVersion: 2
     rgba: 4279066790
@@ -33,7 +33,7 @@ MonoBehaviour:
     MaxHealthIncrease: 0
     HealthModifierIncrease: 0
     RecoveryIncrease: 0
-    ArmorIncrease: 1
+    ArmorIncrease: 0.1
     MoveSpeedIncrease: 0
     MoveSpeedModifierIncrease: 0
     DamageModifierIncrease: 0

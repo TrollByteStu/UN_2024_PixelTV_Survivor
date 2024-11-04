@@ -20,11 +20,21 @@ MonoBehaviour:
   LevelStats:
   - DistanceFromPlayer: 5
     RotationSpeed: 3
-    AttackDamage: 10
-    SatelliteQuantity: 6
+    AttackDamage: 1
+    SatelliteQuantity: 1
+    LayerQuantity: 1
+  - DistanceFromPlayer: 5
+    RotationSpeed: 3
+    AttackDamage: 1
+    SatelliteQuantity: 3
     LayerQuantity: 2
   - DistanceFromPlayer: 5
     RotationSpeed: 3
-    AttackDamage: 10
-    SatelliteQuantity: 5
+    AttackDamage: 1
+    SatelliteQuantity: 6
     LayerQuantity: 1
+  - DistanceFromPlayer: 5
+    RotationSpeed: 3
+    AttackDamage: 2
+    SatelliteQuantity: 6
+    LayerQuantity: 2

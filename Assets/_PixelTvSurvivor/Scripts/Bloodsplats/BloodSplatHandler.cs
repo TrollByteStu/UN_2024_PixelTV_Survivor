@@ -31,7 +31,7 @@ public class BloodSplatHandler : MonoBehaviour
         if ( Random.value > 0.5f ) transform.localScale = new Vector3(-randomSize, randomSize, 1);
             else new Vector3(randomSize, randomSize, 1);
 
-        Lifetime = Time.time + 2f;
+        Lifetime = Time.time + 10f;
         // the more shouting kids, the lower the volume
         myAudioSource.volume = 1 / Mathf.Log(GameController.Instance.currentBloodSplats + 1, 3);
         //Debug.Log("Volume " + myAudioSource.volume.ToString());

@@ -52,6 +52,7 @@ public class BloodSplatHandler : MonoBehaviour
     {
         if (Sounds.Length == 0 || Random.value > 0.2f) return;
         myAudioSource.clip = Sounds[Random.Range(0, Sounds.Length)];
+        myAudioSource.pitch = Random.Range(0.75f, 1.25f);
         myAudioSource.Play();
     }
 }

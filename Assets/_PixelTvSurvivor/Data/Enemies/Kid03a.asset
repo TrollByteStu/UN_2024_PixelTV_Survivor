@@ -52,7 +52,14 @@ MonoBehaviour:
   enemyAudioAttackProbablity: 0.33
   enemyAudioDeath:
   - {fileID: 8300000, guid: 047bf0c21c2cff840af0c5cc218da5a8, type: 3}
-  - {fileID: 8300000, guid: 560e7b8b3755bec44aec18803e519c50, type: 3}
-  - {fileID: 8300000, guid: f9c6f760db2a32e4c9a2f7907e2034cc, type: 3}
+  - {fileID: 8300000, guid: 34790a139d5a28546b82c213a77e35a0, type: 3}
+  - {fileID: 8300000, guid: e2d13a2b7e65e554e83712195fd0cb26, type: 3}
+  - {fileID: 8300000, guid: 34790a139d5a28546b82c213a77e35a0, type: 3}
   - {fileID: 8300000, guid: 584be25182b64db4093995cf71827dfd, type: 3}
+  - {fileID: 8300000, guid: 34790a139d5a28546b82c213a77e35a0, type: 3}
+  - {fileID: 8300000, guid: 5d241d59bc39e654e9401341c05afd4e, type: 3}
+  - {fileID: 8300000, guid: 584be25182b64db4093995cf71827dfd, type: 3}
+  - {fileID: 8300000, guid: 58fb3158faf5f6c4baea7227d2900aff, type: 3}
+  - {fileID: 8300000, guid: 584be25182b64db4093995cf71827dfd, type: 3}
+  - {fileID: 8300000, guid: ff6fa2b54a5f6ac44b0150b1c431a47f, type: 3}
   enemyAudioDeathProbablity: 0.05

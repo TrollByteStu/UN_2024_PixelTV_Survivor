@@ -1105,6 +1105,10 @@ PrefabInstance:
       propertyPath: PlayerReference
       value: 
       objectReference: {fileID: 80125445}
+    - target: {fileID: 5943691402303187131, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: ChanceToHit
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6032272710053213589, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: m_Name
       value: EnemyHolder

@@ -23,7 +23,8 @@ MonoBehaviour:
     AttackRange: 1
     XpValue: 10
     PointValue: 10
-    TimeSecondsValue: 1
+    TimeSecondsValue: 0
+    TakenKnockback: 0
   SpawnsGravestoneUponDeath: 0
   LootTable:
   - LootType: {fileID: 11400000, guid: d620118170a5b13469d98a53164d8a25, type: 2}

@@ -23,7 +23,7 @@ MonoBehaviour:
     AttackRange: 2
     XpValue: 1
     PointValue: 1
-    TimeSecondsValue: 5
+    TimeSecondsValue: 0
     TakenKnockback: 0.5
   SpawnsGravestoneUponDeath: 0
   LootTable:

@@ -873,8 +873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du fik stoppet:\n14 Skrigere\n11 Bidere\n23 Fl\xE5ere\n8 Stinkere\nfor
-    1200 Points"
+  m_text: "Dette er en placeholder tekst, \nhvad skal der st\xE5 her?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 5e5bc83272fca764dbe4ebb749607f16, type: 2}

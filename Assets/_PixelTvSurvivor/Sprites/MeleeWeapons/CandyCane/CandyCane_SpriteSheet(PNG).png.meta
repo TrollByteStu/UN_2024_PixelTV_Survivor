@@ -1,0 +1,380 @@
+fileFormatVersion: 2
+guid: 6d166c7a42aec0b49979507f9c07f76f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5872744290984683086
+    second: CandyCane_SpriteSheet(PNG)_0
+  - first:
+      213: 3587630230070801098
+    second: CandyCane_SpriteSheet(PNG)_1
+  - first:
+      213: -7442588124695970112
+    second: CandyCane_SpriteSheet(PNG)_2
+  - first:
+      213: -1048980555637826327
+    second: CandyCane_SpriteSheet(PNG)_3
+  - first:
+      213: -4604769423947158433
+    second: CandyCane_SpriteSheet(PNG)_4
+  - first:
+      213: -8513973790850126356
+    second: CandyCane_SpriteSheet(PNG)_5
+  - first:
+      213: -1351209929315724059
+    second: CandyCane_SpriteSheet(PNG)_6
+  - first:
+      213: 2686401030892862788
+    second: CandyCane_SpriteSheet(PNG)_7
+  - first:
+      213: 8810676292804938759
+    second: CandyCane_SpriteSheet(PNG)_8
+  - first:
+      213: -3391453916289804614
+    second: CandyCane_SpriteSheet(PNG)_9
+  - first:
+      213: -3789104081695252619
+    second: CandyCane_SpriteSheet(PNG)_10
+  - first:
+      213: 5477273340910518115
+    second: CandyCane_SpriteSheet(PNG)_11
+  - first:
+      213: 5153225648619734978
+    second: CandyCane_SpriteSheet(PNG)_12
+  - first:
+      213: 8751474834585461690
+    second: CandyCane_SpriteSheet(PNG)_13
+  - first:
+      213: 2383463424853238783
+    second: CandyCane_SpriteSheet(PNG)_14
+  - first:
+      213: 7650582965307485676
+    second: CandyCane_SpriteSheet(PNG)_15
+  - first:
+      213: -5239535792284508366
+    second: CandyCane_SpriteSheet(PNG)_16
+  - first:
+      213: 4132634742616828702
+    second: CandyCane_SpriteSheet(PNG)_17
+  - first:
+      213: -5500863621191241386
+    second: CandyCane_SpriteSheet(PNG)_18
+  - first:
+      213: -2049376754100835462
+    second: CandyCane_SpriteSheet(PNG)_19
+  - first:
+      213: 3391681003981229939
+    second: CandyCane_SpriteSheet(PNG)_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53a4fb942d95da4cb35ddbfd3f00302
+      internalID: -279363533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_1
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d61018b33c9e842bcb563763f6f98d
+      internalID: 174706460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_2
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebb3a25f8720794e95facf5a825a627
+      internalID: -737126893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_3
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7829430bd68a2408e211b8279bed6c
+      internalID: -1232312661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_4
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acb9d9187575a147bd6c2bf258ae0f2
+      internalID: 1700278786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_5
+      rect:
+        serializedVersion: 2
+        x: 6250
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b04a9a205ffe949bad6e01c6bab882
+      internalID: 240905214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyCane_SpriteSheet(PNG)_6
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 0
+        width: 1250
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9903e8721321654687fb4b45e634baa
+      internalID: -1745672577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d911d5e4ca7c1084b94e79eca8d42178
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CandyCane_SpriteSheet(PNG)_0: -279363533
+      CandyCane_SpriteSheet(PNG)_1: 174706460
+      CandyCane_SpriteSheet(PNG)_2: -737126893
+      CandyCane_SpriteSheet(PNG)_3: -1232312661
+      CandyCane_SpriteSheet(PNG)_4: 1700278786
+      CandyCane_SpriteSheet(PNG)_5: 240905214
+      CandyCane_SpriteSheet(PNG)_6: -1745672577
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

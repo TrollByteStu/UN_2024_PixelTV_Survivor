@@ -15,13 +15,13 @@ MonoBehaviour:
   WeaponName: Slash
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
-  Slash: {fileID: 4629565521201394547, guid: 2ab814923e8df4a4e88b7a5b30e1862b, type: 3}
-  SlashSprite: {fileID: -8627253566936599298, guid: 35caa551dd266a941ad237d171e12cd0, type: 3}
+  Slash: {fileID: 1344504690676526400, guid: 1750dde5e8d7d4344a778e5bf4e68297, type: 3}
+  SlashSprite: {fileID: 0}
   AttackSide: 0
   Omnidirectional: 0
   LevelStats:
   - AttackSpeed: 1
     AttackDamage: 10
     AttackQuantity: 1
-    AOE: {x: 3, y: 2}
+    AOE: {x: 5, y: 5}
     AttackDelay: 0

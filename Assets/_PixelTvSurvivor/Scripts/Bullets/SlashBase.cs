@@ -17,6 +17,6 @@ public class SlashBase : MonoBehaviour
         else
             GetComponentInChildren<SpriteRenderer>().sprite = sprite;
         transform.localScale = scale;
-
+        transform.SetParent(GameController.Instance.PlayerReference.transform);
     }
 }

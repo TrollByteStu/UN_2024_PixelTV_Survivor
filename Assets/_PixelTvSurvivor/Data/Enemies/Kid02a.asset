@@ -54,5 +54,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 047bf0c21c2cff840af0c5cc218da5a8, type: 3}
   - {fileID: 8300000, guid: 560e7b8b3755bec44aec18803e519c50, type: 3}
   - {fileID: 8300000, guid: f9c6f760db2a32e4c9a2f7907e2034cc, type: 3}
-  - {fileID: 8300000, guid: 584be25182b64db4093995cf71827dfd, type: 3}
+  - {fileID: 8300000, guid: ff6fa2b54a5f6ac44b0150b1c431a47f, type: 3}
+  - {fileID: 8300000, guid: 77be611885a5cf149abbfc94fb0256f9, type: 3}
+  - {fileID: 8300000, guid: 456ed7361f3ab514f8671385139b93d4, type: 3}
+  - {fileID: 8300000, guid: 3fd6c429ece5bf3439e0930f9d0e883c, type: 3}
+  - {fileID: 8300000, guid: e5da8093ce20c8146917e9a5f67c6213, type: 3}
+  - {fileID: 8300000, guid: 5d241d59bc39e654e9401341c05afd4e, type: 3}
+  - {fileID: 8300000, guid: 12f389e7343a07b48b73fb4331d706ca, type: 3}
+  - {fileID: 8300000, guid: 26ec479bc63dc45429c206e627a50e81, type: 3}
   enemyAudioDeathProbablity: 0.05

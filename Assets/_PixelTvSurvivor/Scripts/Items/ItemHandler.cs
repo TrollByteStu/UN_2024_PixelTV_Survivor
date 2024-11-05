@@ -35,6 +35,7 @@ public class ItemHandler : MonoBehaviour
 
                 // actually upgrade stats
                 if (ItemType.Stats.HealthIncrease > 0) PlayerRef.Stats.Health += ItemType.Stats.HealthIncrease;
+                if (PlayerRef.Stats.Health > PlayerRef.Stats.MaxHealth) PlayerRef.Stats.Health = PlayerRef.Stats.MaxHealth;
                 if (ItemType.Stats.MaxHealthIncrease > 0) PlayerRef.Stats.MaxHealth += ItemType.Stats.MaxHealthIncrease;
                 if (ItemType.Stats.HealthModifierIncrease > 0) PlayerRef.Stats.HealthModifier += ItemType.Stats.HealthModifierIncrease;
                 if (ItemType.Stats.RecoveryIncrease > 0) PlayerRef.Stats.Recovery += ItemType.Stats.RecoveryIncrease;

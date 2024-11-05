@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy_Main : MonoBehaviour
 {
@@ -27,9 +30,7 @@ public class Enemy_Main : MonoBehaviour
     // enemy attack
     private float myLastAttackTime;
 
-    // bumping into walls the ugly way
-    private Vector3 thisPosition;
-    private Vector3 lastPosition;
+    private CircleCollider2D Collider;
 
     // Start is called before the first frame update
     public void Start()
@@ -38,6 +39,7 @@ public class Enemy_Main : MonoBehaviour
         playerControllerRef = GameController.Instance.PlayerReference;
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
+        Collider = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -84,22 +86,29 @@ public class Enemy_Main : MonoBehaviour
         if (StunTime > Time.time) return;
 
         Vector3 direction = (playerRef.position - transform.position ).normalized * myStats.MoveSpeed * Time.deltaTime;
+        Vector3 boxOffset = Collider.offset.ConvertTo<Vector3>() + (playerRef.position - transform.position).normalized * Collider.radius / 2;
 
-        foreach (RaycastHit2D Hit in Physics2D.LinecastAll(transform.position, direction + transform.position ))
+        //Debug.DrawRay(transform.position + boxOffset, direction * 1000, Color.yellow);
+        //Debug.DrawRay(transform.position + BoxCollider2D.offset.ConvertTo<Vector3>(), transform.position + BoxCollider2D.offset.ConvertTo<Vector3>(), Color.red);
+        foreach (RaycastHit2D Hit in Physics2D.LinecastAll(transform.position + boxOffset, direction + transform.position ))
         {
-            if (Hit.collider.CompareTag("Walls") || Hit.collider.CompareTag("Player"))
+            if (!transform.CompareTag("Enemy")) break;
+
+            if (Hit.collider.gameObject ==  gameObject) continue;
+
+
+            if (Hit.collider.CompareTag("Enemy") || Hit.collider.CompareTag("Player"))
             {
                 direction *= Hit.distance;
                 break;
             }
         }
-        //Debug.DrawRay(transform.position, direction,Color.red,1);
 
         transform.position += direction;
 
         if (direction.x < 0)
             transform.localScale = new Vector3(-enemytype.spriteScale, enemytype.spriteScale, enemytype.spriteScale);
-        else
+        else if (direction.x > 0) 
             transform.localScale = Vector3.one * enemytype.spriteScale;
 
     }
@@ -118,7 +127,7 @@ public class Enemy_Main : MonoBehaviour
     }
     void Knockback()
     {
-        if (transform.tag != "Enemy") return;
+        if (!transform.CompareTag("Enemy")) return;
         transform.position += (transform.position - playerRef.position).normalized * myStats.TakenKnockback;
 
     }
@@ -135,7 +144,7 @@ public class Enemy_Main : MonoBehaviour
 
     public void EnemyDies()
     {
-        if (transform.tag != "Enemy") return;
+        if (!transform.CompareTag("Enemy")) return;
         // add effects and sounds
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
@@ -185,7 +194,7 @@ public class Enemy_Main : MonoBehaviour
         // Still not recovered from last attack on player
         if (myLastAttackTime + myStats.AttackSpeed > Time.time ) return;
         // no longer an enemy
-        if (transform.tag != "Enemy") return;
+        if (!transform.CompareTag("Enemy")) return;
         // play sound of zombie attacking?!?
         GameController.Instance.PlayerReference.PlayerTakesDamage(myStats.AttackDamage);
         // possibly blood particles?!?

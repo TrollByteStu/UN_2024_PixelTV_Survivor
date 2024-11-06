@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySpriteRenderer: {fileID: 4580590997166710823}
   myAnimator: {fileID: 6017448913976279683}
-  XpOrb: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
+  CoinPrefab: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
   enemytype: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
   myStats:
     AiType: 0

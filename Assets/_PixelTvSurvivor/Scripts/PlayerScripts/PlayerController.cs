@@ -78,6 +78,8 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.transform.CompareTag("PickupAble"))
             {
+                if (hit.transform.GetComponent<Coin>() != null)
+                    hit.transform.GetComponent<Coin>().Pickup();
                 if (hit.transform.GetComponent<ItemHandler>() != null)
                     hit.transform.GetComponent<ItemHandler>().Pickup();
             }
@@ -175,6 +177,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void AddCoins(int amount)
+    {
+        Stats.Coins += amount;
+    }
     public bool DoesPlayerHaveWeapon(WeaponBase checkWeapon)
     {
         foreach (WeaponStats lookForWeapon in WeaponsArray)
@@ -183,7 +189,6 @@ public class PlayerController : MonoBehaviour
         }
         return false;
     }
-
     public void AddWeapon(WeaponBase addWeapon)
     {
         if (DoesPlayerHaveWeapon(addWeapon)) return;

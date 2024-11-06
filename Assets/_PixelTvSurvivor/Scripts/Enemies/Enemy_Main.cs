@@ -14,7 +14,7 @@ public class Enemy_Main : MonoBehaviour
     public Animator myAnimator;
 
     [Header("Prefabs")]
-    public GameObject XpOrb;
+    public GameObject CoinPrefab;
 
     [Header("Data")]
     public EnemyCharacter enemytype;
@@ -148,7 +148,10 @@ public class Enemy_Main : MonoBehaviour
         // add effects and sounds
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
-        GameController.Instance.PlayerReference.Stats.Coins += 1;
+
+        if (Random.Range(0, 5) == 0)
+            Instantiate(CoinPrefab,transform.position,Quaternion.identity);
+        //GameController.Instance.PlayerReference.Stats.Coins += 1;
         
         EnemyDies_DropLoot();
         //if ( enemytype.SpawnsGravestoneUponDeath && GameController.Instance.FPS_isWithinLimit( 50 ) )

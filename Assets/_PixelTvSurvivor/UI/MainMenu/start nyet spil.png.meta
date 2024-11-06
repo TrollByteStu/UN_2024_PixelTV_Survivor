@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      start nyet spil_0: 5755268000813172067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

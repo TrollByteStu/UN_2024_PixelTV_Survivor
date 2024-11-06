@@ -91,8 +91,8 @@ public class UI_HUD : MonoBehaviour
         HealthSlider.localScale = new Vector2(PlayerStatRef.Health / PlayerStatRef.MaxHealth, 1);
 
         // XP
-        XpText.text = math.floor(PlayerStatRef.Xp) + "/" +math.floor( math.pow(PlayerStatRef.Level * 10, 1.4f) );
-        XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
+        XpText.text = PlayerStatRef.Coins + " €";
+        //XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
 
         // time
         TimeText.text = math.floor(PlayerStatRef.TimeUntilDeath / 60) +":" + math.floor(PlayerStatRef.TimeUntilDeath % 60);
@@ -181,7 +181,7 @@ public class UI_HUD : MonoBehaviour
     { // can this upgrade be show to this player at this time?
         // the many reasons it can fail
         if (testThis.UpgradeName.Length < 1) return false;
-        if (testThis.levelRequired > playerRef.Stats.Level) return false;
+        //if (testThis.levelRequired > playerRef.Stats.Level) return false;
         // no fails means it should be shown
         return true;
     }

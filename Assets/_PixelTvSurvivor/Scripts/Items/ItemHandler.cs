@@ -44,7 +44,6 @@ public class ItemHandler : MonoBehaviour
                 if (ItemType.Stats.MoveSpeedModifierIncrease > 0) PlayerRef.Stats.MoveSpeedModifier += ItemType.Stats.MoveSpeedModifierIncrease;
                 if (ItemType.Stats.DamageModifierIncrease > 0) PlayerRef.Stats.DamageModifier += ItemType.Stats.DamageModifierIncrease;
                 if (ItemType.Stats.CooldownModifierIncrease > 0) PlayerRef.Stats.CooldownModifier += ItemType.Stats.CooldownModifierIncrease;
-                if (ItemType.Stats.XpModifierIncrease > 0) PlayerRef.Stats.XpModifier += ItemType.Stats.XpModifierIncrease;
 
                 // actually add/upgrade weapons
                 if (ItemType.givenWeapon.Weapon != null) PlayerRef.AddWeapon(ItemType.givenWeapon);

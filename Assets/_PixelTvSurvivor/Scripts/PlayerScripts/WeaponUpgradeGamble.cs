@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using Unity.Mathematics;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +10,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
 {
     [Range(0f, 100f)]
     public float ChanceToHit = 100;
+    [Range(0f, 100f)]
     public float ChanceToHitWeapon = 100;
 
     public float SuccsesfullWeaponHits = 0;
@@ -19,38 +21,27 @@ public class WeaponUpgradeGamble : MonoBehaviour
     public List<LootItemScriptable> UpgadeChances;
     public List<WeaponBase> WeaponChances;
 
-    private void Start()
-    {
-        Player = GameController.Instance.PlayerReference;
-
-    }
-
-    private void Update()
-    {
-        if (Roll)
-        {
-            Roll = false;
-            SlotMachine();
-        }
-    }
-
-    public void ShowSlotMachine()
-    {
-        //UI_HUD.Instance.Section_SlotMachine;
-    }
-    public void SlotMachine()
+    private bool OngoingAttempt;
+    public void StartAttempt()
     {
         // lost its reference and crashed, getting it again
         Player = GameController.Instance.PlayerReference;
-
-        if (WeaponChances.Count == 0)
-        {
+        if (OngoingAttempt)
             return;
-        }
+        if (Player.Stats.Coins < 10)
+            return;
+
+        OngoingAttempt = true;
+        Player.Stats.Coins -= 10;
+        //GameController.Instance.myWUG.SlotMachine();
+        UI_HUD.Instance.ShowSlotMachine();
+    }
+    public void SlotMachine()
+    {
+        OngoingAttempt = false;
 
         if (RollFailed())
         {
-            print("failed");
             ChanceToHit = math.clamp(ChanceToHit + 10, 0, 100);
             ChanceToHitWeapon = math.clamp(ChanceToHitWeapon + 4 * 10, 0, 100);
             return;
@@ -62,6 +53,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
             ChanceToHitWeapon = 10;
 
             WeaponBase weapon = RollWeapon();
+            print(weapon.name);
         
             if (Player.DoesPlayerHaveWeapon(weapon))
             {
@@ -87,6 +79,8 @@ public class WeaponUpgradeGamble : MonoBehaviour
         {
             ChanceToHit = 20;
             ChanceToHitWeapon = math.clamp(ChanceToHitWeapon + 4, 0, 100);
+            if (UpgadeChances.Count == 0)
+                return;
             GiveUpgrade(RollUpgrade());
         }
     }
@@ -97,7 +91,9 @@ public class WeaponUpgradeGamble : MonoBehaviour
     }
     bool RollForWeapon()
     {
-        return Random.Range(0,100) > ChanceToHitWeapon;
+        if (WeaponChances.Count == 0) 
+            return false;
+        return Random.Range(0,100) < ChanceToHitWeapon;
     }
     WeaponBase RollWeapon()
     {
@@ -120,7 +116,6 @@ public class WeaponUpgradeGamble : MonoBehaviour
         if (item.Stats.MoveSpeedModifierIncrease > 0) Player.Stats.MoveSpeedModifier += item.Stats.MoveSpeedModifierIncrease;
         if (item.Stats.DamageModifierIncrease > 0) Player.Stats.DamageModifier += item.Stats.DamageModifierIncrease;
         if (item.Stats.CooldownModifierIncrease > 0) Player.Stats.CooldownModifier += item.Stats.CooldownModifierIncrease;
-        if (item.Stats.XpModifierIncrease > 0) Player.Stats.XpModifier += item.Stats.XpModifierIncrease;
     }
 
 

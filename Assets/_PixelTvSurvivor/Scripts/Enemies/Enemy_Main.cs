@@ -148,9 +148,8 @@ public class Enemy_Main : MonoBehaviour
         // add effects and sounds
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
-        GameController.Instance.PlayerReference.AddXp(myStats.XpValue);
+        GameController.Instance.PlayerReference.Stats.Coins += 1;
         
-        //Instantiate(XpOrb,transform.position,Quaternion.identity,GameController.Instance.XpHolder).GetComponent<XpOrb>().xp = myStats.XpValue;
         EnemyDies_DropLoot();
         //if ( enemytype.SpawnsGravestoneUponDeath && GameController.Instance.FPS_isWithinLimit( 50 ) )
         //{ // spawn a gravestone

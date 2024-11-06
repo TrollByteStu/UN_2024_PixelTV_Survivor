@@ -34,7 +34,6 @@ public class UI_Upgrade_Icon : MonoBehaviour
         if (chosenUpgradeType.Stats.MoveSpeedModifierIncrease > 0) PlayerRef.Stats.MoveSpeedModifier += chosenUpgradeType.Stats.MoveSpeedModifierIncrease;
         if (chosenUpgradeType.Stats.DamageModifierIncrease > 0) PlayerRef.Stats.DamageModifier += chosenUpgradeType.Stats.DamageModifierIncrease;
         if (chosenUpgradeType.Stats.CooldownModifierIncrease > 0) PlayerRef.Stats.CooldownModifier += chosenUpgradeType.Stats.CooldownModifierIncrease;
-        if (chosenUpgradeType.Stats.XpModifierIncrease > 0) PlayerRef.Stats.XpModifier += chosenUpgradeType.Stats.XpModifierIncrease;
 
         // actually add/upgrade weapons
     }

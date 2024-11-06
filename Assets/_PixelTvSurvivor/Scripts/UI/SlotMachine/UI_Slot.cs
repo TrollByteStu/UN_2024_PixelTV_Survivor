@@ -63,8 +63,8 @@ public class UI_Slot : MonoBehaviour
     {
         if (!isRolling) return;
         mover -= Time.deltaTime*500f;
-        Mover.localPosition = new Vector2(0f,mover+offset);
-        while (mover<-35f)
+        Mover.localPosition = new Vector2(0f,mover + offset);
+        while (mover < -35f)
         { // moveup, reshuffle
             if (stopNextRoll)
             {

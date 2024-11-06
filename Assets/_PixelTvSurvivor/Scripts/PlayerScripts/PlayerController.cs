@@ -76,8 +76,6 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.transform.CompareTag("PickupAble"))
             {
-                if (hit.transform.GetComponent<XpOrb>() != null)
-                    hit.transform.GetComponent<XpOrb>().Pickup();
                 if (hit.transform.GetComponent<ItemHandler>() != null)
                     hit.transform.GetComponent<ItemHandler>().Pickup();
             }
@@ -108,21 +106,11 @@ public class PlayerController : MonoBehaviour
         Stats.TimeUntilDeath += time;
         GameController.Instance.gamePoints = Stats.Points;
     }
-    public void AddXp(float xp)
+    public void OnSpin(InputAction.CallbackContext context)
     {
-        Stats.Xp += xp * Stats.XpModifier;
-        if ((int)Stats.Xp >= (int)math.pow(Stats.Level * 10, 1.4f))
-        {
-            LevelUp();
-            //UI_HUD.Instance.UpgradeShow();
-        }
-    }
-    public void LevelUp()
-    {
-        Stats.Level++;
-        Stats.Xp = 0;
-        //GameController.Instance.myWUG.SlotMachine();
-        UI_HUD.Instance.ShowSlotMachine();
+        if (!context.started)
+            return;
+        GameController.Instance.myWUG.StartAttempt();
     }
 
     // Event called by Player Input Component on press and release of move keybind

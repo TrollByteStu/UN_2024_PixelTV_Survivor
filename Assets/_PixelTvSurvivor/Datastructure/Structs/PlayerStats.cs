@@ -16,10 +16,7 @@ public struct PlayerStats
     public float DamageModifier;
     public float CooldownModifier;
     public float Area;
-    public float XpModifier;
-    public float Xp;
-    public int Level;
-    public int Reroll;
+    public int Coins;
     public float TimeUntilDeath;
 
     public PlayerStats (string name, float maxhealth, float health, float recovery,float armor, float movespeed)
@@ -36,10 +33,7 @@ public struct PlayerStats
         DamageModifier = 1;
         CooldownModifier = 1;
         Area = 1;
-        XpModifier = 1;
-        Xp = 0;
-        Level = 1;
-        Reroll = 0;
+        Coins = 20;
         TimeUntilDeath = 120;
     }
 }

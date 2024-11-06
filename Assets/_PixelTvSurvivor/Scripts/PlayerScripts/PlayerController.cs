@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     {
         GameController.Instance.SetupForGame( this );
 
+        //time is stopped until first spin 
+        Time.timeScale = 0f;
     }
 
     // Update is called once per frame
@@ -106,10 +108,17 @@ public class PlayerController : MonoBehaviour
         Stats.TimeUntilDeath += time;
         GameController.Instance.gamePoints = Stats.Points;
     }
+
+    private bool FirstSpin = true;
     public void OnSpin(InputAction.CallbackContext context)
     {
         if (!context.started)
             return;
+        if (FirstSpin)
+        {
+            Time.timeScale = 1f;
+            FirstSpin = false;
+        }
         GameController.Instance.myWUG.StartAttempt();
     }
 

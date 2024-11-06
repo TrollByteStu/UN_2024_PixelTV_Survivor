@@ -128,7 +128,28 @@ public class PlayerController : MonoBehaviour
     // Event called by Player Input Component on press and release of move keybind
     public void OnMove(InputAction.CallbackContext context)
     {
-        MoveDirection = context.ReadValue<Vector2>().normalized;
+        Move(context.ReadValue<Vector2>());
+    }
+
+    Vector2 TouchStart = Vector2.zero;
+    public void OnTouch(InputAction.CallbackContext context)
+    {
+        TouchStart = context.ReadValue<Vector2>();
+    }
+
+    public void OnDrag(InputAction.CallbackContext context)
+    {
+        Move(context.ReadValue<Vector2>() - TouchStart);
+    }
+
+    public void OnRelease(InputAction.CallbackContext context)
+    {
+        Move(Vector2.zero);
+    }
+    
+    void Move(Vector2 vector2)
+    {
+        MoveDirection = vector2.normalized;
         if (MoveDirection != Vector2.zero)
         { // is moving
             AimDirection = MoveDirection;
@@ -140,14 +161,16 @@ public class PlayerController : MonoBehaviour
             // Flip player sprite to face movement
             if (MoveDirection.x < 0)
                 transform.localScale = new Vector3(-.5f, .5f, 1);
-            else
+            else if (MoveDirection.x > 0)
                 transform.localScale = new Vector3(.5f, .5f, 1);
 
             Santa_Body_Idle.SetActive(false);
             Santa_Body_Walk.SetActive(true);
             Santa_Gun_Idle.SetActive(false);
             Santa_Gun_Walk.SetActive(true);
-        } else { // not moving
+        }
+        else
+        { // not moving
             Santa_Body_Idle.SetActive(true);
             Santa_Body_Walk.SetActive(false);
             Santa_Gun_Idle.SetActive(true);

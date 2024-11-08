@@ -1,16 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.ExceptionServices;
 using Unity.Mathematics;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class WeaponUpgradeGamble : MonoBehaviour
 {
-    [Range(0f, 100f)]
+
     public float ChanceToHit = 100;
-    [Range(0f, 100f)]
+
     public float ChanceToHitWeapon = 100;
 
     public float SuccsesfullWeaponHits = 0;
@@ -19,9 +16,13 @@ public class WeaponUpgradeGamble : MonoBehaviour
 
     public PlayerController Player;
     public List<LootItemScriptable> UpgadeChances;
-    public List<WeaponBase> WeaponChances;
+    public List<LootItemScriptable> WeaponChances;
+    public LootItemScriptable[] StartingWeapons;
 
     private bool OngoingAttempt;
+
+    private int ResultType;
+    private LootItemScriptable Item;
     public void StartAttempt()
     {
         // lost its reference and crashed, getting it again
@@ -33,47 +34,60 @@ public class WeaponUpgradeGamble : MonoBehaviour
 
         OngoingAttempt = true;
         Player.Stats.Coins -= 10;
-        //GameController.Instance.myWUG.SlotMachine();
-        UI_HUD.Instance.ShowSlotMachine();
+        SlotMachine();
+        //UI_HUD.Instance.ShowSlotMachine();
     }
-    public void SlotMachine()
+    void SlotMachine()
     {
-        OngoingAttempt = false;
 
         if (RollFailed())
         {
             ChanceToHit = math.clamp(ChanceToHit + 10, 0, 100);
             ChanceToHitWeapon = math.clamp(ChanceToHitWeapon + 4 * 10, 0, 100);
+            UI_HUD.Instance.ShowSlotMachine();
             return;
         }
         
         if (RollForWeapon())
         {
+            // first roll
+            if (ChanceToHitWeapon > 100)
+            {
+                ChanceToHit = 20;
+                ChanceToHitWeapon = 10;
+                Item = StartingWeapons[Random.Range(0, StartingWeapons.Length - 1)];
+                ResultType = 1;
+                UI_HUD.Instance.ShowSlotMachineDemand(Item);
+                //Player.AddWeapon(startingWeapon.givenWeapon.Weapon);
+                return;
+            }
+
             ChanceToHit = 20;
             ChanceToHitWeapon = 10;
 
-            WeaponBase weapon = RollWeapon();
-            print(weapon.name);
+            Item = RollWeapon();
+            UI_HUD.Instance.ShowSlotMachineDemand(Item);
+            ResultType = 1;
         
-            if (Player.DoesPlayerHaveWeapon(weapon))
-            {
-                if (Player.WeaponUpgradeable(weapon))
-                {
-                    Player.UpgradeWeapon(weapon);
-                    if (!Player.WeaponUpgradeable(weapon))
-                        WeaponChances.Remove(weapon);
-                }
-                else
-                {
-                    WeaponChances.Remove(weapon);
-                }
-            }
-            else
-            {
-                Player.AddWeapon(weapon);
-                if (!Player.WeaponUpgradeable(weapon))
-                    WeaponChances.Remove(weapon);
-            }
+            //if (Player.DoesPlayerHaveWeapon(weapon.givenWeapon.Weapon))
+            //{
+            //    if (Player.WeaponUpgradeable(weapon.givenWeapon.Weapon))
+            //    {
+            //        Player.UpgradeWeapon(weapon.givenWeapon.Weapon);
+            //        if (!Player.WeaponUpgradeable(weapon.givenWeapon.Weapon))
+            //            WeaponChances.Remove(weapon);
+            //    }
+            //    else
+            //    {
+            //        WeaponChances.Remove(weapon);
+            //    }
+            //}
+            //else
+            //{
+            //    Player.AddWeapon(weapon.givenWeapon.Weapon);
+            //    if (!Player.WeaponUpgradeable(weapon.givenWeapon.Weapon))
+            //        WeaponChances.Remove(weapon);
+            //}
         }
         else
         {
@@ -81,7 +95,43 @@ public class WeaponUpgradeGamble : MonoBehaviour
             ChanceToHitWeapon = math.clamp(ChanceToHitWeapon + 4, 0, 100);
             if (UpgadeChances.Count == 0)
                 return;
-            GiveUpgrade(RollUpgrade());
+            Item = RollUpgrade();
+            UI_HUD.Instance.ShowSlotMachineDemand(Item);
+            ResultType = 2;
+        }
+    }
+
+    public void FinishedAnimation()
+    {
+        OngoingAttempt = false;
+
+        switch (ResultType)
+        {
+            case 1:
+                if (Player.DoesPlayerHaveWeapon(Item.givenWeapon.Weapon))
+                {
+                    if (Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
+                    {
+                        Player.UpgradeWeapon(Item.givenWeapon.Weapon);
+                        if (!Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
+                            WeaponChances.Remove(Item);
+                    }
+                    else
+                    {
+                        WeaponChances.Remove(Item);
+                    }
+                }
+                else
+                {
+                    Player.AddWeapon(Item.givenWeapon.Weapon);
+                    if (!Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
+                        WeaponChances.Remove(Item);
+                }
+                break;
+
+            case 2:
+                GiveUpgrade(Item);
+                break;
         }
     }
 
@@ -95,7 +145,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
             return false;
         return Random.Range(0,100) < ChanceToHitWeapon;
     }
-    WeaponBase RollWeapon()
+    LootItemScriptable RollWeapon()
     {
         return WeaponChances[Random.Range(0, WeaponChances.Count - 1)];
     }
@@ -117,6 +167,5 @@ public class WeaponUpgradeGamble : MonoBehaviour
         if (item.Stats.DamageModifierIncrease > 0) Player.Stats.DamageModifier += item.Stats.DamageModifierIncrease;
         if (item.Stats.CooldownModifierIncrease > 0) Player.Stats.CooldownModifier += item.Stats.CooldownModifierIncrease;
     }
-
 
 }

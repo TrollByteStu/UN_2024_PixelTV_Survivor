@@ -82,15 +82,15 @@ public class UI_Slotmachine : MonoBehaviour
                 return;
             default: // end
                 UI_HUD.Instance.HideSlotMachine();
-                GameController.Instance.myWUG.SlotMachine();
+                GameController.Instance.myWUG.FinishedAnimation();
                 isRolling = false;
-                if ( determinedPrize != null)
-                { // we have to give a specific prize
-                    GivePrizeToPlayer(determinedPrize);
-                    determinedPrize = null;
-                } else { // give them hot random garbage(will add a bit to check if all 3 are the same at some point, for now they get garbage)
-                    GivePrizeToPlayer(ConsolationPrizes[UnityEngine.Random.Range(0, ConsolationPrizes.Length)]);
-                }
+                //if ( determinedPrize != null)
+                //{ // we have to give a specific prize
+                //    GivePrizeToPlayer(determinedPrize);
+                //    determinedPrize = null;
+                //} else { // give them hot random garbage(will add a bit to check if all 3 are the same at some point, for now they get garbage)
+                //    GivePrizeToPlayer(ConsolationPrizes[UnityEngine.Random.Range(0, ConsolationPrizes.Length)]);
+                //}
                 break;
         }
     }

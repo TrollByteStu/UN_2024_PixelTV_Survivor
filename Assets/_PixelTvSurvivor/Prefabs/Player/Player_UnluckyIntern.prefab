@@ -624,18 +624,42 @@ MonoBehaviour:
     m_ActionId: 1665f311-c036-4147-9d2e-a54e212cc008
     m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797986456139938501}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnTouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a4b5a30d-601c-44f6-b29b-d833c4d37ef3
     m_ActionName: UI/TrackedDevicePosition
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797986456139938501}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDrag
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8b6584d7-9715-4018-aec5-97a43e4049ba
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 797986456139938501}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnTouch
+        m_MethodName: OnRelease
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -651,7 +675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 797986456139938501}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnDrag
+        m_MethodName: OnSpin
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -709,10 +733,7 @@ MonoBehaviour:
     DamageModifier: 1
     CooldownModifier: 1
     Area: 1
-    XpModifier: 1
-    Xp: 0
-    Level: 1
-    Reroll: 0
+    Coins: 20
     TimeUntilDeath: 600
   WeaponsArray:
   - Weapon: {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}

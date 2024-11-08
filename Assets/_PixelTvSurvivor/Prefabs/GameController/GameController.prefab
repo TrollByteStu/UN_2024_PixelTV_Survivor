@@ -220,22 +220,31 @@ MonoBehaviour:
   SpawnableEnemiesArray:
   - Enemy: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 96006bf497493b242a52c609db8957be, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 003a4fb1cdf84bc4fb2940f68704efa4, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 7e71411a045c1944a83345faf9e504fc, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: c9c0aa655fd8cca429e7121539372b5a, type: 2}
     Cost: 1
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
     Cost: 2
+    ChanceSize: 0
   - Enemy: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
     Cost: 3
+    ChanceSize: 0
   RandomEnemies:
   - enemy: {fileID: 11400000, guid: 4430c9771d377c34c9dc4e8d7f20a99a, type: 2}
     chance: 10
@@ -254,18 +263,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd469b02f9e632a4eb9cc9835c0b73c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChanceToMiss: 0
+  ChanceToHit: 100
+  ChanceToHitWeapon: 110
+  SuccsesfullWeaponHits: 0
   Roll: 0
   Player: {fileID: 0}
+  UpgadeChances: []
   WeaponChances:
-  - {fileID: 11400000, guid: f9602e8e18027d54a88285adb8dbaebe, type: 2}
-  - {fileID: 11400000, guid: 9aa662a6751a87c479ca9a42b5a23512, type: 2}
-  - {fileID: 11400000, guid: 14bbdbe25c50d694cb6548a1ffbb7dd3, type: 2}
-  - {fileID: 11400000, guid: 019fdea26557dbd40b854abb3e6bb282, type: 2}
-  - {fileID: 11400000, guid: da5052f0eb9b7754b9c226e43e48b89e, type: 2}
-  - {fileID: 11400000, guid: 0b550e82a197e1d4c96f3729a1ea8d8f, type: 2}
-  - {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}
-  - {fileID: 11400000, guid: ddec7dc71daf1ef418e202f2f9777718, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  StartingWeapons: []
 --- !u!114 &2346780475056144507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,4 +292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SteamrollerPrefab: {fileID: 5478023746985239956, guid: eda16952986b8f14ca1f487fe5b9cff9, type: 3}
+  spawnInterval: 60
+  spawning: 0
   spawnNow: 0

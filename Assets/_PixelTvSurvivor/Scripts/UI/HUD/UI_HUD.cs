@@ -208,6 +208,11 @@ public class UI_HUD : MonoBehaviour
         Section_SlotMachine.localScale = new Vector2(1, 1);
         Section_SlotMachine.GetComponent<UI_Slotmachine>().StartRoll();
     }
+    public void ShowSlotMachineDemand(LootItemScriptable item)
+    {
+        Section_SlotMachine.localScale = new Vector2(1, 1);
+        Section_SlotMachine.GetComponent<UI_Slotmachine>().StartRollDemandPrize(item);
+    }
     public void HideSlotMachine()
     {
         Section_SlotMachine.localScale = new Vector2(0, 0);

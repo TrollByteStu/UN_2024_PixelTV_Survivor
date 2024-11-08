@@ -25,6 +25,8 @@ public class UI_Slotmachine : MonoBehaviour
     private AudioSource myHandleAS;
     private AudioSource myWinningAS;
 
+    private LootItemScriptable determinedPrize;
+
     // Start is called before the first frame update
     void Start() {
         Slot1.Setup(this,11f);
@@ -51,17 +53,26 @@ public class UI_Slotmachine : MonoBehaviour
             case 3: // stop 3rd
                 rollStage++;
                 rollTime = Time.time + 1f;
-                Slot3.StopRollingNextIcon();
+                if (determinedPrize != null)
+                    Slot3.StopRollingDemandPrize(determinedPrize);
+                else
+                    Slot3.StopRollingNextIcon();
                 return;
             case 2: // stop 2nd
                 rollStage++;
                 rollTime = Time.time + 1f;
-                Slot2.StopRollingNextIcon();
+                if (determinedPrize != null)
+                    Slot2.StopRollingDemandPrize(determinedPrize);
+                else
+                    Slot2.StopRollingNextIcon();
                 return;
             case 1: // stop 1st
                 rollStage++;
                 rollTime = Time.time + 1f;
-                Slot1.StopRollingNextIcon();
+                if (determinedPrize != null)
+                    Slot1.StopRollingDemandPrize(determinedPrize);
+                else
+                    Slot1.StopRollingNextIcon();
                 return;
             case 0: // pull handle
                 rollStage++;
@@ -73,12 +84,19 @@ public class UI_Slotmachine : MonoBehaviour
                 UI_HUD.Instance.HideSlotMachine();
                 GameController.Instance.myWUG.SlotMachine();
                 isRolling = false;
+                if ( determinedPrize != null)
+                { // we have to give a specific prize
+                    GivePrizeToPlayer(determinedPrize);
+                    determinedPrize = null;
+                } else { // give them hot random garbage(will add a bit to check if all 3 are the same at some point, for now they get garbage)
+                    GivePrizeToPlayer(ConsolationPrizes[UnityEngine.Random.Range(0, ConsolationPrizes.Length)]);
+                }
                 break;
         }
     }
 
     public void StartRoll()
-    {
+    { // just start the damn roll
         Slot1.StartRolling();
         Slot2.StartRolling();
         Slot3.StartRolling();
@@ -90,9 +108,45 @@ public class UI_Slotmachine : MonoBehaviour
         myWinningAS.Stop();
     }
 
+    public void StartRollDemandPrize(LootItemScriptable prize)
+    { // get a specific weapon, if we have to make a list of when each is available
+        StartRoll();
+        determinedPrize = prize;
+    }
+    public void StartRollDemandWeapon()
+    { // get any weapon
+        StartRollDemandPrize(MainPrizes[UnityEngine.Random.Range(0, MainPrizes.Length)]);
+    }
+
     public void AddPrizeFromRoll(LootItemScriptable prize)
     {
         rolledPrizes.Add(prize);
         rollTime = 1f;
+    }
+
+    public void GivePrizeToPlayer(LootItemScriptable prize)
+    {
+        PlayerController PlayerRef = GameController.Instance.PlayerReference;
+
+        // actually upgrade stats
+        if (prize.Stats.HealthIncrease > 0) PlayerRef.Stats.Health += prize.Stats.HealthIncrease;
+        if (PlayerRef.Stats.Health > PlayerRef.Stats.MaxHealth) PlayerRef.Stats.Health = PlayerRef.Stats.MaxHealth;
+        if (prize.Stats.MaxHealthIncrease > 0) PlayerRef.Stats.MaxHealth += prize.Stats.MaxHealthIncrease;
+        if (prize.Stats.HealthModifierIncrease > 0) PlayerRef.Stats.HealthModifier += prize.Stats.HealthModifierIncrease;
+        if (prize.Stats.RecoveryIncrease > 0) PlayerRef.Stats.Recovery += prize.Stats.RecoveryIncrease;
+        if (prize.Stats.ArmorIncrease > 0) PlayerRef.Stats.Armor += prize.Stats.ArmorIncrease;
+        if (prize.Stats.MoveSpeedIncrease > 0) PlayerRef.Stats.MoveSpeed += prize.Stats.MoveSpeedIncrease;
+        if (prize.Stats.MoveSpeedModifierIncrease > 0) PlayerRef.Stats.MoveSpeedModifier += prize.Stats.MoveSpeedModifierIncrease;
+        if (prize.Stats.DamageModifierIncrease > 0) PlayerRef.Stats.DamageModifier += prize.Stats.DamageModifierIncrease;
+        if (prize.Stats.CooldownModifierIncrease > 0) PlayerRef.Stats.CooldownModifier += prize.Stats.CooldownModifierIncrease;
+
+        // actually add/upgrade weapons
+        if (prize.givenWeapon.Weapon != null) PlayerRef.AddWeapon(prize.givenWeapon);
+
+        // popup text
+        var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+        popup.TextContent = prize.PopupText;
+        popup.TextColor = prize.PopupColor;
+        popup.playThis = prize.pickupAudio;
     }
 }

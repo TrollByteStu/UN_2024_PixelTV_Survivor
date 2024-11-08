@@ -18,6 +18,7 @@ public class UI_Slot : MonoBehaviour
     private float offset = 0f;
 
     private List<LootItemScriptable> myPrizes;
+    private LootItemScriptable determinedPrize;
 
     private AudioSource myWheelAS;
     private AudioSource myStopAS;
@@ -32,6 +33,7 @@ public class UI_Slot : MonoBehaviour
     {
         myMachine = master;
         offset = newOffset;
+        determinedPrize = null;
         // setup icons
         myPrizes.Clear();
         for (int i = 0; i < 4; i++)
@@ -52,10 +54,18 @@ public class UI_Slot : MonoBehaviour
     {
         stopNextRoll = true;
     }
+    public void StopRollingDemandPrize(LootItemScriptable demandPrize)
+    {
+        stopNextRoll = true;
+        determinedPrize = demandPrize;
+    }
     private void StopRolling()
     {
         myMachine.AddPrizeFromRoll(myPrizes[2]);
         isRolling = false;
+        Mover.localPosition = new Vector2(0f, -35f);
+        myWheelAS.Stop();
+        myStopAS.Play();
     }
 
     // Update is called once per frame
@@ -67,16 +77,25 @@ public class UI_Slot : MonoBehaviour
         while (mover < -35f)
         { // moveup, reshuffle
             if (stopNextRoll)
-            {
-                Mover.localPosition = new Vector2(0f, -35f);
-                StopRolling();
-                myWheelAS.Stop();
-                myStopAS.Play();
-                return;
+            { // must stop
+                if ( determinedPrize != null)
+                { // we need it to stop on a certain icon
+                    if ( determinedPrize == myPrizes[2])
+                    { // we rolled the correct prize
+                        StopRolling();
+                        return;
+                    }
+                } else { // nah, just give us the one it stopped on
+                    StopRolling();
+                    return;
+                }
             }
             mover += 35f;
             myPrizes.RemoveAt(0);
-            myPrizes.Add(myMachine.MainPrizes[Random.Range(0, myMachine.MainPrizes.Length)]);
+            if (determinedPrize != null)
+                myPrizes.Add(determinedPrize);
+            else
+                myPrizes.Add(myMachine.MainPrizes[Random.Range(0, myMachine.MainPrizes.Length)]);
             UpdateIcons();
         }
     }

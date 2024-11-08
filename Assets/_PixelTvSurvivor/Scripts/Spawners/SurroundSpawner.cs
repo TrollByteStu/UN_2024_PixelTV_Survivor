@@ -57,9 +57,9 @@ public class SurroundSpawner : MonoBehaviour
 
         if (LastSpawnTime + 1 < Time.timeSinceLevelLoad)
         {
-            maxEnemeyCost = (int)math.floor(Time.timeSinceLevelLoad / waveSize.keys[^1].time + 1);
+            maxEnemeyCost = (int)math.floor(Time.timeSinceLevelLoad / 60) + 1;
             RandomSpawns();
-            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / waveSize.keys[^1].time + 1)));
+            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / 60 + 1) ));
             LastSpawnTime = Time.timeSinceLevelLoad;
 
         }

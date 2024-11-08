@@ -101,7 +101,7 @@ public class UI_Slotmachine : MonoBehaviour
         Slot2.StartRolling();
         Slot3.StartRolling();
         isRolling = true;
-        rollTime = Time.time + 5f;
+        rollTime = Time.time + 1f;
         rollStage = 0;
         rolledPrizes.Clear();
         HandleAnimation.Play("noAnim");

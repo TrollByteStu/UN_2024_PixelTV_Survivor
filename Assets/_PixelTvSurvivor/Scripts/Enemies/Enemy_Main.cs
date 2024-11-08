@@ -12,6 +12,7 @@ public class Enemy_Main : MonoBehaviour
     [Header("Internal references")]
     public SpriteRenderer mySpriteRenderer;
     public Animator myAnimator;
+    public RectTransform myHitBar;
 
     [Header("Prefabs")]
     public GameObject CoinPrefab;
@@ -37,6 +38,7 @@ public class Enemy_Main : MonoBehaviour
     private Shader shaderSpritesDefault;
     private float EnemyHitTimer = 0f;
     private bool EnemyHitSwitch = false;
+    private float HitbarWidth;
 
     // Start is called before the first frame update
     public void Start()
@@ -119,6 +121,7 @@ public class Enemy_Main : MonoBehaviour
     void Knockback()
     {
         if (!transform.CompareTag("Enemy")) return;
+        updateHitBar();
         transform.position += (transform.position - playerRef.position).normalized * myStats.TakenKnockback;
         mySpriteRenderer.material.shader = shaderGUItext;
         mySpriteRenderer.color = Color.white;
@@ -146,7 +149,11 @@ public class Enemy_Main : MonoBehaviour
         if (Random.Range(0, 5) == 0)
             Instantiate(CoinPrefab,transform.position,Quaternion.identity);
         //GameController.Instance.PlayerReference.Stats.Coins += 1;
-        
+
+        // healthbar
+        myStats.Health = 0f;
+        updateHitBar();
+
         EnemyDies_DropLoot();
         //if ( enemytype.SpawnsGravestoneUponDeath && GameController.Instance.FPS_isWithinLimit( 50 ) )
         //{ // spawn a gravestone
@@ -156,9 +163,9 @@ public class Enemy_Main : MonoBehaviour
         transform.tag = "Untagged";
         if (myStats.MoveSpeed > 0f)
         { // moves towards player
-            myStats.MoveSpeed = myStats.MoveSpeed * -10f;
+            myStats.MoveSpeed = (myStats.MoveSpeed * -10f)-5f;
         } else { // moves away from player
-            myStats.MoveSpeed = myStats.MoveSpeed * 10f;
+            myStats.MoveSpeed = (myStats.MoveSpeed * 10f)-5f;
         }
     }
     private void EnemyDies_DropLoot()
@@ -209,11 +216,18 @@ public class Enemy_Main : MonoBehaviour
         transform.name = enemytype.EnemyName;
         transform.tag = "Enemy";
         myStats.AttackDamage += (Time.timeSinceLevelLoad * 0.01f);
-        myStats.AttackRange += (Time.timeSinceLevelLoad * 0.001f);
+        myStats.AttackRange += (Time.timeSinceLevelLoad * 0.01f);
         myStats.TakenKnockback -= (Time.timeSinceLevelLoad * 0.001f);
         if (myStats.TakenKnockback < 0f) myStats.TakenKnockback = 0f;
         myStats.MaxHealth *= 1f + (Time.timeSinceLevelLoad * 0.01f);
         myStats.Health = myStats.MaxHealth;
         myStats.MoveSpeed += (Time.timeSinceLevelLoad * 0.001f);
+        updateHitBar();
+    }
+
+    private void updateHitBar()
+    {
+        HitbarWidth = myStats.Health / myStats.MaxHealth;
+        myHitBar.localScale = new Vector3(HitbarWidth*2f,Mathf.Clamp(myStats.MaxHealth*0.005f,0.1f,0.5f), 1f);
     }
 }

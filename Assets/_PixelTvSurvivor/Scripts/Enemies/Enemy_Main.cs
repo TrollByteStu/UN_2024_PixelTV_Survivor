@@ -29,8 +29,14 @@ public class Enemy_Main : MonoBehaviour
 
     // enemy attack
     private float myLastAttackTime;
-
     private CircleCollider2D Collider;
+
+    // showing enemy being hit (Switching shaders, to make them "white")
+    private Color mySpriteColor;
+    private Shader shaderGUItext;
+    private Shader shaderSpritesDefault;
+    private float EnemyHitTimer = 0f;
+    private bool EnemyHitSwitch = false;
 
     // Start is called before the first frame update
     public void Start()
@@ -40,6 +46,8 @@ public class Enemy_Main : MonoBehaviour
         myStats = enemytype.Stats;
         transform.name = enemytype.EnemyName;
         Collider = GetComponent<CircleCollider2D>();
+        shaderGUItext = Shader.Find("GUI/Text Shader");
+        shaderSpritesDefault = Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default");
     }
 
     // Update is called once per frame
@@ -56,30 +64,14 @@ public class Enemy_Main : MonoBehaviour
         if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
         //EnemyMoveByAIType();
 
-    }
-
-    private void EnemyMoveByAIType()
-    {
-        switch (myStats.AiType)
+        // indicate damage
+        if (EnemyHitSwitch && EnemyHitTimer <= Time.timeSinceLevelLoad)
         {
-            case EnemyStats.EnemyAiType.LootGoblin or EnemyStats.EnemyAiType.Zombie or EnemyStats.EnemyAiType.Shooter:
-                Movement();
-            break;
-            default:
-            break;
+            EnemyHitSwitch = false;
+            mySpriteRenderer.material.shader = shaderSpritesDefault;
+            mySpriteRenderer.color = mySpriteColor;
         }
     }
-    //private void EnemyMove_ZombieType()
-    //{
-    //    if (statusStunTimerLeft <= 0)
-    //        transform.position = Vector3.MoveTowards(transform.position, playerRef.position, myStats.MoveSpeed * Time.deltaTime);
-    //    if (Vector3.Distance(transform.position, playerRef.position) < myStats.AttackRange) EnemyAttacksPlayer();
-    //}
-    //private void EnemyMove_LootGoblinType()
-    //{
-    //    if (statusStunTimerLeft <= 0)
-    //        transform.position = Vector3.MoveTowards(transform.position, transform.position+((transform.position-playerRef.position)*2), myStats.MoveSpeed * Time.deltaTime);
-    //}
 
     void Movement()
     {
@@ -123,14 +115,16 @@ public class Enemy_Main : MonoBehaviour
         myStats.Health -= damage;
         if (myStats.Health <= 0) EnemyDies();
         Knockback();
-
     }
     void Knockback()
     {
         if (!transform.CompareTag("Enemy")) return;
         transform.position += (transform.position - playerRef.position).normalized * myStats.TakenKnockback;
-
-    }
+        mySpriteRenderer.material.shader = shaderGUItext;
+        mySpriteRenderer.color = Color.white;
+        EnemyHitTimer = Time.timeSinceLevelLoad+0.5f;
+        EnemyHitSwitch = true;
+}
 
     public void EnemyDropsBlood()
     {
@@ -207,7 +201,8 @@ public class Enemy_Main : MonoBehaviour
     {
         enemytype = enemy;
         transform.localScale = new Vector3(enemytype.spriteScale, enemytype.spriteScale, 1);
-        mySpriteRenderer.color = Color.Lerp(enemytype.spriteColorMin, enemytype.spriteColorMax, Random.value);
+        mySpriteColor = Color.Lerp(enemytype.spriteColorMin, enemytype.spriteColorMax, Random.value);
+        mySpriteRenderer.color = mySpriteColor;
         mySpriteRenderer.sprite = enemytype.enemySprite;
         myAnimator.runtimeAnimatorController = enemytype.enemyAnimController;
         myStats = enemytype.Stats;

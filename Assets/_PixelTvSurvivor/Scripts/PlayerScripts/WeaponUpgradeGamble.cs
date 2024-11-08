@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -115,6 +116,11 @@ public class WeaponUpgradeGamble : MonoBehaviour
                         Player.UpgradeWeapon(Item.givenWeapon.Weapon);
                         if (!Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
                             WeaponChances.Remove(Item);
+
+                        var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+                        popup.TextContent = Item.PopupText;
+                        popup.TextColor = Item.PopupColor;
+                        popup.playThis = Item.pickupAudio;
                     }
                     else
                     {
@@ -126,6 +132,11 @@ public class WeaponUpgradeGamble : MonoBehaviour
                     Player.AddWeapon(Item.givenWeapon.Weapon);
                     if (!Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
                         WeaponChances.Remove(Item);
+
+                    var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+                    popup.TextContent = Item.PopupText;
+                    popup.TextColor = Item.PopupColor;
+                    popup.playThis = Item.pickupAudio;
                 }
                 break;
 
@@ -166,6 +177,11 @@ public class WeaponUpgradeGamble : MonoBehaviour
         if (item.Stats.MoveSpeedModifierIncrease > 0) Player.Stats.MoveSpeedModifier += item.Stats.MoveSpeedModifierIncrease;
         if (item.Stats.DamageModifierIncrease > 0) Player.Stats.DamageModifier += item.Stats.DamageModifierIncrease;
         if (item.Stats.CooldownModifierIncrease > 0) Player.Stats.CooldownModifier += item.Stats.CooldownModifierIncrease;
+
+        var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+        popup.TextContent = item.PopupText;
+        popup.TextColor = item.PopupColor;
+        popup.playThis = item.pickupAudio;
     }
 
 }

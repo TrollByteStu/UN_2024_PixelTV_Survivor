@@ -98,7 +98,7 @@ public class UI_HighScore : MonoBehaviour
         GameController.Instance.gamePoints = 0;
 
         // show the ui
-        myCG.alpha = 1f;
+        //myCG.alpha = 1f;
     }
 
     [Serializable]

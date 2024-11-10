@@ -95,7 +95,7 @@ public class UI_HUD : MonoBehaviour
         //XpSlider.localScale = new Vector2(PlayerStatRef.Xp / math.pow(PlayerStatRef.Level * 10, 1.4f), 1);
 
         // time
-        TimeText.text = math.floor(PlayerStatRef.TimeUntilDeath / 60) +":" + math.floor(PlayerStatRef.TimeUntilDeath % 60);
+        TimeText.text = math.floor(PlayerStatRef.TimeUntilDeath / 60) +":" + math.floor(PlayerStatRef.TimeUntilDeath / 10 % 6) + math.floor(PlayerStatRef.TimeUntilDeath % 10);
 
         // points
         PointsText.text = math.floor(PlayerStatRef.Points).ToString();

@@ -6,7 +6,7 @@ public class SlashBase : MonoBehaviour
 {
     private void Start()
     {
-        Destroy(gameObject,1);
+        //Destroy(gameObject,1);
     }
 
     public void Setup(Sprite sprite, Vector3 scale)

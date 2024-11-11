@@ -19,6 +19,7 @@ public class UI_MainMenu_Handler : MonoBehaviour
     {
         HighScoreRef.alpha = 0;
         InfoRef.localScale = new Vector3(0, 0, 0);
+        GameController.Instance.SetupForMenu();
     }
     public void tooltipLettuce() { 
     //NewAnimationExit.GetComponent<TextMeshProUGUI>().text = "+MP";

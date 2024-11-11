@@ -125,5 +125,14 @@ public class GameController : MonoBehaviour
         mySR.StartFromGameController();
         // object pool
         myOP.Start();
+        // universal stats
+        myUS.SetupForGame();
+
+    }
+
+    public void SetupForMenu()
+    {
+        // universal stats
+        myUS.SetupForMenu();
     }
 }

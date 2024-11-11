@@ -74,11 +74,8 @@ public class UI_Slotmachine : MonoBehaviour
                 else
                     Slot1.StopRollingNextIcon();
                 return;
-            case 0: // pull handle
-                rollStage++;
-                rollTime = Time.time + 1f;
-                HandleAnimation.Play("playAnim");
-                myHandleAS.Play();
+            case 0: // waiting for pull handle
+                
                 return;
             default: // end
                 UI_HUD.Instance.HideSlotMachine();
@@ -93,6 +90,14 @@ public class UI_Slotmachine : MonoBehaviour
                 //}
                 break;
         }
+    }
+
+    public void PullHandle()
+    {
+        rollStage++;
+        rollTime = Time.time + 1f;
+        HandleAnimation.Play("playAnim");
+        myHandleAS.Play();
     }
 
     public void StartRoll()

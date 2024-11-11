@@ -146,7 +146,6 @@ public class Enemy_Main : MonoBehaviour
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
 
-        if (Random.Range(0, 5) == 0)
             Instantiate(CoinPrefab,transform.position,Quaternion.identity);
         //GameController.Instance.PlayerReference.Stats.Coins += 1;
 

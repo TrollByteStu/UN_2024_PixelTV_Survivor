@@ -121,7 +121,8 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 1f;
             FirstSpin = false;
         }
-        GameController.Instance.myWUG.StartAttempt();
+        //GameController.Instance.myWUG.StartAttempt();
+        UI_HUD.Instance.ShowSlotMachine_PullHandle();
     }
 
     // Event called by Player Input Component on press and release of move keybind

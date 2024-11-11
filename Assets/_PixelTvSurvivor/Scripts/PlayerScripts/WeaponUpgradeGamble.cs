@@ -27,6 +27,11 @@ public class WeaponUpgradeGamble : MonoBehaviour
     public void StartAttempt()
     {
         // lost its reference and crashed, getting it again
+        //UI_HUD.Instance.ShowSlotMachine();
+    }
+
+    private void Update()
+    {
         Player = GameController.Instance.PlayerReference;
         if (OngoingAttempt)
             return;
@@ -36,7 +41,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
         OngoingAttempt = true;
         Player.Stats.Coins -= 10;
         SlotMachine();
-        //UI_HUD.Instance.ShowSlotMachine();
+        
     }
     void SlotMachine()
     {

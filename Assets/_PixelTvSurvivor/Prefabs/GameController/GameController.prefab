@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3732330668148699807}
   - component: {fileID: 5943691402303187131}
   - component: {fileID: 2346780475056144507}
+  - component: {fileID: 4939269524149062310}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -298,3 +299,15 @@ MonoBehaviour:
   spawnInterval: 60
   spawning: 0
   spawnNow: 0
+--- !u!114 &4939269524149062310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945792299011173173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c11bc5bb931f4e8de042f9cc33bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

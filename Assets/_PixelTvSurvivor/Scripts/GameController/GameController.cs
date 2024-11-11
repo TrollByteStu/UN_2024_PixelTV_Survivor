@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
     public WeaponUpgradeGamble myWUG;
     public GameController_Steamrollers mySR;
     private SurroundSpawner mySS;
+    private GameController_UniversalStats myUS;
 
     private void Awake()
     {
@@ -59,6 +60,7 @@ public class GameController : MonoBehaviour
         myWUG = GetComponent<WeaponUpgradeGamble>();
         mySR = GetComponent<GameController_Steamrollers>();
         mySS = GetComponent<SurroundSpawner>();
+        myUS = GetComponent<GameController_UniversalStats>();
 
         // make this object permanent, so it carries over from scene to scene
         DontDestroyOnLoad(gameObject);

@@ -80,17 +80,16 @@ public class SurroundSpawner : MonoBehaviour
         // computer is dying, skip wave
         if (!GameController.Instance.FPS_isWithinLimit(50)) return;
         int cost=1;
+        int[] availableEnemies = GetEnemyOfCost(maxEnemeyCost);
         // spawn wave
         for (int i = 0; i < amount; i += cost)
         {
-            int[] availableEnemies = GetEnemyOfCost(maxEnemeyCost);
-            int enemy = Random.Range(0 , availableEnemies.Length);
+            int enemy = availableEnemies[Random.Range(0 , availableEnemies.Length)];
 
             if (SpawnableEnemiesArray[enemy].Cost > 0)
                 cost = SpawnableEnemiesArray[enemy].Cost;
             else
                 cost = 1;
-
             Spawn(SpawnableEnemiesArray[enemy].Enemy);
 
             await Awaitable.WaitForSecondsAsync(2/amount);

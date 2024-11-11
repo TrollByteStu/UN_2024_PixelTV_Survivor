@@ -117,8 +117,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 10
+      time: -0.10020065
+      value: 0.41209698
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -126,126 +126,48 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 7.86145
-      value: 14.58548
-      inSlope: 1.47904
-      outSlope: 1.47904
+      time: 27.898226
+      value: 2.453661
+      inSlope: 0.07510846
+      outSlope: 0.07510846
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 9.86145
-      value: 24.58548
+      time: 59.920628
+      value: 4.920169
       inSlope: 0
       outSlope: 0
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 14.456334
-      value: 14.541811
-      inSlope: -0.058780573
-      outSlope: -0.058780573
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 21.251387
-      value: 31.065384
-      inSlope: -0.012036828
-      outSlope: -0.012036828
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 32.350525
-      value: 17.845945
-      inSlope: -0.3394327
-      outSlope: -0.3394327
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 35.861336
-      value: 47.00366
-      inSlope: 0.07077032
-      outSlope: 0.07077032
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 38.805607
-      value: 18.302315
-      inSlope: -0.57723844
-      outSlope: -0.57723844
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 45.28872
-      value: 25.78342
-      inSlope: 0.023594834
-      outSlope: 0.023594834
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 53.14718
-      value: 15.993708
-      inSlope: -0.64655346
-      outSlope: -0.64655346
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 60
-      value: 20
-      inSlope: 0.5846194
-      outSlope: 0.5846194
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 1
     m_RotationOrder: 4
   SpawnableEnemiesArray:
   - Enemy: {fileID: 11400000, guid: 338e71db0fa9c6c4fb7b058728f562d6, type: 2}
     Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
-    Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
-    Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: 96006bf497493b242a52c609db8957be, type: 2}
-    Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: 003a4fb1cdf84bc4fb2940f68704efa4, type: 2}
-    Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: 7e71411a045c1944a83345faf9e504fc, type: 2}
-    Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: c9c0aa655fd8cca429e7121539372b5a, type: 2}
-    Cost: 1
-    ChanceSize: 0
-  - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
-    Cost: 2
-    ChanceSize: 0
+    ChanceSize: 1
   - Enemy: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
     Cost: 3
-    ChanceSize: 0
+    ChanceSize: 1
+  - Enemy: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
+    Cost: 3
+    ChanceSize: 1
+  - Enemy: {fileID: 11400000, guid: 96006bf497493b242a52c609db8957be, type: 2}
+    Cost: 2
+    ChanceSize: 1
+  - Enemy: {fileID: 11400000, guid: 003a4fb1cdf84bc4fb2940f68704efa4, type: 2}
+    Cost: 2
+    ChanceSize: 1
+  - Enemy: {fileID: 11400000, guid: 7e71411a045c1944a83345faf9e504fc, type: 2}
+    Cost: 1
+    ChanceSize: 1
+  - Enemy: {fileID: 11400000, guid: c9c0aa655fd8cca429e7121539372b5a, type: 2}
+    Cost: 1
+    ChanceSize: 1
   RandomEnemies:
   - enemy: {fileID: 11400000, guid: 4430c9771d377c34c9dc4e8d7f20a99a, type: 2}
     chance: 10
@@ -283,6 +205,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 147b55e9312859d46a31a757cbd0d034, type: 2}
   StartingWeapons:
   - {fileID: 11400000, guid: f63e8ff3f4855024a8184fb61b8d9378, type: 2}
+  - {fileID: 11400000, guid: d15f3073218acbb47a01ec5c6e52526b, type: 2}
 --- !u!114 &2346780475056144507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,3 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10c11bc5bb931f4e8de042f9cc33bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotalKills: 0
+  TotalPoints: 0
+  TotalTimePlayed: 0
+  TotalShotFired: 0
+  TotalShotsHit: 0
+  TotalDamageDone: 0

@@ -94,6 +94,8 @@ public class UI_Slotmachine : MonoBehaviour
 
     public void PullHandle()
     {
+        if (!isRolling) return;
+        if (rollStage != 0) return;
         rollStage++;
         rollTime = Time.timeSinceLevelLoad + 1f;
         HandleAnimation.Play("playAnim");

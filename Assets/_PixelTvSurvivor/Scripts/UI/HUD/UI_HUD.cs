@@ -49,6 +49,7 @@ public class UI_HUD : MonoBehaviour
     private PlayerStats PlayerStatRef;
     private AudioSource myAS;
     private GameController myGC;
+    private UI_Slotmachine mySlotUI;
 
     private void Awake()
     {
@@ -70,6 +71,9 @@ public class UI_HUD : MonoBehaviour
         Section_Upgrade.gameObject.SetActive(true);
         Section_SlotMachine.localScale = new Vector2(0, 0);
         Section_SlotMachine.gameObject.SetActive(true);
+
+        // internal
+        mySlotUI = Section_SlotMachine.gameObject.GetComponent<UI_Slotmachine>();
     }
 
     private void Start()
@@ -207,6 +211,10 @@ public class UI_HUD : MonoBehaviour
     {
         Section_SlotMachine.localScale = new Vector2(1, 1);
         Section_SlotMachine.GetComponent<UI_Slotmachine>().StartRoll();
+    }
+    public void ShowSlotMachine_PullHandle()
+    {
+        mySlotUI.PullHandle();
     }
     public void ShowSlotMachineDemand(LootItemScriptable item)
     {

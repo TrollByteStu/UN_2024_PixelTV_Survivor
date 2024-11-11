@@ -64,7 +64,7 @@ public class BulletBase : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.CompareTag("Enemy"))
         {
             if (collision.GetComponent<Enemy_Main>() != null)
                 collision.GetComponent<Enemy_Main>().EnemyTakesDamage(Damage);

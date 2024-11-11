@@ -11,8 +11,7 @@ public class WeaponSlash : WeaponBase
     public GameObject Slash;
     public Sprite SlashSprite;
     public Side AttackSide;
-    public bool Omnidirectional;
-    public List<WeaponStats> LevelStats = new List<WeaponStats> { new WeaponStats() };
+    public List<WeaponStats> LevelStats;
 
     private Vector3 Aim;
 
@@ -55,51 +54,25 @@ public class WeaponSlash : WeaponBase
             Vector3 offset;
             switch (AttackSide)
             {
-
                 case Side.Back:
                     offset = -Aim * (LevelStats[level].AOE.x * playerStats.Area / 2);
                     Instantiate(Slash, playerTransform.position + offset, Quaternion.identity).GetComponent<SlashBase>()
-                        .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area * -new Vector3(Aim.x,1,1));
-
-
-                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerTransform.position + offset , LevelStats[level].AOE * playerStats.Area,0,Vector2.zero))
-                    {
-                        if (Hit.transform.CompareTag("Enemy"))
-                        {
-                            Hit.transform.GetComponent<Enemy_Main>().EnemyTakesDamage(LevelStats[level].AttackDamage * playerStats.DamageModifier);
-                        }
-                    }
+                        .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area , Aim, LevelStats[level].AttackDamage * playerStats.DamageModifier);
                     break;
                 case Side.Forward:
                     offset = Aim * (LevelStats[level].AOE.x * playerStats.Area / 2);
                     Instantiate(Slash, playerTransform.position + offset, Quaternion.identity).GetComponent<SlashBase>()
-                        .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area * new Vector3(Aim.x, 1, 1));
-                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerTransform.position + offset, LevelStats[level].AOE * playerStats.Area, 0, Vector2.zero))
-                    {
-                        if (Hit.transform.CompareTag("Enemy"))
-                        {
-                            Hit.transform.GetComponent<Enemy_Main>().EnemyTakesDamage(LevelStats[level].AttackDamage * playerStats.DamageModifier);
-                        }
-                    }
+                        .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area , Aim, LevelStats[level].AttackDamage * playerStats.DamageModifier);
                     break;
                 case Side.Alternate:
                     offset = Aim * Math.Pow(-1, i % 2).ConvertTo<float>() * (LevelStats[level].AOE.x * playerStats.Area / 2);
                     Instantiate(Slash, playerTransform.position + offset, Quaternion.identity).GetComponent<SlashBase>()
-                        .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area * new Vector3(Aim.x, 1, 1) * Math.Pow(-1,i%2).ConvertTo<float>());
-                    foreach (RaycastHit2D Hit in Physics2D.BoxCastAll(playerTransform.position + offset, LevelStats[level].AOE * playerStats.Area, 0,Vector2.zero))
-                    {
-                        if (Hit.transform.CompareTag("Enemy"))
-                        {
-                            Hit.transform.GetComponent<Enemy_Main>().EnemyTakesDamage(LevelStats[level].AttackDamage * playerStats.DamageModifier);
-                        }
-                    }
+                        .Setup(SlashSprite, LevelStats[level].AOE * playerStats.Area , Aim * Math.Pow(-1, i % 2).ConvertTo<float>(), LevelStats[level].AttackDamage * playerStats.DamageModifier);
                     break;
 
             }
             await Awaitable.WaitForSecondsAsync(LevelStats[level].AttackDelay);
         }
-
-
     }
 
     public override float GetAttackSpeed(int level)

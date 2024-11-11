@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e3b6da1595732489368163d2cc03f2, type: 3}
-  m_Name: WeaponSlash
+  m_Script: {fileID: 11500000, guid: f2fd3685d62543e4ca4f962c440bccef, type: 3}
+  m_Name: WeaponSlashOmni
   m_EditorClassIdentifier: 
-  WeaponName: Slash
+  WeaponName: SlashOmni
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
   Slash: {fileID: 1344504690676526400, guid: 1750dde5e8d7d4344a778e5bf4e68297, type: 3}
   SlashSprite: {fileID: 0}
-  AttackSide: 2
+  AutoAim: 1
   LevelStats:
   - AttackSpeed: 1
     AttackDamage: 10
-    AttackQuantity: 2
+    AttackQuantity: 1
     AOE: {x: 5, y: 5}
-    AttackDelay: -2.5
+    AttackDelay: 0

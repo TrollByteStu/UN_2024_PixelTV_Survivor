@@ -118,7 +118,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
                         if (!Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
                             WeaponChances.Remove(Item);
 
-                        var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+                        var popup = Instantiate(GameController.Instance.PopupTextPrefab, Player.transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
                         popup.TextContent = Item.PopupText;
                         popup.TextColor = Item.PopupColor;
                         popup.playThis = Item.pickupAudio;
@@ -134,7 +134,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
                     if (!Player.WeaponUpgradeable(Item.givenWeapon.Weapon))
                         WeaponChances.Remove(Item);
 
-                    var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+                    var popup = Instantiate(GameController.Instance.PopupTextPrefab, Player.transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
                     popup.TextContent = Item.PopupText;
                     popup.TextColor = Item.PopupColor;
                     popup.playThis = Item.pickupAudio;
@@ -179,7 +179,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
         if (item.Stats.DamageModifierIncrease > 0) Player.Stats.DamageModifier += item.Stats.DamageModifierIncrease;
         if (item.Stats.CooldownModifierIncrease > 0) Player.Stats.CooldownModifier += item.Stats.CooldownModifierIncrease;
 
-        var popup = Instantiate(GameController.Instance.PopupTextPrefab, transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
+        var popup = Instantiate(GameController.Instance.PopupTextPrefab, Player.transform.position, Quaternion.identity).GetComponent<PopupTextHandler>();
         popup.TextContent = item.PopupText;
         popup.TextColor = item.PopupColor;
         popup.playThis = item.pickupAudio;

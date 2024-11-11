@@ -125,7 +125,7 @@ public class Enemy_Main : MonoBehaviour
         transform.position += (transform.position - playerRef.position).normalized * myStats.TakenKnockback;
         mySpriteRenderer.material.shader = shaderGUItext;
         mySpriteRenderer.color = Color.white;
-        EnemyHitTimer = Time.timeSinceLevelLoad+0.5f;
+        EnemyHitTimer = Time.timeSinceLevelLoad+0.15f;
         EnemyHitSwitch = true;
 }
 

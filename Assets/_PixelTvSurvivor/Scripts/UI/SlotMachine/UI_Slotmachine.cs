@@ -48,11 +48,11 @@ public class UI_Slotmachine : MonoBehaviour
                 rollStage++;
                 myWinningAS.Play();
                 myWinningAS.time = 0;
-                rollTime = Time.time + 3f;
+                rollTime = Time.timeSinceLevelLoad + 1f;
                 return;
             case 3: // stop 3rd
                 rollStage++;
-                rollTime = Time.time + 1f;
+                rollTime = Time.timeSinceLevelLoad + 1f;
                 if (determinedPrize != null)
                     Slot3.StopRollingDemandPrize(determinedPrize);
                 else
@@ -60,7 +60,7 @@ public class UI_Slotmachine : MonoBehaviour
                 return;
             case 2: // stop 2nd
                 rollStage++;
-                rollTime = Time.time + 1f;
+                rollTime = Time.timeSinceLevelLoad + 1f;
                 if (determinedPrize != null)
                     Slot2.StopRollingDemandPrize(determinedPrize);
                 else
@@ -68,7 +68,7 @@ public class UI_Slotmachine : MonoBehaviour
                 return;
             case 1: // stop 1st
                 rollStage++;
-                rollTime = Time.time + 1f;
+                rollTime = Time.timeSinceLevelLoad + 1f;
                 if (determinedPrize != null)
                     Slot1.StopRollingDemandPrize(determinedPrize);
                 else
@@ -95,7 +95,7 @@ public class UI_Slotmachine : MonoBehaviour
     public void PullHandle()
     {
         rollStage++;
-        rollTime = Time.time + 1f;
+        rollTime = Time.timeSinceLevelLoad + 1f;
         HandleAnimation.Play("playAnim");
         myHandleAS.Play();
     }
@@ -106,7 +106,7 @@ public class UI_Slotmachine : MonoBehaviour
         Slot2.StartRolling();
         Slot3.StartRolling();
         isRolling = true;
-        rollTime = Time.time + 1f;
+        rollTime = Time.timeSinceLevelLoad + 1f;
         rollStage = 0;
         rolledPrizes.Clear();
         HandleAnimation.Play("noAnim");

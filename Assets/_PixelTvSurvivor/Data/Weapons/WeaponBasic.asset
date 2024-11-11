@@ -17,6 +17,7 @@ MonoBehaviour:
   AttackAudioHit: {fileID: 0}
   BulletPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
   bulletSprite: {fileID: 921682717343652210, guid: 9f15390bd8d19f545b23cfa44688c7a0, type: 3}
+  AutoAim: 0
   LevelStats:
   - bulletSpeed: 15
     AttackSpeed: 1

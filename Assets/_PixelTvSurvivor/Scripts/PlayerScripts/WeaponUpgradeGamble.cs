@@ -45,6 +45,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
         {
             ChanceToHit = math.clamp(ChanceToHit + 10, 0, 100);
             ChanceToHitWeapon = math.clamp(ChanceToHitWeapon + 4 * 10, 0, 100);
+            ResultType = 0;
             UI_HUD.Instance.ShowSlotMachine();
             return;
         }

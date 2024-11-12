@@ -9,6 +9,7 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    private Camera Cam;
     [Header("Player Stats")]
     public PlayerStats Stats = new("Player",100,100,0.1f,0,10);
     public WeaponStats[] WeaponsArray;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cam = FindAnyObjectByType<Camera>();
         GameController.Instance.SetupForGame( this );
 
         //time is stopped until first spin 
@@ -175,7 +177,7 @@ public class PlayerController : MonoBehaviour
     {
         TouchStart = context.ReadValue<Vector2>();
 
-        if (TouchStart.x / Camera.current.pixelWidth > 0.6 && TouchStart.y /  Camera.current.pixelHeight > 0.6)
+        if (TouchStart.x / Cam.pixelWidth > 0.6 && TouchStart.y / Cam.pixelHeight > 0.6)
         {
             if (!context.started)
                 return;

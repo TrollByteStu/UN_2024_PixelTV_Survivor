@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Runtime.CompilerServices;
+using System.Drawing;
 
 public class UI_Slotmachine : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class UI_Slotmachine : MonoBehaviour
     public UI_Slot Slot2;
     public UI_Slot Slot3;
     public Animator HandleAnimation;
+    public AudioSource LooseSoundAS;
 
     private bool isRolling = false;
     private float rollTime = 0f;
@@ -46,8 +48,15 @@ public class UI_Slotmachine : MonoBehaviour
         { // the action order
             case 4: // show all 3,play sound?, maybe particle effects?
                 rollStage++;
-                myWinningAS.Play();
-                myWinningAS.time = 0;
+                if (determinedPrize != null)
+                { // winner
+                    myWinningAS.time = 0;
+                    myWinningAS.Play();
+                } else { // looser
+                    LooseSoundAS.time = 0;
+                    LooseSoundAS.Play();
+                }
+                determinedPrize = null;
                 rollTime = Time.timeSinceLevelLoad + 1f;
                 return;
             case 3: // stop 3rd

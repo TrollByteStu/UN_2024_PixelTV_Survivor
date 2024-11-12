@@ -39,6 +39,7 @@ public class Enemy_Main : MonoBehaviour
     private float EnemyHitTimer = 0f;
     private bool EnemyHitSwitch = false;
     private float HitbarWidth;
+    private AudioSource myBeingHitAS;
 
     // Start is called before the first frame update
     public void Start()
@@ -50,6 +51,7 @@ public class Enemy_Main : MonoBehaviour
         Collider = GetComponent<CircleCollider2D>();
         shaderGUItext = Shader.Find("GUI/Text Shader");
         shaderSpritesDefault = Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default");
+        myBeingHitAS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -127,6 +129,8 @@ public class Enemy_Main : MonoBehaviour
         mySpriteRenderer.color = Color.white;
         EnemyHitTimer = Time.timeSinceLevelLoad+0.15f;
         EnemyHitSwitch = true;
+        myBeingHitAS.time = 0;
+        myBeingHitAS.Play();
 }
 
     public void EnemyDropsBlood()

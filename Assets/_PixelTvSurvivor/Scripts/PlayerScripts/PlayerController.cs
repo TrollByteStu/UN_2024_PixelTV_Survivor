@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         GameController.Instance.SetupForGame( this );
 
         //time is stopped until first spin 
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
 
         // shaders for hit indicator
         shaderGUItext = Shader.Find("GUI/Text Shader");

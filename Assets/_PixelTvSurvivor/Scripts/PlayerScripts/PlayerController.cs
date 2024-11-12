@@ -15,9 +15,19 @@ public class PlayerController : MonoBehaviour
 
     [Header("Santa Sprite Layered")]
     public GameObject Santa_Body_Idle;
+    private SpriteRenderer Santa_Body_Idle_Rend;
     public GameObject Santa_Body_Walk;
+    private SpriteRenderer Santa_Body_Walk_Rend;
     public GameObject Santa_Gun_Idle;
+    private SpriteRenderer Santa_Gun_Idle_Rend;
     public GameObject Santa_Gun_Walk;
+    private SpriteRenderer Santa_Gun_Walk_Rend;
+
+    //private internal
+    private Shader shaderGUItext;
+    private Shader shaderSpritesDefault;
+    private float PlayerHitTimer = 0f;
+    private bool PlayerHitSwitch = false;
 
     private void Awake()
     {
@@ -30,7 +40,17 @@ public class PlayerController : MonoBehaviour
 
         //time is stopped until first spin 
         Time.timeScale = 0f;
-    }
+
+        // shaders for hit indicator
+        shaderGUItext = Shader.Find("GUI/Text Shader");
+        shaderSpritesDefault = Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default");
+
+        // renderers for hit indicator
+        Santa_Body_Idle_Rend = Santa_Body_Idle.gameObject.GetComponent<SpriteRenderer>();
+        Santa_Body_Walk_Rend = Santa_Body_Walk.gameObject.GetComponent<SpriteRenderer>();
+        Santa_Gun_Idle_Rend = Santa_Gun_Idle.gameObject.GetComponent<SpriteRenderer>();
+        Santa_Gun_Walk_Rend = Santa_Gun_Walk.gameObject.GetComponent<SpriteRenderer>();
+}
 
     // Update is called once per frame
     void Update()
@@ -39,6 +59,16 @@ public class PlayerController : MonoBehaviour
         Attacks();
         PickupXP();
         StatsAndStatusHandler();
+
+        // indicate damage
+        if (PlayerHitSwitch && PlayerHitTimer <= Time.timeSinceLevelLoad)
+        {
+            PlayerHitSwitch = false;
+            Santa_Body_Idle_Rend.material.shader = shaderSpritesDefault;
+            Santa_Body_Walk_Rend.material.shader = shaderSpritesDefault;
+            Santa_Gun_Idle_Rend.material.shader = shaderSpritesDefault;
+            Santa_Gun_Walk_Rend.material.shader = shaderSpritesDefault;
+        }
     }
 
     private Vector2 MoveDirection;
@@ -102,6 +132,16 @@ public class PlayerController : MonoBehaviour
     {
         // play sound of player moaning/complaining?
         Stats.Health -= math.clamp( damage - Stats.Armor,0,999999999);
+
+        // damage indicator
+        Santa_Body_Idle_Rend.material.shader = shaderGUItext;
+        Santa_Body_Walk_Rend.material.shader = shaderGUItext;
+        Santa_Gun_Idle_Rend.material.shader = shaderGUItext;
+        Santa_Gun_Walk_Rend.material.shader = shaderGUItext;
+        PlayerHitTimer = Time.timeSinceLevelLoad + 0.25f;
+        PlayerHitSwitch = true;
+
+        // is dead?
         if (Stats.Health <= 0) GameController.Instance.PlayerIsDead();
     }
     public void AddPoints(int Points, float time)

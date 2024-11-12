@@ -121,7 +121,6 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 1f;
             FirstSpin = false;
         }
-        //GameController.Instance.myWUG.StartAttempt();
         UI_HUD.Instance.ShowSlotMachine_PullHandle();
     }
 
@@ -135,6 +134,18 @@ public class PlayerController : MonoBehaviour
     public void OnTouch(InputAction.CallbackContext context)
     {
         TouchStart = context.ReadValue<Vector2>();
+
+        if (TouchStart.x / Camera.current.pixelWidth > 0.6 && TouchStart.y /  Camera.current.pixelHeight > 0.6)
+        {
+            if (!context.started)
+                return;
+            if (FirstSpin)
+            {
+                Time.timeScale = 1f;
+                FirstSpin = false;
+            }
+            UI_HUD.Instance.ShowSlotMachine_PullHandle();
+        }
     }
 
     public void OnDrag(InputAction.CallbackContext context)

@@ -179,8 +179,6 @@ public class PlayerController : MonoBehaviour
 
         if (TouchStart.x / Cam.pixelWidth > 0.6 && TouchStart.y / Cam.pixelHeight > 0.6)
         {
-            if (!context.started)
-                return;
             if (FirstSpin)
             {
                 Time.timeScale = 1f;

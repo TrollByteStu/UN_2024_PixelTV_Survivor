@@ -19,6 +19,8 @@ public class UI_HUD : MonoBehaviour
     public RectTransform Looser_Button;
     public RectTransform Looser_Inputfield;
     public TMP_Text Looser_Inputfield_Text;
+    public GameObject LooserImage;
+    public GameObject WinnerImage;
 
     [Space(10)]
 
@@ -50,6 +52,7 @@ public class UI_HUD : MonoBehaviour
     private AudioSource myAS;
     private GameController myGC;
     private UI_Slotmachine mySlotUI;
+    private GameObject AudioMainRef;
 
     private void Awake()
     {
@@ -74,6 +77,7 @@ public class UI_HUD : MonoBehaviour
 
         // internal
         mySlotUI = Section_SlotMachine.gameObject.GetComponent<UI_Slotmachine>();
+        AudioMainRef = GameObject.Find("Audio");
     }
 
     private void Start()
@@ -113,6 +117,18 @@ public class UI_HUD : MonoBehaviour
         Section_HUD.localScale = new Vector2(0, 0);
         Section_Looser.localScale = new Vector2(1, 1);
         Cursor.visible = true;
+        AudioMainRef.SetActive(false);
+        Destroy(Section_SlotMachine.gameObject);
+        if (myGC.PlayerReference.Stats.TimeUntilDeath > 1)
+        { // time left, evil kids murdered santa, you lost
+            LooserImage.gameObject.SetActive(true);
+            WinnerImage.gameObject.SetActive(false);
+            LooserImage.GetComponent<AudioSource>().Play();
+        } else { // no time left, you ran the clock and won
+            LooserImage.gameObject.SetActive(false);
+            WinnerImage.gameObject.SetActive(true);
+            WinnerImage.GetComponent<AudioSource>().Play();
+        }
         if (myGC.minimumPointsForHighscore < myGC.gamePoints )
         { // got a highscore
             Looser_Button.gameObject.SetActive(false);

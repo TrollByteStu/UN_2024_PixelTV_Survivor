@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Placeholder_Santa_Winner_0: 1099280330706684302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

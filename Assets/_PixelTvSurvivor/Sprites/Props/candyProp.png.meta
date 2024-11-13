@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      candyProp_0: 6084418593573115896
+      candyProp_1: 5127038609082417304
+      candyProp_2: -4093822121045293901
+      candyProp_3: -1015246900875808607
+      candyProp_4: -7689476662898615634
+      candyProp_5: -6505352383973863715
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

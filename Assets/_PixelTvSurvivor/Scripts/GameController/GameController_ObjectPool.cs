@@ -17,6 +17,12 @@ public class GameController_ObjectPool : MonoBehaviour
     public int BloodStartPool = 500;
     public int BloodMaxPool = 2000;
 
+    [Header("Coins")]
+    public GameObject CoinPrefab;
+    public ObjectPool<GameObject> CoinPool;
+    public int CoinStartPool = 500;
+    public int CoinMaxPool = 2000;
+
     private GameController myGC;
 
     // Start is called before the first frame update
@@ -27,6 +33,7 @@ public class GameController_ObjectPool : MonoBehaviour
         // run the inital configure of the object pools
         ConfigureEnemyPool();
         ConfigureBloodPool();
+        ConfigureCoinPool();
 
     }
 
@@ -66,6 +73,25 @@ public class GameController_ObjectPool : MonoBehaviour
         }, false, BloodStartPool, BloodMaxPool);
         // Still trying to access old pool 2nd game
         BloodPool.Clear();
+    }
+
+    void ConfigureCoinPool()
+    {
+        CoinPool = new ObjectPool<GameObject>(() => {
+            // create object pool
+            return Instantiate(CoinPrefab);
+        }, go => { // get object there is one available
+            myGC.currentCoins++;
+            go.gameObject.SetActive(true);
+        }, go => { // return object to pool, room in pool
+            myGC.currentCoins--;
+            go.gameObject.SetActive(false);
+        }, go => {  // return object, pool is full
+            myGC.currentCoins--;
+            Destroy(go.gameObject);
+        }, false, CoinStartPool, CoinMaxPool);
+        // Still trying to access old pool 2nd game
+        CoinPool.Clear();
     }
 
 

@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
     public int Value;
     public bool MoveToPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Start()
     {
         Player = GameController.Instance.PlayerReference.gameObject;
     }
@@ -15,13 +15,18 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // kill enemy if to far from player
+        if (Vector3.Distance(Player.transform.position, transform.position) > 30)
+            GameController.Instance.CoinPool_Release(gameObject);
+
         if (MoveToPlayer)
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, (Vector3.Distance(transform.position, Player.transform.position) + 5) * Time.deltaTime);
             if (Vector3.Distance(transform.position, Player.transform.position) < 0.1f)
             {
                 GameController.Instance.PlayerReference.AddCoins(Value);
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                GameController.Instance.CoinPool_Release(gameObject);
             }
         }
     }

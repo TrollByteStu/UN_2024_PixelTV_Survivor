@@ -143,6 +143,14 @@ public class Enemy_Main : MonoBehaviour
         blood.audioRange(enemytype.enemyAudioDeath);
     }
 
+    public void EnemyDropCoin()
+    {
+        var Coin = GameController.Instance.CoinPool_Get().GetComponent<Coin>();
+        Coin.Start();
+        Coin.transform.position = transform.position;
+        Coin.transform.SetParent(GameController.Instance.CoinHolder);
+    }
+
     public void EnemyDies()
     {
         if (!transform.CompareTag("Enemy")) return;
@@ -150,7 +158,8 @@ public class Enemy_Main : MonoBehaviour
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
 
-            Instantiate(CoinPrefab,transform.position,Quaternion.identity,GameController.Instance.CoinHolder);
+        //Instantiate(CoinPrefab,transform.position,Quaternion.identity,GameController.Instance.CoinHolder);
+        EnemyDropCoin();
         //GameController.Instance.PlayerReference.Stats.Coins += 1;
 
         // healthbar

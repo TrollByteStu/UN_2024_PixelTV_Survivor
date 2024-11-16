@@ -55,6 +55,7 @@ MonoBehaviour:
   BloodHolder: {fileID: 0}
   XpHolder: {fileID: 0}
   EnemyHolder: {fileID: 0}
+  CoinHolder: {fileID: 0}
   BloodSplatPrefab: {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
   GenericItemPrefab: {fileID: 8195367136101649449, guid: b3b574f75c46c824db7c85b08612b25a, type: 3}
   GraveStonePrefab: {fileID: 8119679194988011476, guid: 749794211244a8e4986027e960ad6c01, type: 3}
@@ -64,6 +65,7 @@ MonoBehaviour:
   currentFPS: 0
   currentEnemies: 0
   currentBloodSplats: 0
+  currentCoins: 0
   minimumPointsForHighscore: 0
   gameTime: 0
   gamePoints: 0
@@ -101,6 +103,9 @@ MonoBehaviour:
   BloodSplatPrefab: {fileID: 5230097599599686359, guid: f813eee610bffa74b9f71d95c8b4f255, type: 3}
   BloodStartPool: 500
   BloodMaxPool: 2000
+  CoinPrefab: {fileID: 3538816895483200491, guid: 801f3b987bad7224984b817cac869931, type: 3}
+  CoinStartPool: 500
+  CoinMaxPool: 2000
 --- !u!114 &3732330668148699807
 MonoBehaviour:
   m_ObjectHideFlags: 0

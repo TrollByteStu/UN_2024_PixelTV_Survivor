@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
     public int currentFPS = 120;
     public int currentEnemies = 0;
     public int currentBloodSplats = 0;
+    public int currentCoins = 0;
     public int minimumPointsForHighscore = 0;
     public float gameTime = 0f;
     public int gamePoints = 0;
@@ -100,6 +101,15 @@ public class GameController : MonoBehaviour
     public void BloodPool_Release(GameObject blood)
     {
         myOP.BloodPool.Release(blood);
+    }
+    public GameObject CoinPool_Get()
+    {
+        return myOP.CoinPool.Get();
+    }
+
+    public void CoinPool_Release(GameObject coin)
+    {
+        myOP.CoinPool.Release(coin);
     }
 
     public void SetupForGame(PlayerController controller)

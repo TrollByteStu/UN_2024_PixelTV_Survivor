@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     public Transform XpHolder;
     [HideInInspector]
     public Transform EnemyHolder;
+    [HideInInspector]
+    public Transform CoinHolder;
 
     [Header("Prefabs")]
     public GameObject BloodSplatPrefab;
@@ -120,6 +122,10 @@ public class GameController : MonoBehaviour
         var EneHolder = new GameObject("EnemyHolder");
         EnemyHolder = EneHolder.transform;
         EneHolder.transform.SetParent(holders.transform);
+        // coin
+        var CoiHolder = new GameObject("CoinHolder");
+        CoinHolder = CoiHolder.transform;
+        CoinHolder.transform.SetParent(holders.transform);
         // spawner scripts
         mySS.StartFromGameController(PlayerReference.transform,EnemyHolder);
         mySR.StartFromGameController();

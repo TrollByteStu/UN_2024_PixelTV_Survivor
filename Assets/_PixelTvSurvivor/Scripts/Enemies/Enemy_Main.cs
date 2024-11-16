@@ -150,7 +150,7 @@ public class Enemy_Main : MonoBehaviour
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
 
-            Instantiate(CoinPrefab,transform.position,Quaternion.identity);
+            Instantiate(CoinPrefab,transform.position,Quaternion.identity,GameController.Instance.CoinHolder);
         //GameController.Instance.PlayerReference.Stats.Coins += 1;
 
         // healthbar

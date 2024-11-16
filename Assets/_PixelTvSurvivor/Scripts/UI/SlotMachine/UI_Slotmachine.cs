@@ -18,6 +18,7 @@ public class UI_Slotmachine : MonoBehaviour
     public UI_Slot Slot3;
     public Animator HandleAnimation;
     public AudioSource LooseSoundAS;
+    public GameObject Instructions;
 
     private bool isRolling = false;
     private float rollTime = 0f;
@@ -109,6 +110,7 @@ public class UI_Slotmachine : MonoBehaviour
         rolledPrizes.Clear();
         HandleAnimation.Play("noAnim");
         myWinningAS.Stop();
+        Instructions.SetActive(true);
     }
     public void PullHandle()
     {
@@ -123,7 +125,7 @@ public class UI_Slotmachine : MonoBehaviour
         Slot1.StartRolling();
         Slot2.StartRolling();
         Slot3.StartRolling();
-
+        Instructions.SetActive(false);
     }
 
     public void ResetDemandPrize(LootItemScriptable prize)

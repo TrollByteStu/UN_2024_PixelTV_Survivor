@@ -749,6 +749,7 @@ MonoBehaviour:
   Slot3: {fileID: 4371165533476954720}
   HandleAnimation: {fileID: 2032399421736248111}
   LooseSoundAS: {fileID: 7275470549981611303}
+  Instructions: {fileID: 7062192929308462839}
   rolledPrizes: []
 --- !u!82 &1992110271804342606
 AudioSource:

@@ -226,7 +226,7 @@ public class UI_HUD : MonoBehaviour
     public void ShowSlotMachine()
     {
         Section_SlotMachine.localScale = new Vector2(1, 1);
-        Section_SlotMachine.GetComponent<UI_Slotmachine>().StartRoll();
+        Section_SlotMachine.GetComponent<UI_Slotmachine>().Reset();
     }
     public void ShowSlotMachine_PullHandle()
     {
@@ -235,7 +235,7 @@ public class UI_HUD : MonoBehaviour
     public void ShowSlotMachineDemand(LootItemScriptable item)
     {
         Section_SlotMachine.localScale = new Vector2(1, 1);
-        Section_SlotMachine.GetComponent<UI_Slotmachine>().StartRollDemandPrize(item);
+        Section_SlotMachine.GetComponent<UI_Slotmachine>().ResetDemandPrize(item);
     }
     public void HideSlotMachine()
     {

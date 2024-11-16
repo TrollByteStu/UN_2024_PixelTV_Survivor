@@ -101,21 +101,8 @@ public class UI_Slotmachine : MonoBehaviour
         }
     }
 
-    public void PullHandle()
+    public void Reset()
     {
-        if (!isRolling) return;
-        if (rollStage != 0) return;
-        rollStage++;
-        rollTime = Time.timeSinceLevelLoad + 1f;
-        HandleAnimation.Play("playAnim");
-        myHandleAS.Play();
-    }
-
-    public void StartRoll()
-    { // just start the damn roll
-        Slot1.StartRolling();
-        Slot2.StartRolling();
-        Slot3.StartRolling();
         isRolling = true;
         rollTime = Time.timeSinceLevelLoad + 1f;
         rollStage = 0;
@@ -123,15 +110,26 @@ public class UI_Slotmachine : MonoBehaviour
         HandleAnimation.Play("noAnim");
         myWinningAS.Stop();
     }
+    public void PullHandle()
+    {
+        Debug.Log("pulled");
+        if (!isRolling) return;
+        if (rollStage != 0) return;
+        Debug.Log("pull success");
+        rollStage++;
+        rollTime = Time.timeSinceLevelLoad + 1f;
+        HandleAnimation.Play("playAnim");
+        myHandleAS.Play();
+        Slot1.StartRolling();
+        Slot2.StartRolling();
+        Slot3.StartRolling();
 
-    public void StartRollDemandPrize(LootItemScriptable prize)
-    { // get a specific weapon, if we have to make a list of when each is available
-        StartRoll();
-        determinedPrize = prize;
     }
-    public void StartRollDemandWeapon()
-    { // get any weapon
-        StartRollDemandPrize(MainPrizes[UnityEngine.Random.Range(0, MainPrizes.Length)]);
+
+    public void ResetDemandPrize(LootItemScriptable prize)
+    { // get a specific weapon, if we have to make a list of when each is available
+        Reset();
+        determinedPrize = prize;
     }
 
     public void AddPrizeFromRoll(LootItemScriptable prize)

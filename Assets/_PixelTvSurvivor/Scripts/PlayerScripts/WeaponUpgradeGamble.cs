@@ -24,6 +24,8 @@ public class WeaponUpgradeGamble : MonoBehaviour
 
     private int ResultType;
     private LootItemScriptable Item;
+    private float slotmachineDelay = 0;
+
     public void StartAttempt()
     {
         // lost its reference and crashed, getting it again
@@ -36,6 +38,8 @@ public class WeaponUpgradeGamble : MonoBehaviour
         if (OngoingAttempt)
             return;
         if (Player.Stats.Coins < 10)
+            return;
+        if (slotmachineDelay > Time.timeSinceLevelLoad)
             return;
 
         OngoingAttempt = true;
@@ -111,6 +115,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
     public void FinishedAnimation()
     {
         OngoingAttempt = false;
+        slotmachineDelay = Time.timeSinceLevelLoad + 1f;
 
         switch (ResultType)
         {

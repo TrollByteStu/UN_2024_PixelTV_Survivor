@@ -183,13 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Decortiles:
-  - {fileID: 11400000, guid: 59932c52ec8c3bb4080b8d7a637f5ef3, type: 2}
-  - {fileID: 11400000, guid: 4bebd3d169da2cf4ca8d59e51008d2fb, type: 2}
-  - {fileID: 11400000, guid: c2e103fc65dac5d4890ac95bb687b4f9, type: 2}
-  - {fileID: 11400000, guid: cdb6fb9df6ad0fc4f888992b16aafab3, type: 2}
-  - {fileID: 11400000, guid: 78b7b09acee7ca04eb60645c05351f5d, type: 2}
-  - {fileID: 11400000, guid: 6d9eba09ec0dda245941dafd63beda7c, type: 2}
-  - {fileID: 11400000, guid: 7f0dbae52c964b44b8cc6295c1a04e52, type: 2}
+  - {fileID: 11400000, guid: 39bf287486a5c8649a8e06ff72ed0976, type: 2}
+  - {fileID: 11400000, guid: ff16281a89bec5749a9753fc8ccb4564, type: 2}
+  - {fileID: 11400000, guid: 2512b6ff189926d408c8618b7a5f1c7d, type: 2}
+  - {fileID: 11400000, guid: 4c25a8c9ff52709499c60b39d606044e, type: 2}
+  - {fileID: 11400000, guid: 6d1af16dc2597764386f9fcce8762af9, type: 2}
 --- !u!483693784 &624493196
 TilemapRenderer:
   m_ObjectHideFlags: 0

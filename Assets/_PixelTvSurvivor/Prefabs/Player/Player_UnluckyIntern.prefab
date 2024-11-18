@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1687904249
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5781635613869766626, guid: 85e6fdad1210aeb4a82729d5d8a1dc88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,9 +184,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1292685357
-  m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingLayerID: -1687904249
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 311996221822337867, guid: 7e00ff91fd6501344bd87a9c6f64db80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -294,9 +294,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1292685357
-  m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingLayerID: -1687904249
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6808871498916785719, guid: fd9eb4d8baf2fda49943073a52e5d6fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -585,14 +585,6 @@ MonoBehaviour:
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 4d9016c1-44f1-4dc0-abf9-5be9dd4f6950
-    m_ActionName: 'Player/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 671d2477-5cac-491c-a013-b2400046dada
-    m_ActionName: 'Player/Fire[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 670c84d8-917a-499d-bad8-6b902c99bd6a
     m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
@@ -703,6 +695,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fefd1ada-618a-40a3-bb49-a6aab7697beb
     m_ActionName: Player/Release
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2f15bd85-1224-428b-a57c-1918f1a760c8
+    m_ActionName: 'Player/Spin[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -818,10 +814,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2964412986363477237}
-  - {fileID: 9179744682471027474}
   - {fileID: 1859975654751767422}
   - {fileID: 180317740380147125}
+  - {fileID: 2964412986363477237}
+  - {fileID: 9179744682471027474}
   m_Father: {fileID: 7928294290991414138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6188995383559106537
@@ -5871,7 +5867,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1687904249
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4620558823600693298, guid: 857ca155dc243424595beb9babacf707, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

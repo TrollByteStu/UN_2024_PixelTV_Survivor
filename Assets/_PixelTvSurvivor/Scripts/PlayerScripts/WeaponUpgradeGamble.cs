@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class WeaponUpgradeGamble : MonoBehaviour
 {
-    public int rolls = 0;
+    public int rolls = 1;
     //public float ChanceToHit = 100;
 
     public float ChanceToHitWeapon = 100;
@@ -36,7 +36,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
     {
         //ChanceToHit = 100;
         ChanceToHitWeapon = 110;
-        rolls = 0;
+        rolls = 1;
     }
 
     private void Update()
@@ -51,6 +51,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
 
         OngoingAttempt = true;
         Player.Stats.Coins -= (int)math.ceil(math.pow(rolls * 10,1.4));
+        rolls++;
         SlotMachine();
         
     }

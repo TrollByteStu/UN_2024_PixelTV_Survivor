@@ -228,10 +228,18 @@ MonoBehaviour:
   AnnouncementList:
   - {fileID: 8300000, guid: 1e9f5db7764d112488cca3364d32ca8f, type: 3}
   - {fileID: 8300000, guid: 7e58fb285104fb54ba3e1d1491163adf, type: 3}
+  - {fileID: 8300000, guid: 1b289341dc8bf2c47ab4094afdb5d9dd, type: 3}
+  - {fileID: 8300000, guid: a0ffee1b9c8203648ae33b1389f96442, type: 3}
+  - {fileID: 8300000, guid: faa8c9156576e9c45b83ebc54b3ee3da, type: 3}
+  - {fileID: 8300000, guid: e3c02ef1bc1b7ff4786f63b83e922132, type: 3}
+  - {fileID: 8300000, guid: 574eb9687786b754a95d28b194b8e353, type: 3}
+  - {fileID: 8300000, guid: 2821c487a6d5d274fa96b599dd8d4920, type: 3}
+  - {fileID: 8300000, guid: ed8e29a0cb4ccaa47823cd389adc21ba, type: 3}
   SteamrollerPrefab: {fileID: 5478023746985239956, guid: eda16952986b8f14ca1f487fe5b9cff9, type: 3}
   spawnInterval: 60
   spawning: 0
   spawnNow: 0
+  playNow: 0
 --- !u!114 &4939269524149062310
 MonoBehaviour:
   m_ObjectHideFlags: 0

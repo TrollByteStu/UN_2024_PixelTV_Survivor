@@ -696,7 +696,19 @@ MonoBehaviour:
     m_ActionId: fefd1ada-618a-40a3-bb49-a6aab7697beb
     m_ActionName: Player/Release
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797986456139938501}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSpin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2f15bd85-1224-428b-a57c-1918f1a760c8
     m_ActionName: 'Player/Spin[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0

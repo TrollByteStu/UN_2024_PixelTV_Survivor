@@ -141,6 +141,8 @@ public class GameController : MonoBehaviour
         mySR.StartFromGameController();
         // object pool
         myOP.Start();
+        // gamble script
+        myWUG.StartFromGameController();
         // universal stats
         myUS.SetupForGame();
 

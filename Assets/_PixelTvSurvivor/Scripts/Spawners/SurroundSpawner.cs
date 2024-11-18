@@ -19,7 +19,7 @@ public class SurroundSpawner : MonoBehaviour
 
     private readonly float ViewPortSize = 24;
 
-    private float LastSpawnTime;
+    private float LastSpawnTime = 0;
     private GameObject LastSpawned;
 
     public int maxEnemeyCost = 1;
@@ -59,7 +59,7 @@ public class SurroundSpawner : MonoBehaviour
         {
             maxEnemeyCost = (int)math.floor(Time.timeSinceLevelLoad / 60) + 1;
             RandomSpawns();
-            SpawnWave((int)(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / 60 + 1) ));
+            SpawnWave((int)math.ceil(waveSize.Evaluate(Time.timeSinceLevelLoad) * math.floor(Time.timeSinceLevelLoad / 60 + 1)));
             LastSpawnTime = Time.timeSinceLevelLoad;
 
         }

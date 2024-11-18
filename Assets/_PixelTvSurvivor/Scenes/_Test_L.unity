@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3ca53d1b17355429cbd1a4b768938f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Enabled: 1
 --- !u!4 &440507897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2972367016857335384, guid: 38913555979018b489d5bdad2304ff37, type: 3}
@@ -1314,6 +1313,10 @@ PrefabInstance:
     - target: {fileID: 797986456139938501, guid: de0b145276da4e548b85c2fa91061800, type: 3}
       propertyPath: Stats.Armor
       value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 797986456139938501, guid: de0b145276da4e548b85c2fa91061800, type: 3}
+      propertyPath: Stats.Coins
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 797986456139938501, guid: de0b145276da4e548b85c2fa91061800, type: 3}
       propertyPath: WeaponsArray.Array.size

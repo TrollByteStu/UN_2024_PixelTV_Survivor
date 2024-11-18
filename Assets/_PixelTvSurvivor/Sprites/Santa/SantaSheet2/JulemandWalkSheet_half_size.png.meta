@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JulemandWalkSheet_half_size_0: 6776447615110112834
+      JulemandWalkSheet_half_size_1: -4892932393633537185
+      JulemandWalkSheet_half_size_2: -7989718495957133838
+      JulemandWalkSheet_half_size_3: -3634632024363360984
+      JulemandWalkSheet_half_size_4: -3757589114810152644
+      JulemandWalkSheet_half_size_5: 7577959184462685197
+      JulemandWalkSheet_half_size_6: -1814163485818335988
+      JulemandWalkSheet_half_size_7: -5790836196383520263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

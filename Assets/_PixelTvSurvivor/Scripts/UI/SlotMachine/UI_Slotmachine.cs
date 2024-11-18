@@ -44,7 +44,7 @@ public class UI_Slotmachine : MonoBehaviour
     void Update()
     {
         if (!isRolling) return;
-        if (rollTime > Time.time) return;
+        if (rollTime > Time.timeSinceLevelLoad) return;
         switch( rollStage )
         { // the action order
             case 4: // show all 3,play sound?, maybe particle effects?
@@ -85,7 +85,7 @@ public class UI_Slotmachine : MonoBehaviour
                     Slot1.StopRollingNextIcon();
                 return;
             case 0: // waiting for pull handle
-                
+                PullHandle();
                 return;
             default: // end
                 UI_HUD.Instance.HideSlotMachine();
@@ -105,7 +105,7 @@ public class UI_Slotmachine : MonoBehaviour
     public void Reset()
     {
         isRolling = true;
-        rollTime = Time.timeSinceLevelLoad + 1f;
+        rollTime = Time.timeSinceLevelLoad + 6f;
         rollStage = 0;
         rolledPrizes.Clear();
         HandleAnimation.Play("noAnim");
@@ -137,7 +137,7 @@ public class UI_Slotmachine : MonoBehaviour
     public void AddPrizeFromRoll(LootItemScriptable prize)
     {
         rolledPrizes.Add(prize);
-        rollTime = 1f;
+        rollTime = Time.timeSinceLevelLoad + 1f;
     }
 
     public void GivePrizeToPlayer(LootItemScriptable prize)

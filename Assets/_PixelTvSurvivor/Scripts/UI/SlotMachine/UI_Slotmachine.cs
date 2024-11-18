@@ -61,7 +61,7 @@ public class UI_Slotmachine : MonoBehaviour
                 rollTime = Time.timeSinceLevelLoad + 1f;
                 return;
             case 3: // stop 3rd
-                rollStage++;
+                //rollStage++;
                 rollTime = Time.timeSinceLevelLoad + 1f;
                 if (determinedPrize != null)
                     Slot3.StopRollingDemandPrize(determinedPrize);
@@ -69,7 +69,7 @@ public class UI_Slotmachine : MonoBehaviour
                     Slot3.StopRollingNextIcon();
                 return;
             case 2: // stop 2nd
-                rollStage++;
+                //rollStage++;
                 rollTime = Time.timeSinceLevelLoad + 1f;
                 if (determinedPrize != null)
                     Slot2.StopRollingDemandPrize(determinedPrize);
@@ -77,7 +77,7 @@ public class UI_Slotmachine : MonoBehaviour
                     Slot2.StopRollingNextIcon();
                 return;
             case 1: // stop 1st
-                rollStage++;
+                //rollStage++;
                 rollTime = Time.timeSinceLevelLoad + 1f;
                 if (determinedPrize != null)
                     Slot1.StopRollingDemandPrize(determinedPrize);
@@ -137,7 +137,8 @@ public class UI_Slotmachine : MonoBehaviour
     public void AddPrizeFromRoll(LootItemScriptable prize)
     {
         rolledPrizes.Add(prize);
-        rollTime = Time.timeSinceLevelLoad + 1f;
+        rollStage++;
+        rollTime = Time.timeSinceLevelLoad + .5f;
     }
 
     public void GivePrizeToPlayer(LootItemScriptable prize)

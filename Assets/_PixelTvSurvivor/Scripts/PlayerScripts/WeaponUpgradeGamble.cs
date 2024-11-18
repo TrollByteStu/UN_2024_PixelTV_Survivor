@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class WeaponUpgradeGamble : MonoBehaviour
 {
-    int rolls = 0;
+    public int rolls = 0;
     //public float ChanceToHit = 100;
 
     public float ChanceToHitWeapon = 100;

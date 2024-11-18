@@ -25,6 +25,10 @@ public class Steamroller : MonoBehaviour
         // kill enemy if to far from player
         if (Vector3.Distance(playerRef.transform.position, transform.position) > 30)
             Destroy(gameObject);
+
+        // kill this noise of player is dead
+        if (playerRef.Stats.Health < 1f)
+            Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

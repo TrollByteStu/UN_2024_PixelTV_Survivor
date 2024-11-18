@@ -3,10 +3,14 @@ using UnityEngine;
 public class GameController_Steamrollers : MonoBehaviour
 {
 
+    public AudioSource AnnouncerASRef;
+    public AudioClip[] AnnouncementList;
+
     public GameObject SteamrollerPrefab;
     public float spawnInterval = 60f;
     public bool spawning = false;
     public bool spawnNow = false;
+    public bool playNow = false;
 
 
     private GameController myGC;
@@ -16,7 +20,7 @@ public class GameController_Steamrollers : MonoBehaviour
     void Start()
     {
         myGC = GameController.Instance;
-        nextSpawn = Time.time + spawnInterval;
+        nextSpawn = Time.timeSinceLevelLoad + spawnInterval;
         spawning = false;
     }
     public void StartFromGameController()
@@ -28,16 +32,24 @@ public class GameController_Steamrollers : MonoBehaviour
     void Update()
     {
         if (!spawning) return;
-        if (spawnNow || Time.time > nextSpawn)
+        if (Time.timeSinceLevelLoad > nextSpawn)
         {
-            spawnNow = false;
-            nextSpawn = Time.time + spawnInterval;
-            DoSpawnNow();
+            if (!playNow) DoPlayNow();
         }
+        if (playNow && !AnnouncerASRef.isPlaying)
+        { DoSpawnNow(); }
     }
-
+    void DoPlayNow()
+    {
+        playNow = true;
+        AnnouncerASRef.clip = AnnouncementList[Random.Range(0,AnnouncementList.Length)];
+        AnnouncerASRef.Play();
+    }
     void DoSpawnNow()
     {
+        nextSpawn = Time.timeSinceLevelLoad + spawnInterval;
+        spawnNow = false;
+        playNow = false;
         bool flip = false;
         if (Random.value > 0.5f) flip = true;
         var direction = new Vector3(10, 0, 0);

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e3b6da1595732489368163d2cc03f2, type: 3}
+  m_Name: WeaponCandyCane
+  m_EditorClassIdentifier: 
+  WeaponName: Slash
+  AttackAudioFire: {fileID: 0}
+  AttackAudioHit: {fileID: 0}
+  Slash: {fileID: 1344504690676526400, guid: 1750dde5e8d7d4344a778e5bf4e68297, type: 3}
+  SlashSprite: {fileID: 518370942375278228, guid: d66600f02c2ac994991dd6f5686f1b00, type: 3}
+  AttackSide: 2
+  LevelStats:
+  - AttackSpeed: 1
+    AttackDamage: 15
+    AttackQuantity: 2
+    AOE: {x: 4, y: 3}
+    AttackDelay: 0.5

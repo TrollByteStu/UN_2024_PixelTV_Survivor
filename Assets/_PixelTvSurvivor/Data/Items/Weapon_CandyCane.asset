@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4387e048509a09c4893200b93e3fba01, type: 3}
+  m_Name: Weapon_CandyCane
+  m_EditorClassIdentifier: 
+  ItemName: SlikStok
+  ItemSprite: {fileID: 23530883, guid: ac0904a0ae4f9744ba23cdfb5d87c157, type: 3}
+  spriteScale: 1
+  spriteColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  levelRequired: 0
+  requiedWeapon:
+    Weapon: {fileID: 0}
+    LastShot: 0
+    Level: 0
+  PopupText: Guf!!
+  PopupColor:
+    serializedVersion: 2
+    rgba: 4278323120
+  pickupAudio: {fileID: 8300000, guid: cea2f50fcbd383c469074cd3947c0ecd, type: 3}
+  Stats:
+    HealthIncrease: 0
+    MaxHealthIncrease: 0
+    HealthModifierIncrease: 0
+    RecoveryIncrease: 0
+    ArmorIncrease: 0
+    MoveSpeedIncrease: 0
+    MoveSpeedModifierIncrease: 0
+    DamageModifierIncrease: 0
+    CooldownModifierIncrease: 0
+    XpModifierIncrease: 0
+  givenWeapon:
+    Weapon: {fileID: 11400000, guid: fcc1cbf3afe63764389f57bdbb230529, type: 2}
+    LastShot: 0
+    Level: 0
+  removedWeapon:
+    Weapon: {fileID: 0}
+    LastShot: 0
+    Level: 0

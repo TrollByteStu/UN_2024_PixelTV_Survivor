@@ -204,7 +204,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe21ae6e321586b44b9a6b5c4588c4b3, type: 2}
   WeaponChances:
   - {fileID: 11400000, guid: d15f3073218acbb47a01ec5c6e52526b, type: 2}
-  - {fileID: 11400000, guid: f8b39611fb2b3c64eabbce38919fe50d, type: 2}
+  - {fileID: 11400000, guid: 02ae602b7687fda448dd1d68d53df1a6, type: 2}
   - {fileID: 11400000, guid: f63e8ff3f4855024a8184fb61b8d9378, type: 2}
   - {fileID: 11400000, guid: 79a27a06baa67194486f1b1e56fb8a8a, type: 2}
   - {fileID: 11400000, guid: d620118170a5b13469d98a53164d8a25, type: 2}

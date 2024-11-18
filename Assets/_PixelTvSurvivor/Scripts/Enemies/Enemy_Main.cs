@@ -228,7 +228,7 @@ public class Enemy_Main : MonoBehaviour
         transform.name = enemytype.EnemyName;
         transform.tag = "Enemy";
         myStats.AttackDamage += (Time.timeSinceLevelLoad * 0.01f);
-        myStats.AttackRange += (Time.timeSinceLevelLoad * 0.01f);
+        //myStats.AttackRange += (Time.timeSinceLevelLoad * 0.01f);
         myStats.TakenKnockback -= (Time.timeSinceLevelLoad * 0.001f);
         if (myStats.TakenKnockback < 0f) myStats.TakenKnockback = 0f;
         myStats.MaxHealth *= 1f + (Time.timeSinceLevelLoad * 0.01f);

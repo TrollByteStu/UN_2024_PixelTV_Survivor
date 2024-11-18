@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
     public GameObject Santa_Gun_Walk;
     private SpriteRenderer Santa_Gun_Walk_Rend;
 
+    public SpriteRenderer Santa2Renderer;
+    public Animator Santa2Animator;
+
     //private internal
     private Shader shaderGUItext;
     private Shader shaderSpritesDefault;
@@ -66,10 +69,11 @@ public class PlayerController : MonoBehaviour
         if (PlayerHitSwitch && PlayerHitTimer <= Time.timeSinceLevelLoad)
         {
             PlayerHitSwitch = false;
-            Santa_Body_Idle_Rend.material.shader = shaderSpritesDefault;
+            /*Santa_Body_Idle_Rend.material.shader = shaderSpritesDefault;
             Santa_Body_Walk_Rend.material.shader = shaderSpritesDefault;
             Santa_Gun_Idle_Rend.material.shader = shaderSpritesDefault;
-            Santa_Gun_Walk_Rend.material.shader = shaderSpritesDefault;
+            Santa_Gun_Walk_Rend.material.shader = shaderSpritesDefault;*/
+            Santa2Renderer.material.shader = shaderSpritesDefault;
         }
     }
 
@@ -136,10 +140,11 @@ public class PlayerController : MonoBehaviour
         Stats.Health -= math.clamp( damage - Stats.Armor,0,999999999);
 
         // damage indicator
-        Santa_Body_Idle_Rend.material.shader = shaderGUItext;
+        /*Santa_Body_Idle_Rend.material.shader = shaderGUItext;
         Santa_Body_Walk_Rend.material.shader = shaderGUItext;
         Santa_Gun_Idle_Rend.material.shader = shaderGUItext;
-        Santa_Gun_Walk_Rend.material.shader = shaderGUItext;
+        Santa_Gun_Walk_Rend.material.shader = shaderGUItext;*/
+        Santa2Renderer.material.shader = shaderGUItext;
         PlayerHitTimer = Time.timeSinceLevelLoad + 0.25f;
         PlayerHitSwitch = true;
 
@@ -215,17 +220,23 @@ public class PlayerController : MonoBehaviour
             else if (MoveDirection.x > 0)
                 transform.localScale = new Vector3(.5f, .5f, 1);
 
+            /*
             Santa_Body_Idle.SetActive(false);
             Santa_Body_Walk.SetActive(true);
             Santa_Gun_Idle.SetActive(false);
             Santa_Gun_Walk.SetActive(true);
+            */
+            Santa2Animator.speed = 1;
         }
         else
         { // not moving
+            /*
             Santa_Body_Idle.SetActive(true);
             Santa_Body_Walk.SetActive(false);
             Santa_Gun_Idle.SetActive(true);
             Santa_Gun_Walk.SetActive(false);
+            */
+            Santa2Animator.speed = 0;
         }
     }
 

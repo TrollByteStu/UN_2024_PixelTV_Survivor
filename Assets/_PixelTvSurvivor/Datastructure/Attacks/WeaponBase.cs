@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class WeaponBase : ScriptableObject 
 {
+    public Texture WeaponImage;
+
     [Tooltip("What is this Weapon called?")]
     public String WeaponName;
 

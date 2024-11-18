@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         PlayerHitSwitch = true;
 
         // is dead?
-        if (Stats.Health <= 0) GameController.Instance.PlayerIsDead();
+        if (Stats.Health < 1) GameController.Instance.PlayerIsDead();
     }
     public void AddPoints(int Points, float time)
     {

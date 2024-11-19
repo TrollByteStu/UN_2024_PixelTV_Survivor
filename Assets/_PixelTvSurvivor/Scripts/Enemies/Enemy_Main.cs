@@ -149,6 +149,7 @@ public class Enemy_Main : MonoBehaviour
         Coin.Start();
         Coin.transform.position = transform.position;
         Coin.transform.SetParent(GameController.Instance.CoinHolder);
+        Coin.mySprite.sprite = GameController.Instance.CoinSprites[Random.Range(0,6)];
     }
 
     public void EnemyDies()

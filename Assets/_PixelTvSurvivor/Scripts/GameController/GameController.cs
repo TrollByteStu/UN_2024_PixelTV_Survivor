@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
     public GameObject GenericItemPrefab;
     public GameObject GraveStonePrefab;
     public GameObject PopupTextPrefab;
+    public Sprite[] CoinSprites;
 
     [Header("Highscores")]
     public UI_HighScore.Score[] myScores;

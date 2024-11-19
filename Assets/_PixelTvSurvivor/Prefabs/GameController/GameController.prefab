@@ -61,6 +61,14 @@ MonoBehaviour:
   GenericItemPrefab: {fileID: 8195367136101649449, guid: b3b574f75c46c824db7c85b08612b25a, type: 3}
   GraveStonePrefab: {fileID: 8119679194988011476, guid: 749794211244a8e4986027e960ad6c01, type: 3}
   PopupTextPrefab: {fileID: 4459120249405654147, guid: 3aedf4cfb8e50884a9356582d8a39ef7, type: 3}
+  CoinSprites:
+  - {fileID: -6726151007707229031, guid: c3f54578789f64e46adf81c49aff242b, type: 3}
+  - {fileID: 9077520087064333216, guid: c64a441bd01f73b469d8a3289a86163c, type: 3}
+  - {fileID: -8753956622405372225, guid: 5adb3b8e30700714b8d6489a4804421d, type: 3}
+  - {fileID: -8336869319875122569, guid: 5b112d9574774b245b4281ff5d6435a8, type: 3}
+  - {fileID: -2950240918875102662, guid: 159c4bfcd427c2e47a478632c63e7890, type: 3}
+  - {fileID: -7026716782477700173, guid: f4af04b60d6eaa04482bfbc8544143c4, type: 3}
+  myScores: []
   allUpgradesInGame:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}
   currentFPS: 0

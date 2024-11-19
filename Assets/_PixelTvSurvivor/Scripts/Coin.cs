@@ -4,6 +4,8 @@ public class Coin : MonoBehaviour
 {
     private GameObject Player;
 
+    public SpriteRenderer mySprite;
+
     public int Value;
     public bool MoveToPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

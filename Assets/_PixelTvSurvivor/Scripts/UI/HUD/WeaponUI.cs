@@ -5,6 +5,7 @@ public class WeaponUI : MonoBehaviour
 {
     public int ID;
     public TextMeshPro Text;
+    private SpriteRenderer SpriteRenderer;
     private PlayerController Player;
     private Material Mat;
 
@@ -13,6 +14,7 @@ public class WeaponUI : MonoBehaviour
     {
         Player = GameController.Instance.PlayerReference;
         Mat = GetComponent<SpriteRenderer>().material;
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -20,15 +22,17 @@ public class WeaponUI : MonoBehaviour
     {
         if (Player == null)
             return;
-        if (ID > Player.WeaponsArray.Length)
+        if (ID >= Player.WeaponsArray.Length)
         {
-            gameObject.SetActive(false);
+            SpriteRenderer.enabled = false;
+            Text.enabled = false;
             return;
         }
 
-        gameObject.SetActive(true);
+        Text.enabled = true;
+        SpriteRenderer.enabled = true;
         Mat.SetTexture("_Texture", Player.WeaponsArray[ID].Weapon.WeaponImage);
-        Text.text = Player.WeaponsArray[ID].Level.ToString();
+        Text.text = (Player.WeaponsArray[ID].Level + 1).ToString();
 
     }
 }

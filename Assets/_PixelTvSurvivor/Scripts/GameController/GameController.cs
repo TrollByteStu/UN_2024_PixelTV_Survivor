@@ -27,6 +27,9 @@ public class GameController : MonoBehaviour
     public GameObject GraveStonePrefab;
     public GameObject PopupTextPrefab;
 
+    [Header("Highscores")]
+    public UI_HighScore.Score[] myScores;
+
     [Header("Currently Disabled")]
     public UpgradeScriptable[] allUpgradesInGame;
 

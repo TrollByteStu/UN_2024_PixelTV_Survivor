@@ -81,6 +81,8 @@ public class UI_HighScore : MonoBehaviour
 
         // Now, deserialize the score field, which is JSON-encoded
         myScores = myData.GetScores();
+        // send it to gamecontroller, so we can show them in-game
+        GameController.Instance.myScores = myScores;
 
         // Test it by logging the first score
         Debug.Log("debug " + myData.debug);

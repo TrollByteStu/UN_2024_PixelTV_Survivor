@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
     public GameObject Santa_Gun_Walk;
     private SpriteRenderer Santa_Gun_Walk_Rend;
 
-    public SpriteRenderer Santa2Renderer;
-    public Animator Santa2Animator;
+    public SpriteRenderer Santa2WalkRenderer;
+    public SpriteRenderer Santa2IdleRenderer;
 
     //private internal
     private Shader shaderGUItext;
@@ -73,7 +73,8 @@ public class PlayerController : MonoBehaviour
             Santa_Body_Walk_Rend.material.shader = shaderSpritesDefault;
             Santa_Gun_Idle_Rend.material.shader = shaderSpritesDefault;
             Santa_Gun_Walk_Rend.material.shader = shaderSpritesDefault;*/
-            Santa2Renderer.material.shader = shaderSpritesDefault;
+            Santa2WalkRenderer.material.shader = shaderSpritesDefault;
+            Santa2IdleRenderer.material.shader = shaderSpritesDefault;
         }
     }
 
@@ -144,7 +145,8 @@ public class PlayerController : MonoBehaviour
         Santa_Body_Walk_Rend.material.shader = shaderGUItext;
         Santa_Gun_Idle_Rend.material.shader = shaderGUItext;
         Santa_Gun_Walk_Rend.material.shader = shaderGUItext;*/
-        Santa2Renderer.material.shader = shaderGUItext;
+        Santa2WalkRenderer.material.shader = shaderGUItext;
+        Santa2IdleRenderer.material.shader = shaderGUItext;
         PlayerHitTimer = Time.timeSinceLevelLoad + 0.25f;
         PlayerHitSwitch = true;
 
@@ -226,7 +228,9 @@ public class PlayerController : MonoBehaviour
             Santa_Gun_Idle.SetActive(false);
             Santa_Gun_Walk.SetActive(true);
             */
-            Santa2Animator.speed = 1;
+            //Santa2Animator.speed = 1;
+            Santa2WalkRenderer.gameObject.SetActive(true);
+            Santa2IdleRenderer.gameObject.SetActive(false);
         }
         else
         { // not moving
@@ -236,7 +240,9 @@ public class PlayerController : MonoBehaviour
             Santa_Gun_Idle.SetActive(true);
             Santa_Gun_Walk.SetActive(false);
             */
-            Santa2Animator.speed = 0;
+            //Santa2Animator.speed = 0;
+            Santa2WalkRenderer.gameObject.SetActive(false);
+            Santa2IdleRenderer.gameObject.SetActive(true);
         }
     }
 

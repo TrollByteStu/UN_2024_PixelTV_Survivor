@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -43,6 +44,8 @@ public class WeaponUpgradeGamble : MonoBehaviour
     private void Update()
     {
         Player = GameController.Instance.PlayerReference;
+        if (Player == null) 
+            return;
         if (OngoingAttempt)
             return;
         if (Player.Stats.Coins < math.ceil(math.pow(rolls * 10, 1.2)))

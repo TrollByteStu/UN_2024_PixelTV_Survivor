@@ -94,6 +94,7 @@ MonoBehaviour:
   myCG: {fileID: 6033524014316378008}
   Content: {fileID: 2261130974394422457}
   UI_Single_Score_Prefab: {fileID: 8218344733500862772, guid: 44cc46cf89bc6be48a6a5a05ceeb6ec9, type: 3}
+  ScoreDataTableName: stuTesting01
 --- !u!225 &6033524014316378008
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -372,7 +373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000031071}
+  m_AnchoredPosition: {x: 0, y: 1.6900324}
   m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4329547048928153354
@@ -496,7 +497,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4264583344527066159}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -609,15 +610,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0

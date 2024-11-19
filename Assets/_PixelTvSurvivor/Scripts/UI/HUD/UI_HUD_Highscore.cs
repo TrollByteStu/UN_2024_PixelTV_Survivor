@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using static UI_HighScore;
 
 public class UI_HUD_Highscore : MonoBehaviour
 {
@@ -29,13 +30,19 @@ public class UI_HUD_Highscore : MonoBehaviour
         playerRank = 0;
         for (int i = 0; i < MyGC.myScores.Length; i++)// Score theScore in myScores)
         {
-            if (int.Parse( MyGC.myScores[i].score ) > LastScore )
+            if (int.Parse( MyGC.myScores[i].score ) < LastScore )
             { // this score is higher
                 return;
             } else { // this score is not higher
                 playerRank = i;
             }
         }
+    }
+
+    private void UpdateUiPosition(int position, string name, string score)
+    {
+        Names[position].text = name;
+        Scores[position].text = score;
     }
 
     // Update is called once per frame
@@ -51,5 +58,44 @@ public class UI_HUD_Highscore : MonoBehaviour
 
         // find rank
         FindPlayerRank();
+
+        // +2 rank
+        if (playerRank - 2 >= 0)
+        {
+            UpdateUiPosition(0, MyGC.myScores[(playerRank - 1)].name, MyGC.myScores[(playerRank - 1)].score);
+        } else {
+            UpdateUiPosition(0, "", "");
+        }
+
+        // +1 rank
+        if (playerRank - 1 >= 0)
+        {
+            UpdateUiPosition(1, MyGC.myScores[(playerRank)].name, MyGC.myScores[(playerRank)].score);
+        }
+        else
+        {
+            UpdateUiPosition(1, "", "");
+        }
+
+        // -1 rank
+        if (playerRank + 1 < MyGC.myScores.Length)
+        {
+            UpdateUiPosition(2, MyGC.myScores[(playerRank + 1)].name, MyGC.myScores[(playerRank + 1)].score);
+        }
+        else
+        {
+            UpdateUiPosition(2, "", "");
+        }
+
+        // -2 rank
+        if (playerRank + 2 < MyGC.myScores.Length)
+        {
+            UpdateUiPosition(3, MyGC.myScores[(playerRank + 2)].name, MyGC.myScores[(playerRank + 2)].score);
+        }
+        else
+        {
+            UpdateUiPosition(3, "", "");
+        }
+
     }
 }

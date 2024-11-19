@@ -23,10 +23,10 @@ MonoBehaviour:
     Weapon: {fileID: 0}
     LastShot: 0
     Level: 0
-  PopupText: 
+  PopupText: GLIMMER!!
   PopupColor:
     serializedVersion: 2
-    rgba: 4294180756
+    rgba: 4278199039
   pickupAudio: {fileID: 8300000, guid: 2e9b952651030b74ab987917976ebd95, type: 3}
   Stats:
     HealthIncrease: 0

@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System.Collections.Generic;
 using System.Drawing;
 using Unity.Mathematics;
@@ -84,7 +85,21 @@ public class WeaponUpgradeGamble : MonoBehaviour
             //ChanceToHit = 20;
             ChanceToHitWeapon = 10;
 
+            if (Player.WeaponsArray.Length == 6)
+            {
+                for (int i = WeaponChances.Count - 1; i > -1; i--)
+                {
+                    if (!Player.DoesPlayerHaveWeapon(WeaponChances[i].givenWeapon.Weapon))
+                    {
+                        WeaponChances.Remove(WeaponChances[i]);
+                    }
+                }
+                if (WeaponChances.Count == 0)
+                    return;
+            }
+
             Item = RollWeapon();
+            
             UI_HUD.Instance.ShowSlotMachineDemand(Item);
             ResultType = 1;
         

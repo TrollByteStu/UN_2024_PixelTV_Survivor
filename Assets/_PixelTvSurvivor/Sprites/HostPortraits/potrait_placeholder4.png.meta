@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      potrait_placeholder4_0: 8082123340977471164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JulemandPixelTV_UI_0: 8813559282287781563
+      JulemandPixelTV_UI_1: 6505558911544320898
+      JulemandPixelTV_UI_2: -8505314576084684739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

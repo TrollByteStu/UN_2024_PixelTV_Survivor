@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CloverCoin2_0: 9077520087064333216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

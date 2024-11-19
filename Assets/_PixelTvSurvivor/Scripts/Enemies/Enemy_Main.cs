@@ -232,9 +232,9 @@ public class Enemy_Main : MonoBehaviour
         //myStats.AttackRange += (Time.timeSinceLevelLoad * 0.01f);
         myStats.TakenKnockback -= (Time.timeSinceLevelLoad * 0.001f);
         if (myStats.TakenKnockback < 0f) myStats.TakenKnockback = 0f;
-        myStats.MaxHealth *= 1f + (Time.timeSinceLevelLoad * 0.01f);
+        myStats.MaxHealth *= 1f + (Time.timeSinceLevelLoad * 0.005f);
         myStats.Health = myStats.MaxHealth;
-        myStats.MoveSpeed += (Time.timeSinceLevelLoad * 0.001f);
+        myStats.MoveSpeed += (Time.timeSinceLevelLoad * 0.01f);
         updateHitBar();
     }
 

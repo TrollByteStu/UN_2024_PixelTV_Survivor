@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GingerBreadPickup_0: 1589786359653657867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

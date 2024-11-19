@@ -14,6 +14,7 @@ public class UI_HUD : MonoBehaviour
     public RectTransform Section_Upgrade;
     public RectTransform Section_Upgrade_List;
     public RectTransform Section_SlotMachine;
+    public UI_HUD_Highscore myHighScore;
 
     [Header("Looser Options")]
     public RectTransform Looser_Button;

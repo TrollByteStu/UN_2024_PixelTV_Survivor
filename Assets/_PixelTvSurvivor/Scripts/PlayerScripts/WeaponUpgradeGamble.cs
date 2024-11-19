@@ -192,7 +192,8 @@ public class WeaponUpgradeGamble : MonoBehaviour
     {
         if (WeaponChances.Count == 0) 
             return false;
-        return Random.Range(0,100) < ChanceToHitWeapon;
+        return true;
+        //return Random.Range(0,100) < ChanceToHitWeapon;
     }
     LootItemScriptable RollWeapon()
     {

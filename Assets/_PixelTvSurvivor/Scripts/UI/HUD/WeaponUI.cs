@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class WeaponUI : MonoBehaviour
 {
     public int ID;
-    public TextMeshPro Text;
+    public TMP_Text Text;
     public Image WeaponImage;
     private PlayerController Player;
     private Material Mat;

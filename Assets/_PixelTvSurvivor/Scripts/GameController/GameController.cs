@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
     public WeaponUpgradeGamble myWUG;
     public GameController_Steamrollers mySR;
     private SurroundSpawner mySS;
-    private GameController_UniversalStats myUS;
+    public GameController_UniversalStats myUS;
 
     private void Awake()
     {

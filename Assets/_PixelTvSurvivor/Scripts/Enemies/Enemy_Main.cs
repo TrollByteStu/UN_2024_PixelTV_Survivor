@@ -117,6 +117,7 @@ public class Enemy_Main : MonoBehaviour
     public void EnemyTakesDamage(float damage)
     {
         myStats.Health -= damage;
+        GameController.Instance.myUS.AddStatDamageDone(damage);
         if (myStats.Health <= 0) EnemyDies();
         Knockback();
     }
@@ -158,6 +159,7 @@ public class Enemy_Main : MonoBehaviour
         // add effects and sounds
         EnemyDropsBlood();
         GameController.Instance.PlayerReference.AddPoints(myStats.PointValue,myStats.TimeSecondsValue);
+        GameController.Instance.myUS.AddStatOneKill();
 
         //Instantiate(CoinPrefab,transform.position,Quaternion.identity,GameController.Instance.CoinHolder);
         EnemyDropCoin();

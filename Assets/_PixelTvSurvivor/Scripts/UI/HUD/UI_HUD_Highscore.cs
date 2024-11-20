@@ -39,9 +39,21 @@ public class UI_HUD_Highscore : MonoBehaviour
         }
     }
 
+    private string cleanname(string name)
+    {
+        name = name.Replace("u200b", "");
+        name = name.Replace("&aelig;", "æ");
+        name = name.Replace("&oslash;", "ø");
+        name = name.Replace("&aring;", "å");
+        name = name.Replace("&AElig;", "Æ");
+        name = name.Replace("&Oslash;", "Ø");
+        name = name.Replace("&Aring;", "Å");
+        return name;
+    }
+
     private void UpdateUiPosition(int position, string name, string score)
     {
-        Names[position].text = name;
+        Names[position].text = cleanname( name );
         Scores[position].text = score;
     }
 

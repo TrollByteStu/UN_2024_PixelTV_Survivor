@@ -17,6 +17,7 @@ public class BulletBase : MonoBehaviour
 
     protected virtual void Start()
     {
+        GameController.Instance.myUS.AddStatOneShotFired();
         StartTime = Time.time;
         Destroy(gameObject,LifeTime);
     }
@@ -68,6 +69,7 @@ public class BulletBase : MonoBehaviour
         {
             if (collision.GetComponent<Enemy_Main>() != null)
                 collision.GetComponent<Enemy_Main>().EnemyTakesDamage(Damage);
+            GameController.Instance.myUS.AddStatOneShotHit();
             Destroy(gameObject);
         }
     }

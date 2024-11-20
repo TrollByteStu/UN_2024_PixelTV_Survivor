@@ -13,7 +13,7 @@ public class UI_HighScore_Single : MonoBehaviour
 
     private string cleanname(string name)
     {
-        name= name.Replace("u200b", " ");
+        name= name.Replace("u200b", "");
         name = name.Replace("&aelig;", "æ");
         name = name.Replace("&oslash;", "ø");
         name = name.Replace("&aring;", "å");

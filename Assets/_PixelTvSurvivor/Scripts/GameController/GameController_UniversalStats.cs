@@ -64,8 +64,8 @@ public class GameController_UniversalStats : MonoBehaviour
     {
         TotalShotsHit++;
     }
-    public void AddStatDamageDone(int damage)
+    public void AddStatDamageDone(float damage)
     {
-        TotalDamageDone += damage;
+        TotalDamageDone += (int)damage;
     }
 }

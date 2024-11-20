@@ -156,8 +156,9 @@ public class PlayerController : MonoBehaviour
     public void AddPoints(int Points, float time)
     {
         Stats.Points += Points;
-        Stats.TimeUntilDeath += time;
+        //Stats.TimeUntilDeath += time;
         GameController.Instance.gamePoints = Stats.Points;
+        GameController.Instance.myUS.AddStatPoints(Points);
     }
 
     private bool FirstSpin = true;

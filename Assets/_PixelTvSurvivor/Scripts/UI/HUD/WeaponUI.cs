@@ -21,15 +21,18 @@ public class WeaponUI : MonoBehaviour
     void Update()
     {
         if (Player == null)
+        {
+            Player = GameController.Instance.PlayerReference;
             return;
+        }
         if (ID >= Player.WeaponsArray.Length)
         {
             //SpriteRenderer.enabled = false;
-            Text.enabled = false;
+            Text.text = "";
             return;
         }
 
-        Text.enabled = true;
+        //Text.enabled = true;
         //SpriteRenderer.enabled = true;
         //Mat.SetTexture("_Texture", Player.WeaponsArray[ID].Weapon.WeaponImage);
         WeaponImage.sprite = Player.WeaponsArray[ID].Weapon.WeaponImage;

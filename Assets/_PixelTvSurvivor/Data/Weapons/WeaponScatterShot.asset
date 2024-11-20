@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa95109a9614ec4aa903fb00bd7ff5c, type: 3}
   m_Name: WeaponScatterShot
   m_EditorClassIdentifier: 
+  WeaponImage: {fileID: -6288378908321760524, guid: f7409f7a57ed37c42bcf956b69cf82b8, type: 3}
   WeaponName: ScatterShot
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}

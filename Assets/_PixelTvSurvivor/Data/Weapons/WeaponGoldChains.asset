@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e3b6da1595732489368163d2cc03f2, type: 3}
   m_Name: WeaponGoldChains
   m_EditorClassIdentifier: 
+  WeaponImage: {fileID: 1365032252, guid: 392dd643053572b4883c279991a8255b, type: 3}
   WeaponName: Slash
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
   Slash: {fileID: 1344504690676526400, guid: 4b965a50dd7ac7747b8f4db61bd3487c, type: 3}
   SlashSprite: {fileID: 518370942375278228, guid: d66600f02c2ac994991dd6f5686f1b00, type: 3}
   AttackSide: 2
-  Omnidirectional: 0
   LevelStats:
   - AttackSpeed: 1
     AttackDamage: 15

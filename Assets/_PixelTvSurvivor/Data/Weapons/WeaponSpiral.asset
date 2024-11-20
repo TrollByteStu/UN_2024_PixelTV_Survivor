@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebc9ac86457725409ff33b1c6fa4149, type: 3}
   m_Name: WeaponSpiral
   m_EditorClassIdentifier: 
-  WeaponImage: {fileID: 0}
+  WeaponImage: {fileID: 1232549726935818429, guid: 249011724e4693e4ca28efc48ed8a7c9, type: 3}
   WeaponName: Spiral
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}

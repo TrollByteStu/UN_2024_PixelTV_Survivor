@@ -31,7 +31,8 @@ public class WeaponUI : MonoBehaviour
 
         Text.enabled = true;
         //SpriteRenderer.enabled = true;
-        Mat.SetTexture("_Texture", Player.WeaponsArray[ID].Weapon.WeaponImage);
+        //Mat.SetTexture("_Texture", Player.WeaponsArray[ID].Weapon.WeaponImage);
+        WeaponImage.sprite = Player.WeaponsArray[ID].Weapon.WeaponImage;
         Text.text = (Player.WeaponsArray[ID].Level + 1).ToString();
 
     }

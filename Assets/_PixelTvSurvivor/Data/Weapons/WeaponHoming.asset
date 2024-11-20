@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f704ff6bccf8b42949d653403271ed, type: 3}
   m_Name: WeaponHoming
   m_EditorClassIdentifier: 
+  WeaponImage: {fileID: -8627253566936599298, guid: 35caa551dd266a941ad237d171e12cd0, type: 3}
   WeaponName: Homing
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}

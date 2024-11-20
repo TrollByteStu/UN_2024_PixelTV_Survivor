@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
             Santa_Gun_Walk_Rend.material.shader = shaderSpritesDefault;*/
             Santa2WalkRenderer.material.shader = shaderSpritesDefault;
             Santa2IdleRenderer.material.shader = shaderSpritesDefault;
+            Santa2WalkRenderer.color = Color.white;
+            Santa2IdleRenderer.color = Color.white;
         }
     }
 
@@ -147,7 +149,9 @@ public class PlayerController : MonoBehaviour
         Santa_Gun_Walk_Rend.material.shader = shaderGUItext;*/
         Santa2WalkRenderer.material.shader = shaderGUItext;
         Santa2IdleRenderer.material.shader = shaderGUItext;
-        PlayerHitTimer = Time.timeSinceLevelLoad + 0.25f;
+        Santa2WalkRenderer.color = Color.red;
+        Santa2IdleRenderer.color = Color.red;
+        PlayerHitTimer = Time.timeSinceLevelLoad + 0.35f;
         PlayerHitSwitch = true;
 
         // is dead?

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fd3685d62543e4ca4f962c440bccef, type: 3}
   m_Name: WeaponSlashOmni
   m_EditorClassIdentifier: 
+  WeaponImage: {fileID: 1700278786, guid: 6d166c7a42aec0b49979507f9c07f76f, type: 3}
   WeaponName: SlashOmni
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}

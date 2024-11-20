@@ -188,6 +188,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2512b6ff189926d408c8618b7a5f1c7d, type: 2}
   - {fileID: 11400000, guid: 4c25a8c9ff52709499c60b39d606044e, type: 2}
   - {fileID: 11400000, guid: 6d1af16dc2597764386f9fcce8762af9, type: 2}
+  - {fileID: 11400000, guid: 69ef7be5ecd31214eb807a4243b7150c, type: 2}
+  - {fileID: 11400000, guid: 108b05dbd77f22543b89b016e3bb91a3, type: 2}
+  - {fileID: 11400000, guid: 99888a1ce4495824faf8149210398af3, type: 2}
+  - {fileID: 11400000, guid: 512382705b96c8c47b377da7ded442bb, type: 2}
 --- !u!483693784 &624493196
 TilemapRenderer:
   m_ObjectHideFlags: 0

@@ -1,11 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponUI : MonoBehaviour
 {
     public int ID;
     public TextMeshPro Text;
-    private SpriteRenderer SpriteRenderer;
+    public Image WeaponImage;
     private PlayerController Player;
     private Material Mat;
 
@@ -13,8 +14,7 @@ public class WeaponUI : MonoBehaviour
     void Start()
     {
         Player = GameController.Instance.PlayerReference;
-        Mat = GetComponent<SpriteRenderer>().material;
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        Mat = WeaponImage.material;
     }
 
     // Update is called once per frame
@@ -24,13 +24,13 @@ public class WeaponUI : MonoBehaviour
             return;
         if (ID >= Player.WeaponsArray.Length)
         {
-            SpriteRenderer.enabled = false;
+            //SpriteRenderer.enabled = false;
             Text.enabled = false;
             return;
         }
 
         Text.enabled = true;
-        SpriteRenderer.enabled = true;
+        //SpriteRenderer.enabled = true;
         Mat.SetTexture("_Texture", Player.WeaponsArray[ID].Weapon.WeaponImage);
         Text.text = (Player.WeaponsArray[ID].Level + 1).ToString();
 

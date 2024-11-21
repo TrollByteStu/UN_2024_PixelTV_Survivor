@@ -33,7 +33,7 @@ public class GameController_UniversalStats : MonoBehaviour
     }
     public void SetupForMenu()
     {
-        if (!HasPlayed) return;
+        //if (!HasPlayed) return;
         // send the stats
         StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename="+ GameController.Instance.ScoreDataTableName, ""));
         // reset the stats after sending them
@@ -81,6 +81,9 @@ public class GameController_UniversalStats : MonoBehaviour
 
         Debug.Log("There is new universal data, sending it.");
         json = "{\"universalstats\":[" + TotalKills + "," + TotalPoints + "," + TotalTimePlayed + "," + TotalShotFired + "," + TotalShotsHit + "," + TotalDamageDone + "]}";
+
+        // testing
+        json = "{\"universalstats\":[1,2,3,4,5,6]}";
 
         // prep data
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);

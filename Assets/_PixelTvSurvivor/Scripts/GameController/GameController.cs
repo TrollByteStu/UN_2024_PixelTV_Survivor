@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     public Sprite[] CoinSprites;
 
     [Header("Highscores")]
+    public string ScoreDataTableName = "stuTesting01";
     public UI_HighScore.Score[] myScores;
 
     [Header("Currently Disabled")]

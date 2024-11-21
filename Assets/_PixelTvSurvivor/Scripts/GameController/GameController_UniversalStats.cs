@@ -1,4 +1,8 @@
+using System.Collections;
+using System.Text;
 using UnityEngine;
+using UnityEngine.Networking;
+
 
 public class GameController_UniversalStats : MonoBehaviour
 {
@@ -31,6 +35,7 @@ public class GameController_UniversalStats : MonoBehaviour
     {
         if (!HasPlayed) return;
         // send the stats
+        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename="+ GameController.Instance.ScoreDataTableName, ""));
         // reset the stats after sending them
         HasPlayed = false;
         TotalKills = 0;
@@ -67,5 +72,42 @@ public class GameController_UniversalStats : MonoBehaviour
     public void AddStatDamageDone(float damage)
     {
         TotalDamageDone += (int)damage;
+    }
+
+    IEnumerator Post(string url, string json)
+    {
+        // set up request
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+
+        Debug.Log("There is new universal data, sending it.");
+        json = "{\"universalstats\":[" + TotalKills + "," + TotalPoints + "," + TotalTimePlayed + "," + TotalShotFired + "," + TotalShotsHit + "," + TotalDamageDone + "]}";
+
+        // prep data
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.method = UnityWebRequest.kHttpVerbPOST;
+
+        // set headers
+        request.SetRequestHeader("accept", "application/json");
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("User-Agent", "TrollByteUserAgent/1.0");
+
+        // wait until the request gets back
+        yield return request.SendWebRequest();
+
+        // handle the reply
+        if (request.error != null)
+        { // there is an error
+            Debug.Log("Error: " + request.error);
+            Debug.Log("Response Code: " + request.responseCode);
+            Debug.Log("Response Text: " + request.downloadHandler.text);
+        }
+        else
+        { // there is no error
+            Debug.Log("Status Code: " + request.responseCode);
+            Debug.Log(request.downloadHandler.text);
+            //HandleHighScoreResponse(request.downloadHandler.text);
+        }
     }
 }

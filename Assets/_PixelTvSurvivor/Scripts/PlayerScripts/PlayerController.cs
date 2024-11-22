@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private Shader shaderSpritesDefault;
     private float PlayerHitTimer = 0f;
     private bool PlayerHitSwitch = false;
+    private CameraShake MyShake;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cam = FindAnyObjectByType<Camera>();
+        MyShake = Camera.main.GetComponent<CameraShake>();
         GameController.Instance.SetupForGame( this );
 
         //time is stopped until first spin 
@@ -156,6 +158,7 @@ public class PlayerController : MonoBehaviour
 
         // is dead?
         if (Stats.Health < 1) GameController.Instance.PlayerIsDead();
+        else MyShake.shake();
     }
     public void AddPoints(int Points, float time)
     {

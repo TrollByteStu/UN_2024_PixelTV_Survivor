@@ -865,6 +865,7 @@ MonoBehaviour:
   Santa_Gun_Walk: {fileID: 1671617283441213595}
   Santa2WalkRenderer: {fileID: 2162998981679457444}
   Santa2IdleRenderer: {fileID: 3099654243600122139}
+  MyShake: {fileID: 0}
 --- !u!61 &3604820102806253043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -958,6 +959,7 @@ GameObject:
   - component: {fileID: 7414803333860801162}
   - component: {fileID: 8281761066001999757}
   - component: {fileID: 5107747249382116531}
+  - component: {fileID: 3763125383306790363}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1084,6 +1086,22 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &3763125383306790363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188995383559106537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934f61148979a3a45a981980cf28e410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 0}
+  shakeDuration: 0
+  shakeAmount: 0.7
+  decreaseFactor: 1
 --- !u!1 &6461213693908490988
 GameObject:
   m_ObjectHideFlags: 0

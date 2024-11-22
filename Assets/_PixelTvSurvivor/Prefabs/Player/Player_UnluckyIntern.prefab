@@ -854,7 +854,7 @@ MonoBehaviour:
     CooldownModifier: 1
     Area: 1
     Coins: 52
-    TimeUntilDeath: 600
+    TimeUntilDeath: 300
   WeaponsArray:
   - Weapon: {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}
     LastShot: 0
@@ -865,7 +865,6 @@ MonoBehaviour:
   Santa_Gun_Walk: {fileID: 1671617283441213595}
   Santa2WalkRenderer: {fileID: 2162998981679457444}
   Santa2IdleRenderer: {fileID: 3099654243600122139}
-  MyShake: {fileID: 0}
 --- !u!61 &3604820102806253043
 BoxCollider2D:
   m_ObjectHideFlags: 0

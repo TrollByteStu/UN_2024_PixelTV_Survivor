@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public PlayerStats Stats = new("Player",100,100,0.1f,0,10);
     public WeaponStats[] WeaponsArray;
 
+    [Header("Santa Hit Sounds")]
+    public AudioClip[] SantaHitSounds;
+
     [Header("Santa Sprite Layered")]
     public GameObject Santa_Body_Idle;
     private SpriteRenderer Santa_Body_Idle_Rend;
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private float PlayerHitTimer = 0f;
     private bool PlayerHitSwitch = false;
     private CameraShake MyShake;
+    private AudioSource myAS;
 
     private void Awake()
     {
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         Cam = FindAnyObjectByType<Camera>();
         MyShake = Camera.main.GetComponent<CameraShake>();
+        myAS = GetComponent<AudioSource>();
         GameController.Instance.SetupForGame( this );
 
         //time is stopped until first spin 
@@ -157,8 +162,17 @@ public class PlayerController : MonoBehaviour
         PlayerHitSwitch = true;
 
         // is dead?
-        if (Stats.Health < 1) GameController.Instance.PlayerIsDead();
-        else MyShake.shake();
+        if (Stats.Health < 1)
+        { // dead
+            GameController.Instance.PlayerIsDead();
+        } else { // not dead
+            MyShake.shake();
+            if (!myAS.isPlaying)
+            {
+                myAS.clip = SantaHitSounds[UnityEngine.Random.Range(0,SantaHitSounds.Length)];
+                myAS.Play();
+            }
+        }
     }
     public void AddPoints(int Points, float time)
     {

@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 3735993917740503174}
   - component: {fileID: 797986456139938501}
   - component: {fileID: 3604820102806253043}
+  - component: {fileID: 1697048947649355731}
   m_Layer: 0
   m_Name: Player_UnluckyIntern
   m_TagString: Player
@@ -859,6 +860,22 @@ MonoBehaviour:
   - Weapon: {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}
     LastShot: 0
     Level: 0
+  SantaHitSounds:
+  - {fileID: 8300000, guid: f54d7cb1fcf99ef45954c79e9af716a8, type: 3}
+  - {fileID: 8300000, guid: 7dafdbd5e7050b8418cd36e159eb5c43, type: 3}
+  - {fileID: 8300000, guid: c2ad9b988d72d424fabe845de6965a37, type: 3}
+  - {fileID: 8300000, guid: 5e8b5b468c2553d4db3e411d2b89b372, type: 3}
+  - {fileID: 8300000, guid: 365c0ebdac97b86449a2987f83efb416, type: 3}
+  - {fileID: 8300000, guid: f4f36d8fd01fafb4cb66b5978890ff0f, type: 3}
+  - {fileID: 8300000, guid: 9ea9759d77c05374c9f71bc18f4feaf7, type: 3}
+  - {fileID: 8300000, guid: c2ff89d6dcd1ea74ab65a88aaf303ee7, type: 3}
+  - {fileID: 8300000, guid: 0c3bc65c1616c4c42aaefdf13970c9c5, type: 3}
+  - {fileID: 8300000, guid: ddadeb32a2845514cab24ce89f262135, type: 3}
+  - {fileID: 8300000, guid: 0105bcc7283a4f14284b35b5bb915f75, type: 3}
+  - {fileID: 8300000, guid: 7f6670a00b41bfe47a44836d355dd3bb, type: 3}
+  - {fileID: 8300000, guid: 45208324c7b260344bd613e94a6f6100, type: 3}
+  - {fileID: 8300000, guid: a719d18cf391d74489b32e88a4a81ed5, type: 3}
+  - {fileID: 8300000, guid: bb94ee09a345b1441b5dcdbff659f70d, type: 3}
   Santa_Body_Idle: {fileID: 1950759592383880075}
   Santa_Body_Walk: {fileID: 2853074272490008907}
   Santa_Gun_Idle: {fileID: 7789178455952652676}
@@ -911,6 +928,103 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.01, y: 2.84}
   m_EdgeRadius: 0
+--- !u!82 &1697048947649355731
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717821040084105354}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6088990940546049760
 GameObject:
   m_ObjectHideFlags: 0

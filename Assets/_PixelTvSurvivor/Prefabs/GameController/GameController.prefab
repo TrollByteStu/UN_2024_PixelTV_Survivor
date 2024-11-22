@@ -68,6 +68,7 @@ MonoBehaviour:
   - {fileID: -8336869319875122569, guid: 5b112d9574774b245b4281ff5d6435a8, type: 3}
   - {fileID: -2950240918875102662, guid: 159c4bfcd427c2e47a478632c63e7890, type: 3}
   - {fileID: -7026716782477700173, guid: f4af04b60d6eaa04482bfbc8544143c4, type: 3}
+  ScoreDataTableName: stuTesting01
   myScores: []
   allUpgradesInGame:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}
@@ -81,6 +82,7 @@ MonoBehaviour:
   gamePlayerName: For Highscore
   myWUG: {fileID: 0}
   mySR: {fileID: 0}
+  myUS: {fileID: 0}
 --- !u!114 &2798827809084272646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,15 +238,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnnouncerASRef: {fileID: 1900428245847677257}
   AnnouncementList:
-  - {fileID: 8300000, guid: 1e9f5db7764d112488cca3364d32ca8f, type: 3}
-  - {fileID: 8300000, guid: 7e58fb285104fb54ba3e1d1491163adf, type: 3}
-  - {fileID: 8300000, guid: 1b289341dc8bf2c47ab4094afdb5d9dd, type: 3}
-  - {fileID: 8300000, guid: a0ffee1b9c8203648ae33b1389f96442, type: 3}
-  - {fileID: 8300000, guid: faa8c9156576e9c45b83ebc54b3ee3da, type: 3}
-  - {fileID: 8300000, guid: e3c02ef1bc1b7ff4786f63b83e922132, type: 3}
-  - {fileID: 8300000, guid: 574eb9687786b754a95d28b194b8e353, type: 3}
-  - {fileID: 8300000, guid: 2821c487a6d5d274fa96b599dd8d4920, type: 3}
-  - {fileID: 8300000, guid: ed8e29a0cb4ccaa47823cd389adc21ba, type: 3}
+  - {fileID: 8300000, guid: 309652220cd71d44a88da365b0a960a8, type: 3}
+  - {fileID: 8300000, guid: 2f3b1c38cf6696a40a3f4572fa147b4e, type: 3}
+  - {fileID: 8300000, guid: 39aeaeaabf04d994084485e890fec97c, type: 3}
+  - {fileID: 8300000, guid: b104598decd95124ca2918b1c10f8495, type: 3}
+  - {fileID: 8300000, guid: 6cff49bfef8b13b469f927301cfeadea, type: 3}
+  - {fileID: 8300000, guid: 1c0daa90a175edd4fbb78cfb49836e2f, type: 3}
   SteamrollerPrefab: {fileID: 5478023746985239956, guid: eda16952986b8f14ca1f487fe5b9cff9, type: 3}
   spawnInterval: 60
   spawning: 0

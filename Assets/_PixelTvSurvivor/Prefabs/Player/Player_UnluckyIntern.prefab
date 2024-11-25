@@ -854,7 +854,7 @@ MonoBehaviour:
     DamageModifier: 1
     CooldownModifier: 1
     Area: 1
-    Coins: 52
+    Coins: 53
     TimeUntilDeath: 300
   WeaponsArray:
   - Weapon: {fileID: 11400000, guid: 85150b8b7d425bd4bba6ecf16a873f42, type: 2}

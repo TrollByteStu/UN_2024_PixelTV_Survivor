@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
@@ -95,7 +96,7 @@ public class Enemy_Main : MonoBehaviour
 
             if (Hit.collider.CompareTag("Enemy") || Hit.collider.CompareTag("Player"))
             {
-                direction *= Hit.distance;
+                direction *= math.max(Hit.distance,.3f);
                 break;
             }
         }

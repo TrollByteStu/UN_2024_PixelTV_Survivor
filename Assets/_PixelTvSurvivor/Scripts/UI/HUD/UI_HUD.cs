@@ -124,7 +124,7 @@ public class UI_HUD : MonoBehaviour
         AudioMainRef.SetActive(false);
         Destroy(Section_SlotMachine.gameObject);
         Looser_Summarization_Text.text = PlayerIsDead_Summarization();
-        Looser_Summarization_Piechart.fillAmount = (float)((float)myGC.myUS.TotalShotFired / (float)myGC.myUS.TotalShotsHit);
+        Looser_Summarization_Piechart.fillAmount = (float)myGC.myUS.TotalShotsHit / (float)myGC.myUS.TotalShotFired;
         if (myGC.PlayerReference.Stats.TimeUntilDeath > 1)
         { // time left, evil kids murdered santa, you lost
             LooserImage.gameObject.SetActive(true);

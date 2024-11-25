@@ -212,7 +212,7 @@ SubShader {
 			half4 c = vector(1,round(sin(input.texcoord0.x*100 - input.texcoord0.y*100 )/ 2 + .5),round(sin(input.texcoord0.x*100 - input.texcoord0.y*100 )/ 2 + .5),0) * saturate(d - input.param.w);
 
 			#ifdef OUTLINE_ON
-			c = lerp(input.outlineColor, vector(1,round(sin(input.texcoord0.x*100 - input.texcoord0.y*100 )/ 2 + .5 ) +0.1,round(sin(input.texcoord0.x*100 - input.texcoord0.y*100 )/ 2 + .5) +0.1,0), saturate(d - input.param.z));
+			c = lerp(input.outlineColor, vector(1,round(sin(input.texcoord0.x*100 - input.texcoord0.y*100 )/ 2 + .5 ) +0.,round(sin(input.texcoord0.x*100 - input.texcoord0.y*100 )/ 2 + .5) +0.,0), saturate(d - input.param.z));
 			c *= saturate(d - input.param.y);
 			#endif
 

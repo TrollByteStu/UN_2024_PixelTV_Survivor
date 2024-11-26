@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4387e048509a09c4893200b93e3fba01, type: 3}
   m_Name: Weapon_SlashOmni
   m_EditorClassIdentifier: 
-  ItemName: Omni slash
+  ItemName: Slikstok!
   ItemSprite: {fileID: 21300000, guid: 01f16755511234b438a5b0feea20b251, type: 3}
   spriteScale: 1
   spriteColor:

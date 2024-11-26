@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_Aura
   m_EditorClassIdentifier: 
   ItemName: Aura
-  ItemSprite: {fileID: -6471169931980514349, guid: 54481e7c99f69b748922ee743c38156f, type: 3}
+  ItemSprite: {fileID: -773114128226043197, guid: 5a075428e40b82d4f841d6c5e63e9436, type: 3}
   spriteScale: 1
   spriteColor:
     serializedVersion: 2

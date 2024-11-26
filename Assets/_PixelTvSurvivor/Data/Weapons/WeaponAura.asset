@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c53380f3fe38e4196102fc04f73399, type: 3}
   m_Name: WeaponAura
   m_EditorClassIdentifier: 
-  WeaponImage: {fileID: -6471169931980514349, guid: 54481e7c99f69b748922ee743c38156f, type: 3}
+  WeaponImage: {fileID: -773114128226043197, guid: 5a075428e40b82d4f841d6c5e63e9436, type: 3}
   WeaponName: Aura
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}

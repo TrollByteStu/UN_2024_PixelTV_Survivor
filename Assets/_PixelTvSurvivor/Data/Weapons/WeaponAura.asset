@@ -17,8 +17,20 @@ MonoBehaviour:
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
   LevelStats:
-  - AttackSpeed: 1
-    AttackDamage: 10
+  - AttackSpeed: 3
+    AttackDamage: 5
     AOE: 5
+  - AttackSpeed: 2
+    AttackDamage: 7.5
+    AOE: 6
+  - AttackSpeed: 1.5
+    AttackDamage: 10
+    AOE: 7
+  - AttackSpeed: 1
+    AttackDamage: 15
+    AOE: 8
+  - AttackSpeed: 0.75
+    AttackDamage: 20
+    AOE: 10
   Texture: {fileID: 2800000, guid: 5b052b9d14675a94bb6f06a4c7ca7efa, type: 3}
   Prefab: {fileID: 3431885073850889383, guid: d84cd4ac1292e224c884b043b312e8ba, type: 3}

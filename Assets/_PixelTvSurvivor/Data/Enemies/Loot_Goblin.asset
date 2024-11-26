@@ -27,33 +27,17 @@ MonoBehaviour:
     TakenKnockback: 0
   SpawnsGravestoneUponDeath: 0
   LootTable:
-  - LootType: {fileID: 11400000, guid: d620118170a5b13469d98a53164d8a25, type: 2}
-    LootChancePercent: 0
-  - LootType: {fileID: 11400000, guid: f8b39611fb2b3c64eabbce38919fe50d, type: 2}
-    LootChancePercent: 5
-  - LootType: {fileID: 11400000, guid: f63e8ff3f4855024a8184fb61b8d9378, type: 2}
-    LootChancePercent: 5
-  - LootType: {fileID: 11400000, guid: 79a27a06baa67194486f1b1e56fb8a8a, type: 2}
-    LootChancePercent: 5
-  - LootType: {fileID: 11400000, guid: 147b55e9312859d46a31a757cbd0d034, type: 2}
-    LootChancePercent: 5
-  - LootType: {fileID: 11400000, guid: 72ca8b5ac31409043bf1f367c3ac3f63, type: 2}
-    LootChancePercent: 20
-  - LootType: {fileID: 11400000, guid: 79256c330406f6544a8211f4ff603901, type: 2}
-    LootChancePercent: 20
-  - LootType: {fileID: 11400000, guid: fe21ae6e321586b44b9a6b5c4588c4b3, type: 2}
-    LootChancePercent: 10
   - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
-    LootChancePercent: 100
-  enemySprite: {fileID: 1326495855, guid: b5244ea749d06584d82ca646aec86dc8, type: 3}
-  enemyAnimController: {fileID: 9100000, guid: 333dfa838d5ebe74f9a01249bad43a48, type: 2}
-  spriteScale: 0.15
+    LootChancePercent: 20
+  enemySprite: {fileID: -8981259751579386107, guid: 2e9a4c939429db14db4dcfacaf21a44a, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: f6a3a63277ea41f438972669e24623b0, type: 2}
+  spriteScale: 1
   spriteColorMin:
     serializedVersion: 2
-    rgba: 4293194619
+    rgba: 4294967295
   spriteColorMax:
     serializedVersion: 2
-    rgba: 4294150712
+    rgba: 4294967295
   bloodColorMin:
     serializedVersion: 2
     rgba: 4294048354

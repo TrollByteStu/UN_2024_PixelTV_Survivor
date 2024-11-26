@@ -130,6 +130,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3ca53d1b17355429cbd1a4b768938f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &255449467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255449470}
+  - component: {fileID: 255449469}
+  - component: {fileID: 255449468}
+  m_Layer: 0
+  m_Name: Kid1a-sheet_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &255449468
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255449467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66c1e89a54d8dc34a8b5392cbbcc1fb6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &255449469
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255449467}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1561269156, guid: 83df4a18c7f977042b1514ff4a6725a3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.5, y: 3}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &255449470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255449467}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 541.39374, y: 269.4696, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &440507897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2972367016857335384, guid: 38913555979018b489d5bdad2304ff37, type: 3}
@@ -1095,6 +1205,10 @@ PrefabInstance:
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: waveSize.m_Curve.Array.data[0].value
       value: 4.934361
       objectReference: {fileID: 0}
@@ -1151,9 +1265,53 @@ PrefabInstance:
       value: 0.58744794
       objectReference: {fileID: 0}
     - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[1].Cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[3].Cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[5].Cost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[7].Cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: waveSize.m_Curve.Array.data[10].outSlope
       value: 0.23220022
       objectReference: {fileID: 0}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[1].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f71c15bfac80ee4f80c1972233bc49f, type: 2}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[2].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 3fbab7744e7bd144ba298694e506ad81, type: 2}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[3].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a66725217d47314b95d0020196098d2, type: 2}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[4].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 96006bf497493b242a52c609db8957be, type: 2}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[5].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 003a4fb1cdf84bc4fb2940f68704efa4, type: 2}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[6].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e71411a045c1944a83345faf9e504fc, type: 2}
+    - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: SpawnableEnemiesArray.Array.data[7].Enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: c9c0aa655fd8cca429e7121539372b5a, type: 2}
     - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: SpawnableEnemiesArray.Array.data[1].ChanceSize
       value: 1
@@ -1180,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: SpawnableEnemiesArray.Array.data[7].ChanceSize
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3732330668148699807, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: SpawnableEnemiesArray.Array.data[8].ChanceSize
@@ -1586,3 +1744,4 @@ SceneRoots:
   - {fileID: 6348915682223026684}
   - {fileID: 2123373982}
   - {fileID: 1623128454}
+  - {fileID: 255449470}

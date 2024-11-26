@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e941d303dfdf680459b802356980d420, type: 3}
+  m_Name: Kid01b
+  m_EditorClassIdentifier: 
+  EnemyName: Kid01b
+  Stats:
+    AiType: 0
+    MaxHealth: 20
+    Health: 20
+    MoveSpeed: 0.5
+    AttackDamage: 5
+    AttackSpeed: 1
+    AttackRange: 1
+    XpValue: 1
+    PointValue: 1
+    TimeSecondsValue: 0
+    TakenKnockback: 1
+  SpawnsGravestoneUponDeath: 0
+  LootTable:
+  - LootType: {fileID: 11400000, guid: 72ca8b5ac31409043bf1f367c3ac3f63, type: 2}
+    LootChancePercent: 1
+  - LootType: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
+    LootChancePercent: 1
+  enemySprite: {fileID: 1561269156, guid: 83df4a18c7f977042b1514ff4a6725a3, type: 3}
+  enemyAnimController: {fileID: 9100000, guid: 66c1e89a54d8dc34a8b5392cbbcc1fb6, type: 2}
+  spriteScale: 1
+  spriteColorMin:
+    serializedVersion: 2
+    rgba: 4294967295
+  spriteColorMax:
+    serializedVersion: 2
+    rgba: 4291348680
+  bloodColorMin:
+    serializedVersion: 2
+    rgba: 4284966901
+  bloodColorMax:
+    serializedVersion: 2
+    rgba: 4278321792
+  enemyAudioWalk: []
+  enemyAudioWalkProbablity: 0.1
+  enemyAudioAttack: []
+  enemyAudioAttackProbablity: 0.33
+  enemyAudioDeath:
+  - {fileID: 8300000, guid: 047bf0c21c2cff840af0c5cc218da5a8, type: 3}
+  - {fileID: 8300000, guid: c162c3f8206bf704f94a7d2348803895, type: 3}
+  - {fileID: 8300000, guid: f9c6f760db2a32e4c9a2f7907e2034cc, type: 3}
+  - {fileID: 8300000, guid: 584be25182b64db4093995cf71827dfd, type: 3}
+  - {fileID: 8300000, guid: ff6fa2b54a5f6ac44b0150b1c431a47f, type: 3}
+  - {fileID: 8300000, guid: 58fb3158faf5f6c4baea7227d2900aff, type: 3}
+  - {fileID: 8300000, guid: 58fb3158faf5f6c4baea7227d2900aff, type: 3}
+  - {fileID: 8300000, guid: e2d13a2b7e65e554e83712195fd0cb26, type: 3}
+  enemyAudioDeathProbablity: 0.05

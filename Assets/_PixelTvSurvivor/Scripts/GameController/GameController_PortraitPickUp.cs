@@ -9,8 +9,18 @@ public class GameController_PortraitPickUp : MonoBehaviour
 {
     public Portraits Prefab;
     public Sprite[] Portraits;
+    public string[] Names;
     public List<int> CurrentPortraits;
     public List<int> RemainingPortraits;
+    public bool test = false;
+    private void Update()
+    {
+        if (test)
+        {
+            SpawnPortrait(GameController.Instance.PlayerReference.transform.position);
+            test = false;
+        }
+    }
 
     public void SpawnPortrait(Vector3 position)
     {
@@ -21,6 +31,7 @@ public class GameController_PortraitPickUp : MonoBehaviour
     {
         CurrentPortraits.Add(id);
         RemainingPortraits.Remove(id);
+        UI_HUD.Instance.AddPortrait(Portraits[id],CurrentPortraits.Count-1, CurrentPortraits.Count % 2 == 1, Names[id]);
     }
     public void ResetPortraits()
     {

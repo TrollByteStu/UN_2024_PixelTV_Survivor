@@ -1014,6 +1014,82 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: Names.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[0]'
+      value: Manu Sereen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[1]'
+      value: Anne Lindfjeld
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[2]'
+      value: Yepha
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[3]'
+      value: Magnus Bruun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[4]'
+      value: "Rikke G\xF8ransson"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[5]'
+      value: Oliver Bjerrehuus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[6]'
+      value: Oscar Bjerrehuus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[7]'
+      value: Mark O Madsen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[8]'
+      value: Felix Schmidt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[9]'
+      value: "August H\xF8yen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[10]'
+      value: Sebastian Bull
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[11]'
+      value: Sarah Mahfoud
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[12]'
+      value: Timm Vladimir
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[13]'
+      value: Audrey Castaneda
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[14]'
+      value: "Jimmy J\xF8rgensen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[15]'
+      value: Anders Nielsen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[16]'
+      value: Jonas Schmidt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012720568839755922, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
+      propertyPath: 'Names.Array.data[17]'
+      value: Damian Czarnecki
+      objectReference: {fileID: 0}
     - target: {fileID: 1945792299011173173, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: m_Name
       value: GameController

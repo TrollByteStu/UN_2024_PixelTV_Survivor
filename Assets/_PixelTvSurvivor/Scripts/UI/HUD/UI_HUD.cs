@@ -58,6 +58,10 @@ public class UI_HUD : MonoBehaviour
     private GameController myGC;
     private UI_Slotmachine mySlotUI;
     private GameObject AudioMainRef;
+    private CanvasGroup PortraitGroup;
+
+    // private ui variables
+    private float portraitTimer = 0f;
 
     private void Awake()
     {
@@ -83,6 +87,7 @@ public class UI_HUD : MonoBehaviour
         // internal
         mySlotUI = Section_SlotMachine.gameObject.GetComponent<UI_Slotmachine>();
         AudioMainRef = GameObject.Find("Audio");
+        PortraitGroup = Section_Portraits.GetComponent<CanvasGroup>();
     }
 
     private void Start()
@@ -116,6 +121,12 @@ public class UI_HUD : MonoBehaviour
         // Debug
         DebugText.text = "Debug: \nFps: " + myGC.currentFPS + " TT:"+((int)Time.time)+ " TSLL:" + ((int)Time.timeSinceLevelLoad) + "\n";
         DebugText.text += "Enemies: " + myGC.currentEnemies+"\nConfetti: "+ myGC.currentBloodSplats + "\nCoins: " + myGC.currentCoins;
+
+        // portrait timer
+        if ( portraitTimer < Time.timeSinceLevelLoad && PortraitGroup.alpha > 0 )
+        {
+            PortraitGroup.alpha -= 0.01f;
+        }
     }
 
     public void PlayerIsDead()
@@ -257,5 +268,19 @@ public class UI_HUD : MonoBehaviour
     public void HideSlotMachine()
     {
         Section_SlotMachine.localScale = new Vector2(0, 0);
+    }
+
+    public void AddPortrait(Sprite image, int position, bool flipTopBottom, string name)
+    {
+        var por = Instantiate(PortraitPrefab).GetComponent<UI_Portrait>();
+        por.GetComponent<Image>().sprite = image;
+        por.transform.SetParent(Section_Portraits);
+        por.transform.localPosition = new Vector3((position*-120)-50,0,0);
+        por.transform.localScale = new Vector2(1, 1);
+        if (flipTopBottom)
+            por.TopName.text = name;
+        else por.BottomName.text = name;
+        portraitTimer = Time.timeSinceLevelLoad + 2f;
+        PortraitGroup.alpha = 1;
     }
 }

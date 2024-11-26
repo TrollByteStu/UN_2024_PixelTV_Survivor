@@ -44,6 +44,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
         Roll = false;
         Player = GameController.Instance.PlayerReference;
         WeaponChances = WeaponChancesPermanent;
+        slotmachineDelay = 0;
     }
 
     private void Update()

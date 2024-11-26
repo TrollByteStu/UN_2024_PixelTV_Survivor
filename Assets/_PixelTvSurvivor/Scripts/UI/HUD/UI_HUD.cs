@@ -14,6 +14,7 @@ public class UI_HUD : MonoBehaviour
     public RectTransform Section_Upgrade;
     public RectTransform Section_Upgrade_List;
     public RectTransform Section_SlotMachine;
+    public RectTransform Section_Portraits;
     public UI_HUD_Highscore myHighScore;
 
     [Header("Looser Options")]
@@ -42,6 +43,7 @@ public class UI_HUD : MonoBehaviour
 
     [Header("Prefabs to spawn in UI")]
     public GameObject UpgradeIconPrefab;
+    public GameObject PortraitPrefab;
 
     [Header("UI Sounds")]
     public AudioClip UI_Sound_Upgrade;

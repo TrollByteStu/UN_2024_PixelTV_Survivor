@@ -33,7 +33,7 @@ public struct PlayerStats
         DamageModifier = 1;
         CooldownModifier = 1;
         Area = 1;
-        Coins = 20;
+        Coins = 53;
         TimeUntilDeath = 120;
     }
 }

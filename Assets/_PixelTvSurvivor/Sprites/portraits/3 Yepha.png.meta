@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3 Yepha_0: -109677613685292944
+      3 Yepha_1: 333785658249086143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

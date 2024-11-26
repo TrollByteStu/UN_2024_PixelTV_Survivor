@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      12 Sebastian Bull_0: -7700602714385598902
+      12 Sebastian Bull_1: 3471031622829266675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

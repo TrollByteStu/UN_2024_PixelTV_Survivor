@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "11 August H\xF8yen_0": 8884801616773718355
+      "11 August H\xF8yen_1": 1029140517184885004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

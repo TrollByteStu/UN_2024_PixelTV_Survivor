@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      7 Oscar Bjerrehuus_0: -1575372694342437008
+      7 Oscar Bjerrehuus_1: -6826175510373727271
+      7 Oscar Bjerrehuus_2: 860727590491558670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

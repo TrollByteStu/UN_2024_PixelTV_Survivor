@@ -1185,50 +1185,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1945792299011173173, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6348915682223026686}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
---- !u!1 &6348915682223026685 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1945792299011173173, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-  m_PrefabInstance: {fileID: 6348915682223026684}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6348915682223026686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6348915682223026685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d5fa93e22d9dc643a433416aac1da33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefab: {fileID: -8390436741538722197, guid: a4267516bfc397e4da45586674f52acb, type: 3}
-  Portraits:
-  - {fileID: -5842596582242883037, guid: cb872914e04d71a488122d2b7674b3e8, type: 3}
-  - {fileID: 3127609526107043467, guid: de16e2c91622ba64d94d58d24e27ceef, type: 3}
-  - {fileID: -109677613685292944, guid: 0526c841715a43943ae196f37303ba9d, type: 3}
-  - {fileID: -7957232138048835605, guid: 2d1528bef51d0a3489de3367cb5058fe, type: 3}
-  - {fileID: -83317000222516997, guid: 333c3032f48cd2543a316862e2a5cc75, type: 3}
-  - {fileID: -4501565437490267818, guid: d9b36e0b1cff93041959a9e0b002a7e1, type: 3}
-  - {fileID: -1575372694342437008, guid: 63cd396facc9f0b428382679973523da, type: 3}
-  - {fileID: -1160973910890792244, guid: 06afadcca38f3e34d94ba132b5070f93, type: 3}
-  - {fileID: -1110471087784563036, guid: 0e83d3127fabb42479da2893e06434a3, type: 3}
-  - {fileID: 8884801616773718355, guid: 96e0be105775cb74b83b17817a7d294e, type: 3}
-  - {fileID: -7700602714385598902, guid: 69c48881e1f6b9c45a4afec0a149ceab, type: 3}
-  - {fileID: -7206945930071299179, guid: 92db58b7a47c16641a7e44d2d75599a3, type: 3}
-  - {fileID: 886553887314937839, guid: cb362470003893d4f95095c97c7731d0, type: 3}
-  - {fileID: 7314081563651124916, guid: 18e6b9526893053449014f1b5387b72d, type: 3}
-  - {fileID: -4368369170809795099, guid: f47ac52b46208a8468eb61a1e445d709, type: 3}
-  - {fileID: -3389282166349064737, guid: dfce3f304b4bb1f4d8ff5cc312023fb1, type: 3}
-  - {fileID: -602219763930759425, guid: c9b8bc55073a62d4ca8e087419fe4e24, type: 3}
-  - {fileID: -4853488307415809437, guid: 66bbb10f58660804cbb10df54564c1b3, type: 3}
-  CurrentPortraits: 
-  RemainingPortraits: 
 --- !u!1001 &6985131530495393394
 PrefabInstance:
   m_ObjectHideFlags: 0

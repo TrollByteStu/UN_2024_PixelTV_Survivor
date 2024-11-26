@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      4 Magnus Bruun_0: -7957232138048835605
+      4 Magnus Bruun_1: -6335462205804480825
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

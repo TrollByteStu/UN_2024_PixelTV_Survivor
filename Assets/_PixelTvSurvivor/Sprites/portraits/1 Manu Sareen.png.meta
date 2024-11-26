@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1 Manu Sareen_0: -5842596582242883037
+      1 Manu Sareen_1: -5317702135043859540
+      1 Manu Sareen_2: 9106609438260468205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

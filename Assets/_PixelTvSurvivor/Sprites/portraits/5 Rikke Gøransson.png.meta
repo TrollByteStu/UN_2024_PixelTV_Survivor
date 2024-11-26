@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "5 Rikke G\xF8ransson_0": -83317000222516997
+      "5 Rikke G\xF8ransson_1": -5143259382905075071
+      "5 Rikke G\xF8ransson_2": 3348534911315710037
+      "5 Rikke G\xF8ransson_3": 8385461688901676090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

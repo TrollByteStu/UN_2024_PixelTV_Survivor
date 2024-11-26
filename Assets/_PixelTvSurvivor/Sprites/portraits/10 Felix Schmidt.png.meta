@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      10 Felix Schmidt_0: -1110471087784563036
+      10 Felix Schmidt_1: -5607435351050095023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

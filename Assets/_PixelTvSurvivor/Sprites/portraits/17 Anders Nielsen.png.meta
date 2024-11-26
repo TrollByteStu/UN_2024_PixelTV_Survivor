@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      17 Anders Nielsen_0: -3389282166349064737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

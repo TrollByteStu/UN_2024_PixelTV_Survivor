@@ -19,6 +19,8 @@ public class UI_HUD : MonoBehaviour
 
     [Header("Looser Options")]
     public TMP_Text Looser_Summarization_Text;
+    public TMP_Text Looser_Missed_Text;
+    public TMP_Text Looser_Hit_Text;
     public Image Looser_Summarization_Piechart;
     public RectTransform Looser_Button;
     public RectTransform Looser_Inputfield;
@@ -138,6 +140,8 @@ public class UI_HUD : MonoBehaviour
         Destroy(Section_SlotMachine.gameObject);
         Looser_Summarization_Text.text = PlayerIsDead_Summarization();
         Looser_Summarization_Piechart.fillAmount = (float)myGC.myUS.TotalShotsHit / (float)myGC.myUS.TotalShotFired;
+        Looser_Hit_Text.text = myGC.myUS.TotalShotsHit.ToString() + " Pletskud";
+        Looser_Missed_Text.text = (myGC.myUS.TotalShotFired - myGC.myUS.TotalShotsHit).ToString() + " Forbiere";
         if (myGC.PlayerReference.Stats.TimeUntilDeath > 1)
         { // time left, evil kids murdered santa, you lost
             LooserImage.gameObject.SetActive(true);
@@ -161,10 +165,10 @@ public class UI_HUD : MonoBehaviour
     {
         string theoutput = "Glade børn: <color=green>" + myGC.myUS.TotalKills + "</color>";
         theoutput += "\nPakker Sendt: <color=blue>" + myGC.myUS.TotalShotFired + "</color>";
-        theoutput += "\nPakker Modtaget: <color=yellow>" + myGC.myUS.TotalShotsHit + "</color>";
+        //theoutput += "\nPakker Modtaget: <color=yellow>" + myGC.myUS.TotalShotsHit + "</color>";
         theoutput += "\nPoints Optjent: <color=red>" + myGC.gamePoints+ "</color>";
 
-        return theoutput + "\n\nYeah, it's hard to be a nissemann";
+        return theoutput + "\n\n\n\nYeah, it's hard to be a nissemann";
     }
     void clearTransformChildren(Transform needToClear)
     {

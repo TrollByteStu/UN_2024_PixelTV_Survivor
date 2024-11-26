@@ -21,14 +21,32 @@ MonoBehaviour:
   SpinDirection: 2
   LevelStats:
   - ClimbSpeed: 3
-    bulletSpeed: 1
+    bulletSpeed: 0.5
     AttackSpeed: 1
-    AttackDamage: 10
-    ShootQuantity: 5
+    AttackDamage: 5
+    ShootQuantity: 2
     ShotDelay: 0.1
   - ClimbSpeed: 3
     bulletSpeed: 1
     AttackSpeed: 1
-    AttackDamage: 10
-    ShootQuantity: 10
+    AttackDamage: 7.5
+    ShootQuantity: 2
     ShotDelay: 0.1
+  - ClimbSpeed: 4
+    bulletSpeed: 2
+    AttackSpeed: 1
+    AttackDamage: 10
+    ShootQuantity: 4
+    ShotDelay: 0.2
+  - ClimbSpeed: 5
+    bulletSpeed: 3
+    AttackSpeed: 1
+    AttackDamage: 15
+    ShootQuantity: 8
+    ShotDelay: 0.3
+  - ClimbSpeed: 6
+    bulletSpeed: 6
+    AttackSpeed: 1
+    AttackDamage: 20
+    ShootQuantity: 12
+    ShotDelay: 0.3

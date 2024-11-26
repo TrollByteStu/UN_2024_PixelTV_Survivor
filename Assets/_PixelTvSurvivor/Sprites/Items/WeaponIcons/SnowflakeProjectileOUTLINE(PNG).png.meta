@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowflakeProjectileOUTLINE(PNG)_0: -6414498391342944604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

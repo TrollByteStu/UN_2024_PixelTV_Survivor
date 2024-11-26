@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CandyCaneIcon1_0: 2883160596070998743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,8 @@ public class GameController_PortraitPickUp : MonoBehaviour
 
     public void SpawnPortrait(Vector3 position)
     {
-        Instantiate(Prefab, position, Quaternion.identity).Setup(Random.Range(0,RemainingPortraits.Count));
+        if (RemainingPortraits.Count > 0)
+            Instantiate(Prefab, position, Quaternion.identity).Setup(Random.Range(0,RemainingPortraits.Count));
     }
     public void PickUp(int id)
     {

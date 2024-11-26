@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4387e048509a09c4893200b93e3fba01, type: 3}
   m_Name: Weapon_Fireball
   m_EditorClassIdentifier: 
-  ItemName: Fireball
-  ItemSprite: {fileID: 978461316, guid: ac0904a0ae4f9744ba23cdfb5d87c157, type: 3}
+  ItemName: Train
+  ItemSprite: {fileID: -4176129862795830376, guid: 345e317d713f93e4b9f6f6ca710a7121, type: 3}
   spriteScale: 1
   spriteColor:
     serializedVersion: 2
@@ -23,7 +23,7 @@ MonoBehaviour:
     Weapon: {fileID: 0}
     LastShot: 0
     Level: 0
-  PopupText: PRUTKANON!!!
+  PopupText: FUT TOG!!!
   PopupColor:
     serializedVersion: 2
     rgba: 4278245119

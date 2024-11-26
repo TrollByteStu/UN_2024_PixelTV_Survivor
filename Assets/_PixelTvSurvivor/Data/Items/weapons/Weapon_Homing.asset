@@ -23,7 +23,7 @@ MonoBehaviour:
     Weapon: {fileID: 0}
     LastShot: 0
     Level: 0
-  PopupText: RAKETTER!!!
+  PopupText: Pakkekanon!!!
   PopupColor:
     serializedVersion: 2
     rgba: 4278255615

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401f41e59dbb1cc4f90ee5acf8b0e710, type: 3}
   m_Name: WeaponBasic
   m_EditorClassIdentifier: 
-  WeaponImage: {fileID: 921682717343652210, guid: 9f15390bd8d19f545b23cfa44688c7a0, type: 3}
+  WeaponImage: {fileID: -4176129862795830376, guid: 345e317d713f93e4b9f6f6ca710a7121, type: 3}
   WeaponName: Basic
   AttackAudioFire: {fileID: 0}
   AttackAudioHit: {fileID: 0}
   BulletPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
-  bulletSprite: {fileID: 921682717343652210, guid: 9f15390bd8d19f545b23cfa44688c7a0, type: 3}
+  bulletSprite: {fileID: -4176129862795830376, guid: 345e317d713f93e4b9f6f6ca710a7121, type: 3}
   AutoAim: 0
   LevelStats:
   - bulletSpeed: 10

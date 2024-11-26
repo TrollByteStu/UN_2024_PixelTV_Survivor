@@ -20,22 +20,27 @@ MonoBehaviour:
   SpinDirection: 3
   LevelStats:
   - DistanceFromPlayer: 5
-    RotationSpeed: 3
-    AttackDamage: 1
+    RotationSpeed: 5
+    AttackDamage: 2
     SatelliteQuantity: 1
     LayerQuantity: 1
   - DistanceFromPlayer: 5
-    RotationSpeed: 3
-    AttackDamage: 1
-    SatelliteQuantity: 3
+    RotationSpeed: 4
+    AttackDamage: 2
+    SatelliteQuantity: 2
     LayerQuantity: 2
   - DistanceFromPlayer: 5
-    RotationSpeed: 3
-    AttackDamage: 1
-    SatelliteQuantity: 6
+    RotationSpeed: 3.5
+    AttackDamage: 3
+    SatelliteQuantity: 3
     LayerQuantity: 1
   - DistanceFromPlayer: 5
     RotationSpeed: 3
-    AttackDamage: 2
-    SatelliteQuantity: 6
+    AttackDamage: 5
+    SatelliteQuantity: 4
+    LayerQuantity: 2
+  - DistanceFromPlayer: 5
+    RotationSpeed: 2.75
+    AttackDamage: 7.5
+    SatelliteQuantity: 5
     LayerQuantity: 2

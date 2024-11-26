@@ -221,6 +221,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d620118170a5b13469d98a53164d8a25, type: 2}
   - {fileID: 11400000, guid: 3babd4b7cb94373408091cc7a3835352, type: 2}
   - {fileID: 11400000, guid: 147b55e9312859d46a31a757cbd0d034, type: 2}
+  WeaponChancesPermanent:
+  - {fileID: 11400000, guid: c04c8c77f8f04184ba93bdab1282d98a, type: 2}
+  - {fileID: 11400000, guid: 02ae602b7687fda448dd1d68d53df1a6, type: 2}
+  - {fileID: 11400000, guid: d15f3073218acbb47a01ec5c6e52526b, type: 2}
+  - {fileID: 11400000, guid: f63e8ff3f4855024a8184fb61b8d9378, type: 2}
+  - {fileID: 11400000, guid: 79a27a06baa67194486f1b1e56fb8a8a, type: 2}
+  - {fileID: 11400000, guid: d620118170a5b13469d98a53164d8a25, type: 2}
+  - {fileID: 11400000, guid: 3babd4b7cb94373408091cc7a3835352, type: 2}
+  - {fileID: 11400000, guid: 147b55e9312859d46a31a757cbd0d034, type: 2}
   StartingWeapons:
   - {fileID: 11400000, guid: f63e8ff3f4855024a8184fb61b8d9378, type: 2}
   - {fileID: 11400000, guid: 3babd4b7cb94373408091cc7a3835352, type: 2}

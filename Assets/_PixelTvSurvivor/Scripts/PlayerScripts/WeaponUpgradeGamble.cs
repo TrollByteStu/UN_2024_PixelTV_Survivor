@@ -20,6 +20,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
     public PlayerController Player;
     public List<LootItemScriptable> UpgadeChances;
     public List<LootItemScriptable> WeaponChances;
+    public List<LootItemScriptable> WeaponChancesPermanent;
     public LootItemScriptable[] StartingWeapons;
 
     private bool OngoingAttempt;
@@ -39,6 +40,10 @@ public class WeaponUpgradeGamble : MonoBehaviour
         //ChanceToHit = 100;
         ChanceToHitWeapon = 110;
         rolls = 1;
+        OngoingAttempt = false;
+        Roll = false;
+        Player = GameController.Instance.PlayerReference;
+        WeaponChances = WeaponChancesPermanent;
     }
 
     private void Update()

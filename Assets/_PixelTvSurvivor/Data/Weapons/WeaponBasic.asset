@@ -20,7 +20,27 @@ MonoBehaviour:
   bulletSprite: {fileID: 921682717343652210, guid: 9f15390bd8d19f545b23cfa44688c7a0, type: 3}
   AutoAim: 0
   LevelStats:
+  - bulletSpeed: 10
+    AttackSpeed: 2.5
+    AttackDamage: 7.5
+    ShootQuantity: 2
+    ShotDelay: 0
+  - bulletSpeed: 12.5
+    AttackSpeed: 2
+    AttackDamage: 10
+    ShootQuantity: 4
+    ShotDelay: 0
   - bulletSpeed: 15
+    AttackSpeed: 1.5
+    AttackDamage: 15
+    ShootQuantity: 3
+    ShotDelay: 0
+  - bulletSpeed: 20
+    AttackSpeed: 0.5
+    AttackDamage: 20
+    ShootQuantity: 4
+    ShotDelay: 0
+  - bulletSpeed: 25
     AttackSpeed: 1
     AttackDamage: 10
     ShootQuantity: 2

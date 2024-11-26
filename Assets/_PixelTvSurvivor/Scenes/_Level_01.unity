@@ -1118,26 +1118,6 @@ PrefabInstance:
       propertyPath: PlayerReference
       value: 
       objectReference: {fileID: 80125445}
-    - target: {fileID: 5943691402303187131, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-      propertyPath: UpgadeChances.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5943691402303187131, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-      propertyPath: 'UpgadeChances.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 79256c330406f6544a8211f4ff603901, type: 2}
-    - target: {fileID: 5943691402303187131, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-      propertyPath: 'UpgadeChances.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: afba22ebedb078a44abb8b5faf00d4a5, type: 2}
-    - target: {fileID: 5943691402303187131, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-      propertyPath: 'UpgadeChances.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 72ca8b5ac31409043bf1f367c3ac3f63, type: 2}
-    - target: {fileID: 5943691402303187131, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
-      propertyPath: 'UpgadeChances.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: fe21ae6e321586b44b9a6b5c4588c4b3, type: 2}
     - target: {fileID: 6032272710053213589, guid: 1b78e4de4520a5e41b610e8fc87047af, type: 3}
       propertyPath: m_Name
       value: EnemyHolder

@@ -308,6 +308,25 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfce3f304b4bb1f4d8ff5cc312023fb1, type: 3}
   - {fileID: 21300000, guid: c9b8bc55073a62d4ca8e087419fe4e24, type: 3}
   - {fileID: 21300000, guid: 66bbb10f58660804cbb10df54564c1b3, type: 3}
+  Names:
+  - Manu Sereen
+  - Anne Lindfjeld
+  - Yepha
+  - Magnus Bruun
+  - "Rikke G\xF8ransson"
+  - Oliver Bjerrehuus
+  - Oscar Bjerrehuus
+  - Mark O Madsen
+  - Felix Schmidt
+  - "August H\xF8yen"
+  - Sebastian Bull
+  - Sarah Mahfoud
+  - Timm Vladimir
+  - Audrey Castaneda
+  - "Jimmy J\xF8rgensen"
+  - Anders Nielsen
+  - Jonas Schmidt
+  - Damian Czarnecki
   CurrentPortraits: 
   RemainingPortraits: 
   test: 0

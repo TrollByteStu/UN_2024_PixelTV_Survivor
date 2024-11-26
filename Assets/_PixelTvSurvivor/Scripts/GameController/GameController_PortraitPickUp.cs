@@ -35,7 +35,7 @@ public class GameController_PortraitPickUp : MonoBehaviour
     public void PickUp(int id)
     {
         CurrentPortraits.Add(id);
-        UI_HUD.Instance.AddPortrait(Portraits[id],CurrentPortraits.Count-1, CurrentPortraits.Count % 2 == 1, Names[id]);
+        UI_HUD.Instance.AddPortrait(Portraits[id],CurrentPortraits.Count-1, (CurrentPortraits.Count) % 2 == 1, Names[id]);
     }
     public void ResetPortraits()
     {

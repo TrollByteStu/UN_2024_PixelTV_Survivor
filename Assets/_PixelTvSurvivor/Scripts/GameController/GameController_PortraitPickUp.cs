@@ -25,12 +25,16 @@ public class GameController_PortraitPickUp : MonoBehaviour
     public void SpawnPortrait(Vector3 position)
     {
         if (RemainingPortraits.Count > 0)
-            Instantiate(Prefab, position, Quaternion.identity).Setup(Random.Range(0,RemainingPortraits.Count));
+        {
+            int id = Random.Range(0, RemainingPortraits.Count);
+            Instantiate(Prefab, position, Quaternion.identity).Setup(id);
+            RemainingPortraits.Remove(id);
+        }
+            
     }
     public void PickUp(int id)
     {
         CurrentPortraits.Add(id);
-        RemainingPortraits.Remove(id);
         UI_HUD.Instance.AddPortrait(Portraits[id],CurrentPortraits.Count-1, CurrentPortraits.Count % 2 == 1, Names[id]);
     }
     public void ResetPortraits()

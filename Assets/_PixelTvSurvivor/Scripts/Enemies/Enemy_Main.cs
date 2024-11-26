@@ -186,6 +186,10 @@ public class Enemy_Main : MonoBehaviour
     }
     private void EnemyDies_DropLoot()
     {
+        if (enemytype.Stats.AiType == EnemyStats.EnemyAiType.LootGoblin)
+        {
+            GameController.Instance.myPP.SpawnPortrait(transform.position);
+        }
         if (enemytype.LootTable.Length < 1) return; // no loot
         foreach (EnemyCharacter.LootTableStructure possibleLoot in enemytype.LootTable)
         { // try them all, roll for each(simpler to explain to the designers)

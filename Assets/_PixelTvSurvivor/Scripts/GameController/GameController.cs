@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour
     public GameController_Steamrollers mySR;
     private SurroundSpawner mySS;
     public GameController_UniversalStats myUS;
+    public GameController_PortraitPickUp myPP;
 
     private void Awake()
     {
@@ -69,6 +70,8 @@ public class GameController : MonoBehaviour
         mySR = GetComponent<GameController_Steamrollers>();
         mySS = GetComponent<SurroundSpawner>();
         myUS = GetComponent<GameController_UniversalStats>();
+        myPP = GetComponent<GameController_PortraitPickUp>();
+        myPP.ResetPortraits();
 
         // make this object permanent, so it carries over from scene to scene
         DontDestroyOnLoad(gameObject);
@@ -151,6 +154,7 @@ public class GameController : MonoBehaviour
         // universal stats
         myUS.SetupForGame();
 
+        myPP.ResetPortraits();
     }
 
     public void SetupForMenu()

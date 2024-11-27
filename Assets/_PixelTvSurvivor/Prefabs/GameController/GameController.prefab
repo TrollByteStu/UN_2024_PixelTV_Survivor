@@ -69,7 +69,7 @@ MonoBehaviour:
   - {fileID: -8336869319875122569, guid: 5b112d9574774b245b4281ff5d6435a8, type: 3}
   - {fileID: -2950240918875102662, guid: 159c4bfcd427c2e47a478632c63e7890, type: 3}
   - {fileID: -7026716782477700173, guid: f4af04b60d6eaa04482bfbc8544143c4, type: 3}
-  ScoreDataTableName: stuTesting01
+  ScoreDataTableName: Giveaway2024VIP
   myScores: []
   allUpgradesInGame:
   - {fileID: 11400000, guid: 0184ead76a2e93a488831fd2ceb123e8, type: 2}

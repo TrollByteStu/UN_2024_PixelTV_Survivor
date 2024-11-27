@@ -35,6 +35,8 @@ public class WeaponHoming : WeaponBase
     }
     public async override void Attack(int level, Transform playerTransform, Vector3 direction, PlayerStats playerStats)
     {
+        if (playerTransform == null) return;
+
         List<RaycastHit2D> Hits = Physics2D.CircleCastAll(playerTransform.position, 15, Vector3.forward).ToList<RaycastHit2D>();
         List<RaycastHit2D> RemoveList = new List<RaycastHit2D>();
         foreach (RaycastHit2D Hit in Hits)

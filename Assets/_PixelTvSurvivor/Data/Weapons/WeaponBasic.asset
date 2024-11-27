@@ -22,27 +22,27 @@ MonoBehaviour:
   LevelStats:
   - bulletSpeed: 10
     AttackSpeed: 2.5
-    AttackDamage: 7.5
+    AttackDamage: 30
     ShootQuantity: 2
     ShotDelay: 0
   - bulletSpeed: 12.5
     AttackSpeed: 2
-    AttackDamage: 10
+    AttackDamage: 35
     ShootQuantity: 4
     ShotDelay: 0
   - bulletSpeed: 15
     AttackSpeed: 1.5
-    AttackDamage: 15
+    AttackDamage: 40
     ShootQuantity: 3
     ShotDelay: 0
   - bulletSpeed: 20
     AttackSpeed: 0.5
-    AttackDamage: 20
+    AttackDamage: 45
     ShootQuantity: 4
     ShotDelay: 0
   - bulletSpeed: 25
     AttackSpeed: 1
-    AttackDamage: 10
+    AttackDamage: 50
     ShootQuantity: 2
     ShotDelay: 0
   HasCurve: 0

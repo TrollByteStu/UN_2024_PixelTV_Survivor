@@ -19,34 +19,34 @@ MonoBehaviour:
   BulletPrefab: {fileID: 1718296494489236584, guid: f78a9281d49c6f742bd56a0309545149, type: 3}
   bulletSprite: {fileID: -6288378908321760524, guid: f7409f7a57ed37c42bcf956b69cf82b8, type: 3}
   LevelStats:
-  - bulletSpeed: 5
+  - bulletSpeed: 20
     bulletSpread: 25
     AttackSpeed: 2
-    AttackDamage: 5
+    AttackDamage: 10
     ShootQuantity: 2
     ShotDelay: 0.25
-  - bulletSpeed: 7.5
+  - bulletSpeed: 22
     bulletSpread: 30
     AttackSpeed: 2
-    AttackDamage: 7.5
+    AttackDamage: 15
     ShootQuantity: 4
     ShotDelay: 0.2
-  - bulletSpeed: 10
+  - bulletSpeed: 25
     bulletSpread: 35
     AttackSpeed: 2
-    AttackDamage: 10
+    AttackDamage: 20
     ShootQuantity: 6
     ShotDelay: 0.2
-  - bulletSpeed: 12.5
+  - bulletSpeed: 27
     bulletSpread: 40
     AttackSpeed: 3
-    AttackDamage: 12.5
+    AttackDamage: 25
     ShootQuantity: 8
     ShotDelay: 0.1
-  - bulletSpeed: 15
+  - bulletSpeed: 30
     bulletSpread: 45
     AttackSpeed: 3
-    AttackDamage: 15
+    AttackDamage: 30
     ShootQuantity: 12
     ShotDelay: 0.1
   HasCurve: 0

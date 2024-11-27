@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Midjourney_Logo_0: -8336502047410427092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

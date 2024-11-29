@@ -9,6 +9,8 @@ using Random = UnityEngine.Random;
 public class WeaponUpgradeGamble : MonoBehaviour
 {
     public int rolls = 1;
+    public int CostOfRoll;
+    private float Exponent = 1.1f;
     //public float ChanceToHit = 100;
 
     public float ChanceToHitWeapon = 100;
@@ -45,6 +47,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
         Player = GameController.Instance.PlayerReference;
         WeaponChances = WeaponChancesPermanent;
         slotmachineDelay = 0;
+        CostOfRoll = (int)math.ceil(math.pow(rolls * 10, Exponent));
     }
 
     private void Update()
@@ -54,16 +57,18 @@ public class WeaponUpgradeGamble : MonoBehaviour
             return;
         if (OngoingAttempt)
             return;
-        if (Player.Stats.Coins < math.ceil(math.pow(rolls * 10, 1.2)))
+        if (Player.Stats.Coins < math.ceil(math.pow(rolls * 10, Exponent)))
             return;
         if (slotmachineDelay > Time.timeSinceLevelLoad)
             return;
 
         OngoingAttempt = true;
-        Player.Stats.Coins -= (int)math.ceil(math.pow(rolls * 10,1.2));
+        Player.Stats.Coins -= (int)math.ceil(math.pow(rolls * 10, Exponent));
         rolls++;
         SlotMachine();
-        
+        CostOfRoll = (int)math.ceil(math.pow(rolls * 10, Exponent));
+
+
     }
     void SlotMachine()
     {

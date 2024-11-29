@@ -111,8 +111,8 @@ public class UI_HUD : MonoBehaviour
         HealthSlider.localScale = new Vector2(math.clamp(PlayerStatRef.Health / PlayerStatRef.MaxHealth,0,1), 1);
 
         // XP
-        XpText.text = PlayerStatRef.Coins + "/"+ math.ceil(math.pow(myGC.myWUG.rolls * 10, 1.2f)) + " Kr.";
-        XpSlider.localScale = new Vector2(math.clamp(PlayerStatRef.Coins / math.ceil(math.pow(myGC.myWUG.rolls * 10, 1.2f)),0,1), 1);
+        XpText.text = PlayerStatRef.Coins + "/"+ myGC.myWUG.CostOfRoll + " Kr.";
+        XpSlider.localScale = new Vector2(math.clamp(PlayerStatRef.Coins / (float)myGC.myWUG.CostOfRoll, 0,1), 1);
 
         // time
         TimeText.text = math.floor(PlayerStatRef.TimeUntilDeath / 60) +":" + math.floor(PlayerStatRef.TimeUntilDeath / 10 % 6) + math.floor(PlayerStatRef.TimeUntilDeath % 10);

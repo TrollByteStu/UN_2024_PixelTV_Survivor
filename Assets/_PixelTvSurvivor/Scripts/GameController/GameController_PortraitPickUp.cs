@@ -26,7 +26,7 @@ public class GameController_PortraitPickUp : MonoBehaviour
     {
         if (RemainingPortraits.Count > 0)
         {
-            int id = Random.Range(0, RemainingPortraits.Count);
+            int id = RemainingPortraits[Random.Range(0, RemainingPortraits.Count)];
             Instantiate(Prefab, position, Quaternion.identity).Setup(id);
             RemainingPortraits.Remove(id);
         }

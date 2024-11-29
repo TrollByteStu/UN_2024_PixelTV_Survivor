@@ -10,7 +10,7 @@ public class WeaponUpgradeGamble : MonoBehaviour
 {
     public int rolls = 1;
     public int CostOfRoll;
-    private float Exponent = 1.1f;
+    private float Exponent = 1;
     //public float ChanceToHit = 100;
 
     public float ChanceToHitWeapon = 100;

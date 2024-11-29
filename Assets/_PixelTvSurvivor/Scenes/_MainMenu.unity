@@ -1665,7 +1665,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Pixel.tvs Julekalender pr\xE6senteres i samarbejde med\r\nLEGO, Frederiksberg
-    Centret, Acer og Pluto.tv"
+    Centret, Acer og Pluto Tv"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8907,7 +8907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2261130974394422457, guid: af9cc777969d033458454f555b4a501c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00054464256
+      value: 0.00046822004
       objectReference: {fileID: 0}
     - target: {fileID: 3996093861233506490, guid: af9cc777969d033458454f555b4a501c, type: 3}
       propertyPath: m_Pivot.x

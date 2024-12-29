@@ -77,8 +77,8 @@ public class SurroundSpawner : MonoBehaviour
     }
     async void SpawnWave(int amount)
     {
-        // computer is dying, skip wave
-        if (!GameController.Instance.FPS_isWithinLimit(50)) return;
+        // computer is dying, skip wave, (On slow devices spawn at least (some) enemies
+        if (!GameController.Instance.FPS_isWithinLimit(50) && GameController.Instance.currentEnemies > 100) return;
         int cost=1;
         int[] availableEnemies = GetEnemyOfCost(maxEnemeyCost);
         // spawn wave

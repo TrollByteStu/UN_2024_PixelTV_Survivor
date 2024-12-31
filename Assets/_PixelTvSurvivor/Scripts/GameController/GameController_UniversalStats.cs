@@ -31,7 +31,7 @@ public class GameController_UniversalStats : MonoBehaviour
     {
         HasPlayed = true; 
     }
-    public void SetupForMenu()
+    public void SendGameStats()
     {
         if (!HasPlayed) return;
         // send the stats

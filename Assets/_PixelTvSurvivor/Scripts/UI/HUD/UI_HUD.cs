@@ -160,6 +160,7 @@ public class UI_HUD : MonoBehaviour
             Looser_Button.gameObject.SetActive(true);
             Looser_Inputfield.gameObject.SetActive(false);
         }
+        myGC.myUS.SendGameStats();
     }
     private string PlayerIsDead_Summarization()
     {

@@ -160,6 +160,6 @@ public class GameController : MonoBehaviour
     public void SetupForMenu()
     {
         // universal stats
-        myUS.SetupForMenu();
+        //myUS.SetupForMenu();
     }
 }

@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
 
     [Header("Highscores")]
     public string ScoreDataTableName = "stuTesting01";
+    public bool DynamicTableName = false;
     public UI_HighScore.Score[] myScores;
 
     [Header("Currently Disabled")]
@@ -161,5 +162,13 @@ public class GameController : MonoBehaviour
     {
         // universal stats
         //myUS.SetupForMenu();
+    }
+
+    public string GetScoreTableName()
+    {
+        if ( DynamicTableName )
+            return ("Y" + System.DateTime.Now.Year + "M" + System.DateTime.Now.Month);
+        else
+            return ScoreDataTableName;
     }
 }

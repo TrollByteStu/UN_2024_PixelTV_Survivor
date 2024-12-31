@@ -35,7 +35,7 @@ public class GameController_UniversalStats : MonoBehaviour
     {
         if (!HasPlayed) return;
         // send the stats
-        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&universalstats=true&scorename=" + GameController.Instance.ScoreDataTableName, ""));
+        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&universalstats=true&scorename=" + GameController.Instance.GetScoreTableName(), ""));
         // reset the stats after sending them
         HasPlayed = false;
         TotalKills = 0;

@@ -26,7 +26,7 @@ public class UI_HighScore : MonoBehaviour
         myCG.alpha = 0f;
 
         // get highscore
-        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename="+ GameController.Instance.ScoreDataTableName, ""));
+        StartCoroutine(Post("https://www.trollbyte.io/PixelTv/api.php?apiVersion=One&trygethighscore=true&scorename="+ GameController.Instance.GetScoreTableName(), ""));
     }
 
     IEnumerator Post(string url, string json)
